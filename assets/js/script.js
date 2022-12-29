@@ -26,7 +26,7 @@ import { acoes } from "./acoes/utilitarios.js";
     try{
       $.ajax({
         method: 'POST',
-        url: 'https://gabriel-ribeiro.000webhostapp.com/index.php',
+        url: 'https://gabriel-ribeiro.000webhostapp.com/assets/php/index.php',
         contentType: "application/x-www-form-urlencoded; charset=UTF-8",
         data: JSON.stringify({
           nome: $("[data-input-formulario=nome]").val(),
@@ -57,9 +57,12 @@ import { acoes } from "./acoes/utilitarios.js";
       
       .fail(function (retorno){
         trocarTipoFeedbackModal(false);
+        controlarExibicaoModal(document.querySelector("#modal-feedback-formulario"), 'show');
         console.log('Não foi possível enviar os dados informados. Entre em contato com o desenvolvedor através do e-mail devgabrielribeiro@gmail.com')
       })
     }catch{
+      trocarTipoFeedbackModal(false);
+      controlarExibicaoModal(document.querySelector("#modal-feedback-formulario"), 'show');
       console.log('A mensagem não foi enviada. Por favor, contate o desenvolvedor.');
     }
     
