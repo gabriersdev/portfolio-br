@@ -129,7 +129,20 @@
   color: var(--cinza-forte);
 }
 
-@media screen and (min-width: 0) and (max-width: 767px){
+.formulario-iframe{
+  width: 100%;
+  height: 600px;
+
+  overflow-y: none;
+}
+
+@media screen and (min-width: 0) and (max-width: 390px) {
+  .formulario-iframe{
+    height: 950px;
+  }
+}
+
+@media screen and (min-width: 390px) and (max-width: 767px){
   .formulario{
     flex-direction: column;
   }
@@ -148,5 +161,9 @@
     padding: 0;
     
     background-color: inherit;
+  }
+
+  .formulario-iframe{
+    height: 850px;
   }
 }
