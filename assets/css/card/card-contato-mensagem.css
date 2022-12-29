@@ -1,0 +1,76 @@
+.card-contato-mensagem{
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+
+  border-radius: 15px;
+}
+
+.card-contato-mensagem{
+  background-color: var(--oliva-medio);
+
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 2rem 2rem;
+}
+
+.card-contato-mensagem__titulo{
+  font-size: 1.7rem;
+  font-weight: 600;
+
+  margin-left: 1rem;
+
+  color: var(--cinza-medio-forte);
+}
+
+.card-contato-mensagem__descricao{
+  text-align: center;
+
+  color: var(--cinza-mediano-fraco);
+}
+
+.card-contato__url{
+  padding: 0.5rem 0;
+
+  color: var(--preto) !important;
+}
+
+.card-contato__link{
+  display: inline-block;
+  margin-top: 0.75rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1.25rem;
+
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: 0.3s;
+
+  background-color: var(--oliva-medio);
+  border-color: var(--oliva);
+  color: var(--preto);
+}
+
+.card-contato__link:hover{
+  background-color: var(--oliva);
+  border-color: var(--cinza-mediano-forte);
+  color: var(--preto);
+}
+
+@media screen and (min-width: 0) and (max-width: 390px){
+  .card-contato__descricao{
+    padding: 0;
+    margin: 0.5rem 0;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px){
+  .card-contato-mensagem{
+    margin-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,29 @@
+.contato__titulo{
+  font-size: 2.25rem;
+  font-weight: 600;
+
+  padding-bottom: 0.6rem;
+}
+
+.contato__descricao{
+  margin-bottom: 0.5rem;
+}
+
+.contatos{
+  display: grid;
+
+  grid-template-columns: calc(25% - 1rem) calc(25% - 1rem) calc(25% - 1rem) calc(25% - 1rem);
+  grid-gap: 1rem;
+}
+
+@media screen and (min-width: 0) and (max-width: 767px){
+  .contatos{
+    grid-template-columns: 100%;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px){
+  .contatos{
+    grid-template-columns: calc(50% - 0.5rem) calc(50% - 0.5rem);
+  }
+}

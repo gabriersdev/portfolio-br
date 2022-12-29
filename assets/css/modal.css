@@ -1,0 +1,83 @@
+.feedback-formulario__conteudo{
+  margin: 1rem 0;
+}
+
+.feedback-formulario__conteudo__imagem{
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.feedback-formulario__conteudo__imagem.sucesso{
+  background-image: url(../imagens/feedback-formulario-sucesso.svg);
+}
+
+.feedback-formulario__conteudo__imagem.erro{
+  background-image: url(../imagens/feedback-formulario-erro.svg);
+}
+
+.feedback-formulario__conteudo__imagem.excesso{
+  background-image: url(../imagens/feedback-formulario-excesso.svg);
+}
+
+.feedback-formulario__conteudo__descricao{
+  color: var(--cinza-medio-forte);
+  
+  font-weight: 600;
+  font-size: var(--titulo-h3);
+}
+
+.feedback-formulario__conteudo__descricao.sucesso{
+  color: var(--azul);
+}
+
+.feedback-formulario__conteudo__descricao.erro{
+  color: var(--pessego);
+}
+
+.feedback-formulario__conteudo__descricao.excesso{
+  color: var(--cinza-mediano-fraco);
+}
+
+@media screen and (min-width: 0){
+  .feedback-formulario__conteudo{
+    margin: 1.5rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feedback-formulario__conteudo{
+    text-align: center;
+  }
+
+  .feedback-formulario__conteudo__imagem{
+    margin-bottom: 1.5rem;
+
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feedback-formulario__conteudo{
+    margin: 1rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .feedback-formulario__conteudo{
+    text-align: left;
+  }
+
+  .feedback-formulario__conteudo__imagem{
+    margin-right: 1.5rem;
+
+    width: 25rem;
+    height: 25rem;
+  }
+}

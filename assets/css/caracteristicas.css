@@ -1,0 +1,43 @@
+.caracteristicas-sem-marcador{
+  list-style-type: none;
+}
+
+.caracteristicas-sem-marcador__item{
+  line-height: 2;
+}
+
+.caracteristicas-sem-marcador__item__icone{
+  color: var(--azul);
+  margin-right: 0.2rem;
+}
+
+.caracteristicas-sem-marcador__item__descricao{
+  display: inline-block;
+}
+
+.caracteristicas{
+  margin-left: 0;
+
+  list-style-type: disc;
+}
+
+.caracteristicas__item{
+  line-height: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.caracteristicas__item__icone{
+  font-size: var(--icone-grande);
+
+  color: var(--cinza-medio-forte);
+
+  margin-right: 2.5px;
+}
+
+.caracteristicas__item__descricao{
+  color: var(--preto);
+}
+

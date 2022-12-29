@@ -1,0 +1,30 @@
+.projetos__titulo{
+  font-size: 2.25rem;
+  font-weight: 600;
+
+  padding-bottom: 0.6rem;
+}
+
+.projetos__card{
+  display: grid;
+
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+@media screen and (min-width: 0) and (max-width: 767px){
+  .projetos__card{
+    grid-template-columns: 100%;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px){
+  .projetos__card{
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1250px){
+  .projetos__card{
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+}

@@ -1,0 +1,224 @@
+.card-projeto{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 5px calc(2.5rem + 1.7rem * 2 + 1rem) auto calc(2.75rem + 1rem);
+
+  padding: 2rem 1rem;
+
+  margin-top: 1rem; 
+  margin-right: 1rem;
+
+  border-radius: 15px;
+}
+
+.card-projeto-facil{
+  background-color: var(--azul-mais-claro);
+}
+
+.card-projeto-medio{
+  background-color: var(--verde-agua-claro);
+}
+
+.card-projeto-dificil{
+  background-color: var(--rosa-mais-claro);
+}
+
+.card-projeto__marcador{
+  display: block;
+  width: 30px;
+  height: 5px;
+  border-radius: 5px;
+}
+
+.card-projeto-facil .card-projeto__marcador{
+  background-color: var(--azul);
+}
+
+.card-projeto-medio .card-projeto__marcador{
+  background-color: var(--verde-forte);
+}
+
+.card-projeto-dificil .card-projeto__marcador{
+  background-color: var(--roxo);
+}
+
+.card-projeto__cabecalho{
+  padding: 1.25rem 0;
+
+  border-bottom: 1px dashed var(--cinza-mediano-fraco);
+}
+
+.card-projeto__cabecalho__titulo{
+  font-size: 1.7rem;
+
+  font-weight: 600;
+}
+
+.card-projeto-facil .card-projeto__cabecalho__titulo{
+  color: var(--azul);
+}
+
+.card-projeto-medio .card-projeto__cabecalho__titulo{
+  color: var(--verde-forte);
+}
+
+.card-projeto-dificil .card-projeto__cabecalho__titulo{
+  color: var(--roxo);
+}
+
+.card-projeto__corpo{
+  margin-top:  1rem;
+}
+
+.card-projeto__corpo__marcador{
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  margin-top: 0.25rem;
+
+  border-radius: 5px;
+
+  color: var(--cinza-medio-forte);
+}
+
+.card-projeto__corpo__marcador{
+  margin-left: 0.25rem;
+}
+
+.card-projeto-facil .card-projeto__corpo__marcador{
+  background-color: var(--azul-claro-medio);
+}
+
+.card-projeto-medio .card-projeto__corpo__marcador{
+  background-color: var(--verde-agua);
+}
+
+.card-projeto-dificil .card-projeto__corpo__marcador{
+  background-color: var(--rosa-claro);
+}
+
+.card-projeto__corpo__descricao{
+  color: var(--cinza-medio-forte);
+
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-projeto__rodape{
+  margin-top: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-projeto__rodape__link{
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1.25rem;
+
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-projeto-facil .card-projeto__rodape__link{
+  border-color: var(--azul);
+  color: var(--azul);
+  
+  text-decoration: none;
+}
+
+.card-projeto-facil .card-projeto__rodape__link:hover{
+  background-color: var(--azul-claro-medio);
+}
+
+.card-projeto-medio .card-projeto__rodape__link{
+  border-color: var(--verde-forte);
+  color: var(--verde-forte);
+
+  text-decoration: none;
+}
+
+.card-projeto-medio .card-projeto__rodape__link:hover{
+  background-color: var(--verde-agua);
+}
+
+.card-projeto-dificil .card-projeto__rodape__link{
+  border-color: var(--roxo);
+  color: var(--roxo);
+
+  text-decoration: none;
+}
+
+.card-projeto-dificil .card-projeto__rodape__link:hover{
+  background-color: var(--rosa-claro);
+}
+
+.card-projeto__rodape__marcador{
+  display: flex;
+  align-items: center;
+
+  padding: 0.5rem 1.25rem;
+
+  border-radius: 15px;
+
+  color: var(--cinza-medio-forte);
+}
+
+.card-projeto-facil .card-projeto__rodape__marcador{
+  background-color: var(--azul-claro-medio);
+}
+
+.card-projeto-medio .card-projeto__rodape__marcador{
+  background-color: var(--verde-agua);
+}
+
+.card-projeto-dificil .card-projeto__rodape__marcador{
+  background-color: var(--rosa-claro);
+}
+
+.card-projeto a{
+  text-decoration: underline;
+}
+
+.card-projeto-facil a{
+  color: var(--azul);
+}
+
+.card-projeto-medio a{
+  color: var(--verde-forte);
+}
+
+.card-projeto-dificil a{
+  color: var(--roxo);
+}
+
+@media screen and (min-width: 0) and (max-width: 390px){
+  .card-projeto{
+    margin-left: 0;
+
+    width: 100%;
+  }
+
+  .card-projeto__rodape{
+    display: block;
+  }
+
+  .card-projeto__rodape__marcador{
+    margin-top: 1rem;
+
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px){
+  .card-projeto{
+    grid-template-rows: 5px calc(2.5rem + 1.7rem * 2 + 1rem) auto;
+  }
+
+  .card-projeto__corpo__descricao{
+    display: none;
+  }
+}

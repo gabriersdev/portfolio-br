@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+body{
+  position: relative;
+}
+
+.container-elemento{
+  padding: 0 1.8rem;
+}
+
+.container-principal{
+  margin-top: 2.5rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+.saiba-mais{
+  background-color: transparent;
+  
+  border: none;
+
+  padding: 0;
+  margin: 0.5rem 0;
+
+  text-decoration: underline;
+
+  display: block;
+}
+
+.botao-subir{
+  position: fixed;
+  bottom: 10%;
+  right: 0;
+
+  border-radius: 50% 0 0 50%;
+  border: none;
+
+  color: var(--preto);
+  padding: 0 0.75rem;
+
+  background-color: var(--roxo);
+  opacity: 0.5;
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.botao-subir i{
+  text-align: center;
+  font-size: 2.25rem;
+}
+
+.botao-subir:hover{
+  opacity: 1;
+  color: var(--branco);
+}
+
+.oculto{
+  visibility: hidden;
+}
+
+@media screen and (min-width: 0) and (max-width: 390px){
+  .container-elemento{
+    padding: 0 1rem;
+  }
+  
+  .container-principal{
+    margin-top: 2.5rem;
+  }
+}
