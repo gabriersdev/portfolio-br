@@ -1,51 +1,21 @@
 class cardProjeto{
-  
-  // static div = '';
-
-  // static titulo = '';
-  // static linguagensProjeto = [];
-  // static textoDescricao = '';
-  
-  // static existeTextoAlternativo = false;
-  // static tituloTextoAlternativo = '';
-  // static textoAlternativo = '';
-  
-  // static URLProjeto = '';
-
-  // static nivelDificuldade = 0;
-  // static dificuldadeTexto = '';
-  // static dificuldade = '';
-  
+    
   //Parâmetros para serem recebidos: titulo, linguagensProjeto (virá em array), textoDescricao, existeTextoAlternativo, tituloTextoAlternativo, textoAlternativo, URLProjeto, nivelDificuldade ==> Alguns atributos de parâmetro são necessários outros não
   //Definição das variáveis e seus valores usadas para criar um card na seção projetos
   constructor(titulo, linguagensProjeto, textoDescricao, existeTextoAlternativo, tituloTextoAlternativo, textoAlternativo, URLProjeto, nivelDificuldade) {
     this.div = document.querySelector('[data-conteudo="projetos"]');
     
-    // this.titulo = 'Tesde de Criação';
     this.titulo = titulo;
-    
-    // this.linguagensProjeto = [
-    //   'php',
-    //   'js'
-    // ]
-    
     this.linguagensProjeto = linguagensProjeto;
-
-    // this.textoDescricao = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis soluta error debitis doloribus alias. Error autem, alias labore minima ex quod, provident ullam necessitatibus ducimus modi.';
 
     this.textoDescricao = textoDescricao;
     
-    // this.existeTextoAlternativo = true;
     this.existeTextoAlternativo = existeTextoAlternativo;
-    // this.tituloTextoAlternativo = 'Teste Popouver';
     this.tituloTextoAlternativo = tituloTextoAlternativo;
-    // this.textoAlternativo = "And here's some amazing content. It's very engaging. Right? And here's some amazing content. It's very engaging. Right? And here's some amazing content. It's very engaging. Right? And here's some amazing content. It's very engaging. Right?";
     this.textoAlternativo = textoAlternativo;
     
-    // this.URLProjeto = "#";
     this.URLProjeto = URLProjeto;
 
-    // this.nivelDificuldade = 1;
     this.nivelDificuldade = nivelDificuldade;
     
     switch (this.nivelDificuldade){
@@ -122,6 +92,7 @@ class cardProjeto{
     const linkProjeto = document.createElement('a');
     linkProjeto.classList.add('card-projeto__rodape__link');
     linkProjeto.setAttribute('href', this.URLProjeto);
+    linkProjeto.setAttribute('target', '_blank');
     linkProjeto.textContent = 'Ver projeto';
     
     const dificuldadeProjeto = document.createElement('span');

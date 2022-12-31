@@ -28,12 +28,7 @@ import { acoes } from "./acoes/utilitarios.js";
         method: 'POST',
         url: 'https://gabriel-ribeiro.000webhostapp.com/assets/php/index.php',
         contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-        data: JSON.stringify({
-          nome: $("[data-input-formulario=nome]").val(),
-          email: $("[data-input-formulario=email]").val(),
-          mensagem: $("[data-input-formulario=mensagem]").val(),
-          chaveAPI : 'O840OE1590BOXAP59HANBOXAP4C80MJ69U9XX076XX0760B949XOX1NXX076KC690ARC75XOX1N99Z73ARC7539546XX07699Z73KKX40BOXAPXOX1NXX076XOX1N'
-      }),
+        data: dadosFormulario,
         dataType: 'json',
         encode: true,
         success: function(){}

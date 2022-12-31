@@ -72,19 +72,19 @@ const dadosProjetos = [
     tituloSaibaMais: '', 
     saibaMais: "", 
     conclusao: 2022-12-19, 
-    link: "", 
+    link: "https://gabrieszin.github.io/Encriptador/", 
     linguagens: ["JS", "CSS", "HTML"], 
     dificuldade: 1
   },
   {
-    titulo: "Jogo da Velha", 
+    titulo: "Jogo da Forca", 
     autor: "Gabriel Ribeiro", 
-    descricao: 'Foi um projeto desenvolvido para a Trilha Iniciante em Programação da Alura. O Jogo da Velha foi realizado através das aulas dos instrutores da Alura. Foi usado a biblioteca SweetAlert no desenvolvimento, o Trelo para a organização e o Figma, para a prototipação.',
+    descricao: 'Foi um projeto desenvolvido para a Trilha Iniciante em Programação da Alura. O Jogo da Forca foi realizado através das aulas dos instrutores da Alura. Foi usado a biblioteca SweetAlert no desenvolvimento, o Trelo para a organização e o Figma, para a prototipação.',
     existeSaibaMais: false,
     tituloSaibaMais: '',
     saibaMais: '', 
     conclusao: 2022-12-31, 
-    link: "", 
+    link: "https://gabrieszin.github.io/Jogo-da-Forca/", 
     linguagens: ["JS", "CSS", "HTML"],
     dificuldade: 1
   },

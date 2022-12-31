@@ -150,4 +150,8 @@
   .card__header__principal__avaliacao{
     display: none;
   }
+
+  .card__header__versao{
+    text-align: right;
+  }
 }

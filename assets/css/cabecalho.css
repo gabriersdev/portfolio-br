@@ -1,6 +1,6 @@
 .cabecalho{
   background: url(../imagens/banner.png) center / cover no-repeat;
-  height: 100vh;
+  height: calc(100vh + 1rem);
   width: 100%;
 
   display: flex;
@@ -11,7 +11,7 @@
 
 .cabecalho__principal{
   position: absolute;
-  top: 20%;
+  top: calc(17.5% - 1vh);
 
   display: flex;
   color: #FFF;
@@ -94,6 +94,12 @@
   grid-gap: 1rem;
 }
 
+@media screen and (max-width: 320px) and (max-height: 820px) {
+  .cabecalho{
+    height: calc(100vh + 25vh);
+  }
+}
+
 @media screen and (min-width: 0) and (max-width: 420px){
   .cabecalho{
     display: block;
@@ -110,7 +116,7 @@
   }
 
   .cabecalho__principal__apresentacao__titulo{
-    font-size: 3.5rem;
+    font-size: 3rem;
 
     margin: 1rem 0;
   }
@@ -120,7 +126,12 @@
   }
 
   .cabecalho__principal__menu{
-    display: none;
+    position: relative;
+
+    margin-right: 0;
+    margin-top: 1rem;
+
+    display: block;
   }
 
   .cabecalho__cards{

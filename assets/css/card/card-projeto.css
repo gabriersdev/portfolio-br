@@ -215,10 +215,10 @@
 
 @media screen and (min-width: 0) and (max-width: 767px){
   .card-projeto{
-    grid-template-rows: 5px calc(2.5rem + 1.7rem * 2 + 1rem) auto;
+    grid-template-rows: auto auto auto;
   }
 
   .card-projeto__corpo__descricao{
-    display: none;
+    display: block;
   }
 }
