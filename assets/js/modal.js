@@ -79,8 +79,6 @@ function controlarExibicaoModal(objeto, condicao){
   }
 }
 
-// controlarExibicaoModal(document.querySelector("#modal-feedback-formulario"), "show");
-
 function fecharModal(elemento){
   const pai = elemento.parentElement;
   const avo = pai.parentElement;

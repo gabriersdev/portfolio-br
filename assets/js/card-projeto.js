@@ -1,13 +1,11 @@
 class cardProjeto{
-    
+  
   //Parâmetros para serem recebidos: titulo, linguagensProjeto (virá em array), textoDescricao, existeTextoAlternativo, tituloTextoAlternativo, textoAlternativo, URLProjeto, nivelDificuldade ==> Alguns atributos de parâmetro são necessários outros não
   //Definição das variáveis e seus valores usadas para criar um card na seção projetos
-  constructor(titulo, linguagensProjeto, textoDescricao, existeTextoAlternativo, tituloTextoAlternativo, textoAlternativo, URLProjeto, nivelDificuldade) {
-    this.div = document.querySelector('[data-conteudo="projetos"]');
-    
+  constructor(titulo, linguagensProjeto, textoDescricao, existeTextoAlternativo, tituloTextoAlternativo, textoAlternativo, URLProjeto, nivelDificuldade) {   
     this.titulo = titulo;
     this.linguagensProjeto = linguagensProjeto;
-
+    
     this.textoDescricao = textoDescricao;
     
     this.existeTextoAlternativo = existeTextoAlternativo;
@@ -15,7 +13,7 @@ class cardProjeto{
     this.textoAlternativo = textoAlternativo;
     
     this.URLProjeto = URLProjeto;
-
+    
     this.nivelDificuldade = nivelDificuldade;
     
     switch (this.nivelDificuldade){
@@ -37,28 +35,28 @@ class cardProjeto{
     
   }
   
-  criarMarcador(){
+  criarMarcador({classeMarcador}){
     const marcador = document.createElement('i');
-    marcador.classList.add('card-projeto__marcador');
-
+    marcador.classList.add(classeMarcador);
+    
     return marcador;
   }
   
-  criarCabecalho(){
+  criarCabecalho({classeTitulo, classeCabecalho}){
     const tituloProjeto = document.createElement('h2');
-    tituloProjeto.classList.add('card-projeto__cabecalho__titulo');
+    tituloProjeto.classList.add(classeTitulo);
     tituloProjeto.textContent = (this.titulo).substr(0, 25);
     
     const cabecalhoProjeto = document.createElement('div');
-    cabecalhoProjeto.classList.add('card-projeto__cabecalho');
+    cabecalhoProjeto.classList.add(classeCabecalho);
     cabecalhoProjeto.appendChild(tituloProjeto); 
     
     return cabecalhoProjeto;
   }
   
-  criarCorpo(){
+  criarCorpo({classeDescricao, classeCorpoProjeto, classeCorpoMarcador}){
     const descricaoProjeto = document.createElement('p');
-    descricaoProjeto.classList.add('card-projeto__corpo__descricao');
+    descricaoProjeto.classList.add(classeDescricao);
     descricaoProjeto.innerHTML = this.textoDescricao;
     
     if(this.existeTextoAlternativo){
@@ -74,11 +72,11 @@ class cardProjeto{
     }
     
     const corpoProjeto = document.createElement('div');
-    corpoProjeto.classList.add('card-projeto__corpo');
+    corpoProjeto.classList.add(classeCorpoProjeto);
     
     this.linguagensProjeto.forEach(linguagem => {
       const marcador = document.createElement('span');
-      marcador.classList.add('card-projeto__corpo__marcador');
+      marcador.classList.add(classeCorpoMarcador);
       marcador.textContent = linguagem;
       corpoProjeto.appendChild(marcador);
     })
@@ -88,30 +86,33 @@ class cardProjeto{
     return corpoProjeto;
   }
   
-  criarRodape(){
+  criarRodape({classeLink, classeRodapeMarcador, classeRodape}){
     const linkProjeto = document.createElement('a');
-    linkProjeto.classList.add('card-projeto__rodape__link');
+    linkProjeto.classList.add(classeLink);
     linkProjeto.setAttribute('href', this.URLProjeto);
     linkProjeto.setAttribute('target', '_blank');
     linkProjeto.textContent = 'Ver projeto';
     
-    const dificuldadeProjeto = document.createElement('span');
-    dificuldadeProjeto.classList.add('card-projeto__rodape__marcador');
-    dificuldadeProjeto.setAttribute('data-toggle', 'tooltip');
-    dificuldadeProjeto.setAttribute('data-placement', 'bottom');
-    dificuldadeProjeto.setAttribute('title', 'Dificuldade do Projeto');
-    dificuldadeProjeto.textContent = this.dificuldadeTexto;
-    
     const rodapeProjeto = document.createElement('div');
-    rodapeProjeto.classList.add('card-projeto__rodape');
+    rodapeProjeto.classList.add(classeRodape);
     rodapeProjeto.appendChild(linkProjeto);
-    rodapeProjeto.appendChild(dificuldadeProjeto);
-
+    
+    if(this.nivelDificuldade !== null){
+      const dificuldadeProjeto = document.createElement('span');
+      dificuldadeProjeto.classList.add(classeRodapeMarcador);
+      dificuldadeProjeto.setAttribute('data-toggle', 'tooltip');
+      dificuldadeProjeto.setAttribute('data-placement', 'bottom');
+      dificuldadeProjeto.setAttribute('title', 'Dificuldade do Projeto');
+      dificuldadeProjeto.textContent = this.dificuldadeTexto;
+      rodapeProjeto.appendChild(dificuldadeProjeto);
+    }
+    
     return rodapeProjeto;
   }
   
   //Agrupamento de todos o conteúdo e formação do card
   criarCard(){
+    const div = document.querySelector('[data-conteudo="projetos"]');
 
     const novoCard = document.createElement('div');
     novoCard.classList.add('card-projeto');
@@ -123,12 +124,28 @@ class cardProjeto{
       novoCard.setAttribute(dataAttribute, '');
     });
     
-    novoCard.appendChild(this.criarMarcador());
-    novoCard.appendChild(this.criarCabecalho());
-    novoCard.appendChild(this.criarCorpo());
-    novoCard.appendChild(this.criarRodape());
+    const classes = {
+      classeMarcador: 'card-projeto__marcador',
+      classeTitulo: 'card-projeto__cabecalho__titulo',
+      classeCabecalho: 'card-projeto__cabecalho',
+      classesCorpo: {
+        classeDescricao: 'card-projeto__corpo__descricao',
+        classeCorpoProjeto: 'card-projeto__corpo',
+        classeCorpoMarcador: 'card-projeto__corpo__marcador'
+      },
+      classesRodape: {
+        classeLink: 'card-projeto__rodape__link',
+        classeRodapeMarcador: 'card-projeto__rodape__marcador',
+        classeRodape: 'card-projeto__rodape'
+      }
+    }
     
-    this.div.appendChild(novoCard);
+    novoCard.appendChild(this.criarMarcador(classes));
+    novoCard.appendChild(this.criarCabecalho(classes));
+    novoCard.appendChild(this.criarCorpo(classes.classesCorpo));
+    novoCard.appendChild(this.criarRodape(classes.classesRodape));
+    
+    div.appendChild(novoCard);
   }
   
 }

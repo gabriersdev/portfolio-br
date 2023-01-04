@@ -1,0 +1,44 @@
+.formulario-pg-auxiliar{
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.formulario-pg-auxiliar__label{
+  color: var(--cinza-medio-forte);
+  text-align: left;
+
+  margin-top: 0.5rem;
+}
+
+.formulario-pg-auxiliar__input{
+  display: block;
+
+  background-color: var(--cinza-fraco);
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--cinza);
+  border-radius: 5px;
+
+  padding: 0.5rem 0.5rem;
+  width: auto;
+
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+
+  transition: 0.3s;
+}
+
+.formulario-pg-auxiliar__input::placeholder{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.formulario-pg-auxiliar__input:focus{
+  box-shadow:  0px 0px 0px 5px var(--azul-claro-medio);
+  -webkit-box-shadow: 0px 0px 0px 5px var(--azul-claro-medio);
+  -moz-box-shadow: 0px 0px 0px 5px var(--azul-claro-medio);
+  outline: none;
+  border-color: var(--azul-claro-forte);
+}

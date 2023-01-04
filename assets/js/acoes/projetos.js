@@ -1,9 +1,14 @@
+import { controlarNenhumProjeto } from "../utilitarios.js";
+
 class projetos{
   
   static divProjetos = "";
   static cardsProjeto = "";
   
-  constructor(){
+  constructor(tipoDisplay){
+    
+    tipoDisplay == undefined ? this.tipoDisplay = 'grid' : this.tipoDisplay = tipoDisplay;
+    
     this.divProjetos = document.querySelector('[data-conteudo="projetos"]');
     this.cardsProjeto = this.divProjetos.querySelectorAll('[data-conteudo-projetos="card-projeto"]');
     return;
@@ -13,25 +18,53 @@ class projetos{
     this.ocultarCardsProjetos();
     
     linguagem = linguagem.toLowerCase();
+    let existemProjetos = false;
     
     const cardsLinguagem = document.querySelectorAll(`[data-conteudo-projetos-linguagem-${linguagem}]`);
     cardsLinguagem.forEach(card => {
-      card.style.display = 'grid';
+      existemProjetos = true;
+      card.style.display = this.tipoDisplay;
     })
     
+    this.exibicaoNenhumProjeto(!existemProjetos);
     this.ativarBotao(botao);
+  }
+  
+  exibirProjetoSelecionado(id){
+    id = id.toString();
+
+    this.ocultarCardsProjetos();
+    this.desativarTodosOsBotoes();
+    
+    let existemProjetos = false;
+
+    this.cardsProjeto.forEach(card => {
+      if(card.dataset.projetoId == id){
+        existemProjetos = true;
+        card.style.display = this.tipoDisplay;
+      }
+    })
+
+    this.exibicaoNenhumProjeto(!existemProjetos);
   }
   
   exibirTodosOsProjetos(botao){
     this.ocultarCardsProjetos();
-    
+    let existemProjetos = false;
+
     this.cardsProjeto.forEach(card => {
-      card.style.display = 'grid';
+      existemProjetos = true;
+      card.style.display = this.tipoDisplay;
     })
     
+    this.exibicaoNenhumProjeto(!existemProjetos);
     this.ativarBotao(botao);
   }
   
+  exibicaoNenhumProjeto(condicao){
+    controlarNenhumProjeto(condicao)
+  }
+
   ocultarCardsProjetos(){
     this.cardsProjeto.forEach(card => {
       card.style.display = 'none';

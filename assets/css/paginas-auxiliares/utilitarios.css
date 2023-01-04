@@ -1,0 +1,9 @@
+.divisao-pg-auxiliar{
+  margin-top: 2.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.divisao-pg-auxiliar hr{
+  border: none;
+  border-bottom: dashed 1px var(--preto);
+}

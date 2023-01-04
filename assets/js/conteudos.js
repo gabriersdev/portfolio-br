@@ -1,8 +1,3 @@
-// (() => {
-
-//DESCRIÇÃO: MÁXIMO REC 188 CARACTERES
-//SAIBA MAIS: MÁXIMO REC 240 CARACTERES
-
 const dadosProjetos = [
   {
     titulo: "Expresso Mobilidade", 
@@ -38,6 +33,18 @@ const dadosProjetos = [
     conclusao: 2022-12-19, 
     link: "", 
     linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML"],
+    dificuldade: 2
+  },
+  {
+    titulo: "Projetos dos Cursos Alura", 
+    autor: "Gabriel Ribeiro", 
+    descricao: "Aqui você encontra alguns dos projetos que eu desenvolvi junto de cursos que eu realizei na Alura.", 
+    existeSaibaMais: false, 
+    tituloSaibaMais: '', 
+    saibaMais: "", 
+    conclusao: 2022-12-19, 
+    link: "../../projetos/cursos-alura/", 
+    linguagens: ["JS", "CSS", "HTML"], 
     dificuldade: 2
   },
   {
@@ -141,6 +148,3 @@ const dadosProjetos = [
 export{
   dadosProjetos
 }
-
-// })();
-// console.log(projetos[1]);
