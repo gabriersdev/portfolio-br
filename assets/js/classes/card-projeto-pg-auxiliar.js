@@ -1,4 +1,4 @@
-import { cardProjeto } from "../card-projeto.js";
+import { cardProjeto } from "./card-projeto.js";
 
 export class cardProjetosPGAuxiliar extends cardProjeto{
   constructor(titulo, linguagens, descricao, existeSaibaMais, tituloSaibaMais, saibaMais, link, dificuldade){
@@ -22,12 +22,15 @@ export class cardProjetosPGAuxiliar extends cardProjeto{
     BTNPreview.setAttribute('data-toggle', 'tooltip');
     BTNPreview.setAttribute('data-placement', 'bottom');
     BTNPreview.setAttribute('data-bs-original-title', 'Ver o Preview do Projeto');
-    BTNPreview.textContent = 'Preview';
+    
+    const textoPreview = (document.createElement('span'));
+    textoPreview.textContent = 'Preview';
 
     const iconeBTNPreview = document.createElement('i');
     iconeBTNPreview.classList.add('bi');
     iconeBTNPreview.classList.add('bi-eye-fill');
 
+    BTNPreview.appendChild(textoPreview);
     BTNPreview.appendChild(iconeBTNPreview);
 
     rodapeProjeto.appendChild(linkProjeto);

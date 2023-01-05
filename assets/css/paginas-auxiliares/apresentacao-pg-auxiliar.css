@@ -35,3 +35,25 @@
   border: 1px solid var(--cinza-fraco-medio);
   border-radius: 5px;
 }
+
+[data-conteudo=projetos]{
+  display: flex;
+}
+
+@media screen and (max-width: 590px) {
+  [data-conteudo=projetos]{
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 590px) and (max-width: 767px) {
+  .apresentacao-pg-auxiliar{
+    overflow: initial;
+    scrollbar-width: none;
+  }
+
+  [data-conteudo=projetos]{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}

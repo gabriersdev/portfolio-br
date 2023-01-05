@@ -1,8 +1,8 @@
-import { projetos } from "../acoes/projetos.js";
-import { controlarNenhumProjeto } from "../utilitarios.js";
-import { cardProjetosPGAuxiliar } from "./card-projeto-pg-auxiliar.js";
-import { carregarPreview } from "./carregar-preview.js";
-import { dadosProjetos } from "./conteudos-pg-auxiliar.js";
+import { projetos } from "./classes/projetos.js";
+import { controlarNenhumProjeto } from "./utilitarios/utilitarios.js";
+import { cardProjetosPGAuxiliar } from "./classes/card-projeto-pg-auxiliar.js";
+import { carregarPreview } from "./view/carregar-preview.js";
+import { dadosProjetos } from "./conteudo/conteudos-pg-auxiliar.js";
 
 let listagemProjetos = [];
 
@@ -37,10 +37,8 @@ selecaoProjeto.onchange = (evento) => {
 }
 
 const form = document.querySelector('[data-pg-aux-formulario]');
-form.addEventListener('keypress', (evento) => {
-  if(evento.keyCode == 13){
-    evento.preventDefault();
-  }
+form.addEventListener('submit', (evento) => {
+  evento.preventDefault();
 })
 
 listagemProjetos.forEach(projeto => {

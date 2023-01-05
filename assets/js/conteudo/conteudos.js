@@ -43,7 +43,7 @@ const dadosProjetos = [
     tituloSaibaMais: '', 
     saibaMais: "", 
     conclusao: 2022-12-19, 
-    link: "../../projetos/cursos-alura/", 
+    link: "./projetos/cursos-alura/", 
     linguagens: ["JS", "CSS", "HTML"], 
     dificuldade: 2
   },

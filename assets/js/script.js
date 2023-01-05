@@ -1,4 +1,4 @@
-import { fecharModal } from "./modal.js";
+import { fecharModal } from "./utilitarios/modal.js";
 
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()

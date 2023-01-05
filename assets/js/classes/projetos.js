@@ -1,4 +1,4 @@
-import { controlarNenhumProjeto } from "../utilitarios.js";
+import { controlarNenhumProjeto } from "../utilitarios/utilitarios.js";
 
 class projetos{
   

@@ -1,5 +1,5 @@
 .card-pg-auxiliar-projeto{
-  display: inline-block;
+  display: grid;
   width: 400px;
 
   padding: 2rem 1rem;
@@ -146,13 +146,26 @@
   color: var(--cinza-medio-forte);
 }
 
-@media screen and (min-width: 0) and (max-width: 767px){
+@media screen and (max-width: 590px) {
   .card-pg-auxiliar-projeto{
-    /* margin-left: 0; */
-    width: auto;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 590px) and (max-width: 767px){
+  .card-pg-auxiliar-projeto{
+    max-width: calc(100% - 1rem);
   }
 
   .card-pg-auxiliar-projeto__corpo__descricao{
     display: block;
+  }
+
+  .card-pg-auxiliar-projeto__rodape__botao-preview span{
+    display: none;
+  }
+
+  .card-pg-auxiliar-projeto__rodape__botao-preview i{
+    margin-left: 0;
   }
 }

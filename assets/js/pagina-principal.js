@@ -1,16 +1,9 @@
-import { trocarTipoFeedbackModal } from "./modal.js";
-import { controlarExibicaoModal } from "./modal.js";
+import { trocarTipoFeedbackModal, controlarExibicaoModal } from "./utilitarios/modal.js";
 
-import { limparFormulario } from "./formulario.js";
+import { ajustarPeriodoProgramando, ajustarIdade, acoesModal, limparFormulario } from "./utilitarios/utilitarios.js";
+import { carregarCardsPrincipal } from "./view/carregar-cards-principal.js";
 
-import { dadosProjetos } from "./conteudos.js";
-import { cardProjeto } from "./card-projeto.js";
-
-import { projetos } from "./acoes/projetos.js";
-import { linguagens } from "./acoes/linguagens.js";
-
-import { ajustarPeriodoProgramando, ajustarIdade } from "./utilitarios.js";
-import { acoes } from "./acoes/utilitarios.js";
+import { acoes } from "./view/carregar-eventos-principal.js";
 
 (() => {
   
@@ -66,8 +59,8 @@ import { acoes } from "./acoes/utilitarios.js";
   
   const btnFecharModais = document.querySelectorAll("[data-bs-dismiss=modal]");
   btnFecharModais.forEach(elemento =>{
-    if(acoes.modal){
-      acoes.modal(elemento);
+    if(acoesModal.modal){
+      acoesModal.modal(elemento);
     };
   })
   
@@ -76,83 +69,28 @@ import { acoes } from "./acoes/utilitarios.js";
   
 })();
 
-dadosProjetos.forEach(projeto => {
-  if(projeto.dificuldade == 3){
-    const classeCard = new cardProjeto(projeto.titulo, projeto.linguagens, projeto.descricao, projeto.existeSaibaMais, projeto.tituloSaibaMais, projeto.saibaMais, projeto.link, projeto.dificuldade);
-    classeCard.criarCard();
-  }
-});
-
-dadosProjetos.forEach(projeto => {
-  if(projeto.dificuldade == 2){
-    const classeCard = new cardProjeto(projeto.titulo, projeto.linguagens, projeto.descricao, projeto.existeSaibaMais, projeto.tituloSaibaMais, projeto.saibaMais, projeto.link, projeto.dificuldade);
-    classeCard.criarCard();
-  }
-});
-
-dadosProjetos.forEach(projeto => {
-  if(projeto.dificuldade == 1){
-    const classeCard = new cardProjeto(projeto.titulo, projeto.linguagens, projeto.descricao, projeto.existeSaibaMais, projeto.tituloSaibaMais, projeto.saibaMais, projeto.link, projeto.dificuldade);
-    classeCard.criarCard();
-  }
-});
-
-const classeProjetos = new projetos();
-
-const acoesCardsLinguagem = {
-  php:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirProjetos(botao.dataset.acaoCardLinguagem.toLowerCase(), document.querySelector(`[data-acao-projeto=${botao.dataset.acaoCardLinguagem.toLowerCase()}`))}),
-  js:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirProjetos(botao.dataset.acaoCardLinguagem.toLowerCase(), document.querySelector(`[data-acao-projeto=${botao.dataset.acaoCardLinguagem.toLowerCase()}`))}),
-  css:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirProjetos(botao.dataset.acaoCardLinguagem.toLowerCase(), document.querySelector(`[data-acao-projeto=${botao.dataset.acaoCardLinguagem.toLowerCase()}`))}),
-  mysql:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirProjetos(botao.dataset.acaoCardLinguagem.toLowerCase(), document.querySelector(`[data-acao-projeto=${botao.dataset.acaoCardLinguagem.toLowerCase()}`))}),
-  html:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirProjetos(botao.dataset.acaoCardLinguagem.toLowerCase(), document.querySelector(`[data-acao-projeto=${botao.dataset.acaoCardLinguagem.toLowerCase()}`))}),
-  java:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirTodosOsProjetos(document.querySelector('[data-acao-projeto="todos"'))}),
-  git:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirTodosOsProjetos(document.querySelector('[data-acao-projeto="todos"'))}),
-  figma:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirTodosOsProjetos(document.querySelector('[data-acao-projeto="todos"'))})
-};
+carregarCardsPrincipal();
 
 const botoesAcaoCardsLinguagem = document.querySelectorAll('[data-acao-card-linguagem]');
 botoesAcaoCardsLinguagem.forEach(botao => {
   const linguagem = botao.dataset.acaoCardLinguagem.toLowerCase();
-  if(acoesCardsLinguagem[linguagem]){
-    acoesCardsLinguagem[linguagem](botao);
+  if(acoes.cardsLinguagem[linguagem]){
+    acoes.cardsLinguagem[linguagem](botao);
   }
 })
-
-const acoesProjetos = {
-  todos:botao => botao.addEventListener("click", evento => {classeProjetos.exibirTodosOsProjetos(botao)}),
-  php:botao => botao.addEventListener("click", evento => {classeProjetos.exibirProjetos(botao.getAttribute("data-acao-projeto").toLowerCase(), botao)}),
-  js:botao => botao.addEventListener("click", evento => {classeProjetos.exibirProjetos(botao.getAttribute("data-acao-projeto").toLowerCase(), botao)}),
-  css:botao => botao.addEventListener("click", evento => {classeProjetos.exibirProjetos(botao.getAttribute("data-acao-projeto").toLowerCase(), botao)}),
-  mysql:botao => botao.addEventListener("click", evento => {classeProjetos.exibirProjetos(botao.getAttribute("data-acao-projeto").toLowerCase(), botao)}),
-  html:botao => botao.addEventListener("click", evento => {classeProjetos.exibirProjetos(botao.getAttribute("data-acao-projeto").toLowerCase(), botao)}),
-}
 
 const botoesAcaoProjetos = document.querySelectorAll("[data-acao-projeto]");
 botoesAcaoProjetos.forEach(botao => {
   const nomeAcaoProjeto = botao.getAttribute("data-acao-projeto").toLowerCase();
-  if(acoesProjetos[nomeAcaoProjeto]){
-    acoesProjetos[nomeAcaoProjeto](botao)
+  if(acoes.btnProjetos[nomeAcaoProjeto]){
+    acoes.btnProjetos[nomeAcaoProjeto](botao)
   }
 })
-
-const classeLinguagens = new linguagens();
-
-const acoesLinguagens = {
-  todas:botao => botao.addEventListener("click", evento => {classeLinguagens.exibirTodasAsLinguagens(botao)}),
-  front_end:botao => botao.addEventListener("click", evento => {classeLinguagens.exibirLinguagem(botao.getAttribute("data-acao-linguagens").toLowerCase(), botao)}),
-  back_end:botao => botao.addEventListener("click", evento => {classeLinguagens.exibirLinguagem(botao.getAttribute("data-acao-linguagens").toLowerCase(), botao)}),
-  programacao:botao => botao.addEventListener("click", evento => {classeLinguagens.exibirLinguagem(botao.getAttribute("data-acao-linguagens").toLowerCase(), botao)}),
-  desenvolvimento_web:botao => botao.addEventListener("click", evento => {classeLinguagens.exibirLinguagem(botao.getAttribute("data-acao-linguagens").toLowerCase(), botao)}),
-  ux_ui:botao => botao.addEventListener("click", evento => {classeLinguagens.exibirLinguagem(botao.getAttribute("data-acao-linguagens").toLowerCase(), botao)})
-}
 
 const botoesAcaoLinguagens = document.querySelectorAll("[data-acao-linguagens]");
 botoesAcaoLinguagens.forEach(botao => {
   const nomeAcaoLinguagem = botao.getAttribute("data-acao-linguagens").toLowerCase();
-  if(acoesLinguagens[nomeAcaoLinguagem]){
-    acoesLinguagens[nomeAcaoLinguagem](botao)
+  if(acoes.btnlinguagens[nomeAcaoLinguagem]){
+    acoes.btnlinguagens[nomeAcaoLinguagem](botao)
   }
 })
-
-trocarTipoFeedbackModal(true);
-controlarExibicaoModal(document.querySelector("#modal-feedback-formulario"), 'show');

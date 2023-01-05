@@ -1,4 +1,4 @@
-import { projetos } from "./acoes/projetos.js";
+import { projetos } from "../classes/projetos.js";
 
 const calcularPeriodo = (inicio, forma) => {
   let dataInicio = new Date(inicio);
@@ -54,8 +54,24 @@ const controlarNenhumProjeto = (condicao) => {
   }
 }
 
+const limparFormulario  = () => {
+  const inputs = document.querySelectorAll("[data-input-formulario]");
+
+  inputs.forEach(elemento => {
+    elemento.value = "";
+  })
+}
+
+const acoesModal = {
+  modal:button => button.addEventListener("click", (evento) => {
+    fecharModal(button);
+  })
+}
+
 export{
   ajustarPeriodoProgramando,
   ajustarIdade,
-  controlarNenhumProjeto
+  controlarNenhumProjeto,
+  acoesModal,
+  limparFormulario
 }
