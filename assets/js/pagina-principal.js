@@ -63,7 +63,7 @@ import { pesquisarProjeto } from './interacao/pesquisa-projetos.js'
     };
   })
   
-  pesquisarProjeto(carregarCardsPrincipal());
+  pesquisarProjeto(carregarCardsPrincipal())
   ajustarIdade();
   ajustarPeriodoProgramando();
   

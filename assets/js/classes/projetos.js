@@ -14,9 +14,17 @@ class projetos{
     return;
   }
   
+  ocultarCardsProjetos(){
+    const cards = document.querySelectorAll('[data-conteudo-projetos="card-projeto"]');
+
+    cards.forEach(card => {
+      card.style.display = 'none';
+    });
+  }
+
   exibirProjetos(linguagem, botao){
     this.ocultarCardsProjetos();
-    
+
     linguagem = linguagem.toLowerCase();
     let existemProjetos = false;
     
@@ -52,7 +60,9 @@ class projetos{
     this.ocultarCardsProjetos();
     let existemProjetos = false;
 
-    this.cardsProjeto.forEach(card => {
+    const cards = document.querySelectorAll('[data-conteudo-projetos="card-projeto"]');
+
+    cards.forEach(card => {
       existemProjetos = true;
       card.style.display = this.tipoDisplay;
     })
@@ -63,12 +73,6 @@ class projetos{
   
   exibicaoNenhumProjeto(condicao){
     controlarNenhumProjeto(condicao)
-  }
-
-  ocultarCardsProjetos(){
-    this.cardsProjeto.forEach(card => {
-      card.style.display = 'none';
-    });
   }
   
   ativarBotao(botao){

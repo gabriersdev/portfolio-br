@@ -7,14 +7,14 @@ export const carregarCardsPrincipal = () => {
 
   dadosProjetos.forEach((projeto, index) => {
     if(projeto.dificuldade == 3){
-      const classeCard = new cardProjeto(projeto.titulo, projeto.linguagens, projeto.descricao, projeto.existeSaibaMais, projeto.tituloSaibaMais, projeto.saibaMais, projeto.link, projeto.dificuldade);
+      const classeCard =  new cardProjeto(projeto.titulo, projeto.linguagens, projeto.descricao, projeto.existeSaibaMais, projeto.tituloSaibaMais, projeto.saibaMais, projeto.link, projeto.dificuldade);
       classeCard.criarCard(index);
 
       const dadosIdentificacao = {
         titulo: projeto.titulo,
         id: index
       }
-      
+
       listagemProjetos.push(dadosIdentificacao);
     }
   });
@@ -46,6 +46,6 @@ export const carregarCardsPrincipal = () => {
       listagemProjetos.push(dadosIdentificacao);
     }
   });
-
+  
   return listagemProjetos;
 }

@@ -1,3 +1,7 @@
+import { projetos } from "../classes/projetos"
+
+const classeProjetos = new projetos()
+
 const acoesProjetos = {
   todos:botao => botao.addEventListener("click", evento => {classeProjetos.exibirTodosOsProjetos(botao)}),
   php:botao => botao.addEventListener("click", evento => {classeProjetos.exibirProjetos(botao.getAttribute("data-acao-projeto").toLowerCase(), botao)}),
