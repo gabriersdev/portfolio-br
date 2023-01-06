@@ -1,9 +1,8 @@
 import { trocarTipoFeedbackModal, controlarExibicaoModal } from "./utilitarios/modal.js";
-
 import { ajustarPeriodoProgramando, ajustarIdade, acoesModal, limparFormulario } from "./utilitarios/utilitarios.js";
-import { carregarCardsPrincipal } from "./view/carregar-cards-principal.js";
-
-import { acoes } from "./view/carregar-eventos-principal.js";
+import { carregarCardsPrincipal } from "./carregar/carregar-cards-principal.js";
+import { acoes } from "./carregar/carregar-eventos-principal.js";
+import { pesquisarProjeto } from './interacao/pesquisa-projetos.js'
 
 (() => {
   
@@ -64,33 +63,32 @@ import { acoes } from "./view/carregar-eventos-principal.js";
     };
   })
   
+  pesquisarProjeto(carregarCardsPrincipal());
   ajustarIdade();
   ajustarPeriodoProgramando();
   
+  const botoesAcaoCardsLinguagem = document.querySelectorAll('[data-acao-card-linguagem]');
+  botoesAcaoCardsLinguagem.forEach(botao => {
+    const linguagem = botao.dataset.acaoCardLinguagem.toLowerCase();
+    if(acoes.cardsLinguagem[linguagem]){
+      acoes.cardsLinguagem[linguagem](botao);
+    }
+  })
+  
+  const botoesAcaoProjetos = document.querySelectorAll("[data-acao-projeto]");
+  botoesAcaoProjetos.forEach(botao => {
+    const nomeAcaoProjeto = botao.getAttribute("data-acao-projeto").toLowerCase();
+    if(acoes.btnProjetos[nomeAcaoProjeto]){
+      acoes.btnProjetos[nomeAcaoProjeto](botao)
+    }
+  })
+  
+  const botoesAcaoLinguagens = document.querySelectorAll("[data-acao-linguagens]");
+  botoesAcaoLinguagens.forEach(botao => {
+    const nomeAcaoLinguagem = botao.getAttribute("data-acao-linguagens").toLowerCase();
+    if(acoes.btnlinguagens[nomeAcaoLinguagem]){
+      acoes.btnlinguagens[nomeAcaoLinguagem](botao)
+    }
+  })
+  
 })();
-
-carregarCardsPrincipal();
-
-const botoesAcaoCardsLinguagem = document.querySelectorAll('[data-acao-card-linguagem]');
-botoesAcaoCardsLinguagem.forEach(botao => {
-  const linguagem = botao.dataset.acaoCardLinguagem.toLowerCase();
-  if(acoes.cardsLinguagem[linguagem]){
-    acoes.cardsLinguagem[linguagem](botao);
-  }
-})
-
-const botoesAcaoProjetos = document.querySelectorAll("[data-acao-projeto]");
-botoesAcaoProjetos.forEach(botao => {
-  const nomeAcaoProjeto = botao.getAttribute("data-acao-projeto").toLowerCase();
-  if(acoes.btnProjetos[nomeAcaoProjeto]){
-    acoes.btnProjetos[nomeAcaoProjeto](botao)
-  }
-})
-
-const botoesAcaoLinguagens = document.querySelectorAll("[data-acao-linguagens]");
-botoesAcaoLinguagens.forEach(botao => {
-  const nomeAcaoLinguagem = botao.getAttribute("data-acao-linguagens").toLowerCase();
-  if(acoes.btnlinguagens[nomeAcaoLinguagem]){
-    acoes.btnlinguagens[nomeAcaoLinguagem](botao)
-  }
-})

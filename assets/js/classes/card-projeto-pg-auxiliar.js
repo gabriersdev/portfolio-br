@@ -19,9 +19,9 @@ export class cardProjetosPGAuxiliar extends cardProjeto{
     const BTNPreview = document.createElement('a');
     BTNPreview.classList.add(classeRodapeBTNPreview);
     BTNPreview.setAttribute('data-btn-preview', '')
-    BTNPreview.setAttribute('data-toggle', 'tooltip');
-    BTNPreview.setAttribute('data-placement', 'bottom');
-    BTNPreview.setAttribute('data-bs-original-title', 'Ver o Preview do Projeto');
+    // BTNPreview.setAttribute('data-toggle', 'tooltip');
+    // BTNPreview.setAttribute('data-placement', 'bottom');
+    // BTNPreview.setAttribute('data-bs-original-title', 'Ver o Preview do Projeto');
     
     const textoPreview = (document.createElement('span'));
     textoPreview.textContent = 'Preview';

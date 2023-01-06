@@ -111,10 +111,11 @@ class cardProjeto{
   }
   
   //Agrupamento de todos o conteúdo e formação do card
-  criarCard(){
+  criarCard(index){
     const div = document.querySelector('[data-conteudo="projetos"]');
 
     const novoCard = document.createElement('div');
+    novoCard.setAttribute('data-projeto-id', index);
     novoCard.classList.add('card-projeto');
     novoCard.classList.add(`card-projeto-${this.dificuldade.toLowerCase()}`);
     novoCard.setAttribute('data-conteudo-projetos', 'card-projeto');

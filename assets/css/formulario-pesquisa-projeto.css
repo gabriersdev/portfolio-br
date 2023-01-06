@@ -1,0 +1,78 @@
+.formulario-pesquisa-projeto{
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.formulario-pesquisa-projeto__label{
+  color: var(--cinza-medio-forte);
+  text-align: left;
+
+  margin-top: 0.5rem;
+}
+
+.formulario-pesquisa-projeto__input{
+  display: block;
+
+  background-color: var(--cinza-fraco);
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--cinza);
+  border-radius: 5px;
+
+  padding: 0.5rem;
+  width: auto;
+
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+
+  transition: 0.3s;
+}
+
+.formulario-pesquisa-projeto__input::placeholder{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.formulario-pesquisa-projeto__input:focus{
+  box-shadow:  0px 0px 0px 5px var(--azul-claro-medio);
+  -webkit-box-shadow: 0px 0px 0px 5px var(--azul-claro-medio);
+  -moz-box-shadow: 0px 0px 0px 5px var(--azul-claro-medio);
+  outline: none;
+  border-color: var(--azul-claro-forte);
+}
+
+.form-group{
+  display: flex;
+  align-items: center;
+}
+
+.formulario-pesquisa-projeto__botao{
+  margin-left: 0.5rem;
+  margin-top: -3px;
+
+  padding: 0.5rem 0.7rem;
+
+  background-color: var(--cinza-fraco-forte);
+
+  border: none;
+  border-radius: 50%;
+
+  transition: 0.3s;
+}
+
+.formulario-pesquisa-projeto__botao i{
+  padding: 0;
+}
+
+.formulario-pesquisa-projeto__botao:hover{
+  background-color: var(--cinza-medio);
+}
+
+@media screen and (max-width: 320px) {
+  .form-group{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

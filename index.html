@@ -13,7 +13,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <title>Gabriel Ribeiro - Portfólio</title>
   <link rel="shortcut icon" href="./assets/imagens/icon.svg" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" >
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/normalize.css">
@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="./assets/css/conteudo.css">
   <link rel="stylesheet" href="./assets/css/apresentacao.css">
   <link rel="stylesheet" href="./assets/css/projetos.css">
+  <link rel="stylesheet" href="./assets/css/formulario-pesquisa-projeto.css">
   <link rel="stylesheet" href="./assets/css/selecao.css">
   <link rel="stylesheet" href="./assets/css/linguagens.css">
   <link rel="stylesheet" href="./assets/css/sobre.css">
@@ -38,15 +39,15 @@
 <body>
   
     <header id="apresentacao" class="cabecalho container-elemento">
-    <section class="cabecalho__principal">
-      <section class="cabecalho__principal__apresentacao">
-        <h2 class="cabecalho__principal__apresentacao__titulo">Portfólio</h2>
-        <p class="cabecalho__principal__apresentacao__descricao">
-          Opa, tudo bom? Este é o meu porfólio, aqui você verá um pouco do meu trabalho como desenvolvedor. Você pode navegar através dos meus projetos, ver eles funcionando, saber quais linguagens eu tenho conhecimento, a minha formação e outros detalhes :D
-        </p>
-      </section>
-      
-      <section class="cabecalho__principal__menu">
+      <section class="cabecalho__principal">
+        <section class="cabecalho__principal__apresentacao">
+          <h2 class="cabecalho__principal__apresentacao__titulo">Portfólio</h2>
+          <p class="cabecalho__principal__apresentacao__descricao">
+            Opa, tudo bom? Este é o meu porfólio, aqui você verá um pouco do meu trabalho como desenvolvedor. Você pode navegar através dos meus projetos, ver eles funcionando, saber quais linguagens eu tenho conhecimento, a minha formação e outros detalhes :D
+          </p>
+        </section>
+        
+        <section class="cabecalho__principal__menu">
           <h2 class="cabecalho__principal__menu__titulo">Neste Portfólio</h2>
           <ul class="cabecalho__principal__menu__lista">
             <li class="cabecalho__principal__menu__item-lista ativo">
@@ -57,137 +58,137 @@
             </li>
             <li class="cabecalho__principal__menu__item-lista">
               <a href="#linguagens" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-title="Linguagens (Seção)" data-bs-content="Nesta seção você vê as linguagens que eu desenvolvo, o período que eu as uso e os cursos que realizei com elas">Linguagens</a></li>
-              <li class="cabecalho__principal__menu__item-lista"><a href="#sobre" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-title="Sobre Mim (Seção)" data-bs-content="Nesta seção você visualizará um resumo sobre mim, meus objetivos e as formações que tenho">Sobre mim</a>
-              </li>
-              <li class="cabecalho__principal__menu__item-lista">
-                <a href="#contato" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-title="Contato (Seção)" data-bs-content="Nesta seção você terá as informações necessárias para me contactar">Contato</a>
-              </li>
-            </ul>
+            <li class="cabecalho__principal__menu__item-lista">
+              <a href="#sobre" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-title="Sobre Mim (Seção)" data-bs-content="Nesta seção você visualizará um resumo sobre mim, meus objetivos e as formações que tenho">Sobre mim</a>
+            </li>
+            <li class="cabecalho__principal__menu__item-lista">
+              <a href="#contato" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-title="Contato (Seção)" data-bs-content="Nesta seção você terá as informações necessárias para me contactar">Contato</a>
+            </li>
+          </ul>
+        </section>
       </section>
-    </section>
-      
-    <section class="cabecalho__cards container-elemento">
-      <!-- Cards -->
-      <div class="card-linguagem-transparente">
-          <div class="card__header">
-            <div class="card__header__principal">
-              <h2 class="card__header__principal__titulo">PHP</h2>
-              <div class="card__header__principal__avaliacao">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
-                <i class="bi bi-star"></i>
-              </div>
-            </div>
-            <p class="card__header__versao">
-              Versão 7.4+
-            </p>
-          </div>
-          
-          <div class="card__corpo">
-            <div class="marcador coloracao-back-end">
-              <i class="bi bi-database marcador__icone"></i>
-              <p class="marcador__descricao">Back-end</p>
-            </div><br>
-            
-            <div class="marcador coloracao-programacao">
-              <i class="bi bi-braces marcador__icone"></i>
-              <p class="marcador__descricao">Programação</p>
-            </div><br>
-            
-            <div class="marcador coloracao-desenvolvimento-web">
-              <i class="bi bi-window-stack marcador__icone"></i>
-              <p class="marcador__descricao">Desenv. WEB</p>
-            </div>
-          </div>
-          
-          <div class="card__rodape">
-            <a data-acao-card-linguagem="php" class="card__rodape__link">Ver projetos</a>
-            <div class="contador-projetos" data-toggle="tooltip" data-placement="bottom" title="Quantidade de Projetos nesta Linguagem">
-              <p class="contador-projetos__quantidade">15</p>
-              <i class="bi bi-collection contador-projetos__icone"></i>
-            </div>
-          </div>
-      </div>
         
-      <div class="card-linguagem-transparente">
-          <div class="card__header">
-            <div class="card__header__principal">
-              <h2 class="card__header__principal__titulo">Java</h2>
-              <div class="card__header__principal__avaliacao">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
-                <i class="bi bi-star"></i>
+      <section class="cabecalho__cards container-elemento">
+        <!-- Cards -->
+        <div class="card-linguagem-transparente">
+            <div class="card__header">
+              <div class="card__header__principal">
+                <h2 class="card__header__principal__titulo">PHP</h2>
+                <div class="card__header__principal__avaliacao">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+              <p class="card__header__versao">
+                Versão 7.4+
+              </p>
+            </div>
+            
+            <div class="card__corpo">
+              <div class="marcador coloracao-back-end">
+                <i class="bi bi-database marcador__icone"></i>
+                <p class="marcador__descricao">Back-end</p>
+              </div><br>
+              
+              <div class="marcador coloracao-programacao">
+                <i class="bi bi-braces marcador__icone"></i>
+                <p class="marcador__descricao">Programação</p>
+              </div><br>
+              
+              <div class="marcador coloracao-desenvolvimento-web">
+                <i class="bi bi-window-stack marcador__icone"></i>
+                <p class="marcador__descricao">Desenv. WEB</p>
               </div>
             </div>
-            <p class="card__header__versao">
-              Versão 8+
-            </p>
-          </div>
-          
-          <div class="card__corpo">
-            <div class="marcador coloracao-back-end">
-              <i class="bi bi-database marcador__icone"></i>
-              <p class="marcador__descricao">Back-end</p>
-            </div><br>
             
-            <div class="marcador coloracao-programacao">
-              <i class="bi bi-braces marcador__icone"></i>
-              <p class="marcador__descricao">Programação</p>
-            </div><br>
-          </div>
-          
-          <div class="card__rodape oculto">
-            <a data-acao-card-linguagem="java" class="card__rodape__link">Ver projetos</a>
-            <div class="contador-projetos" data-toggle="tooltip" data-placement="bottom" title="Quantidade de Projetos nesta Linguagem">
-              <p class="contador-projetos__quantidade">15</p>
-              <i class="bi bi-collection contador-projetos__icone"></i>
-            </div>
-          </div>
-      </div>
-        
-      <div class="card-linguagem-transparente">
-          <div class="card__header">
-            <div class="card__header__principal">
-              <h2 class="card__header__principal__titulo">MySQL</h2>
-              <div class="card__header__principal__avaliacao">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
-                <i class="bi bi-star"></i>
+            <div class="card__rodape">
+              <a data-acao-card-linguagem="php" class="card__rodape__link">Ver projetos</a>
+              <div class="contador-projetos" data-toggle="tooltip" data-placement="bottom" title="Quantidade de Projetos nesta Linguagem">
+                <p class="contador-projetos__quantidade">15</p>
+                <i class="bi bi-collection contador-projetos__icone"></i>
               </div>
             </div>
-            <p class="card__header__versao">
-              Versão 8.0+
-            </p>
-          </div>
+        </div>
           
-          <div class="card__corpo">
-            <div class="marcador coloracao-back-end">
-              <i class="bi bi-database marcador__icone"></i>
-              <p class="marcador__descricao">Back-end</p>
-            </div><br>
+        <div class="card-linguagem-transparente">
+            <div class="card__header">
+              <div class="card__header__principal">
+                <h2 class="card__header__principal__titulo">Java</h2>
+                <div class="card__header__principal__avaliacao">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+              <p class="card__header__versao">
+                Versão 8+
+              </p>
+            </div>
             
-            <div class="marcador coloracao-desenvolvimento-web">
-              <i class="bi bi-window-stack marcador__icone"></i>
-              <p class="marcador__descricao">Desenv. WEB</p>
+            <div class="card__corpo">
+              <div class="marcador coloracao-back-end">
+                <i class="bi bi-database marcador__icone"></i>
+                <p class="marcador__descricao">Back-end</p>
+              </div><br>
+              
+              <div class="marcador coloracao-programacao">
+                <i class="bi bi-braces marcador__icone"></i>
+                <p class="marcador__descricao">Programação</p>
+              </div><br>
             </div>
-          </div>
+            
+            <div class="card__rodape oculto">
+              <a data-acao-card-linguagem="java" class="card__rodape__link">Ver projetos</a>
+              <div class="contador-projetos" data-toggle="tooltip" data-placement="bottom" title="Quantidade de Projetos nesta Linguagem">
+                <p class="contador-projetos__quantidade">15</p>
+                <i class="bi bi-collection contador-projetos__icone"></i>
+              </div>
+            </div>
+        </div>
           
-          <div class="card__rodape">
-            <a data-acao-card-linguagem="mysql" class="card__rodape__link">Ver projetos</a>
-            <div class="contador-projetos" data-toggle="tooltip" data-placement="bottom" title="Quantidade de Projetos nesta Linguagem">
-              <p class="contador-projetos__quantidade">15</p>
-              <i class="bi bi-collection contador-projetos__icone"></i>
+        <div class="card-linguagem-transparente">
+            <div class="card__header">
+              <div class="card__header__principal">
+                <h2 class="card__header__principal__titulo">MySQL</h2>
+                <div class="card__header__principal__avaliacao">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+              <p class="card__header__versao">
+                Versão 8.0+
+              </p>
             </div>
-          </div>
-      </div>
-    </section>
-      
+            
+            <div class="card__corpo">
+              <div class="marcador coloracao-back-end">
+                <i class="bi bi-database marcador__icone"></i>
+                <p class="marcador__descricao">Back-end</p>
+              </div><br>
+              
+              <div class="marcador coloracao-desenvolvimento-web">
+                <i class="bi bi-window-stack marcador__icone"></i>
+                <p class="marcador__descricao">Desenv. WEB</p>
+              </div>
+            </div>
+            
+            <div class="card__rodape">
+              <a data-acao-card-linguagem="mysql" class="card__rodape__link">Ver projetos</a>
+              <div class="contador-projetos" data-toggle="tooltip" data-placement="bottom" title="Quantidade de Projetos nesta Linguagem">
+                <p class="contador-projetos__quantidade">15</p>
+                <i class="bi bi-collection contador-projetos__icone"></i>
+              </div>
+            </div>
+        </div>
+      </section>
     </header>
     
     <nav class="menu">
@@ -565,6 +566,16 @@
           <button class="selecao__botao-projeto" data-acao-projeto="html">HTML</button>
         </div>
         
+        <form class="formulario-pesquisa-projeto" data-form-pesquisa-projeto>
+          <label for="" class="formulario-pesquisa-projeto__label">Busque por um projeto específico</label>
+          <div class="form-group">
+            <input list="listagem-projetos" class="formulario-pesquisa-projeto__input" maxlength="30" placeholder="Pesquise um projeto" data-selecao-projeto required>
+            <button class="formulario-pesquisa-projeto__botao" data-recarregar-projetos data-toggle="tooltip" data-placement="bottom" title="Recarregar projetos"><i class="bi bi-arrow-clockwise"></i></button>
+          </div>
+          <datalist id="listagem-projetos" name="listagem-projetos" data-lista-projetos>
+          </datalist>
+        </form>
+
         <div class="projetos__nenhum-projeto" data-conteudo="nenhum-projeto">
           Nenhum projeto foi encontrado
         </div>

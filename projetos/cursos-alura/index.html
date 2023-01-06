@@ -21,17 +21,14 @@
   <link rel="stylesheet" href="../../assets/css/variaveis.css">
   <link rel="stylesheet" href="../../assets/css/menu.css">
   <link rel="stylesheet" href="../../assets/css/marcador.css">
-  <link rel="stylesheet" href="../../assets/css/cabecalho.css">
-  <link rel="stylesheet" href="../../assets/css/card.css">
   <link rel="stylesheet" href="../../assets/css/conteudo.css">
   <link rel="stylesheet" href="../../assets/css/apresentacao.css">
-  <link rel="stylesheet" href="../../assets/css/projetos.css">
   <link rel="stylesheet" href="../../assets/css/selecao.css">
+  <link rel="stylesheet" href="../../assets/css/formulario-pesquisa-projeto.css">
   
   <link rel="stylesheet" href="../../assets/css/paginas-auxiliares/cabecalho-auxiliar.css">
   <link rel="stylesheet" href="../../assets/css/paginas-auxiliares/projetos-pg-auxiliar.css">
   <link rel="stylesheet" href="../../assets/css/paginas-auxiliares/selecao-pg-auxiliar.css">
-  <link rel="stylesheet" href="../../assets/css/paginas-auxiliares/formulario-pg-auxiliar.css">
   <link rel="stylesheet" href="../../assets/css/paginas-auxiliares/card-pg-auxiliar-projeto.css">
   <link rel="stylesheet" href="../../assets/css/paginas-auxiliares/apresentacao-pg-auxiliar.css">
   <link rel="stylesheet" href="../../assets/css/paginas-auxiliares/utilitarios.css">
@@ -80,9 +77,12 @@
         <button class="selecao-pg-auxiliar-projetos__botao" data-acao-projeto="html">HTML</button>
       </div>
 
-      <form class="formulario-pg-auxiliar" data-pg-aux-formulario>
-        <label for="" class="formulario-pg-auxiliar__label">Busque por um projeto específico</label>
-        <input list="listagem-projetos" class="formulario-pg-auxiliar__input" maxlength="30" placeholder="Pesquise um projeto" data-selecao-projeto required>
+      <form class="formulario-pesquisa-projeto" data-form-pesquisa-projeto>
+        <label for="" class="formulario-pesquisa-projeto__label">Busque por um projeto específico</label>
+        <div class="form-group">
+          <input list="listagem-projetos" class="formulario-pesquisa-projeto__input" maxlength="30" placeholder="Pesquise um projeto" data-selecao-projeto required>
+          <button class="formulario-pesquisa-projeto__botao" data-recarregar-projetos data-toggle="tooltip" data-placement="bottom" title="Recarregar projetos"><i class="bi bi-arrow-clockwise"></i></button>
+        </div>
         <datalist id="listagem-projetos" name="listagem-projetos" data-lista-projetos>
         </datalist>
       </form>
@@ -141,6 +141,10 @@
   <div class="modal fade" id="modal-exibicao-preview" tabindex="-1" aria-labelledby="modal-exibicao-preview-label" aria-hidden="true">
     <div class="modal-dialog modal-xl">
       <div class="modal-content modal-estilo">
+        <div class='modal-header'>
+          <h5 class='modal-title' id=''></h5>
+          <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+        </div>
         <div class="modal-body modal-exibicao-preview__corpo">
           <div class="spinner-border text-secondary modal-exibicao-preview__corpo__spinner" role="status">
             <span class="sr-only"></span>
@@ -152,6 +156,8 @@
     </div>
   </div>
   
+  <a href="#apresentacao" class="botao-subir"><i class="bi bi-arrow-up-short"></i></a>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
