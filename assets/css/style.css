@@ -14,7 +14,7 @@ body{
 }
 
 .container-principal{
-  margin-top: 2.5rem;
+  margin-top: 2.5rem !important;
 }
 
 a{
