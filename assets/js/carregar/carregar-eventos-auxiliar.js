@@ -1,6 +1,6 @@
-import { projetos } from "../classes/projetos"
+import { projetos } from "../classes/projetos.js"
 
-const classeProjetos = new projetos()
+const classeProjetos = new projetos();
 
 const acoesProjetos = {
   todos:botao => botao.addEventListener("click", evento => {classeProjetos.exibirTodosOsProjetos(botao)}),

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url(./spinner-load.css);
 
 *{
   font-family: 'Inter', sans-serif;
@@ -40,12 +41,12 @@ a{
   right: 0.5rem;
 
   border-radius: 50%;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
 
   color: var(--preto);
   padding: 0 0.65rem;
 
-  background-color: var(--azul-claro-forte);
+  background-color: rgba(0, 0, 0, 0.4);
   opacity: 0.7;
 
   transition: 0.3s;
@@ -59,7 +60,8 @@ a{
 
 .botao-subir:hover{
   opacity: 1;
-  color: var(--preto);
+  color: var(--branco);
+  border-color: var(--branco);
 }
 
 .oculto{

@@ -15,6 +15,9 @@
 }
 
 .linguagem{
+  display: grid;
+  grid-template-rows: 3.5rem auto;
+  
   padding: 1.5rem 1rem;
 
   margin-top: 0.75rem;
@@ -49,18 +52,17 @@
 }
 
 .linguagem__corpo__descricao{
+  display: none;
   margin: 1rem 0;
-}
-
-@media screen and (min-width: 0) and (max-width: 390px){
-  .linguagem__corpo{
-    margin-left: auto;
-  }
 }
 
 @media screen and (min-width: 0) and (max-width: 767px){
   .linguagens__lista{
     grid-template-columns: 100%;
+  }
+
+  .linguagem__corpo{
+    margin-left: 0;
   }
 
   .linguagem{

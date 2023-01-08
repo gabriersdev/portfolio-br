@@ -14,7 +14,7 @@
 }
 
 .sobre__lista__item{
-  padding-top:  1rem;
+  margin-top:  1.5rem;
 }
 
 .sobre__lista__item__cabecalho{
@@ -46,7 +46,7 @@
   margin: 1rem 0;
 }
 
-@media screen and (min-width: 0) and (max-width: 390px){
+@media screen and (max-width: 767px){
   .sobre__lista__item__corpo{
     margin-left: 0;
   }
