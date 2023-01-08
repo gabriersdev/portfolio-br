@@ -46,28 +46,6 @@ export const carregarCardsPrincipal = () => {
       listagemProjetos.push(dadosIdentificacao);
     }
   });
-  
-  const todosProjetos = [
-    ['php', 0],
-    ['mysql', 0],
-    ['js', 0],
-    ['css', 0],
-    ['html', 0]
-  ]
-
-  dadosProjetos.forEach(projeto => {
-    projeto.linguagens.forEach((linguagem) => {
-
-      todosProjetos.forEach((dados, index) => {
-        if(linguagem.toLowerCase() == todosProjetos[index][0]){  
-          todosProjetos[index][1] += 1;
-        }
-      })
-
-    })
-  })
-
-  console.log(todosProjetos)
 
   return listagemProjetos;
 }

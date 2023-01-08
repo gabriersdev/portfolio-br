@@ -2,7 +2,8 @@ import { trocarTipoFeedbackModal, controlarExibicaoModal } from "./utilitarios/m
 import { ajustarPeriodoProgramando, ajustarIdade, acoesModal, limparFormulario } from "./utilitarios/utilitarios.js";
 import { carregarCardsPrincipal } from "./carregar/carregar-cards-principal.js";
 import { acoes } from "./carregar/carregar-eventos-principal.js";
-import { pesquisarProjeto } from './interacao/pesquisa-projetos.js'
+import { pesquisarProjeto } from './interacao/pesquisa-projetos.js';
+import { carregarQuantidadeProjetosLinguagem } from './carregar/carregar-quantidade-projetos-linguagem.js';
 
 (() => {
   
@@ -63,7 +64,8 @@ import { pesquisarProjeto } from './interacao/pesquisa-projetos.js'
     };
   })
   
-  pesquisarProjeto(carregarCardsPrincipal())
+  pesquisarProjeto(carregarCardsPrincipal());
+  carregarQuantidadeProjetosLinguagem();
   ajustarIdade();
   ajustarPeriodoProgramando();
   
