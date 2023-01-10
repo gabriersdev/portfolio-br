@@ -165,13 +165,16 @@
   }
 
   .cabecalho__cards{
-    display: block;
-    bottom: 1rem;
+    display: none;
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1365) {
-  .cabecalho__principal__menu{
+@media screen and (min-width: 767px) and (max-width: 1441px) and (max-height: 800px) {
+  .cabecalho__principal{
+    top: calc(25% - 1vh);
+  }
+
+  .cabecalho__cards{
     display: none;
   }
 }

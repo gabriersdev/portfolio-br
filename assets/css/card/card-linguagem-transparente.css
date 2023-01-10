@@ -133,25 +133,11 @@
     display: none;
   }
 
-  .card__header__versao{
-    display: none;
-  }
-
   .card-linguagem-transparente .card__corpo{
     display: none;
   }
 
   .card__rodape{
     margin-top: 1rem;
-  }
-}
-
-@media screen and (min-width: 767px) and (max-width: 1365px){
-  .card__header__principal__avaliacao{
-    display: none;
-  }
-
-  .card__header__versao{
-    text-align: right;
   }
 }
