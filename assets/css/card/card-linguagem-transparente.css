@@ -146,7 +146,7 @@
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 992px){
+@media screen and (min-width: 767px) and (max-width: 1365px){
   .card__header__principal__avaliacao{
     display: none;
   }

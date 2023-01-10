@@ -169,3 +169,9 @@
     bottom: 1rem;
   }
 }
+
+@media screen and (min-width: 767px) and (max-width: 1365) {
+  .cabecalho__principal__menu{
+    display: none;
+  }
+}
