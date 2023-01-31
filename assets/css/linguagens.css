@@ -34,6 +34,7 @@
 
 .linguagem__cabecalho__icone{
   font-size: var(--icone-grande);
+  width: calc(var(--icone-grande) - 0.5rem) !important;
 
   color: var(--cinza-medio-forte);
 }
