@@ -68,10 +68,20 @@ const acoesModal = {
   })
 }
 
+const isEmpty = (valor) => {
+  return valor == undefined && valor == null;
+}
+
+const lengthZero = (string) => {
+  return string.length <= 0;
+}
+
 export{
   ajustarPeriodoProgramando,
   ajustarIdade,
   controlarNenhumProjeto,
   acoesModal,
-  limparFormulario
+  limparFormulario,
+  isEmpty,
+  lengthZero
 }
