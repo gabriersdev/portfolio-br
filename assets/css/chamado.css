@@ -41,10 +41,10 @@
 
   border-width: 1.5px;
   border-style: solid;
-  border-color: var(--cinza-medio);
+  border-color: var(--cinza-fraco-sec);
   border-radius: 5px;
 
-  color: var(--cinza);
+  color: var(--cinza-fraco-sec);
   text-align: center;
 
   cursor: pointer;
