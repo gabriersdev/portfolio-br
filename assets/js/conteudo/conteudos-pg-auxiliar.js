@@ -1,4 +1,4 @@
-const dadosProjetos = [
+const dadosProjetosAlura = [
   {
     titulo: "Doguito PET Shop", 
     autor: "Gabriel Ribeiro", 
@@ -85,6 +85,22 @@ const dadosProjetos = [
   },
 ]
 
+const dadosProjetosAntigos = [
+  {
+    titulo: "Doguito PET Shop", 
+    autor: "Gabriel Ribeiro", 
+    descricao: 'Projeto desenvolvido nos cursos de Validação de Formulário e CRUD com JS. É um gerenciador de um PET Shop, onde é possível cadastrar um cliente e produto e você vê os dados salvos em API em um dashboard.',
+    existeSaibaMais: false,
+    tituloSaibaMais: '',
+    saibaMais: '', 
+    conclusao: 2022-12-31, 
+    link: "https://gabrieszin.github.io/portfolio/", 
+    linguagens: ["JS", "CSS", "HTML"],
+    linkPreview: ''
+  }
+]
+
 export{
-  dadosProjetos
+  dadosProjetosAlura,
+  dadosProjetosAntigos
 }
