@@ -4,10 +4,13 @@ export const carregarQuantidadeProjetosLinguagem = () => {
   
   const todasLinguagens = [
     ['php', 0],
+    ['java', 0],
     ['mysql', 0],
     ['js', 0],
     ['css', 0],
-    ['html', 0]
+    ['html', 0],
+    ['figma', 0],
+    ['git', 0]
   ]
   
   dadosProjetos.forEach(projeto => {

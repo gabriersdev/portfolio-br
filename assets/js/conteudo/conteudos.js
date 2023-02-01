@@ -8,7 +8,7 @@ const dadosProjetos = [
     saibaMais: 'Através do Expresso é possível consultar linhas, estações e pontos de recarga. O usuário pode adicionar os cartões de transporte público, favoritas as linhas que ele mais utiliza e gerenciar o uso delas através dos cartões. É possível gerar relatórios de uso dos cartões e baixar o extrato destes cartões e os dados das linhas', 
     conclusao: 2022-12-31, 
     link: "", 
-    linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML"],
+    linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML", "Figma"],
     dificuldade: 3
   },
   {

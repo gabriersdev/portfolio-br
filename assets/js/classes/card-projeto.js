@@ -74,7 +74,7 @@ class cardProjeto{
     const corpoProjeto = document.createElement('div');
     corpoProjeto.classList.add(classeCorpoProjeto);
     
-    this.linguagensProjeto.forEach(linguagem => {
+    this.linguagensProjeto.splice(0, 5).forEach(linguagem => {
       const marcador = document.createElement('span');
       marcador.classList.add(classeCorpoMarcador);
       marcador.textContent = linguagem;
