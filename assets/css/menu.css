@@ -77,6 +77,10 @@
   color: inherit;
 }
 
+.menu__item-lista a i{
+  margin-right: 0.5rem;
+}
+
 .menu__item-lista:hover{
   background-color: rgba(170, 170, 170, 0.1);
   border-color: var(--cinza-mediano-forte);
