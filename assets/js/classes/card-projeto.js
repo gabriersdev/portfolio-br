@@ -73,12 +73,14 @@ class cardProjeto{
     
     const corpoProjeto = document.createElement('div');
     corpoProjeto.classList.add(classeCorpoProjeto);
-    
-    this.linguagensProjeto.splice(0, 5).forEach(linguagem => {
-      const marcador = document.createElement('span');
-      marcador.classList.add(classeCorpoMarcador);
-      marcador.textContent = linguagem;
-      corpoProjeto.appendChild(marcador);
+
+    this.linguagensProjeto.forEach((linguagem, index) => {
+      if(index < 5){
+        const marcador = document.createElement('span');
+        marcador.classList.add(classeCorpoMarcador);
+        marcador.textContent = linguagem;
+        corpoProjeto.appendChild(marcador);
+      }
     })
     
     corpoProjeto.appendChild(descricaoProjeto);

@@ -12,14 +12,14 @@ export const carregarQuantidadeProjetosLinguagem = () => {
     ['figma', 0],
     ['git', 0]
   ]
-  
+
   dadosProjetos.forEach(projeto => {
     projeto.linguagens.forEach((linguagem) => {
       
       todasLinguagens.forEach((dados, index) => {
         
         const nomeLinguagem = todasLinguagens[index][0];
-
+        
         if(linguagem.toLowerCase() == nomeLinguagem){  
           todasLinguagens[index][1] += 1;
         }

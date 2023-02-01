@@ -9,7 +9,7 @@ const cardsLinguagem = {
   css:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirProjetos(botao.dataset.acaoCardLinguagem.toLowerCase(), document.querySelector(`[data-acao-projeto=${botao.dataset.acaoCardLinguagem.toLowerCase()}`))}),
   mysql:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirProjetos(botao.dataset.acaoCardLinguagem.toLowerCase(), document.querySelector(`[data-acao-projeto=${botao.dataset.acaoCardLinguagem.toLowerCase()}`))}),
   html:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirProjetos(botao.dataset.acaoCardLinguagem.toLowerCase(), document.querySelector(`[data-acao-projeto=${botao.dataset.acaoCardLinguagem.toLowerCase()}`))}),
-  java:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirTodosOsProjetos(document.querySelector('[data-acao-projeto="todos"'))}),
+  java:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirProjetos(botao.dataset.acaoCardLinguagem.toLowerCase(), document.querySelector(`[data-acao-projeto=${botao.dataset.acaoCardLinguagem.toLowerCase()}`))} ),
   git:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirTodosOsProjetos(document.querySelector('[data-acao-projeto="todos"'))}),
   figma:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirTodosOsProjetos(document.querySelector('[data-acao-projeto="todos"'))})
 };
