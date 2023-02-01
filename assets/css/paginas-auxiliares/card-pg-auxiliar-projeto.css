@@ -2,6 +2,7 @@
   display: grid;
   grid-template-rows: 5px calc(2.5rem + 1.7rem * 2 + 1rem) auto calc(2.75rem + 1rem);
   min-width: 400px;
+  max-width: 400px;
 
   padding: 2rem 1rem;
 
