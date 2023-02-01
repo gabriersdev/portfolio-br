@@ -87,17 +87,65 @@ const dadosProjetosAlura = [
 
 const dadosProjetosAntigos = [
   {
-    titulo: "Doguito PET Shop", 
+    titulo: "Site de Conscientização", 
     autor: "Gabriel Ribeiro", 
-    descricao: 'Projeto desenvolvido nos cursos de Validação de Formulário e CRUD com JS. É um gerenciador de um PET Shop, onde é possível cadastrar um cliente e produto e você vê os dados salvos em API em um dashboard.',
+    descricao: "O projeto é um website criado usando um template gratuito. O conteúdo visa realizar uma conscientização sobre o uso de entorpecentes e as suas consequências no corpo. Há também dicas de como tratar o vício e relato de testemunhas retirados da internet.", 
+    existeSaibaMais: false, 
+    tituloSaibaMais: '', 
+    saibaMais: "", 
+    conclusao: 2022-12-19, 
+    link: "", 
+    linguagens: ["JS", "CSS", "HTML"], 
+    linkPreview: ''
+  },
+  {
+    titulo: "Quiz de História", 
+    autor: "Gabriel Ribeiro", 
+    descricao: 'É um Quiz com algumas perguntas de História em geral. Conforme os acertos, no final o usuário é informado da sua perfomance no Quiz.',
     existeSaibaMais: false,
     tituloSaibaMais: '',
     saibaMais: '', 
     conclusao: 2022-12-31, 
-    link: "https://gabrieszin.github.io/portfolio/", 
+    link: "", 
     linguagens: ["JS", "CSS", "HTML"],
     linkPreview: ''
-  }
+  },
+  {
+    titulo: "Calculadora", 
+    autor: "Gabriel Ribeiro", 
+    descricao: "É uma calculadora comum. É possível fazer os cálculos aritméticos básicos (somar, subtrair, dividir e multiplicar), obter os últimos cinco cálculos feitos e seus respectivos resultados e também ativar/desativar o Modo Noturno.", 
+    existeSaibaMais: false, 
+    tituloSaibaMais: '', 
+    saibaMais: "", 
+    conclusao: 2022-12-19, 
+    link: "", 
+    linguagens: ["JS", "CSS", "HTML"], 
+    linkPreview: ''
+  },
+  {
+    titulo: "Tempo para live", 
+    autor: "Gabriel Ribeiro", 
+    descricao: "Este projeto é um cronômetro que conta quanto tempo falta para as lives do Eskimozin na Twitch. As lives geralmente ocorrem às segundas, quartas, sextas e aos sábados, começando geralmente às 19h - dias e horário em que o script faz a contagem.", 
+    existeSaibaMais: false, 
+    tituloSaibaMais: '', 
+    saibaMais: "", 
+    conclusao: 2022-12-19, 
+    link: "", 
+    linguagens: ["JS", "CSS", "HTML"], 
+    linkPreview: ''
+  },
+  {
+    titulo: "Player MP3", 
+    autor: "Gabriel Ribeiro", 
+    descricao: "É um tocador de músicas que usa o JavaScript para trocar as faixas que foram salvas no servidor. O Player usa ainda a biblioteca FontAwesome e as capas de álbuns do Spotify. As músicas não tem direitos autorais e foram retiradas do YouTube.", 
+    existeSaibaMais: false, 
+    tituloSaibaMais: '', 
+    saibaMais: "", 
+    conclusao: 2022-12-19, 
+    link: "", 
+    linguagens: ["JS", "CSS", "HTML"], 
+    linkPreview: ''
+  },
 ]
 
 export{

@@ -48,16 +48,16 @@ const dadosProjetos = [
     dificuldade: 2
   },
   {
-    titulo: "Site de Conscientização", 
+    titulo: "Projetos Antigos", 
     autor: "Gabriel Ribeiro", 
-    descricao: "O projeto é um website criado usando um template gratuito. O conteúdo visa realizar uma conscientização sobre o uso de entorpecentes e as suas consequências no corpo. Há também dicas de como tratar o vício e relato de testemunhas retirados da internet.", 
+    descricao: "Aqui você encontra os primeiro projetos que eu desenvolvi :)", 
     existeSaibaMais: false, 
     tituloSaibaMais: '', 
     saibaMais: "", 
     conclusao: 2022-12-19, 
-    link: "", 
+    link: "./projetos/projetos-antigos/", 
     linguagens: ["JS", "CSS", "HTML"], 
-    dificuldade: 2
+    dificuldade: 1
   },
   {
     titulo: "Gerenciador de Biblioteca", 
@@ -93,54 +93,6 @@ const dadosProjetos = [
     conclusao: 2022-12-31, 
     link: "https://gabrieszin.github.io/Jogo-da-Forca/", 
     linguagens: ["JS", "CSS", "HTML"],
-    dificuldade: 1
-  },
-  {
-    titulo: "Quiz de História", 
-    autor: "Gabriel Ribeiro", 
-    descricao: 'É um Quiz com algumas perguntas de História em geral. Conforme os acertos, no final o usuário é informado da sua perfomance no Quiz.',
-    existeSaibaMais: false,
-    tituloSaibaMais: '',
-    saibaMais: '', 
-    conclusao: 2022-12-31, 
-    link: "", 
-    linguagens: ["JS", "CSS", "HTML"],
-    dificuldade: 1
-  },
-  {
-    titulo: "Calculadora", 
-    autor: "Gabriel Ribeiro", 
-    descricao: "É uma calculadora comum. É possível fazer os cálculos aritméticos básicos (somar, subtrair, dividir e multiplicar), obter os últimos cinco cálculos feitos e seus respectivos resultados e também ativar/desativar o Modo Noturno.", 
-    existeSaibaMais: false, 
-    tituloSaibaMais: '', 
-    saibaMais: "", 
-    conclusao: 2022-12-19, 
-    link: "", 
-    linguagens: ["JS", "CSS", "HTML"], 
-    dificuldade: 1
-  },
-  {
-    titulo: "Tempo para live", 
-    autor: "Gabriel Ribeiro", 
-    descricao: "Este projeto é um cronômetro que conta quanto tempo falta para as lives do Eskimozin na Twitch. As lives geralmente ocorrem às segundas, quartas, sextas e aos sábados, começando geralmente às 19h - dias e horário em que o script faz a contagem.", 
-    existeSaibaMais: false, 
-    tituloSaibaMais: '', 
-    saibaMais: "", 
-    conclusao: 2022-12-19, 
-    link: "", 
-    linguagens: ["JS", "CSS", "HTML"], 
-    dificuldade: 1
-  },
-  {
-    titulo: "Player MP3", 
-    autor: "Gabriel Ribeiro", 
-    descricao: "É um tocador de músicas que usa o JavaScript para trocar as faixas que foram salvas no servidor. O Player usa ainda a biblioteca FontAwesome e as capas de álbuns do Spotify. As músicas não tem direitos autorais e foram retiradas do YouTube.", 
-    existeSaibaMais: false, 
-    tituloSaibaMais: '', 
-    saibaMais: "", 
-    conclusao: 2022-12-19, 
-    link: "", 
-    linguagens: ["JS", "CSS", "HTML"], 
     dificuldade: 1
   },
 ]
