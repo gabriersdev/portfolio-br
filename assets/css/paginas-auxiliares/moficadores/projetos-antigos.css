@@ -1,0 +1,19 @@
+nav.menu, .menu__identificacao__titulos-titulo, .menu__item-lista{
+  color: var(--preto) !important;
+}
+
+.menu__item-lista{
+  border-color: var(--cinza-medio-forte);
+}
+
+.menu__identificacao__titulos-titulo-secundario{
+  color: var(--cinza-medio-forte);
+}
+
+.cabecalho-auxiliar{
+  background: url(../../../imagens/banner-projetos-antigos.svg) left / cover no-repeat;
+}
+
+.chamado-conheca-portfolio{
+  background: url(../../../imagens/background-chamado-projetos-antigos.svg) center / cover no-repeat;
+}
