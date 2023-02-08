@@ -1,4 +1,5 @@
 import { projetos } from "../classes/projetos.js";
+import { fecharModal } from "./modal.js";
 
 const calcularPeriodo = (inicio, forma) => {
   let dataInicio = new Date(inicio);
