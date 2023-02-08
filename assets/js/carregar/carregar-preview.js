@@ -28,14 +28,14 @@ export const carregarPreview = (btn) => {
     const vazio = corpo.querySelector('[data-link-vazio]');
     vazio.textContent = '';
     vazio.textContent = 'Não foi atribuído um link para este projeto'
+    spinner.style.display = 'none';
   }
 
   else{
     iframe.addEventListener("load" , function(){
       iframe.classList.add('block');
+      spinner.style.display = 'none';
     })
   }
-
-  spinner.style.display = 'none';
 
 }
