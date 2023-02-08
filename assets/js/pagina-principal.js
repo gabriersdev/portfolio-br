@@ -1,6 +1,7 @@
 import { trocarTipoFeedbackModal, controlarExibicaoModal } from "./utilitarios/modal.js";
 import { ajustarPeriodoProgramando, ajustarIdade, acoesModal, limparFormulario } from "./utilitarios/utilitarios.js";
 import { carregarCardsPrincipal } from "./carregar/carregar-cards-principal.js";
+import { carregarPreview } from "./carregar/carregar-preview.js";
 import { acoes } from "./carregar/carregar-eventos-principal.js";
 import { pesquisarProjeto } from './interacao/pesquisa-projetos.js';
 import { carregarQuantidadeProjetosLinguagem } from './carregar/carregar-quantidade-projetos-linguagem.js';
@@ -69,6 +70,13 @@ import { carregarQuantidadeProjetosLinguagem } from './carregar/carregar-quantid
   ajustarIdade();
   ajustarPeriodoProgramando();
   
+  const btnPreview = document.querySelectorAll('[data-btn-preview]');
+  btnPreview.forEach(btn => {
+    btn.addEventListener('click', (evento) => {
+      carregarPreview(btn);
+    })
+  })
+
   const botoesAcaoCardsLinguagem = document.querySelectorAll('[data-acao-card-linguagem]');
   botoesAcaoCardsLinguagem.forEach(botao => {
     const linguagem = botao.dataset.acaoCardLinguagem.toLowerCase();

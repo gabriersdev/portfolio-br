@@ -93,6 +93,7 @@ class cardProjeto{
     linkProjeto.classList.add(classeLink);
     linkProjeto.setAttribute('href', this.URLProjeto);
     linkProjeto.setAttribute('target', '_blank');
+    linkProjeto.dataset.projetoLink = '';
 
     try{
       if((new URL(this.URLProjeto).origin.trim()) == "https://github.com"){
@@ -108,7 +109,22 @@ class cardProjeto{
     rodapeProjeto.classList.add(classeRodape);
     rodapeProjeto.appendChild(linkProjeto);
     
-    if(this.nivelDificuldade !== null){
+    const BTNPreview = document.createElement('a');
+    BTNPreview.classList.add(classeRodapeMarcador);
+    BTNPreview.classList.add("card-pg-projeto__rodape__botao-preview");
+    BTNPreview.setAttribute('data-btn-preview', '');
+    const textoPreview = (document.createElement('span'));
+    textoPreview.textContent = '';
+    const iconeBTNPreview = document.createElement('i');
+    iconeBTNPreview.classList.add('bi');
+    iconeBTNPreview.classList.add('bi-eye-fill');
+    BTNPreview.appendChild(textoPreview);
+    BTNPreview.appendChild(iconeBTNPreview);
+
+    rodapeProjeto.appendChild(BTNPreview);
+
+    if(false){
+    //if(this.nivelDificuldade !== null){
       const dificuldadeProjeto = document.createElement('span');
       dificuldadeProjeto.classList.add(classeRodapeMarcador);
       dificuldadeProjeto.setAttribute('data-toggle', 'tooltip');
