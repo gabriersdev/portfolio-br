@@ -5,6 +5,7 @@ import { carregarPreview } from "./carregar/carregar-preview.js";
 import { acoes } from "./carregar/carregar-eventos-principal.js";
 import { pesquisarProjeto } from './interacao/pesquisa-projetos.js';
 import { carregarQuantidadeProjetosLinguagem } from './carregar/carregar-quantidade-projetos-linguagem.js';
+import { controleFechamentoModal } from "./utilitarios/modal.js";
 
 (() => {
   
@@ -70,35 +71,43 @@ import { carregarQuantidadeProjetosLinguagem } from './carregar/carregar-quantid
   ajustarIdade();
   ajustarPeriodoProgramando();
   
-  const btnPreview = document.querySelectorAll('[data-btn-preview]');
-  btnPreview.forEach(btn => {
-    btn.addEventListener('click', (evento) => {
-      carregarPreview(btn);
+  window.addEventListener('load', () => {
+    const modalPreviews = ` <div class="modal fade" id="modal-exibicao-preview" tabindex="-1" aria-labelledby="modal-exibicao-preview-label" aria-hidden="true"> <div class="modal-dialog modal-xl"> <div class="modal-content modal-estilo"> <div class='modal-header'> <h5 class='modal-title' id=''></h5> <button data-modal-fecha><i class='bi bi-x-lg'></i></button> </div> <div class="modal-body modal-exibicao-preview__corpo"> <div class="spinner-border text-secondary modal-exibicao-preview__corpo__spinner" role="status"> <span class="sr-only"></span> </div> <iframe src="" class="modal-exibicao-preview__corpo__iframe" frameborder="0" sandbox="allow-same-origin allow-forms allow-modals allow-popups allow-scripts"> </iframe> </div> </div> </div> </div>`;
+    const areaImportacao = document.querySelector('[data-area-importacao]');
+    
+    areaImportacao !== null ? areaImportacao.innerHTML += modalPreviews : '';
+    controleFechamentoModal();
+    
+    const botoesAcaoCardsLinguagem = document.querySelectorAll('[data-acao-card-linguagem]');
+    botoesAcaoCardsLinguagem.forEach(botao => {
+      const linguagem = botao.dataset.acaoCardLinguagem.toLowerCase();
+      if(acoes.cardsLinguagem[linguagem]){
+        acoes.cardsLinguagem[linguagem](botao);
+      }
     })
-  })
-
-  const botoesAcaoCardsLinguagem = document.querySelectorAll('[data-acao-card-linguagem]');
-  botoesAcaoCardsLinguagem.forEach(botao => {
-    const linguagem = botao.dataset.acaoCardLinguagem.toLowerCase();
-    if(acoes.cardsLinguagem[linguagem]){
-      acoes.cardsLinguagem[linguagem](botao);
-    }
-  })
-  
-  const botoesAcaoProjetos = document.querySelectorAll("[data-acao-projeto]");
-  botoesAcaoProjetos.forEach(botao => {
-    const nomeAcaoProjeto = botao.getAttribute("data-acao-projeto").toLowerCase();
-    if(acoes.btnProjetos[nomeAcaoProjeto]){
-      acoes.btnProjetos[nomeAcaoProjeto](botao)
-    }
-  })
-  
-  const botoesAcaoLinguagens = document.querySelectorAll("[data-acao-linguagens]");
-  botoesAcaoLinguagens.forEach(botao => {
-    const nomeAcaoLinguagem = botao.getAttribute("data-acao-linguagens").toLowerCase();
-    if(acoes.btnlinguagens[nomeAcaoLinguagem]){
-      acoes.btnlinguagens[nomeAcaoLinguagem](botao)
-    }
+    
+    const btnPreview = document.querySelectorAll('[data-btn-preview]');
+    btnPreview.forEach(btn => {
+      btn.addEventListener('click', (evento) => {
+        carregarPreview(btn);
+      })
+    })
+    
+    const botoesAcaoProjetos = document.querySelectorAll("[data-acao-projeto]");
+    botoesAcaoProjetos.forEach(botao => {
+      const nomeAcaoProjeto = botao.getAttribute("data-acao-projeto").toLowerCase();
+      if(acoes.btnProjetos[nomeAcaoProjeto]){
+        acoes.btnProjetos[nomeAcaoProjeto](botao)
+      }
+    })
+    
+    const botoesAcaoLinguagens = document.querySelectorAll("[data-acao-linguagens]");
+    botoesAcaoLinguagens.forEach(botao => {
+      const nomeAcaoLinguagem = botao.getAttribute("data-acao-linguagens").toLowerCase();
+      if(acoes.btnlinguagens[nomeAcaoLinguagem]){
+        acoes.btnlinguagens[nomeAcaoLinguagem](botao)
+      }
+    })
   })
   
 })();
