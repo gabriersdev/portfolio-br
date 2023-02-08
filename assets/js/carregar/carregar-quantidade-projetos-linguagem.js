@@ -39,7 +39,14 @@ export const carregarQuantidadeProjetosLinguagem = () => {
       const qtdeProjetosLinguagem = todasLinguagens[index][1];
 
       if(nomeContador == nomeLinguagem){
-        contador.textContent = qtdeProjetosLinguagem;
+        if(qtdeProjetosLinguagem == 0){
+          contador.parentElement.parentElement.remove();
+        }
+        else if(qtdeProjetosLinguagem == 1){
+          contador.parentElement.textContent = `${qtdeProjetosLinguagem} projeto desenvolvido`
+        }else{
+          contador.textContent = qtdeProjetosLinguagem;
+        }
       }
     })
   })
