@@ -7,20 +7,44 @@ const dadosProjetos = [
     tituloSaibaMais: 'Expresso Mobilidade',
     saibaMais: 'Através do Expresso é possível consultar linhas, estações e pontos de recarga. O usuário pode adicionar os cartões de transporte público, favoritas as linhas que ele mais utiliza e gerenciar o uso delas através dos cartões. É possível gerar relatórios de uso dos cartões e baixar o extrato destes cartões e os dados das linhas', 
     conclusao: 2022-12-31, 
-    link: "", 
+    link: "https://exp.epizy.com", 
     linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML", "Figma"],
     dificuldade: 3
   },
+  // {
+  //   titulo: "API Expresso Mobilidade", 
+  //   autor: "Gabriel Ribeiro", 
+  //   descricao: 'Permite a consulta externa aos dados de 923 linhas de Belo Horizonte e Região Metropolitana operadas pela BHTrans, Vinscol e o Consórcio Ótimo Metropolitano. A API tem estrutura básica e retorna os dados em JSON através de AJAX.',
+  //   existeSaibaMais: true,
+  //   tituloSaibaMais: 'API Expresso Mobilidade',
+  //   saibaMais: 'Para usar a API, o desenvolvedor pode acessar a página de API do Expresso', 
+  //   conclusao: 2022-12-31, 
+  //   link: "", 
+  //   linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML"],
+  //   dificuldade: 3
+  // },
   {
-    titulo: "API Expresso Mobilidade", 
+    titulo: "Hotel Alura", 
     autor: "Gabriel Ribeiro", 
-    descricao: 'Permite a consulta externa aos dados de 923 linhas de Belo Horizonte e Região Metropolitana operadas pela BHTrans, Vinscol e o Consórcio Ótimo Metropolitano. A API tem estrutura básica e retorna os dados em JSON através de AJAX.',
-    existeSaibaMais: true,
-    tituloSaibaMais: 'API Expresso Mobilidade',
-    saibaMais: 'Para usar a API, o desenvolvedor pode acessar a página de API do Expresso', 
-    conclusao: 2022-12-31, 
-    link: "", 
-    linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML"],
+    descricao: 'Projeto de um gerenciador de um gerenciador simples de hotel desenvolvido para o Challenge do Oracle ONE. Este projeto permite ao usuário: registar reservas e hóspedes, editar e consultar as reservas e hóspedes existentes, exclusão de todos os tipos de registros.',
+    existeSaibaMais: false,
+    tituloSaibaMais: '',
+    saibaMais: '', 
+    conclusao: null, 
+    link: "https://github.com/gabrieszin/Alura-Hotel", 
+    linguagens: ["Java", "MySQL"],
+    dificuldade: 3
+  },
+  {
+    titulo: "Conversor em Java", 
+    autor: "Gabriel Ribeiro", 
+    descricao: 'Este projeto é um Conversor de Moedas, Medidas e Temperatura desenvolvido por mim, Gabriel Ribeiro, para o primeiro Challenge da Trilha de Java do Programa Oracle ONE. Este projeto permite ao usuário: converter moedas, converter medidas, converter entre unidades de temperatura.',
+    existeSaibaMais: false,
+    tituloSaibaMais: '',
+    saibaMais: '', 
+    conclusao: null, 
+    link: "https://gabrieszin.github.io/home-page-Conversor/", 
+    linguagens: ["Java"],
     dificuldade: 3
   },
   {
@@ -31,7 +55,7 @@ const dadosProjetos = [
     tituloSaibaMais: '', 
     saibaMais: "", 
     conclusao: 2022-12-19, 
-    link: "", 
+    link: "https://expressomobilidade.000webhostapp.com/externo-expresso/", 
     linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML"],
     dificuldade: 2
   },
@@ -59,18 +83,18 @@ const dadosProjetos = [
     linguagens: ["JS", "CSS", "HTML"], 
     dificuldade: 1
   },
-  {
-    titulo: "Gerenciador de Biblioteca", 
-    autor: "Gabriel Ribeiro", 
-    descricao: "É um gerenciador básico de biblioteca escolar. Primeiro é necessário cadastrar um aluno, depois um livro (no gerenciador, chamado de título) e a partir daí registrar uma locação.", 
-    existeSaibaMais: false, 
-    tituloSaibaMais: '', 
-    saibaMais: "", 
-    conclusao: 2022-12-19, 
-    link: "", 
-    linguagens: ["JS", "CSS", "HTML"], 
-    dificuldade: 2
-  },
+  // {
+  //   titulo: "Gerenciador de Biblioteca", 
+  //   autor: "Gabriel Ribeiro", 
+  //   descricao: "É um gerenciador básico de biblioteca escolar. Primeiro é necessário cadastrar um aluno, depois um livro (no gerenciador, chamado de título) e a partir daí registrar uma locação.", 
+  //   existeSaibaMais: false, 
+  //   tituloSaibaMais: '', 
+  //   saibaMais: "", 
+  //   conclusao: 2022-12-19, 
+  //   link: "", 
+  //   linguagens: ["JS", "CSS", "HTML"], 
+  //   dificuldade: 2
+  // },
   {
     titulo: "Encriptador de Vogais", 
     autor: "Gabriel Ribeiro", 
