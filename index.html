@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/normalize.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
+
   <link rel="stylesheet" href="./assets/css/variaveis.css">
   <link rel="stylesheet" href="./assets/css/menu.css">
   <link rel="stylesheet" href="./assets/css/marcador.css">
@@ -39,6 +39,7 @@
   <link rel="stylesheet" href="./assets/css/formulario.css">
   <link rel="stylesheet" href="./assets/css/rodape.css">
   <link rel="stylesheet" href="./assets/css/modal.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
   <header id="apresentacao" class="cabecalho container-elemento">
@@ -704,5 +705,21 @@
     
     <script type="module" src="./assets/js/script.js"></script>
     <script type="module" src="./assets/js/pagina-principal.js"></script>
+
+    <button data-recarrega-pagina> aaaaa</button>
+
+    <noscript>
+      <div class="box-no-script">         
+        <div class="texto-pagina-centralizado-alt">
+          <h2 class="titulo-texto-pagina-centralizado">Este site não funciona com o 
+            <span class="destaque-pagina-centralizado">Javascript desabilitado</span></h2><br>
+            
+          <p class="label-texto-pagina-centralizado">Muitos dos recursos usados funcionam através do Javascript e sem ele a navegabilidade e o próprio funcionamento do site são comprometidos</p>
+            
+          <p class="label-texto-pagina-centralizado">Portanto, habilite o Javascript e navegue pelo site</p><br>
+          <button data-recarrega-pagina class="btn-principal-no-script" id="btn-redirecionar-inicio" name="btn-redirecionar-inicio">Recarregar</button>
+        </div>
+      </div>
+    </noscript>
   </body>
   </html>

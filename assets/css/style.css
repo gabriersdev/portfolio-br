@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url(./spinner-load.css);
+@import url(./no-script.css);
 
 *{
   font-family: 'Inter', sans-serif;
