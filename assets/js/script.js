@@ -44,4 +44,7 @@ window.addEventListener("load", () => {
   area.forEach(element => {
     element.textContent = ` -  ${dataAtual.getFullYear()}`;
   });
+
+  const loader = document.querySelector('.loader');
+  loader.style.display = 'none';
 })
