@@ -32,7 +32,7 @@ const dadosProjetos = [
     saibaMais: '', 
     conclusao: null, 
     link: "https://github.com/gabrieszin/Alura-Hotel", 
-    linguagens: ["Java", "MySQL"],
+    linguagens: ["Java", "MySQL", "Git"],
     dificuldade: 3
   },
   {

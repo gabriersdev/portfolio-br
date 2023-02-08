@@ -93,7 +93,16 @@ class cardProjeto{
     linkProjeto.classList.add(classeLink);
     linkProjeto.setAttribute('href', this.URLProjeto);
     linkProjeto.setAttribute('target', '_blank');
-    linkProjeto.textContent = 'Ver projeto';
+
+    try{
+      if((new URL(this.URLProjeto).origin.trim()) == "https://github.com"){
+        linkProjeto.innerHTML = `Ver no <i class="bi bi-github"></i>`
+      }else{
+        linkProjeto.textContent = 'Ver projeto'; 
+      }
+    }catch{
+      linkProjeto.textContent = 'Ver projeto'; 
+    }
     
     const rodapeProjeto = document.createElement('div');
     rodapeProjeto.classList.add(classeRodape);
