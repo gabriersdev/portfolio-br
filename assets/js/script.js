@@ -17,7 +17,6 @@ btnFecharModais.forEach(elemento =>{
 
 window.addEventListener("load", () => {
   const rodape = `<footer class="rodape container-principal"><section class="rodape__secao"><div><h4 class="rodape__secao__titulo">Portfólio</h4><p>Gabriel Ribeiro</p> </div><a class="rodape__secao__link pointer" data-bs-toggle="modal" data-bs-target="#modal-direitos-autorais">Direitos autorais&nbsp;<i class="bi bi-arrow-up-right-square-fill rodape__secao__link__icone"></i></a></section> <ul class="rodape__secao"><li><a href="../../index.html#projetos" class="rodape__secao__link">Projetos</a></li> <li><a href="../../index.html#linguagens" class="rodape__secao__link">Linguagens</a></li> <li><a href="../../index.html#sobre" class="rodape__secao__link">Sobre mim</a></li> <li><a href="../../index.html#contato" class="rodape__secao__link">Contato</a></li> </ul> <ul class="rodape__secao"> <h4 class="rodape__secao__titulo">Contato</h4></li> <li><a href="../../index.html#email" class="rodape__secao__link">E-mail</a></li> <li><a href="../../index.html#linkedin" class="rodape__secao__link">Linkedin</a></li> <li><a href="../../index.html#telegram" class="rodape__secao__link">Telegram</a></li> </ul> <div class="rodape__base"> <p class="rodape__base__descricao">&copy; Gabriel Ribeiro 2022<span data-ano-atual></span></p> </div></footer>`;
-
   const areaImportacao = document.createElement('section');
   areaImportacao.setAttribute('data-area-importacao', '');
 
