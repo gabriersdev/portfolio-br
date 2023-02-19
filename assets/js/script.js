@@ -45,8 +45,8 @@ window.addEventListener("load", () => {
     element.textContent = ` -  ${dataAtual.getFullYear()}`;
   });
 
-  const loader = document.querySelector('.loader');
-  loader.style.display = 'none';
+  // const loader = document.querySelector('.loader');
+  // loader.style.display = 'none';
 
   controleFechamentoModal();
 })
