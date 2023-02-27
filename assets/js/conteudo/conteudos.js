@@ -44,7 +44,7 @@ const dadosProjetos = [
     saibaMais: '', 
     conclusao: null, 
     link: "https://gabrieszin.github.io/home-page-Conversor/", 
-    linguagens: ["Java"],
+    linguagens: ["Java", "Git", "Figma"],
     dificuldade: 3
   },
   {
@@ -56,7 +56,7 @@ const dadosProjetos = [
     saibaMais: "", 
     conclusao: 2022-12-19, 
     link: "https://expressomobilidade.000webhostapp.com/externo-expresso/", 
-    linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML"],
+    linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML", "Figma"],
     dificuldade: 2
   },
   {
@@ -68,7 +68,7 @@ const dadosProjetos = [
     saibaMais: "", 
     conclusao: 2022-12-19, 
     link: "https://gabrieszin.github.io/projeto-humanos-altamira/", 
-    linguagens: ["JS", "CSS", "HTML"],
+    linguagens: ["JS", "CSS", "HTML", "Git", "Figma"],
     dificuldade: 2
   },
   {
@@ -116,7 +116,7 @@ const dadosProjetos = [
     saibaMais: "", 
     conclusao: 2022-12-19, 
     link: "https://gabrieszin.github.io/Encriptador/", 
-    linguagens: ["JS", "CSS", "HTML"], 
+    linguagens: ["JS", "CSS", "HTML", "Git"], 
     dificuldade: 1
   },
   {
@@ -128,7 +128,7 @@ const dadosProjetos = [
     saibaMais: '', 
     conclusao: 2022-12-31, 
     link: "https://gabrieszin.github.io/Jogo-da-Forca/", 
-    linguagens: ["JS", "CSS", "HTML"],
+    linguagens: ["JS", "CSS", "HTML", "Git"],
     dificuldade: 1
   },
 ]
