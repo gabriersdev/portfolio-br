@@ -7,7 +7,7 @@ const dadosProjetos = [
     tituloSaibaMais: 'Expresso Mobilidade',
     saibaMais: 'Através do Expresso é possível consultar linhas, estações e pontos de recarga. O usuário pode adicionar os cartões de transporte público, favoritas as linhas que ele mais utiliza e gerenciar o uso delas através dos cartões. É possível gerar relatórios de uso dos cartões e baixar o extrato destes cartões e os dados das linhas', 
     conclusao: 2022-12-31, 
-    link: "https://exp.epizy.com", 
+    link: "https://expressomobilidade.000webhostapp.com/login/index.html", 
     linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML", "Figma"],
     dificuldade: 3
   },
@@ -38,7 +38,7 @@ const dadosProjetos = [
   {
     titulo: "Conversor em Java", 
     autor: "Gabriel Ribeiro", 
-    descricao: 'Este projeto é um Conversor de Moedas, Medidas e Temperatura desenvolvido por mim, Gabriel Ribeiro, para o primeiro Challenge da Trilha de Java do Programa Oracle ONE. Este projeto permite ao usuário: converter moedas, converter medidas, converter entre unidades de temperatura.',
+    descricao: 'Este projeto é um Conversor de Moedas, Medidas e Temperatura desenvolvido por mim para o primeiro Challenge da Trilha de Java do Programa Oracle ONE. Este projeto permite ao usuário: converter moedas, converter medidas, converter entre unidades de temperatura.',
     existeSaibaMais: false,
     tituloSaibaMais: '',
     saibaMais: '', 
@@ -60,6 +60,18 @@ const dadosProjetos = [
     dificuldade: 2
   },
   {
+    titulo: "Projeto Humanos: Altamira", 
+    autor: "Gabriel Ribeiro", 
+    descricao: 'É um website dedicado a 5ª temporada do podcast "Projeto Humanos". Neste projeto, eu implementei a funções de pesquisa com autocomplete e um player para a trilha sonora da temporada.', 
+    existeSaibaMais: false,
+    tituloSaibaMais: '', 
+    saibaMais: "", 
+    conclusao: 2022-12-19, 
+    link: "https://gabrieszin.github.io/projeto-humanos-altamira/", 
+    linguagens: ["JS", "CSS", "HTML"],
+    dificuldade: 2
+  },
+  {
     titulo: "Projetos dos Cursos Alura", 
     autor: "Gabriel Ribeiro", 
     descricao: "Aqui você encontra alguns dos projetos que eu desenvolvi junto de cursos que eu realizei na Alura.", 
@@ -71,18 +83,18 @@ const dadosProjetos = [
     linguagens: ["JS", "CSS", "HTML"], 
     dificuldade: 2
   },
-  {
-    titulo: "Projetos Antigos", 
-    autor: "Gabriel Ribeiro", 
-    descricao: "Aqui você encontra os primeiro projetos que eu desenvolvi :)", 
-    existeSaibaMais: false, 
-    tituloSaibaMais: '', 
-    saibaMais: "", 
-    conclusao: 2022-12-19, 
-    link: "./projetos/projetos-antigos/", 
-    linguagens: ["JS", "CSS", "HTML"], 
-    dificuldade: 1
-  },
+  // {
+  //   titulo: "Projetos Antigos", 
+  //   autor: "Gabriel Ribeiro", 
+  //   descricao: "Aqui você encontra os primeiro projetos que eu desenvolvi :)", 
+  //   existeSaibaMais: false, 
+  //   tituloSaibaMais: '', 
+  //   saibaMais: "", 
+  //   conclusao: 2022-12-19, 
+  //   link: "./projetos/projetos-antigos/", 
+  //   linguagens: ["JS", "CSS", "HTML"], 
+  //   dificuldade: 1
+  // },
   // {
   //   titulo: "Gerenciador de Biblioteca", 
   //   autor: "Gabriel Ribeiro", 
@@ -110,7 +122,7 @@ const dadosProjetos = [
   {
     titulo: "Jogo da Forca", 
     autor: "Gabriel Ribeiro", 
-    descricao: 'Foi um projeto desenvolvido para a Trilha Iniciante em Programação da Alura. O Jogo da Forca foi realizado através das aulas dos instrutores da Alura. Foi usado a biblioteca SweetAlert no desenvolvimento, o Trelo para a organização e o Figma, para a prototipação.',
+    descricao: 'Projeto desenvolvido para a Trilha Iniciante em Programação da Alura. O Jogo da Forca foi realizado através das aulas dos instrutores da Alura. No desenvolvimento, foi usada a biblioteca SweetAlert, o Trelo e o Figma, para a prototipação.',
     existeSaibaMais: false,
     tituloSaibaMais: '',
     saibaMais: '', 
