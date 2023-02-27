@@ -178,3 +178,33 @@
     display: none;
   }
 }
+
+@media screen and (max-height: 825px) {
+  .cabecalho__principal{
+    top: calc(25% - 1vh);
+  }
+
+  .cabecalho__principal__menu{
+    display: none;
+  }
+}
+
+@media screen and (max-height: 760px) {
+  .cabecalho{
+    display: block;
+  }
+
+  .cabecalho__principal{
+    top: 50%;
+    transform: translate(0, -50%);
+    display: block;
+  }
+
+  .cabecalho__principal__menu{
+    display: none;
+  }
+
+  .cabecalho__cards{
+    display: none;
+  }
+}
