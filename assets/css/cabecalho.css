@@ -26,7 +26,10 @@
 .cabecalho__principal__apresentacao__titulo{
   margin: 1.5rem 0;
 
-  font-size: 5rem;
+  font-weight: 600;
+  font-size: 3.25rem;
+  font-family: 'Inter Tight', 'Inter', sans-serif;
+
   text-shadow: 2.5px 2.5px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -106,17 +109,17 @@
   }
 
   .cabecalho__principal{
-    top: 50%;
+    top: 55%;
     transform: translate(0, -50%);
     display: block;
   }
 
   .cabecalho__principal__apresentacao{
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 
   .cabecalho__principal__apresentacao__titulo{
-    font-size: 3rem;
+    font-size: 2rem;
 
     margin: 1rem 0;
   }
@@ -139,6 +142,12 @@
   }
 }
 
+@media screen and (max-width: 300px){
+  .cabecalho__principal__menu{
+    display: none;
+  }
+}
+
 @media screen and (min-width: 420px) and (max-width: 767px){
   .cabecalho{
     display: block;
@@ -151,11 +160,11 @@
   }
 
   .cabecalho__principal__apresentacao{
-    width: 100%;
+    width: calc(100% - 2rem);
   }
 
   .cabecalho__principal__apresentacao__titulo{
-    font-size: 4rem;
+    font-size: 3rem;
 
     margin: 1rem 0;
   }
@@ -185,6 +194,10 @@
   }
 
   .cabecalho__principal__menu{
+    display: none;
+  }
+
+  .cabecalho__cards{
     display: none;
   }
 }

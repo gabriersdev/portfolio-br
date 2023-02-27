@@ -108,7 +108,7 @@
   margin-left: 0.75rem;
 }
 
-@media screen and (min-width: 0) and (max-width: 767px){
+@media screen and (min-width: 0) and (max-width: 1185px){
   .card-linguagem{
     width: auto;
   }
@@ -120,9 +120,7 @@
   .card-linguagem__header__versao{
     display: none;
   }
-}
 
-@media screen and (min-width: 0) and (max-width: 767px){
   .card-linguagem-transparente{
     margin-bottom: 1rem;
 
@@ -139,5 +137,11 @@
 
   .card__rodape{
     margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .card__header__versao{
+    display: none;
   }
 }
