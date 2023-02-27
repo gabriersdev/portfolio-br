@@ -35,7 +35,7 @@
 }
 
 .card-contato__descricao, .card-contato__url{
-  margin-left: calc(1.7rem + 1rem);
+  /* margin-left: calc(1.7rem + 1rem); */
 
   flex-wrap: wrap;
   overflow: hidden;
