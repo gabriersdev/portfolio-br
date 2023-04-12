@@ -94,9 +94,9 @@ const dadosProjetosAntigos = [
     tituloSaibaMais: '', 
     saibaMais: "", 
     conclusao: 2022-12-19, 
-    link: "", 
+    link: "https://gabrieszin.github.io/conscientize-se/", 
     linguagens: ["JS", "CSS", "HTML"], 
-    linkPreview: ''
+    linkPreview: 'https://gabrieszin.github.io/conscientize-se/'
   },
   {
     titulo: "Quiz de História", 
@@ -118,9 +118,9 @@ const dadosProjetosAntigos = [
     tituloSaibaMais: '', 
     saibaMais: "", 
     conclusao: 2022-12-19, 
-    link: "", 
+    link: "https://gabrieszin.github.io/calculator/", 
     linguagens: ["JS", "CSS", "HTML"], 
-    linkPreview: ''
+    linkPreview: 'https://gabrieszin.github.io/calculator/'
   },
   {
     titulo: "Tempo para live", 
@@ -145,6 +145,30 @@ const dadosProjetosAntigos = [
     link: "", 
     linguagens: ["JS", "CSS", "HTML"], 
     linkPreview: ''
+  },
+  {
+    titulo: "Gerador de senha", 
+    autor: "Gabriel Ribeiro", 
+    descricao: "Gerador de senha que permite a personalização da senha gerada aleatoriamente", 
+    existeSaibaMais: false, 
+    tituloSaibaMais: '', 
+    saibaMais: "", 
+    conclusao: 2022-12-19, 
+    link: "https://gabrieszin.github.io/random-password/", 
+    linguagens: ["JS", "CSS", "HTML"], 
+    linkPreview: 'https://gabrieszin.github.io/random-password/'
+  },
+  {
+    titulo: "Urna Eletrônica", 
+    autor: "Gabriel Ribeiro", 
+    descricao: "Urna eletrônica usando recursos simples de Programação WEB", 
+    existeSaibaMais: false, 
+    tituloSaibaMais: '', 
+    saibaMais: "", 
+    conclusao: 2022-12-19, 
+    link: "https://gabrieszin.github.io/urna-eletronica/", 
+    linguagens: ["JS", "CSS", "HTML"], 
+    linkPreview: 'https://gabrieszin.github.io/urna-eletronica/'
   },
 ]
 
