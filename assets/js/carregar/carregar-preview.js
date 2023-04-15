@@ -9,33 +9,48 @@ export const carregarPreview = (btn) => {
 
   const corpo = modalExibicaoPreview.querySelector('.modal-body');
   const spinner = corpo.querySelector('.modal-exibicao-preview__corpo__spinner');
-  const iframe = corpo.querySelector('iframe');
+  let iframe = corpo.querySelector('iframe');
 
   //Criando elemento para dar feedback sobre o link estar ou não vazio
-  const linkVazio = document.createElement('p');
-  linkVazio.dataset.linkVazio = '';
-  corpo.appendChild(linkVazio);
+  if(isEmpty(corpo.querySelector('p'))){
+    const linkVazio = document.createElement('p');
+    linkVazio.dataset.linkVazio = '';
+    corpo.appendChild(linkVazio);
+  }
 
-  spinner.style.display = 'block';
+  spinner.classList.contains('none') ? spinner.classList.remove('none') : '';
 
+  if(isEmpty(iframe)){
+    corpo.innerHTML += `<iframe src="" class="modal-exibicao-preview__corpo__iframe block" frameborder="0" sandbox="allow-same-origin allow-forms allow-modals allow-popups allow-scripts"> </iframe>`;
+    iframe = corpo.querySelector('iframe');
+  }
+  
+  iframe.setAttribute('src', null);
   iframe.classList.contains('block') ? iframe.classList.remove('block') : '';
   iframe.setAttribute('src', link);
 
   $(modalExibicaoPreview).modal('show');
   const vazio = corpo.querySelector('[data-link-vazio]');
+  iframe.style.display = 'none !important';
 
   //Verifica se o link está ou não vazio e exibe o feedback (se tiver vazio)
   if(isEmpty(link) || lengthZero(link)){
+    iframe.classList.contains('block') ? iframe.classList.remove('block') : '';
+    // iframe.style.zIndex = 1;
+    iframe.remove()
+    vazio.style.zIndex = 1;
+    spinner.style.display = 'none';
     vazio.textContent = '';
     vazio.textContent = 'Não foi atribuído um link para este projeto'
-    spinner.style.display = 'none';
+    spinner.classList.add('none');
   }
   
   else{
     vazio.textContent = '';
     iframe.addEventListener("load" , function(){
+      iframe.style.zIndex = 1;
       iframe.classList.add('block');
-      spinner.style.display = 'none';
+      spinner.classList.add('none');
     })
   }
 

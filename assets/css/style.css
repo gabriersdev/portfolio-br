@@ -70,6 +70,10 @@ a{
   visibility: hidden;
 }
 
+.none{
+  display: none;
+}
+
 .pointer{
   cursor: pointer;
 }
