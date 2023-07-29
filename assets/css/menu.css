@@ -7,7 +7,9 @@
   padding: 0.25rem 2rem;
 
   backdrop-filter: blur(20px);
-  position: absolute;
+  /* position: absolute; */
+  border-radius: 5px;
+  transition: unset;
 
   top: 0;
   left: 0;
@@ -70,7 +72,7 @@
   color: var(--cinza);
 
   cursor: pointer;
-  transition: 0.3s;
+  transition: border ease-in-out 0.3s;
 }
 
 .menu__item-lista a{

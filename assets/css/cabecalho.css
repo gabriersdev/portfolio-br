@@ -4,15 +4,17 @@
   width: 100%;
 
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
 
   position: relative;
+  padding: 1.8rem;
 }
 
 .cabecalho__principal{
-  position: absolute;
-  top: calc(17.5% - 1vh);
-
+  /* position: absolute; */
+  /* top: calc(17.5% - 1vh); */
+  /* margin: 0 1.8rem; */
   display: flex;
   color: #FFF;
   justify-content: space-between;
@@ -47,7 +49,6 @@
   max-width: 15rem;
 
   padding: 2rem;
-  margin-right: 1.8rem;
 
   backdrop-filter: blur(20px);
   border-radius: 15px;
@@ -88,7 +89,7 @@
 
 .cabecalho__cards{
   width: 100%;
-  position: absolute;
+  /* position: absolute; */
   left: 0;
   bottom: 1rem;
 
@@ -105,17 +106,17 @@
 
 @media screen and (min-width: 0) and (max-width: 420px){
   .cabecalho{
-    display: block;
+    /* display: block; */
   }
 
   .cabecalho__principal{
-    top: 55%;
-    transform: translate(0, -50%);
+    /* top: 55%; */
+    /* transform: translate(0, -50%); */
     display: block;
   }
 
   .cabecalho__principal__apresentacao{
-    width: calc(100% - 1rem);
+    width: calc(100%);
   }
 
   .cabecalho__principal__apresentacao__titulo{
@@ -150,17 +151,18 @@
 
 @media screen and (min-width: 420px) and (max-width: 767px){
   .cabecalho{
-    display: block;
+    /* display: block; */
+    padding: 1rem;
   }
 
   .cabecalho__principal{
-    top: 50%;
-    transform: translate(0, -50%);
+    /* top: 50%; */
+    /* transform: translate(0, -50%); */
     display: block;
   }
 
   .cabecalho__principal__apresentacao{
-    width: calc(100% - 2rem);
+    width: calc(100%);
   }
 
   .cabecalho__principal__apresentacao__titulo{
@@ -174,7 +176,8 @@
   }
 
   .cabecalho__cards{
-    display: none;
+    /* display: none; */
+    visibility: hidden;
   }
 }
 
