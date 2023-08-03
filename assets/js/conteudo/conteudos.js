@@ -1,3 +1,17 @@
+const exemplo = 
+{
+  titulo: "", 
+  autor: "Gabriel Ribeiro", 
+  descricao: '',
+  existeSaibaMais: false,
+  tituloSaibaMais: '',
+  saibaMais: '', 
+  conclusao: 2022-12-31, 
+  link: "", 
+  linguagens: [],
+  dificuldade: 1
+}
+
 const dadosProjetos = [
   {
     titulo: "Expresso Mobilidade", 
@@ -47,16 +61,28 @@ const dadosProjetos = [
     linguagens: ["Java", "Git", "Figma"],
     dificuldade: 3
   },
+  // {
+  //   titulo: "Institucional do Expresso Mobilidade", 
+  //   autor: "Gabriel Ribeiro", 
+  //   descricao: 'É a apresentação do Expresso Mobilidade para quem não conhece o projeto ou nunca o acessou. Para o desenvolvimento dessas páginas foram usados os frameworks Bootstrap, JQuery, SweetAlert, Bootstrap Icons e Flaticon. O projeto foi prototipado no Figma e desenvolvido junto do <a href="https://github.com/samuelsoaresl" target="_blank">Samuel Soares.</a>', 
+  //   existeSaibaMais: false,
+  //   tituloSaibaMais: '', 
+  //   saibaMais: "", 
+  //   conclusao: 2022-12-19, 
+  //   link: "https://expressomobilidade.000webhostapp.com/externo-expresso/", 
+  //   linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML", "Figma"],
+  //   dificuldade: 2
+  // },
   {
-    titulo: "Institucional do Expresso Mobilidade", 
+    titulo: "Meus Cursos na Alura", 
     autor: "Gabriel Ribeiro", 
-    descricao: 'É a apresentação do Expresso Mobilidade para quem não conhece o projeto ou nunca o acessou. Para o desenvolvimento dessas páginas foram usados os frameworks Bootstrap, JQuery, SweetAlert, Bootstrap Icons e Flaticon. O projeto foi prototipado no Figma e desenvolvido junto do <a href="https://github.com/samuelsoaresl" target="_blank">Samuel Soares.</a>', 
+    descricao: 'Neste projeto, eu consumo a API de Cursos da Alura e mostro meus cursos e formações.',
     existeSaibaMais: false,
-    tituloSaibaMais: '', 
-    saibaMais: "", 
-    conclusao: 2022-12-19, 
-    link: "https://expressomobilidade.000webhostapp.com/externo-expresso/", 
-    linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML", "Figma"],
+    tituloSaibaMais: '',
+    saibaMais: '', 
+    conclusao: 2023-4-27, 
+    link: "https://gabrieszin.github.io/my-courses-alura/", 
+    linguagens: ['JS', 'CSS', 'HTML', 'Figma'],
     dificuldade: 2
   },
   {
@@ -83,6 +109,43 @@ const dadosProjetos = [
     linguagens: ["JS", "CSS", "HTML"], 
     dificuldade: 2
   },
+  {
+    titulo: "Birthday Message", 
+    autor: "Gabriel Ribeiro", 
+    descricao: 'O Birthday Message é um projeto que renderiza mensagens de aniversário (personalizadas ou não)',
+    existeSaibaMais: false,
+    tituloSaibaMais: '',
+    saibaMais: '', 
+    conclusao: 2023-4-27, 
+    link: "https://gabrieszin.github.io/birthday-message", 
+    linguagens: ['JS', 'CSS', 'HTML', 'Figma'],
+    dificuldade: 1
+  },
+  {
+    titulo: "Calculadora Tempo de Serviço", 
+    autor: "Gabriel Ribeiro", 
+    descricao: 'O nome é auto explicativo: o projeto é uma calculadora que você insere com os períodos trabalhados e ela calcula o total',
+    existeSaibaMais: false,
+    tituloSaibaMais: '',
+    saibaMais: '', 
+    conclusao: 2023-6-1, 
+    link: "https://gabrieszin.github.io/calculadora-tempo-de-servico/", 
+    linguagens: ['JS', 'CSS', 'HTML', 'Figma'],
+    dificuldade: 1
+  },
+  {
+    titulo: "Gerador de senhas", 
+    autor: "Gabriel Ribeiro", 
+    descricao: 'Gere senhas aleatórias seguras, conforme suas escolhas e teste as senhas que você já usa.',
+    existeSaibaMais: false,
+    tituloSaibaMais: '',
+    saibaMais: '', 
+    conclusao: 2023-6-1, 
+    link: "https://gabrieszin.github.io/random-password/", 
+    linguagens: ['JS', 'CSS', 'HTML'],
+    dificuldade: 1
+  },
+  
   // {
   //   titulo: "Projetos Antigos", 
   //   autor: "Gabriel Ribeiro", 
