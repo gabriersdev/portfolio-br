@@ -10,6 +10,8 @@
 
 body{
   position: relative;
+  background: var(--preto);
+  color: var(--branco);
 }
 
 .container-elemento{
