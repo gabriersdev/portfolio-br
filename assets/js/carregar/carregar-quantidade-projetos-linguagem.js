@@ -37,12 +37,13 @@ export const carregarQuantidadeProjetosLinguagem = () => {
 
       const nomeLinguagem = todasLinguagens[index][0];
       const qtdeProjetosLinguagem = todasLinguagens[index][1];
+      const nome_secao_cabecalho_cards = contador.closest('.cabecalho__cards');
 
       if(nomeContador == nomeLinguagem){
         if(qtdeProjetosLinguagem == 0){
           contador.parentElement.parentElement.remove();
         }
-        else if(qtdeProjetosLinguagem == 1){
+        else if(qtdeProjetosLinguagem == 1 && nome_secao_cabecalho_cards == null){
           contador.parentElement.textContent = `${qtdeProjetosLinguagem} projeto desenvolvido`
         }else{
           contador.textContent = qtdeProjetosLinguagem;
