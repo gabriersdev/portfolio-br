@@ -56,6 +56,11 @@
   margin: 1rem 0;
 }
 
+.sobre_grupo-descricao{
+  columns: 2;
+  margin: 1.5rem 0;
+}
+
 @media screen and (max-width: 767px){
   .sobre__lista__item__corpo{
     margin-left: 0;
@@ -63,5 +68,9 @@
 
   .sobre__lista__item:first-child{
     margin-right: 0;
+  }
+
+  .sobre_grupo-descricao{
+    columns: unset;
   }
 }

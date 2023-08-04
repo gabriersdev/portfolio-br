@@ -21,15 +21,16 @@
 }
 
 .selecao__botao-projeto{
-  border-color: var(--azul-claro-forte);
+  /* border-color: var(--azul-claro-forte); */
+  border-color: unset;
 
   margin-bottom: 0.25rem;
 
-  background-color: var(--azul-mais-claro);
+  background-color: var(--azul-claro-forte);
 }
 
 .selecao-linguagens__botao{
-  border-color: var(--azul-mais-claro);
+  border-color: unset;
 
   margin-bottom: 0.25rem;
 }
