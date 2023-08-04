@@ -32,13 +32,15 @@
 }
 
 .sobre__lista__item__cabecalho__icone{
-  color: var(--cinza-medio-forte);
+  /* color: var(--cinza-medio-forte); */
+  color: var(--branco);
 
   font-size: var(--icone-grande);
 }
 
 .sobre__lista__item__cabecalho__titulo{
-  color: var(--cinza-medio-forte);
+  /* color: var(--cinza-medio-forte); */
+  color: var(--branco);
 
   margin-left: 1rem;
 

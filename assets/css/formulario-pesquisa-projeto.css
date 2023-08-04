@@ -4,7 +4,8 @@
 }
 
 .formulario-pesquisa-projeto__label{
-  color: var(--cinza-medio-forte);
+  /* color: var(--cinza-medio-forte); */
+  color: var(--branco);
   text-align: left;
 
   margin-top: 0.5rem;
@@ -13,11 +14,13 @@
 .formulario-pesquisa-projeto__input{
   display: block;
 
-  background-color: var(--cinza-fraco);
-
+  /* background-color: var(--cinza-fraco); */
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFF;
+  
   border-width: 1px;
   border-style: solid;
-  border-color: var(--cinza);
+  border-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
 
   padding: 0.5rem;
@@ -33,14 +36,16 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .formulario-pesquisa-projeto__input:focus{
-  box-shadow:  0px 0px 0px 5px var(--azul-claro-medio);
-  -webkit-box-shadow: 0px 0px 0px 5px var(--azul-claro-medio);
-  -moz-box-shadow: 0px 0px 0px 5px var(--azul-claro-medio);
+  /* box-shadow:  0px 0px 0px 2.5px var(--azul-claro-medio);
+  -webkit-box-shadow: 0px 0px 0px 2.5px var(--azul-claro-medio);
+  -moz-box-shadow: 0px 0px 0px 2.5px var(--azul-claro-medio); */
   outline: none;
-  border-color: var(--azul-claro-forte);
+  border-color: var(--cinza-medio);
 }
 
 .form-group{
@@ -54,20 +59,22 @@
 
   padding: 0.5rem 0.7rem;
 
-  background-color: var(--cinza-fraco-forte);
+  background-color: var(--cinza-medio);
 
-  border: none;
+  border: unset;
   border-radius: 50%;
 
   transition: 0.3s;
 }
 
-.formulario-pesquisa-projeto__botao i{
-  padding: 0;
+.formulario-pesquisa-projeto__botao:is(:hover, :focus){
+  border: unset;
+  box-shadow: unset;
+  background-color: var(--cinza);
 }
 
-.formulario-pesquisa-projeto__botao:hover{
-  background-color: var(--cinza-medio);
+.formulario-pesquisa-projeto__botao i{
+  padding: 0;
 }
 
 @media screen and (max-width: 320px) {

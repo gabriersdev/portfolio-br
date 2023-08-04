@@ -11,7 +11,8 @@
 }
 
 .caracteristicas-sem-marcador__item__icone{
-  color: var(--cinza-medio-forte);
+  /* color: var(--cinza-medio-forte); */
+  color: var(--branco);
 
   opacity: 0.5;
 
@@ -41,13 +42,15 @@
 .caracteristicas__item__icone{
   font-size: var(--icone-grande);
 
-  color: var(--cinza-medio-forte);
+  /* color: var(--cinza-medio-forte); */
+  color: var(--branco);
 
   margin-right: 2.5px;
 }
 
 .caracteristicas__item__descricao{
-  color: var(--preto);
+  /* color: var(--preto); */
+  color: var(--branco);
 }
 
 

@@ -25,12 +25,14 @@
   --azul-claro-forte: #9DC1F6;
   --azul-claro-medio: #B1D0FF;
   --azul-mais-claro: #D9E8FF;
+  --azul-mais-claro-35: rgba(157, 193, 246, 0.1);
   
   --roxo: #6D3BBF;
   --roxo-medio: #B49DF6;
   --rosa: #F69DED;
   --rosa-claro: #BCB6FF;
   --rosa-mais-claro: #D0DAFD;
+  --rosa-25: rgba(180, 157, 246, 0.1);
   
   --oliva: #99ACA1;
   --verde-forte: #167171;
@@ -39,6 +41,7 @@
   --verde-agua: #77CBCB;
   --verde-agua-claro: #B7E9FF;
   --oliva-fraco: #CEECDA;
+  --verde-forte-35: rgba(22, 113, 113, 0.1);
   
   --titulo-h1: 5rem;
   --titulo-h2: 2.25rem;

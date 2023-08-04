@@ -12,15 +12,18 @@
 }
 
 .card-projeto-facil{
-  background-color: var(--azul-mais-claro);
+  /* background-color: var(--azul-mais-claro); */
+  background-color: var(--azul-mais-claro-35);
 }
 
 .card-projeto-medio{
-  background-color: var(--verde-agua-claro);
+  /* background-color: var(--verde-agua-claro); */
+  background-color: var(--verde-forte-35);
 }
 
 .card-projeto-dificil{
-  background-color: var(--rosa-mais-claro);
+  /* background-color: var(--rosa-mais-claro); */
+  background-color: var(--rosa-25);
 }
 
 .card-projeto__marcador{
@@ -31,15 +34,18 @@
 }
 
 .card-projeto-facil .card-projeto__marcador{
-  background-color: var(--azul);
+  /* background-color: var(--azul); */
+  background-color: var(--azul-claro-forte);
 }
 
 .card-projeto-medio .card-projeto__marcador{
-  background-color: var(--verde-forte);
+  /* background-color: var(--verde-forte); */
+  background-color: var(--verde-agua);
 }
 
 .card-projeto-dificil .card-projeto__marcador{
-  background-color: var(--roxo);
+  /* background-color: var(--roxo); */
+  background-color: var(--roxo-medio);
 }
 
 .card-projeto__cabecalho{
@@ -55,15 +61,18 @@
 }
 
 .card-projeto-facil .card-projeto__cabecalho__titulo{
-  color: var(--azul);
+  /* color: var(--azul); */
+  color: var(--azul-claro-forte);
 }
 
 .card-projeto-medio .card-projeto__cabecalho__titulo{
-  color: var(--verde-forte);
+  /* color: var(--verde-forte); */
+  color: var(--verde-agua);
 }
 
 .card-projeto-dificil .card-projeto__cabecalho__titulo{
-  color: var(--roxo);
+  /* color: var(--roxo); */
+  color: var(--roxo-medio);
 }
 
 .card-projeto__corpo{
@@ -77,7 +86,8 @@
 
   border-radius: 5px;
 
-  color: var(--cinza-medio-forte);
+  /* color: var(--cinza-medio-forte); */
+  color: var(--preto);
 }
 
 .card-projeto__corpo__marcador{
@@ -97,10 +107,15 @@
 }
 
 .card-projeto__corpo__descricao{
-  color: var(--cinza-medio-forte);
+  /* color: var(--cinza-medio-forte); */
+  color: var(--branco);
 
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+.card-projeto .saiba-mais{
+  color: var(--branco);
 }
 
 .card-projeto__rodape{
@@ -124,36 +139,33 @@
 }
 
 .card-projeto-facil .card-projeto__rodape__link{
-  border-color: var(--azul);
-  color: var(--azul);
+  border-color: var(--azul-claro-forte);
+  color: var(--azul-claro-forte);
   
   text-decoration: none;
 }
 
 .card-projeto-facil .card-projeto__rodape__link:hover{
-  background-color: var(--azul-claro-medio);
+  background-color: var(--azul-mais-claro-35);
 }
 
 .card-projeto-medio .card-projeto__rodape__link{
-  border-color: var(--verde-forte);
-  color: var(--verde-forte);
+  border-color: var(--verde-agua);
+  color: var(--verde-agua);
 
   text-decoration: none;
 }
 
 .card-projeto-medio .card-projeto__rodape__link:hover{
-  background-color: var(--verde-agua);
+  background-color: var(--verde-forte-35);
 }
 
 .card-projeto-dificil .card-projeto__rodape__link{
-  border-color: var(--roxo);
-  color: var(--roxo);
-
-  text-decoration: none;
+  text-decoration: unset;
 }
 
 .card-projeto-dificil .card-projeto__rodape__link:hover{
-  background-color: var(--rosa-claro);
+  background-color: var(--rosa-25);
 }
 
 .card-projeto__rodape__marcador{
@@ -168,15 +180,17 @@
 }
 
 .card-projeto-facil .card-projeto__rodape__marcador{
-  background-color: var(--azul-claro-medio);
+  /* background-color: var(--azul-claro-medio); */
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .card-projeto-medio .card-projeto__rodape__marcador{
-  background-color: var(--verde-agua);
+  /* background-color: var(--verde-agua); */
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .card-projeto-dificil .card-projeto__rodape__marcador{
-  background-color: var(--rosa-claro);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .card-projeto a{
@@ -184,15 +198,17 @@
 }
 
 .card-projeto-facil a{
-  color: var(--azul);
+  /* color: var(--azul); */
+  color: var(--azul-claro-forte);
 }
 
 .card-projeto-medio a{
-  color: var(--verde-forte);
+  /* color: var(--verde-forte); */
+  color: var(--verde-agua);
 }
 
 .card-projeto-dificil a{
-  color: var(--roxo);
+  color: var(--roxo-medio);
 }
 
 .card-pg-projeto__rodape__botao-preview{
@@ -203,8 +219,8 @@
 
   border-radius: 15px;
 
-  color: var(--cinza-medio-forte);
-  background-color: var(--cinza-fraco-medio);
+  /* color: var(--cinza-medio-forte); */
+  /* background-color: var(--cinza-fraco-medio); */
 
   outline: none;
   border: none;
@@ -225,11 +241,11 @@
 
 .card-pg-projeto__rodape__botao-preview:hover,
 .card-pg-projeto__rodape__botao-preview:focus{
-  box-shadow:  0px 0px 0px 5px var(--azul-claro-medio);
-  -webkit-box-shadow: 0px 0px 0px 5px var(--azul-claro-medio);
-  -moz-box-shadow: 0px 0px 0px 5px var(--azul-claro-medio);
+  /* box-shadow:  0px 0px 0px 5px var(--azul-claro-medio); */
+  /* -webkit-box-shadow: 0px 0px 0px 5px var(--azul-claro-medio); */
+  /* -moz-box-shadow: 0px 0px 0px 5px var(--azul-claro-medio); */
   outline: none;
-  border-color: var(--azul-claro-forte);
+  /* border-color: var(--azul-claro-forte); */
 }
 
 @media screen and (min-width: 0) and (max-width: 390px){

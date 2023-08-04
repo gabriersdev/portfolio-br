@@ -18,12 +18,13 @@
   display: grid;
   grid-template-rows: 3.5rem auto;
   
-  padding: 1.5rem 1rem;
+  padding: 1.5rem;
 
   margin-top: 0.75rem;
   margin-right: 1rem;
 
-  border: 1px dashed var(--azul);
+  /* border: 1px dashed var(--azul); */
+  border: 1px dashed var(--branco);
 }
 
 .linguagem__cabecalho{
@@ -36,16 +37,18 @@
   font-size: var(--icone-grande);
   width: calc(var(--icone-grande) - 0.5rem) !important;
 
-  color: var(--cinza-medio-forte);
+  /* color: var(--cinza-medio-forte); */
+  color: var(--branco);
 }
 
 .linguagem__cabecalho__titulo{
   font-size: var(--titulo-h3);
   font-weight: 600;
-
+  
   margin-left: 1rem;
-
-  color: var(--cinza-medio-forte);
+  
+  /* color: var(--cinza-medio-forte); */
+  color: var(--branco);
 }
 
 .linguagem__corpo{
