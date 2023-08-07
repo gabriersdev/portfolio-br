@@ -9,7 +9,9 @@
 }
 
 .card-contato{
-  background-color: var(--oliva-fraco);
+  /* background-color: var(--oliva-fraco); */
+  background: linear-gradient(135deg, rgba(86, 137, 93, 0.20) 0%, rgba(86, 137, 93, 0.075) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 2rem 1rem;
 }
 
@@ -22,7 +24,8 @@
 .card-contato__icone{
   font-size: 1.7rem;
 
-  color: var(--cinza-medio-forte);
+  /* color: var(--cinza-medio-forte); */
+  color: var(--cinza-fraco);
 }
 
 .card-contato__titulo{
@@ -31,7 +34,8 @@
 
   margin-left: 1rem;
 
-  color: var(--cinza-medio-forte);
+  /* color: var(--cinza-medio-forte); */
+  color: var(--cinza-fraco);
 }
 
 .card-contato__descricao, .card-contato__url{
@@ -45,13 +49,15 @@
 .card-contato__descricao{
   padding: 0.5rem 0;
 
-  color: var(--cinza-mediano-fraco);
+  /* color: var(--cinza-mediano-fraco); */
+  color: var(--cinza-fraco-medio);
 }
 
-.card-contato__url{
+a.card-contato__url{
   padding: 0.5rem 0;
 
-  color: var(--preto) !important;
+  /* color: var(--preto) !important; */
+  color: var(--branco) !important;
 }
 
 .card-contato__link{
@@ -67,15 +73,15 @@
   cursor: pointer;
   transition: 0.3s;
 
-  background-color: var(--oliva-medio);
-  border-color: var(--oliva);
-  color: var(--preto);
+  background-color: rgba(255, 255, 255, 0.10) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  color: var(--cinza-fraco) !important;
 }
 
-.card-contato__link:hover{
-  background-color: var(--oliva);
-  border-color: var(--cinza-mediano-forte);
-  color: var(--preto);
+.card-contato__link:Is(:hover, :focus){
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  color: var(--branco) !important;
 }
 
 @media screen and (min-width: 0) and (max-width: 390px){

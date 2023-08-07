@@ -9,7 +9,7 @@
 }
 
 .card-contato-mensagem{
-  background-color: var(--oliva-medio);
+  background-color: var(--verde-forte);
 
   justify-content: space-around;
   align-items: center;
@@ -23,13 +23,15 @@
 
   margin-left: 1rem;
 
-  color: var(--cinza-medio-forte);
+  /* color: var(--cinza-medio-forte); */
+  color: var(--cinza-fraco);
 }
 
 .card-contato-mensagem__descricao{
   text-align: center;
 
-  color: var(--cinza-mediano-fraco);
+  /* color: var(--cinza-mediano-fraco); */
+  color: var(--cinza-fraco-medio);
 }
 
 .card-contato__url{
