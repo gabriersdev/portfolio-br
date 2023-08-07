@@ -80,6 +80,17 @@ a{
   cursor: pointer;
 }
 
+.popover-lista {
+  --bs-popover-max-width: 200px;
+  --bs-popover-header-bg: var(--preto);
+  --bs-popover-header-color: var(--branco);
+  --bs-popover-border-color: var(--cinza);
+  --bs-popover-bg: var(--preto-medio);
+  --bs-popover-body-color: var(--branco);
+  --bs-popover-body-padding-x: 1rem;
+  --bs-popover-body-padding-y: .5rem;
+}
+
 @media screen and (min-width: 0) and (max-width: 390px){
   .container-elemento{
     padding: 0 1rem;
