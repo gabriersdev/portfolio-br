@@ -100,7 +100,21 @@
 
 @media screen and (max-width: 320px) and (max-height: 820px) {
   .cabecalho{
-    height: calc(100vh + 25vh);
+    /* height: calc(100vh + 25vh); */
+  }
+}
+
+@media screen and (max-width: 320px){
+  .cabecalho{
+    padding: 1rem;
+  }
+
+  .cabecalho .cabecalho__principal__apresentacao__titulo{
+    font-size: 2rem;
+  }
+
+  .cabecalho__principal__apresentacao__descricao{
+    display: none;
   }
 }
 
@@ -145,7 +159,8 @@
 
 @media screen and (max-width: 300px){
   .cabecalho__principal__menu{
-    display: none;
+    /* display: none; */
+    visibility: hidden;
   }
 }
 
@@ -172,7 +187,8 @@
   }
 
   .cabecalho__principal__menu{
-    display: none;
+    /* display: none; */
+    visibility: hidden;
   }
 
   .cabecalho__cards{
@@ -183,7 +199,7 @@
 
 @media screen and (min-width: 767px) and (max-width: 1441px) and (max-height: 800px) {
   .cabecalho__principal{
-    top: calc(25% - 1vh);
+    /* top: calc(25% - 1vh); */
   }
 
   .cabecalho__cards{
@@ -193,11 +209,12 @@
 
 @media screen and (max-height: 825px) {
   .cabecalho__principal{
-    top: calc(25% - 1vh);
+    /* top: calc(25% - 1vh); */
   }
 
   .cabecalho__principal__menu{
-    display: none;
+    /* display: none; */
+    visibility: hidden;
   }
 
   .cabecalho__cards{
@@ -207,11 +224,11 @@
 
 @media screen and (max-height: 760px) {
   .cabecalho{
-    display: block;
+    /* display: block; */
   }
 
   .cabecalho__principal{
-    top: 50%;
+    /* top: 50%; */
     transform: translate(0, -50%);
     display: block;
   }

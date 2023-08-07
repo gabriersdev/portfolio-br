@@ -106,3 +106,14 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 320px){
+  .menu{
+    padding: 1rem;
+    display: flex;
+  }
+
+  div.menu__imagem{
+    display: none;
+  }
+}

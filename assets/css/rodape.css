@@ -1,5 +1,6 @@
 .rodape{
-  background-color: var(--cinza-fraco);
+  /* background-color: var(--cinza-fraco); */
+  background-color: var(--preto);
 
   display: flex;
   justify-content: space-between;
@@ -10,6 +11,15 @@
   padding-bottom: calc(1rem + 2.5rem + 1rem + 1.5rem);
 
   position: relative;
+}
+
+.rodape :where(a){
+  color: var(--cinza-fraco) !important;
+}
+
+.rodape :where(a:is(:focus, :hover)){
+  color: var(--branco) !important;
+  text-decoration: underline;
 }
 
 .rodape__secao{
@@ -33,7 +43,8 @@
 }
 
 .rodape__secao__titulo{
-  color: var(--cinza-mediano-fraco);
+  /* color: var(--cinza-mediano-fraco); */
+  color: var(--cinza-medio);
   font-size: 1rem;
 
   line-height: 2;
@@ -44,7 +55,8 @@
 }
 
 .rodape__secao__link__icone{
-  color: var(--preto);
+  /* color: var(--preto); */
+  color: var(--cinza-fraco);
 }
 
 .rodape__base{
@@ -52,7 +64,8 @@
 
   position: absolute;
 
-  border-top: 1px dashed var(--cinza-mediano-fraco);
+  /* border-top: 1px dashed var(--cinza-mediano-fraco); */
+  border-top: 1px dashed var(--cinza-fraco);
 
   margin-top: 1rem;
   padding: 1.25rem 0;

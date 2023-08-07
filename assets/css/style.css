@@ -19,7 +19,11 @@ body{
 }
 
 .container-principal{
-  margin-top: 5rem !important;
+  margin-top: 4rem !important;
+}
+
+.container-principal h2{
+  padding-top: 1rem;
 }
 
 a{
@@ -40,6 +44,7 @@ a{
 }
 
 .botao-subir{
+  display: none;
   position: fixed;
   bottom: 5%;
   right: 0.5rem;
