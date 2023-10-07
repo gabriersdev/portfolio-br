@@ -1,3 +1,29 @@
+#modal-direitos-autorais{
+  color: var(--branco);
+}
+
+.modal-estilo{
+  background-color: var(--cinza-ultra-forte);
+
+  .modal-body,
+  .modal-header,
+  .modal-footer{
+    border-color: var(--cinza-medio-forte);
+  }
+
+  [href]{
+    color: var(--azul-claro-medio);
+
+    &:hover{
+      color: var(--azul-claro-forte);
+    }
+  }
+
+  [data-modal-fecha]{
+    color: #FFF;
+  }
+}
+
 .modal-header{
   display: flex;
   justify-items: flex-end !important;

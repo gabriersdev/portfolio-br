@@ -51,6 +51,7 @@
 
 .card-linguagem-transparente .card__header__versao{
   color: var(--branco);
+  display: none;
 }
 
 .card-linguagem-transparente .card__corpo{

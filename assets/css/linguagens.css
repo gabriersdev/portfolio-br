@@ -19,12 +19,14 @@
   grid-template-rows: 3.5rem auto;
   
   padding: 1.5rem;
+  padding-top: 1rem;
 
   margin-top: 0.75rem;
   margin-right: 1rem;
 
   /* border: 1px dashed var(--azul); */
   border: 1px dashed var(--branco);
+  border-radius: 7.5px;
 }
 
 .linguagem__cabecalho{
