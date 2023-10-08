@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   justify-items: flex-start;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #000;
   margin-bottom: 0.5rem;
   padding: 0.25rem 0.5rem;
@@ -105,6 +105,12 @@
   margin-left: unset;
   line-height: 1.5;
   list-style-type: none;
+
+  &.finished{
+    padding-right: 0.7rem;
+
+    border-color: #FFFF5530;
+  }
 }
 
 .caracteristicas-formacao__item__titulo{

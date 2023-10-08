@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-page="principal">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,7 @@
   <meta property="og:image:width" content="800"> 
   <meta property="og:image:height" content="600">
 
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net/; img-src *; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net/ https://code.jquery.com/ https://cdnjs.cloudflare.com/; frame-src *">  
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net/; img-src *; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net/ https://code.jquery.com/ https://cdnjs.cloudflare.com/; frame-src *">  
 
   <title>Gabriel Ribeiro - Portfólio</title>
   <link rel="shortcut icon" href="./assets/imagens/icon-profile.png" type="image/x-icon">
@@ -597,16 +597,16 @@
                   </p>
                 </li>
 
-                <li class="caracteristicas-formacao__item">
-                  <p class="caracteristicas-formacao__item__titulo">Programa Oracle ONE <i class="bi bi-bookmark-fill"></i></p>
+                <li class="caracteristicas-formacao__item finished">
+                  <p class="caracteristicas-formacao__item__titulo">Programa Oracle ONE<i class="bi bi-bookmark-fill"></i></p>
                   <p class="caracteristicas-formacao__item__descricao">
                     Alura <br>
                     2022 - 2023
                   </p>
                 </li>
 
-                <li class="caracteristicas-formacao__item">
-                  <p class="caracteristicas-formacao__item__titulo">Técnico em Informática para a Internet <i class="bi bi-bookmark-fill"></i></p>
+                <li class="caracteristicas-formacao__item finished">
+                  <p class="caracteristicas-formacao__item__titulo">Técnico em Informática para a Internet<i class="bi bi-bookmark-fill"></i></p>
                   <p class="caracteristicas-formacao__item__descricao">
                     E.E. Técnico Industrial Prof. Fontes <br>
                     2021 - 2022
@@ -653,8 +653,37 @@
       </section>
       
       <section class="projetos container-principal" id="projetos">
-        <h2 class="projetos__titulo">Meus Projetos</h2>
-        
+        <h2 class="projetos__titulo">Projetos</h2>
+
+        <div class="projetos projetos-destaque" id="projetos-destaque">
+          <div class="projeto-destaque">
+            <div class="projeto-destaque--imagem" style="--img: url(https://opengraph.githubassets.com/ef53dcba7698452627f8f6de5c034e97d2ccfa86964ede2c7c48527de0f8fcbb/gabrieszin/confirmacao-cca)"></div>
+            <div class="projeto-destaque--conteudo">
+              <h4 class="titulo">Confirmação CCA</h4>
+              <p class="descricao">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit illum esse nostrum quisquam, nemo asperiores recusandae distinctio delectus. Nam libero incidunt eos, ipsa corrupti inventore sint quos quisquam maxime enim.</p>
+              <a class="btn" href=""><span>Ver projeto</span></a>
+            </div>
+          </div>
+
+          <div class="projeto-destaque">
+            <div class="projeto-destaque--imagem" style="--img: url(https://opengraph.githubassets.com/ef53dcba7698452627f8f6de5c034e97d2ccfa86964ede2c7c48527de0f8fcbb/gabrieszin/calculadora-tempo-de-servico)"></div>
+            <div class="projeto-destaque--conteudo">
+              <h4 class="titulo">Calculadora Tempo de Serviço</h4>
+              <p class="descricao">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit illum esse nostrum quisquam, nemo asperiores recusandae distinctio delectus. Nam libero incidunt eos, ipsa corrupti inventore sint quos quisquam maxime enim.</p>
+              <a class="btn" href=""><span>Ver projeto</span></a>
+            </div>
+          </div>
+
+          <div class="projeto-destaque">
+            <div class="projeto-destaque--imagem" style="--img: url(https://opengraph.githubassets.com/ef53dcba7698452627f8f6de5c034e97d2ccfa86964ede2c7c48527de0f8fcbb/gabrieszin/random-password)"></div>
+            <div class="projeto-destaque--conteudo">
+              <h4 class="titulo">Random Password</h4>
+              <p class="descricao">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit illum esse nostrum quisquam, nemo asperiores recusandae distinctio delectus. Nam libero incidunt eos, ipsa corrupti inventore sint quos quisquam maxime enim.</p>
+              <a class="btn" href=""><span>Ver projeto</span></a>
+            </div>
+          </div>
+        </div>
+
         <div class="selecao">
           <button class="selecao__botao-projeto ativo" data-acao-projeto="todos">Todos</button>
           <button class="selecao__botao-projeto" data-acao-projeto="php">PHP</button>

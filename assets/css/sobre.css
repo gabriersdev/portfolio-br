@@ -1,6 +1,6 @@
 .sobre__titulo{
-  font-size: 2.25rem;
-  font-weight: 600;
+  font-size: var(--titulo-h2);
+  font-weight: var(--weight-titulo-h2);
 
   padding-bottom: 0.6rem;
 }
