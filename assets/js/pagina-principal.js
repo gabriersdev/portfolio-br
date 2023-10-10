@@ -1,11 +1,12 @@
 import { trocarTipoFeedbackModal, controlarExibicaoModal } from "./utilitarios/modal.js";
-import { ajustarPeriodoProgramando, ajustarIdade, acoesModal, limparFormulario } from "./utilitarios/utilitarios.js";
+import { ajustarPeriodoProgramando, ajustarIdade, acoesModal, limparFormulario, isEmpty } from "./utilitarios/utilitarios.js";
 import { carregarCardsPrincipal } from "./carregar/carregar-cards-principal.js";
 import { carregarPreview } from "./carregar/carregar-preview.js";
 import { acoes } from "./carregar/carregar-eventos-principal.js";
 import { pesquisarProjeto } from './interacao/pesquisa-projetos.js';
 import { carregarQuantidadeProjetosLinguagem } from './carregar/carregar-quantidade-projetos-linguagem.js';
 import { controleFechamentoModal } from "./utilitarios/modal.js";
+import { destaques } from "./conteudo/conteudos.js";
 
 (() => {
   
@@ -77,7 +78,18 @@ import { controleFechamentoModal } from "./utilitarios/modal.js";
     
     areaImportacao !== null ? areaImportacao.innerHTML += modalPreviews : '';
     controleFechamentoModal();
-    
+
+    // Carregando projetos em destaque
+    let destaque;
+    for (destaque of destaques){
+      let linkIMG = destaque.link
+      if(destaque.desployInGitHub){
+        linkIMG = 'https://opengraph.githubassets.com/ef53dcba7698452627f8f6de5c034e97d2ccfa86964ede2c7c48527de0f8fcbb/gabrieszin/' + destaque.link.split('/')[isEmpty(destaque.link.split('/').length - 2) ? destaque.link.split('/').length - 1 : destaque.link.split('/').length - 2]
+      }
+
+      $('#projetos-destaque').append(`<div class="projeto-destaque"><div class="projeto-destaque--imagem" style="--img: url(${linkIMG})"></div><div class="projeto-destaque--conteudo"><h4 class="titulo">${destaque.title}</h4><p class="descricao">${destaque.resume}</p><a class="btn" href="${destaque.link}" target="_blank" rel="noreferrer noopener"><span>Ver projeto</span></a></div></div>`)
+    }
+
     const botoesAcaoCardsLinguagem = document.querySelectorAll('[data-acao-card-linguagem]');
     botoesAcaoCardsLinguagem.forEach(botao => {
       const linguagem = botao.dataset.acaoCardLinguagem.toLowerCase();

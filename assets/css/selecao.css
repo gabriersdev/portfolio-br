@@ -53,3 +53,8 @@
   opacity: 1;
 }
 
+@media screen and (width <= 766px) {
+  .selecao__botao-projeto{
+    margin-bottom: 0.5rem;
+  }
+}
