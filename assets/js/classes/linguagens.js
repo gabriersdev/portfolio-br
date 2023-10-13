@@ -27,7 +27,7 @@ class linguagens{
     this.desativarTodosOsBotoes();
 
     this.cardsLinguagem.forEach(card => {
-      card.style.display = 'block';
+      card.style.display = 'grid';
     })
 
     this.ativarBotao(botao);
