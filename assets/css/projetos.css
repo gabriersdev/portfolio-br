@@ -95,8 +95,8 @@
 
 .projetos__card{
   display: grid;
-
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, min(460px, calc(25% - 0.5rem)));
 }
 
 .projetos__nenhum-projeto{

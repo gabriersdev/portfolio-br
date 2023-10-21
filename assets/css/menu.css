@@ -62,12 +62,12 @@
 
 .menu__item-lista{
   margin-right: 0.5rem;
-  padding: 0.5rem 1.25rem;
+  padding: 0.45rem 1rem;
 
   border-width: 1.5px;
   border-style: solid;
   border-color: var(--cinza-medio);
-  border-radius: 5px;
+  border-radius: 6px;
 
   color: var(--cinza);
 

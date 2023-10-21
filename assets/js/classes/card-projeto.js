@@ -45,7 +45,8 @@ class cardProjeto{
   criarCabecalho({classeTitulo, classeCabecalho}){
     const tituloProjeto = document.createElement('h2');
     tituloProjeto.classList.add(classeTitulo);
-    tituloProjeto.textContent = (this.titulo).substr(0, 25);
+    // tituloProjeto.textContent = (this.titulo).substr(0, 25);
+    tituloProjeto.textContent = this.titulo;
     
     const cabecalhoProjeto = document.createElement('div');
     cabecalhoProjeto.classList.add(classeCabecalho);

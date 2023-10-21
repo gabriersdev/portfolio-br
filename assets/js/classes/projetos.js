@@ -7,7 +7,7 @@ class projetos{
   
   constructor(tipoDisplay){
     
-    tipoDisplay == undefined ? this.tipoDisplay = 'grid' : this.tipoDisplay = tipoDisplay;
+    tipoDisplay == undefined ? this.tipoDisplay = 'flex' : this.tipoDisplay = tipoDisplay;
     
     this.divProjetos = document.querySelector('[data-conteudo="projetos"]');
     this.cardsProjeto = this.divProjetos.querySelectorAll('[data-conteudo-projetos="card-projeto"]');

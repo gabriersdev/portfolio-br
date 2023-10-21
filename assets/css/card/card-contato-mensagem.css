@@ -44,11 +44,11 @@
   display: inline-block;
   margin-top: 0.75rem;
   margin-right: 0.5rem;
-  padding: 0.5rem 1.25rem;
+  padding: var(--padding-buttons);
 
   border-width: 1.5px;
   border-style: solid;
-  border-radius: 5px;
+  border-radius: 6px;
 
   cursor: pointer;
   transition: 0.3s;

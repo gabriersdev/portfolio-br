@@ -1,12 +1,17 @@
 .card-projeto{
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 5px calc(2.5rem + 1.7rem * 2 + 1rem) auto calc(2.75rem + 1rem);
+  /* display: grid; */
+  /* grid-template-rows: 5px calc(2.5rem + 1.7rem * 2 + 1rem) auto calc(2.75rem + 0.85rem); */
+  /* grid-template-columns: auto; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
 
   padding: 2rem 1rem;
 
-  margin-top: 1rem; 
-  margin-right: 1rem;
+  /* margin-top: 1rem;  */
+  /* margin-right: 1rem; */
 
   border-radius: 15px;
 }
@@ -50,6 +55,7 @@
 
 .card-projeto__cabecalho{
   padding: 1.25rem 0;
+  padding-top: 0.5rem;
 
   border-bottom: 1px dashed var(--cinza-mediano-fraco);
 }
@@ -77,6 +83,7 @@
 
 .card-projeto__corpo{
   margin-top:  1rem;
+  flex-grow: 2;
 }
 
 .card-projeto__corpo__marcador{
@@ -128,14 +135,14 @@
 .card-projeto__rodape__link{
   display: inline-block;
   margin-right: 0.5rem;
-  padding: 0.5rem 1.25rem;
+  padding: var(--padding-buttons);
 
   border-width: 1.5px;
   border-style: solid;
-  border-radius: 5px;
+  border-radius: 6px;
 
   cursor: pointer;
-  transition: 0.3s;
+  transition: border ease-in-out 0.3s;
 }
 
 .card-projeto-facil .card-projeto__rodape__link{
@@ -215,9 +222,9 @@
   display: flex;
   align-items: center;
 
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 0.9rem;
 
-  border-radius: 15px;
+  border-radius: 50%;
 
   /* color: var(--cinza-medio-forte); */
   /* background-color: var(--cinza-fraco-medio); */
