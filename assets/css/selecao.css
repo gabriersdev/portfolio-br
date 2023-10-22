@@ -30,7 +30,7 @@
 }
 
 .selecao-linguagens__botao{
-  border-color: unset;
+  border-color: transparent;
 
   margin-bottom: 0.25rem;
 }

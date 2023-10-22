@@ -12,7 +12,7 @@
 
 body{
   position: relative;
-  background: var(--preto-medio);
+  background: #101010;
   color: var(--branco);
 }
 

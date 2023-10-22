@@ -1,6 +1,13 @@
 .card-pg-auxiliar-projeto{
-  display: grid;
-  grid-template-rows: 5px calc(2.5rem + 1.7rem * 2 + 1rem) auto calc(2.75rem + 1rem);
+  /* display: grid; */
+  /* grid-template-rows: 5px calc(2.5rem + 1.7rem * 2 + 1rem) auto calc(2.75rem + 0.85rem); */
+  /* grid-template-columns: auto; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+
   min-width: 400px;
   max-width: 400px;
 

@@ -3,7 +3,7 @@ import { controlarNenhumProjeto } from "../utilitarios/utilitarios.js";
 
 export const pesquisarProjeto = (listagemProjetos) => {
 
-  const classeProjetos = new projetos('grid');
+  const classeProjetos = new projetos('flex');
 
   const selecaoProjeto = document.querySelector('[data-selecao-projeto]');
   const listaProjetos = document.querySelector('[data-lista-projetos]');
