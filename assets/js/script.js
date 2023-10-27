@@ -9,6 +9,13 @@ import { conteudo } from './conteudo/conteudo-pg-principal.js';
     $('body').html(conteudo)
   }
 
+  // Verificando página e redirecionando para a página inicial
+  if(new URL(window.location).origin.toLowerCase().trim() === 'https://gabrieszin.github.io'){
+    if(document.title.trim() === 'Projetos Antigos - Gabriel Ribeiro - Portfólio' || document.title.trim() === 'Projetos dos Cursos da Alura - Gabriel Ribeiro - Portfólio'){
+      window.location.href = '../../index.html'
+    }
+  }
+
   $(document).ready(function(){
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
