@@ -83,7 +83,7 @@ import { destaques } from "./conteudo/conteudos.js";
     
     // Carregando projetos em destaque
     let destaque;
-    for (destaque of destaques){
+    for (destaque of destaques.filter((projeto) => projeto.visible === true)){
       let linkIMG = destaque.link
       if(destaque.desployInGitHub){
         linkIMG = 'https://opengraph.githubassets.com/ef53dcba7698452627f8f6de5c034e97d2ccfa86964ede2c7c48527de0f8fcbb/gabrieszin/' + destaque.link.split('/')[isEmpty(destaque.link.split('/').length - 2) ? destaque.link.split('/').length - 1 : destaque.link.split('/').length - 2]

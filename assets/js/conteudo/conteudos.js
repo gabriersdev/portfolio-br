@@ -14,6 +14,7 @@ const exemplo =
 
 const dadosProjetos = [
   {
+    visible: true,
     titulo: "Expresso Mobilidade", 
     autor: "Gabriel Ribeiro", 
     descricao: 'É um serviço de mobilidade urbana feito de usuários para usuários da Região Metropolitana de Belo Horizonte e que visa facilitar e melhorar o dia à dia de quem precisa se deslocar usando o transporte público.',
@@ -25,19 +26,21 @@ const dadosProjetos = [
     linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML", "Figma"],
     dificuldade: 3
   },
-  // {
-  //   titulo: "API Expresso Mobilidade", 
-  //   autor: "Gabriel Ribeiro", 
-  //   descricao: 'Permite a consulta externa aos dados de 923 linhas de Belo Horizonte e Região Metropolitana operadas pela BHTrans, Vinscol e o Consórcio Ótimo Metropolitano. A API tem estrutura básica e retorna os dados em JSON através de AJAX.',
-  //   existeSaibaMais: true,
-  //   tituloSaibaMais: 'API Expresso Mobilidade',
-  //   saibaMais: 'Para usar a API, o desenvolvedor pode acessar a página de API do Expresso', 
-  //   conclusao: 2022-12-31, 
-  //   link: "", 
-  //   linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML"],
-  //   dificuldade: 3
-  // },
   {
+    visible: false,
+    titulo: "API Expresso Mobilidade", 
+    autor: "Gabriel Ribeiro", 
+    descricao: 'Permite a consulta externa aos dados de 923 linhas de Belo Horizonte e Região Metropolitana operadas pela BHTrans, Vinscol e o Consórcio Ótimo Metropolitano. A API tem estrutura básica e retorna os dados em JSON através de AJAX.',
+    existeSaibaMais: true,
+    tituloSaibaMais: 'API Expresso Mobilidade',
+    saibaMais: 'Para usar a API, o desenvolvedor pode acessar a página de API do Expresso', 
+    conclusao: 2022-12-31, 
+    link: "", 
+    linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML"],
+    dificuldade: 3
+  },
+  {
+    visible: true,
     titulo: "Hotel Alura", 
     autor: "Gabriel Ribeiro", 
     descricao: 'Projeto de um gerenciador de um gerenciador simples de hotel desenvolvido para o Challenge do Oracle ONE. Este projeto permite ao usuário: registar reservas e hóspedes, editar e consultar as reservas e hóspedes existentes, exclusão de todos os tipos de registros.',
@@ -50,6 +53,7 @@ const dadosProjetos = [
     dificuldade: 3
   },
   {
+    visible: true,
     titulo: "Conversor em Java", 
     autor: "Gabriel Ribeiro", 
     descricao: 'Este projeto é um Conversor de Moedas, Medidas e Temperatura desenvolvido por mim para o primeiro Challenge da Trilha de Java do Programa Oracle ONE. Este projeto permite ao usuário: converter moedas, converter medidas, converter entre unidades de temperatura.',
@@ -61,19 +65,21 @@ const dadosProjetos = [
     linguagens: ["Java", "Git", "Figma"],
     dificuldade: 3
   },
-  // {
-  //   titulo: "Institucional do Expresso Mobilidade", 
-  //   autor: "Gabriel Ribeiro", 
-  //   descricao: 'É a apresentação do Expresso Mobilidade para quem não conhece o projeto ou nunca o acessou. Para o desenvolvimento dessas páginas foram usados os frameworks Bootstrap, JQuery, SweetAlert, Bootstrap Icons e Flaticon. O projeto foi prototipado no Figma e desenvolvido junto do <a href="https://github.com/samuelsoaresl" target="_blank">Samuel Soares.</a>', 
-  //   existeSaibaMais: false,
-  //   tituloSaibaMais: '', 
-  //   saibaMais: "", 
-  //   conclusao: 2022-12-19, 
-  //   link: "https://expressomobilidade.000webhostapp.com/externo-expresso/", 
-  //   linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML", "Figma"],
-  //   dificuldade: 2
-  // },
   {
+    visible: false,
+    titulo: "Institucional do Expresso Mobilidade", 
+    autor: "Gabriel Ribeiro", 
+    descricao: 'É a apresentação do Expresso Mobilidade para quem não conhece o projeto ou nunca o acessou. Para o desenvolvimento dessas páginas foram usados os frameworks Bootstrap, JQuery, SweetAlert, Bootstrap Icons e Flaticon. O projeto foi prototipado no Figma e desenvolvido junto do <a href="https://github.com/samuelsoaresl" target="_blank">Samuel Soares.</a>', 
+    existeSaibaMais: false,
+    tituloSaibaMais: '', 
+    saibaMais: "", 
+    conclusao: 2022-12-19, 
+    link: "https://expressomobilidade.000webhostapp.com/externo-expresso/", 
+    linguagens: ["PHP", "MySQL", "JS", "CSS", "HTML", "Figma"],
+    dificuldade: 2
+  },
+  {
+    visible: true,
     titulo: "Meus Cursos na Alura", 
     autor: "Gabriel Ribeiro", 
     descricao: 'Neste projeto, eu consumo a API de Cursos da Alura e mostro meus cursos e formações.',
@@ -86,6 +92,7 @@ const dadosProjetos = [
     dificuldade: 2
   },
   {
+    visible: true,
     titulo: "Projeto Humanos: Altamira", 
     autor: "Gabriel Ribeiro", 
     descricao: 'É um website dedicado a 5ª temporada do podcast "Projeto Humanos". Neste projeto, eu implementei a funções de pesquisa com autocomplete e um player para a trilha sonora da temporada.', 
@@ -98,6 +105,7 @@ const dadosProjetos = [
     dificuldade: 2
   },
   {
+    visible: false,
     titulo: "Projetos dos Cursos Alura", 
     autor: "Gabriel Ribeiro", 
     descricao: "Aqui você encontra alguns dos projetos que eu desenvolvi junto de cursos que eu realizei na Alura.", 
@@ -110,6 +118,7 @@ const dadosProjetos = [
     dificuldade: 2
   },
   {
+    visible: true,
     titulo: "Birthday Message", 
     autor: "Gabriel Ribeiro", 
     descricao: 'O Birthday Message é um projeto que renderiza mensagens de aniversário (personalizadas ou não)',
@@ -122,6 +131,7 @@ const dadosProjetos = [
     dificuldade: 1
   },
   {
+    visible: true,
     titulo: "Calculadora Tempo de Serviço", 
     autor: "Gabriel Ribeiro", 
     descricao: 'O nome é auto explicativo: o projeto é uma calculadora que você insere com os períodos trabalhados e ela calcula o total',
@@ -134,6 +144,7 @@ const dadosProjetos = [
     dificuldade: 1
   },
   {
+    visible: true,
     titulo: "Gerador de senhas", 
     autor: "Gabriel Ribeiro", 
     descricao: 'Gere senhas aleatórias seguras, conforme suas escolhas e teste as senhas que você já usa.',
@@ -144,33 +155,35 @@ const dadosProjetos = [
     link: "https://gabrieszin.github.io/random-password/", 
     linguagens: ['JS', 'CSS', 'HTML'],
     dificuldade: 1
-  },
-  
-  // {
-  //   titulo: "Projetos Antigos", 
-  //   autor: "Gabriel Ribeiro", 
-  //   descricao: "Aqui você encontra os primeiro projetos que eu desenvolvi :)", 
-  //   existeSaibaMais: false, 
-  //   tituloSaibaMais: '', 
-  //   saibaMais: "", 
-  //   conclusao: 2022-12-19, 
-  //   link: "./projetos/projetos-antigos/", 
-  //   linguagens: ["JS", "CSS", "HTML"], 
-  //   dificuldade: 1
-  // },
-  // {
-  //   titulo: "Gerenciador de Biblioteca", 
-  //   autor: "Gabriel Ribeiro", 
-  //   descricao: "É um gerenciador básico de biblioteca escolar. Primeiro é necessário cadastrar um aluno, depois um livro (no gerenciador, chamado de título) e a partir daí registrar uma locação.", 
-  //   existeSaibaMais: false, 
-  //   tituloSaibaMais: '', 
-  //   saibaMais: "", 
-  //   conclusao: 2022-12-19, 
-  //   link: "", 
-  //   linguagens: ["JS", "CSS", "HTML"], 
-  //   dificuldade: 2
-  // },
+  },  
   {
+    visible: false,
+    titulo: "Projetos Antigos", 
+    autor: "Gabriel Ribeiro", 
+    descricao: "Aqui você encontra os primeiro projetos que eu desenvolvi :)", 
+    existeSaibaMais: false, 
+    tituloSaibaMais: '', 
+    saibaMais: "", 
+    conclusao: 2022-12-19, 
+    link: "./projetos/projetos-antigos/", 
+    linguagens: ["JS", "CSS", "HTML"], 
+    dificuldade: 1
+  },
+  {
+    visible: false,
+    titulo: "Gerenciador de Biblioteca", 
+    autor: "Gabriel Ribeiro", 
+    descricao: "É um gerenciador básico de biblioteca escolar. Primeiro é necessário cadastrar um aluno, depois um livro (no gerenciador, chamado de título) e a partir daí registrar uma locação.", 
+    existeSaibaMais: false, 
+    tituloSaibaMais: '', 
+    saibaMais: "", 
+    conclusao: 2022-12-19, 
+    link: "", 
+    linguagens: ["JS", "CSS", "HTML"], 
+    dificuldade: 2
+  },
+  {
+    visible: true,
     titulo: "Encriptador de Vogais", 
     autor: "Gabriel Ribeiro", 
     descricao: "Este projeto é um codificador de vogais em textos. As letras A, E, I, O e U são ofuscadas, deixando o texto encriptado. É possível também copiar e descriptografar os textos.", 
@@ -183,6 +196,7 @@ const dadosProjetos = [
     dificuldade: 1
   },
   {
+    visible: true,
     titulo: "Jogo da Forca", 
     autor: "Gabriel Ribeiro", 
     descricao: 'Projeto desenvolvido para a Trilha Iniciante em Programação da Alura. O Jogo da Forca foi realizado através das aulas dos instrutores da Alura. No desenvolvimento, foi usada a biblioteca SweetAlert, o Trelo e o Figma, para a prototipação.',
@@ -198,18 +212,21 @@ const dadosProjetos = [
 
 const destaques = [
   {
+    visible: true,
     title: 'Confirmação CCA', 
     link: 'https://gabrieszin.github.io/confirmacao-cca/', 
     resume: 'Projeto para a verificação e validação prévia de dados básicos de clientes de Correspondentes Caixa Aqui', 
     desployInGitHub: true
   },
   {
+    visible: true,
     title: 'Calculadora Tempo de Serviço', 
     link: 'https://gabrieszin.github.io/calculadora-tempo-de-servico/', 
     resume: 'Calculadora de tempo de serviço trabalhado, desenvolvida utilizando recursos básicos de Programação WEB', 
     desployInGitHub: true
   },
   {
+    visible: true,
     title: 'Random Password', 
     link: 'https://gabrieszin.github.io/random-password/', 
     resume: 'Gerador de senhas aleatórias', 
