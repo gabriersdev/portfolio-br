@@ -1,6 +1,7 @@
 .card-contato-mensagem{
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 
   margin-top: 0.5rem;
   margin-bottom: 1rem;

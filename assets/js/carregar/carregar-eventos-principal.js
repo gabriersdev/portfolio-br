@@ -10,14 +10,17 @@ const cardsLinguagem = {
   mysql:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirProjetos(botao.dataset.acaoCardLinguagem.toLowerCase(), document.querySelector(`[data-acao-projeto=${botao.dataset.acaoCardLinguagem.toLowerCase()}`))}),
   html:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirProjetos(botao.dataset.acaoCardLinguagem.toLowerCase(), document.querySelector(`[data-acao-projeto=${botao.dataset.acaoCardLinguagem.toLowerCase()}`))}),
   java:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirProjetos(botao.dataset.acaoCardLinguagem.toLowerCase(), document.querySelector(`[data-acao-projeto=${botao.dataset.acaoCardLinguagem.toLowerCase()}`))} ),
+  python:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirProjetos(botao.dataset.acaoCardLinguagem.toLowerCase(), document.querySelector(`[data-acao-projeto=${botao.dataset.acaoCardLinguagem.toLowerCase()}`))} ),
   git:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirTodosOsProjetos(document.querySelector('[data-acao-projeto="todos"'))}),
-  figma:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirTodosOsProjetos(document.querySelector('[data-acao-projeto="todos"'))})
+  figma:botao => botao.addEventListener('click', evento => {window.location.replace('#projetos'); classeProjetos.exibirTodosOsProjetos(document.querySelector('[data-acao-projeto="todos"'))}),
+  outros:botao => botao.addEventListener('click', (evento) => { window.location.replace('#projetos'); evento.preventDefault(); classeProjetos.exibirTodosOsProjetos(document.querySelector('[data-acao-projeto="todos"'))}),
 };
 
 const btnProjetos = {
   todos:botao => botao.addEventListener("click", evento => {classeProjetos.exibirTodosOsProjetos(botao)}),
   php:botao => botao.addEventListener("click", evento => {classeProjetos.exibirProjetos(botao.getAttribute("data-acao-projeto").toLowerCase(), botao)}),
   java:botao => botao.addEventListener("click", evento => {classeProjetos.exibirProjetos(botao.getAttribute("data-acao-projeto").toLowerCase(), botao)}),
+  python:botao => botao.addEventListener("click", evento => {classeProjetos.exibirProjetos(botao.getAttribute("data-acao-projeto").toLowerCase(), botao)}), 
   mysql:botao => botao.addEventListener("click", evento => {classeProjetos.exibirProjetos(botao.getAttribute("data-acao-projeto").toLowerCase(), botao)}),
   js:botao => botao.addEventListener("click", evento => {classeProjetos.exibirProjetos(botao.getAttribute("data-acao-projeto").toLowerCase(), botao)}),
   css:botao => botao.addEventListener("click", evento => {classeProjetos.exibirProjetos(botao.getAttribute("data-acao-projeto").toLowerCase(), botao)}),

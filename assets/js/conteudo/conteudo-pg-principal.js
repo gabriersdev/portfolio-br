@@ -25,7 +25,7 @@ const conteudo = `
     </section>
 
     <section class="cabecalho__principal__menu">
-      <h2 class="cabecalho__principal__menu__titulo">Neste Portfólio</h2>
+      <h2 class="cabecalho__principal__menu__titulo" style="text-transform: initial;">Neste Portfólio</h2>
       <ul class="cabecalho__principal__menu__lista">
         <li class="cabecalho__principal__menu__item-lista ativo">
           <a href="#apresentacao" tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popover-lista" data-bs-trigger="hover focus" data-bs-title="Apresentação (Seção)" data-bs-content="Nesta seção você visualizará um breve resumo sobre o meu portfólio e também um preview das linguagens que desenvolvo">Apresentação</a>
@@ -159,7 +159,7 @@ const conteudo = `
         </div>
         
         <div class="card__rodape">
-          <a data-acao-card-linguagem="java" class="card__rodape__link">Ver projetos</a>
+          <a data-acao-card-linguagem="python" class="card__rodape__link">Ver projetos</a>
           <div class="contador-projetos" data-toggle="tooltip" data-placement="bottom" title="Quantidade de Projetos nesta Linguagem">
             <p class="contador-projetos__quantidade" data-contador-projeto="python"></p>
             <i class="bi bi-collection contador-projetos__icone"></i>
@@ -644,6 +644,7 @@ const conteudo = `
     <div class="selecao">
       <button class="selecao__botao-projeto ativo" data-acao-projeto="todos">Todos</button>
       <button class="selecao__botao-projeto" data-acao-projeto="php">PHP</button>
+      <button class="selecao__botao-projeto" data-acao-projeto="python">Python</button>
       <button class="selecao__botao-projeto" data-acao-projeto="java">Java</button>
       <button class="selecao__botao-projeto" data-acao-projeto="mysql">MySQL</button>
       <button class="selecao__botao-projeto" data-acao-projeto="js">JavaScript</button>
