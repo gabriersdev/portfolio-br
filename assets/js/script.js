@@ -5,6 +5,16 @@ import { conteudo } from './conteudo/conteudo-pg-principal.js';
 
 (() => {  
 
+  fetch('https://gist.githubusercontent.com/gabrieszin/c2136e42374bf2b78eac871b840543ad/raw/bd02b2c44a47a861024fbbcb12fabfa5a303df9d/projetos.json')
+  .then((result) => {
+    result.json().then((dados) => { 
+      // console.log(dados) 
+      
+    });
+  }).catch((err) => {
+    
+  });
+
   if(document.title == 'Gabriel Ribeiro - Portfólio'){
     $('body').html(conteudo)
   }
