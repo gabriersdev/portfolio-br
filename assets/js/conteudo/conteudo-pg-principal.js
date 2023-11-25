@@ -612,21 +612,21 @@ const conteudo = `
           </p>
           <ul class="caracteristicas">
             <div class="caracteristicas__itens">
-              <li class="caracteristicas__item finished">
+              <li class="caracteristicas__item finished" data-toggle="tooltip" data-placement="bottom" data-bs-custom-class="custom-tooltip-finished" title="Concluído">
                 <i class="caracteristicas__item__icone bi bi-check2"></i>
                 <p class="caracteristicas__item__descricao">Aperfeiçoar meus conhecimentos</p>
               </li>
-              <li class="caracteristicas__item finished">
+              <li class="caracteristicas__item finished" data-toggle="tooltip" data-placement="bottom" data-bs-custom-class="custom-tooltip-finished" title="Concluído">
                 <i class="caracteristicas__item__icone bi bi-check2"></i>
                 <p class="caracteristicas__item__descricao">Aprender a trabalhar com frameworks para JS</p>
               </li>
-              <li class="caracteristicas__item">
+              <li class="caracteristicas__item studying" data-toggle="tooltip" data-placement="bottom" data-bs-custom-class="custom-tooltip-studying" title="Estudando">
+                <i class="caracteristicas__item__icone bi bi-battery-half"></i>
+                <p class="caracteristicas__item__descricao">Faculdade em ADS</p>
+              </li>
+              <li class="caracteristicas__item" data-toggle="tooltip" data-placement="bottom" title="">
                 <i class="caracteristicas__item__icone bi bi-arrow-right-short"></i>
                 <p class="caracteristicas__item__descricao">Aprender Java</p>
-              </li>
-              <li class="caracteristicas__item">
-                <i class="caracteristicas__item__icone bi bi-arrow-right-short"></i>
-                <p class="caracteristicas__item__descricao">Faculdade em ADS</p>
               </li>
             </div>
           </ul>

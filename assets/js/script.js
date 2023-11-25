@@ -73,7 +73,7 @@ import { conteudo } from './conteudo/conteudo-pg-principal.js';
   
     // const loader = document.querySelector('.loader');
     // loader.style.display = 'none';
-  
+    
     controleFechamentoModal();
   })
 })();

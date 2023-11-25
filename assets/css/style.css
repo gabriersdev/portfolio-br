@@ -115,3 +115,17 @@ a{
     margin-top: 2.5rem;
   }
 }
+
+.custom-tooltip-studying{
+  --bs-tooltip-bg: var(--amarelo) !important;
+  --bs-tooltip-color: #000 !important;
+  --bs-tooltip-opacity: 1;
+  --bs-tooltip-margin: 1rem;
+}
+
+.custom-tooltip-finished{
+  --bs-tooltip-bg: var(--verde) !important;
+  --bs-tooltip-color: #000 !important;
+  --bs-tooltip-opacity: 1;
+  --bs-tooltip-margin: 1rem;
+}
