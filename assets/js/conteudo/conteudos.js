@@ -1,6 +1,7 @@
 const dadosProjetos = [
   {
-    "visible": true,
+    "visible": false,
+    "active": false, 
     "titulo": "Expresso Mobilidade", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "É um serviço de mobilidade urbana feito de usuários para usuários da Região Metropolitana de Belo Horizonte e que visa facilitar e melhorar o dia à dia de quem precisa se deslocar usando o transporte público.",
@@ -14,6 +15,7 @@ const dadosProjetos = [
   },
   {
     "visible": false,
+    "active": true,
     "titulo": "API Expresso Mobilidade", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "Permite a consulta externa aos dados de 923 linhas de Belo Horizonte e Região Metropolitana operadas pela BHTrans, Vinscol e o Consórcio Ótimo Metropolitano. A API tem estrutura básica e retorna os dados em JSON através de AJAX.",
@@ -27,6 +29,7 @@ const dadosProjetos = [
   },
   {
     "visible": true,
+    "active": true,
     "titulo": "Hotel Alura", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "Projeto de um gerenciador de um gerenciador simples de hotel desenvolvido para o Challenge do Oracle ONE. Este projeto permite ao usuário: registar reservas e hóspedes, editar e consultar as reservas e hóspedes existentes, exclusão de todos os tipos de registros.",
@@ -40,6 +43,7 @@ const dadosProjetos = [
   },
   {
     "visible": true,
+    "active": true,
     "titulo": "Conversor em Java", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "Este projeto é um Conversor de Moedas, Medidas e Temperatura desenvolvido por mim para o primeiro Challenge da Trilha de Java do Programa Oracle ONE. Este projeto permite ao usuário: converter moedas, converter medidas, converter entre unidades de temperatura.",
@@ -53,6 +57,7 @@ const dadosProjetos = [
   },
   {
     "visible": false,
+    "active": true,
     "titulo": "Institucional do Expresso Mobilidade", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "É a apresentação do Expresso Mobilidade para quem não conhece o projeto ou nunca o acessou. Para o desenvolvimento dessas páginas foram usados os frameworks Bootstrap, JQuery, SweetAlert, Bootstrap Icons e Flaticon. O projeto foi prototipado no Figma e desenvolvido junto do <a href='https://github.com/samuelsoaresl' target='_blank'>Samuel Soares.</a>", 
@@ -66,6 +71,7 @@ const dadosProjetos = [
   },
   {
     "visible": true,
+    "active": true,
     "titulo": "Meus Cursos na Alura", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "Neste projeto, eu consumo a API de Cursos da Alura e mostro meus cursos e formações.",
@@ -79,6 +85,7 @@ const dadosProjetos = [
   },
   {
     "visible": true,
+    "active": true,
     "titulo": "Projeto Humanos: Altamira", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "É um website dedicado a 5ª temporada do podcast 'Projeto Humanos'. Neste projeto, eu implementei a funções de pesquisa com autocomplete e um player para a trilha sonora da temporada.", 
@@ -92,6 +99,7 @@ const dadosProjetos = [
   },
   {
     "visible": false,
+    "active": true,
     "titulo": "Projetos dos Cursos Alura", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "Aqui você encontra alguns dos projetos que eu desenvolvi junto de cursos que eu realizei na Alura.", 
@@ -105,6 +113,7 @@ const dadosProjetos = [
   },
   {
     "visible": true,
+    "active": true,
     "titulo": "Birthday Message", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "O Birthday Message é um projeto que renderiza mensagens de aniversário (personalizadas ou não)",
@@ -118,6 +127,7 @@ const dadosProjetos = [
   },
   {
     "visible": true,
+    "active": true,
     "titulo": "Calculadora Tempo de Serviço", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "O nome é auto explicativo: o projeto é uma calculadora que você insere com os períodos trabalhados e ela calcula o total",
@@ -131,6 +141,7 @@ const dadosProjetos = [
   },
   {
     "visible": true,
+    "active": true,
     "titulo": "Gerador de senhas", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "Gere senhas aleatórias seguras, conforme suas escolhas e teste as senhas que você já usa.",
@@ -144,6 +155,7 @@ const dadosProjetos = [
   },  
   {
     "visible": false,
+    "active": true,
     "titulo": "Projetos Antigos", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "Aqui você encontra os primeiro projetos que eu desenvolvi :)", 
@@ -157,6 +169,7 @@ const dadosProjetos = [
   },
   {
     "visible": false,
+    "active": true,
     "titulo": "Gerenciador de Biblioteca", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "É um gerenciador básico de biblioteca escolar. Primeiro é necessário cadastrar um aluno, depois um livro (no gerenciador, chamado de título) e a partir daí registrar uma locação.", 
@@ -170,6 +183,7 @@ const dadosProjetos = [
   },
   {
     "visible": true,
+    "active": true,
     "titulo": "Encriptador de Vogais", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "Este projeto é um codificador de vogais em textos. As letras A, E, I, O e U são ofuscadas, deixando o texto encriptado. É possível também copiar e descriptografar os textos.", 
@@ -183,6 +197,7 @@ const dadosProjetos = [
   },
   {
     "visible": true,
+    "active": true,
     "titulo": "Jogo da Forca", 
     "autor": "Gabriel Ribeiro", 
     "descricao": "Projeto desenvolvido para a Trilha Iniciante em Programação da Alura. O Jogo da Forca foi realizado através das aulas dos instrutores da Alura. No desenvolvimento, foi usada a biblioteca SweetAlert, o Trelo e o Figma, para a prototipação.",
