@@ -32,6 +32,7 @@ header{
 
 .cabecalho__principal__apresentacao__titulo{
   margin: 1.5rem 0;
+  text-wrap: balance;
 
   font-weight: 600;
   font-size: 3.25rem;
@@ -43,6 +44,7 @@ header{
 .cabecalho__principal__apresentacao__descricao{
   font-size: 1rem;
   margin-right: 1rem;
+  text-wrap: balance;
 }
 
 .cabecalho__principal__menu{
