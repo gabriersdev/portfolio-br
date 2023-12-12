@@ -95,6 +95,7 @@ header{
 }
 
 .cabecalho__cards{
+  padding-block-start: 1rem;
   width: 100%;
   /* position: absolute; */
   left: 0;
@@ -121,7 +122,7 @@ header{
   }
 
   .cabecalho__principal__apresentacao__descricao{
-    display: none;
+    /* display: none; */
   }
 }
 
@@ -180,7 +181,7 @@ header{
   .cabecalho__principal{
     /* top: 50%; */
     /* transform: translate(0, -50%); */
-    display: block;
+    width: 100%;
   }
 
   .cabecalho__principal__apresentacao{
@@ -194,13 +195,17 @@ header{
   }
 
   .cabecalho__principal__menu{
-    /* display: none; */
-    visibility: hidden;
+    display: none;
   }
 
   .cabecalho__cards{
-    /* display: none; */
-    visibility: hidden;
+    gap: 0.5rem
+  }
+}
+
+@media screen and (width <= 545px) {
+  .cabecalho__cards{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -214,37 +219,22 @@ header{
   }
 }
 
-@media screen and (max-height: 825px) {
-  .cabecalho__principal{
-    /* top: calc(25% - 1vh); */
-  }
-
-  .cabecalho__principal__menu{
-    /* display: none; */
-    visibility: hidden;
-  }
-
-  .cabecalho__cards{
-    display: none;
-  }
-}
-
-@media screen and (max-height: 760px) {
+@media screen and (width >= 900px) and (height <= 825px) {
   .cabecalho{
     /* display: block; */
   }
 
   .cabecalho__principal{
     /* top: 50%; */
-    transform: translate(0, -50%);
-    display: block;
+    /* transform: translate(0, -50%); */
+    flex-direction: row;
   }
 
-  .cabecalho__principal__menu{
-    display: none;
+  .cabecalho__principal__apresentacao{
+    width: min(100%, 600px);
   }
 
   .cabecalho__cards{
-    display: none;
+    display: grid;
   }
 }

@@ -109,7 +109,7 @@
   margin-left: 0.75rem;
 }
 
-@media screen and (min-width: 0) and (max-width: 1185px){
+@media screen and (max-width: 1185px){
   .card-linguagem{
     width: auto;
   }
@@ -143,6 +143,20 @@
 
 @media screen and (max-width: 850px) {
   .card__header__versao{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 767px){
+  .card-linguagem-transparente [data-acao-card-linguagem]{
+    width: 100%;
+    margin-top: 0.25rem;
+    margin-right: 0;
+    text-align: center;
+    padding: 0.5rem 0.35rem;
+  }
+
+  .card-linguagem-transparente .contador-projetos{
     display: none;
   }
 }
