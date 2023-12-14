@@ -127,7 +127,7 @@
   &.finished{
     padding-right: 0.7rem;
 
-    border-color: #FFFF5530;
+    border-color: #63DA9250;
   }
 }
 
@@ -139,7 +139,7 @@
 
   .bi{
     margin-left: 1rem;
-    color: #FF5
+    color: #63DA92
   }
 }
 
