@@ -35,7 +35,7 @@
     .projeto-destaque--imagem{
       /* border-radius: 7.5px 0 0 7.5px; */
       border-radius: 0.625rem 0 0 0.625rem;
-      background: var(--img) center / cover no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.5)), var(--img) center / cover no-repeat;
       background-color: rgba(0, 0, 0, 0.5);
       min-width: 400px;
     }

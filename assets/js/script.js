@@ -76,4 +76,14 @@ import { conteudo } from './conteudo/conteudo-pg-principal.js';
     
     controleFechamentoModal();
   })
+
+  window.addEventListener("scroll", () => {
+    if(window.scrollY >= document.querySelector('.linguagens.container-principal').clientHeight){
+      $(document.querySelector('#menu-flutuante')).fadeIn(300);
+      $(document.querySelector('#menu-flutuante')).css('display', 'flex');
+    }else{
+      $(document.querySelector('#menu-flutuante')).fadeOut(300);
+    }
+  })
+
 })();

@@ -1,9 +1,17 @@
 .menu.flutuante{
   position: sticky;
-  z-index: 1;
-  margin: 0 1rem;
-  background-color: rebeccapurple;
-  width: calc(100% - 2rem);
+  z-index: 2;
+  /* margin: 0 1rem; */
+  /* width: calc(100% - 2rem); */
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+}
+
+.menu.flutuante .menu__item-lista:hover{
+  border-color: #FFF !important;
+}
+
+.menu.flutuante .menu__item-lista:hover a{
+  color: #FFF;
 }
 
 .menu{
