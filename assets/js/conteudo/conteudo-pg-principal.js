@@ -1,4 +1,19 @@
 const conteudo = `
+<nav class="menu flutuante">
+  <a href="./index.html" class="menu__identificacao">
+    <div src="" alt="" class="menu__imagem"></div>
+    <div class="menu__identificacao__titulos">
+      <h2 class="menu__identificacao__titulos-titulo">Portfólio</h2>
+      <h2 class="menu__identificacao__titulos-titulo-secundario">Gabriel Ribeiro</h2>
+    </div>
+  </a>
+  <ul class="menu__lista">
+    <li class="menu__item-lista"><a href="https://www.behance.net/devgabrielribeiro" target="_blank"><i class="bi bi-behance"></i>Behance</a></li>
+    <li class="menu__item-lista"><a href="https://github.com/gabrieszin/" target="_blank"><i class="bi bi-github"></i>GitHub</a></li>
+    <li class="menu__item-lista"><a href="#contato"><i class="bi bi-person-lines-fill"></i>Contato</a></li>
+  </ul>
+</nav>
+
 <header id="apresentacao">
   <section class="cabecalho">
     <nav class="menu">

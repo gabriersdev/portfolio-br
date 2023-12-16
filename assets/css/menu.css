@@ -1,3 +1,11 @@
+.menu.flutuante{
+  position: sticky;
+  z-index: 1;
+  margin: 0 1rem;
+  background-color: rebeccapurple;
+  width: calc(100% - 2rem);
+}
+
 .menu{
   display: flex;
   align-items: center;
