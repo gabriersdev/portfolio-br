@@ -88,5 +88,32 @@ import { conteudo } from './conteudo/conteudo-pg-principal.js';
     })
 
     controleFechamentoModal();
+    
+    // Escrevendo no Console
+    console.groupCollapsed('Portfólio, Version 2.0.0');
+    console.table({
+      "Project name": "Portfólio",
+      "Developed by": "Gabriel Ribeiro",
+      "Version": "2.0.0",
+      "Release date": "2023-12-17",
+      "Hostname": new URL(window.location).hostname,
+      "Origin": new URL(window.location).origin,
+      "Status": "Working"
+    })
+    console.groupEnd();
+
+    console.groupCollapsed('New features');
+    [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+    ].sort((a, b) => a.localeCompare(b)).forEach((feature, index) => {
+      console.info(`${feature}${index > 0? "\n" : ""}`)
+    })
+    console.groupEnd();
+
+    console.log("%cALERTA DE IMPORTANTE!\n\nPROCURA POR DESENVOLVEDOR?\n\nENVIE UM EMAIL PARA:\ndevgabrielribeiro@gmail.com", "color: red; font-size: large; font-family: sans-serif; font-weight: 400", );
+
   })
 })();

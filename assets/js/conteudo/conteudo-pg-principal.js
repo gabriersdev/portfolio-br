@@ -8,9 +8,9 @@ const conteudo = `
     </div>
   </a>
   <ul class="menu__lista">
-    <li class="menu__item-lista"><a href="https://www.behance.net/devgabrielribeiro" target="_blank"><i class="bi bi-behance"></i>Behance</a></li>
-    <li class="menu__item-lista"><a href="https://github.com/gabrieszin/" target="_blank"><i class="bi bi-github"></i>GitHub</a></li>
-    <li class="menu__item-lista"><a href="#contato"><i class="bi bi-person-lines-fill"></i>Contato</a></li>
+    <li class="menu__item-lista"><a href="https://www.behance.net/devgabrielribeiro" target="_blank"><i class="bi bi-behance"></i><span>Behance</span></a></li>
+    <li class="menu__item-lista"><a href="https://github.com/gabrieszin/" target="_blank"><i class="bi bi-github"></i><span>GitHub</span></a></li>
+    <li class="menu__item-lista"><a href="#contato"><i class="bi bi-person-lines-fill"></i><span>Contato</span></a></li>
   </ul>
 </nav>
 
@@ -25,9 +25,9 @@ const conteudo = `
       </div>
     </a>
     <ul class="menu__lista">
-      <li class="menu__item-lista"><a href="https://www.behance.net/devgabrielribeiro" target="_blank"><i class="bi bi-behance"></i>Behance</a></li>
-      <li class="menu__item-lista"><a href="https://github.com/gabrieszin/" target="_blank"><i class="bi bi-github"></i>GitHub</a></li>
-      <li class="menu__item-lista"><a href="#contato"><i class="bi bi-person-lines-fill"></i>Contato</a></li>
+      <li class="menu__item-lista"><a href="https://www.behance.net/devgabrielribeiro" target="_blank"><i class="bi bi-behance"></i><span>Behance</span></a></li>
+      <li class="menu__item-lista"><a href="https://github.com/gabrieszin/" target="_blank"><i class="bi bi-github"></i><span>GitHub</span></a></li>
+      <li class="menu__item-lista"><a href="#contato"><i class="bi bi-person-lines-fill"></i><span>Contato</span></a></li>
     </ul>
     </nav>
 
@@ -505,6 +505,29 @@ const conteudo = `
           </div>
         </li>
 
+        <li class="linguagem" div-conteudo-linguagens="card-linguagem" data-conteudo-linguagem-desenvolvimento_web>
+          <div class="linguagem__cabecalho">
+            <i class="bi bi-filetype-md linguagem__cabecalho__icone"></i>
+            <h3 class="linguagem__cabecalho__titulo">Markdown</h3>
+          </div>
+          
+          <div class="linguagem__corpo">
+            <p class="linguagem__corpo__descricao">
+            </p>
+            
+            <ul class="caracteristicas-sem-marcador">
+              <li class="caracteristicas-sem-marcador__item destaque">
+                <i class="bi bi-check-square-fill caracteristicas-sem-marcador__item__icone"></i>
+                <p class="caracteristicas-sem-marcador__item__descricao"><span data-contador-projeto="MD"></span> projetos desenvolvidos</p>
+              </li>
+              <li class="caracteristicas-sem-marcador__item destaque">
+                <i class="bi bi-check-square-fill caracteristicas-sem-marcador__item__icone"></i>
+                <p class="caracteristicas-sem-marcador__item__descricao">Usando no dia a dia 📆</p>
+              </li>
+            </ul>
+          </div>
+        </li>
+
         <li class="linguagem" div-conteudo-linguagens="card-linguagem" data-conteudo-linguagem-ux_ui>
           <div class="linguagem__cabecalho">
             <img src="./assets/imagens/icons/figma-logo.png" class="linguagem__cabecalho__icone" alt="">
@@ -642,6 +665,31 @@ const conteudo = `
               <li class="caracteristicas__item" data-toggle="tooltip" data-bs-placement="right" title="">
                 <i class="caracteristicas__item__icone bi bi-arrow-right-short"></i>
                 <p class="caracteristicas__item__descricao">Aprender Java</p>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </li>
+
+      <li class="sobre__lista__item">
+        <div class="sobre__lista__item__cabecalho">
+          <i class="bi bi-check2-circle sobre__lista__item__cabecalho__icone"></i>
+          <h3 class="sobre__lista__item__cabecalho__titulo">Certificações</h3>
+        </div>
+        <div class="sobre__lista__item__corpo">
+          <p class="sobre__lista__item__corpo__descricao">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          </p>
+          <ul class="caracteristicas">
+            <div class="caracteristicas__itens">
+              <li class="caracteristicas__item finished" data-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip-finished" title="Concluído">
+                <i class="caracteristicas__item__icone bi bi-bookmark-fill"></i>
+                <p class="caracteristicas__item__descricao">Aperfeiçoar meus conhecimentos</p>
+              </li>
+              <li class="caracteristicas__item finished" data-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip-finished" title="Concluído">
+                <i class="caracteristicas__item__icone bi bi bi-bookmark-fill"></i>
+                <p class="caracteristicas__item__descricao">Aprender a trabalhar com frameworks para JS</p>
               </li>
             </div>
           </ul>

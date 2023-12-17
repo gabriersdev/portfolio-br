@@ -107,6 +107,9 @@
   /* color: var(--preto); */
   /* color: var(--branco); */
   color: var(--cinza);
+  line-height: 1.5;
+  margin-bottom: 0.15rem;
+  text-wrap: balance;
 }
 
 

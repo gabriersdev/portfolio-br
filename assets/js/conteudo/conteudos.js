@@ -214,13 +214,15 @@ const dadosProjetos = [
 const destaques = [
   {
     "visible": true,
+    "active": true,
     "title": "Confirmação CCA", 
     "link": "https://gabrieszin.github.io/confirmacao-cca/", 
     "resume": "Projeto para a verificação e validação prévia de dados básicos de clientes de Correspondentes Caixa Aqui", 
-    "desployInGitHub": true
+    "desployInGitHub": true,
   },
   {
     "visible": true,
+    "active": true,
     "title": "Calculadora Tempo de Serviço", 
     "link": "https://gabrieszin.github.io/calculadora-tempo-de-servico/", 
     "resume": "Calculadora de tempo de serviço trabalhado, desenvolvida utilizando recursos básicos de Programação WEB", 
@@ -228,6 +230,7 @@ const destaques = [
   },
   {
     "visible": true,
+    "active": true,
     "title": "Random Password", 
     "link": "https://gabrieszin.github.io/random-password/", 
     "resume": "Gerador de senhas aleatórias", 

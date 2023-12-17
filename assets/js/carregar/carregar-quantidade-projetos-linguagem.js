@@ -1,4 +1,4 @@
-import { dadosProjetos } from "../conteudo/conteudos.js";
+import { dadosProjetos, destaques } from "../conteudo/conteudos.js";
 
 export const carregarQuantidadeProjetosLinguagem = () => {
   
@@ -10,22 +10,25 @@ export const carregarQuantidadeProjetosLinguagem = () => {
     ['css', 0],
     ['html', 0],
     ['figma', 0],
-    ['git', 0]
+    ['git', 0],
+    ['python', 0],
+    ['react', 0],
+    ['MD', 0],
   ]
 
-  dadosProjetos.forEach(projeto => {
-    projeto.linguagens.forEach((linguagem) => {
-      
-      todasLinguagens.forEach((dados, index) => {
-        
-        const nomeLinguagem = todasLinguagens[index][0];
-        
-        if(linguagem.toLowerCase() == nomeLinguagem){  
-          todasLinguagens[index][1] += 1;
-        }
+  dadosProjetos.concat(destaques).filter(p => p.visible && p.active).forEach(projeto => {
+    if(projeto.linguagens !== undefined){
+      projeto.linguagens.forEach((linguagem) => {
+        todasLinguagens.forEach((dados, index) => {
+          
+          const nomeLinguagem = todasLinguagens[index][0];
+          
+          if(linguagem.toLowerCase() == nomeLinguagem){  
+            todasLinguagens[index][1] += 1;
+          }
+        })
       })
-      
-    })
+    }
   })
   
   const contadores = document.querySelectorAll('[data-contador-projeto]');
@@ -41,10 +44,15 @@ export const carregarQuantidadeProjetosLinguagem = () => {
 
       if(nomeContador == nomeLinguagem){
         if(qtdeProjetosLinguagem == 0){
-          contador.parentElement.parentElement.remove();
+          if(contador.closest('.card-linguagem-transparente') !== null){
+            contador.parentElement.innerHTML = `<p class="contador-projetos__quantidade" data-contador-projeto="python">0</p><i class="bi bi-collection contador-projetos__icone"></i>`;
+          }else{
+            contador.parentElement.textContent = `Nenhum projeto desenvolvido`;
+            // contador.parentElement.parentElement.remove();
+          }
         }
         else if(qtdeProjetosLinguagem == 1 && nome_secao_cabecalho_cards == null){
-          contador.parentElement.textContent = `${qtdeProjetosLinguagem} projeto desenvolvido`
+          contador.parentElement.textContent = `${qtdeProjetosLinguagem} projeto desenvolvido`;
         }else{
           contador.textContent = qtdeProjetosLinguagem;
         }

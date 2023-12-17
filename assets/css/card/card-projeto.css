@@ -62,8 +62,9 @@
 
 .card-projeto__cabecalho__titulo{
   font-size: 1.7rem;
-
   font-weight: 600;
+  
+  text-wrap: balance;
 }
 
 .card-projeto-facil .card-projeto__cabecalho__titulo{
@@ -116,6 +117,8 @@
 .card-projeto__corpo__descricao{
   /* color: var(--cinza-medio-forte); */
   color: var(--branco);
+
+  text-wrap: balance;
 
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -273,7 +276,7 @@
   }
 }
 
-@media screen and (min-width: 0) and (max-width: 767px){
+@media screen and (max-width: 767px){
   .card-projeto{
     grid-template-rows: auto auto auto;
   }

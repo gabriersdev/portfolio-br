@@ -15,14 +15,11 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
+  gap: 3rem;
 }
 
 .sobre__lista__item{
   margin-top:  1.5rem;
-}
-
-.sobre__lista__item:first-child{
-  margin-right: 5rem;
 }
 
 .sobre__lista__item__cabecalho{
@@ -54,6 +51,7 @@
 
 .sobre__lista__item__corpo__descricao{
   margin: 1rem 0;
+  text-wrap: balance;
 }
 
 .sobre_grupo-descricao{
@@ -62,12 +60,12 @@
 }
 
 @media screen and (max-width: 767px){
-  .sobre__lista__item__corpo{
-    margin-left: 0;
+  .sobre__lista{
+    gap: 1.5rem;
   }
 
-  .sobre__lista__item:first-child{
-    margin-right: 0;
+  .sobre__lista__item__corpo{
+    margin-left: 0;
   }
 
   .sobre_grupo-descricao{
