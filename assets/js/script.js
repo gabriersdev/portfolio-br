@@ -104,10 +104,7 @@ import { conteudo } from './conteudo/conteudo-pg-principal.js';
 
     console.groupCollapsed('New features');
     [
-      "F1",
-      "F2",
-      "F3",
-      "F4"
+     // New features here 
     ].sort((a, b) => a.localeCompare(b)).forEach((feature, index) => {
       console.info(`${feature}${index > 0? "\n" : ""}`)
     })
