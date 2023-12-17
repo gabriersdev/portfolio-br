@@ -74,16 +74,19 @@ import { conteudo } from './conteudo/conteudo-pg-principal.js';
     // const loader = document.querySelector('.loader');
     // loader.style.display = 'none';
     
+    window.addEventListener("scroll", () => {
+      if(window.innerWidth > 500){
+        setTimeout(() => {
+          if(window.scrollY >= document.querySelector('.linguagens.container-principal').offsetHeight){
+            $(document.querySelector('#menu-flutuante')).slideDown(100);
+            $(document.querySelector('#menu-flutuante')).css('display', 'flex');
+          }else{
+            $(document.querySelector('#menu-flutuante')).slideUp(100);
+          }
+        }, 0)
+      }
+    })
+
     controleFechamentoModal();
   })
-
-  window.addEventListener("scroll", () => {
-    if(window.scrollY >= document.querySelector('.linguagens.container-principal').clientHeight){
-      $(document.querySelector('#menu-flutuante')).fadeIn(300);
-      $(document.querySelector('#menu-flutuante')).css('display', 'flex');
-    }else{
-      $(document.querySelector('#menu-flutuante')).fadeOut(300);
-    }
-  })
-
 })();

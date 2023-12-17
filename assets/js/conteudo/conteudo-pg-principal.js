@@ -1,5 +1,5 @@
 const conteudo = `
-<nav class="menu flutuante none" id="menu-flutuante">
+<nav class="menu flutuante" id="menu-flutuante">
   <a href="./index.html" class="menu__identificacao">
     <div src="" alt="" class="menu__imagem"></div>
     <div class="menu__identificacao__titulos">

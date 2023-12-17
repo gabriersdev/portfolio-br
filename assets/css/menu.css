@@ -1,9 +1,12 @@
 .menu.flutuante{
   position: sticky;
   z-index: 2;
+  display: none;
   /* margin: 0 1rem; */
   /* width: calc(100% - 2rem); */
   background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
 }
 
 .menu.flutuante .menu__item-lista:hover{
@@ -29,6 +32,10 @@
 
   top: 0;
   left: 0;
+
+  &:not(.flutuante){
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
 }
 
 .menu__identificacao{
@@ -131,5 +138,21 @@
 
   div.menu__imagem{
     display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menu{
+    padding: 1rem 2rem;
+    
+    &:not(.flutuante){
+      visibility: hidden;
+      /* display: none; */
+    }
+
+    &.flutuante{
+      top: 0;
+      display: flex !important;
+    }
   }
 }
