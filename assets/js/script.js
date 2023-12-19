@@ -110,7 +110,7 @@ import { conteudo } from './conteudo/conteudo-pg-principal.js';
     })
     console.groupEnd();
 
-    console.log("%cALERTA DE IMPORTANTE!\n\nPROCURA POR DESENVOLVEDOR?\n\nENVIE UM EMAIL PARA:\ndevgabrielribeiro@gmail.com", "color: red; font-size: large; font-family: sans-serif; font-weight: 400", );
+    console.log("%cALERTA IMPORTANTE!\n\nPROCURA POR DESENVOLVEDOR?\n\nENVIE UM EMAIL PARA:\ndevgabrielribeiro@gmail.com", "color: red; font-size: large; font-family: sans-serif; font-weight: 400", );
 
   })
 })();

@@ -1,6 +1,10 @@
 .formulario-pesquisa-projeto{
   margin-top: 0;
   margin-bottom: 1rem;
+
+  .input-group > .btn{
+    border-radius: 0 5px 5px 0!important;
+  }
 }
 
 .formulario-pesquisa-projeto__label{
@@ -23,11 +27,11 @@
   border-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
 
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   width: auto;
 
-  margin-top: 0.25rem;
-  margin-bottom: 0.5rem;
+  /* margin-top: 0.25rem; */
+  /* margin-bottom: 0.5rem; */
 
   transition: 0.3s;
 }
@@ -54,15 +58,15 @@
 }
 
 .formulario-pesquisa-projeto__botao{
-  margin-left: 0.5rem;
+  margin-left: 0.75rem !important;
   margin-top: -3px;
 
-  padding: 0.5rem 0.7rem;
+  padding: 0.5rem 0.8rem;
 
   background-color: var(--cinza-medio);
 
   border: unset;
-  border-radius: 50%;
+  border-radius: 50% !important;
 
   transition: 0.3s;
 }

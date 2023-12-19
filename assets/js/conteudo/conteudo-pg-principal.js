@@ -716,9 +716,12 @@ const conteudo = `
     
     <form class="formulario-pesquisa-projeto" data-form-pesquisa-projeto>
       <label for="input-busca-projeto" class="formulario-pesquisa-projeto__label">Busque por um projeto específico</label>
-      <div class="form-group">
-        <input list="listagem-projetos" id="input-busca-projeto" name="input-busca-projeto" class="formulario-pesquisa-projeto__input" maxlength="30" placeholder="Pesquise um projeto" data-selecao-projeto required>
-        <button class="formulario-pesquisa-projeto__botao" data-recarregar-projetos data-toggle="tooltip" data-placement="bottom" title="Recarregar projetos"><i class="bi bi-arrow-clockwise"></i></button>
+      <div class="mt-2" style="display: flex; align-items: flex-start; justify-content: flex-start">
+        <div class="input-group">
+          <input type="text" list="listagem-projetos" id="input-busca-projeto" name="input-busca-projeto" class="input-group-text formulario-pesquisa-projeto__input" maxlength="30" placeholder="Pesquise um projeto" data-selecao-projeto required style="margin: none !important; text-align: left;">
+          <button type="reset" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i></button>
+          <button class="formulario-pesquisa-projeto__botao" data-recarregar-projetos data-toggle="tooltip" data-placement="bottom" title="Recarregar projetos"><i class="bi bi-arrow-clockwise"></i></button>
+        </div>
       </div>
       <datalist id="listagem-projetos" name="listagem-projetos" data-lista-projetos>
       </datalist>
