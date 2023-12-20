@@ -682,7 +682,7 @@ const conteudo = `
             e metodologias que possuo: 
           </p>
           <ul class="caracteristicas">
-            <div class="caracteristicas__itens" style="display: flex; flex-direction: column; gap: 0.5rem">
+            <div class="caracteristicas__itens" style="display: flex; flex-direction: column; gap: 0.5rem;">
               <!-- <li class="caracteristicas__item finished" data-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip-finished" title="Concluído">
                 <i class="caracteristicas__item__icone bi bi-bookmark-fill"></i>
                 <p class="caracteristicas__item__descricao">Aperfeiçoar meus conhecimentos</p>
