@@ -678,18 +678,35 @@ const conteudo = `
         </div>
         <div class="sobre__lista__item__corpo">
           <p class="sobre__lista__item__corpo__descricao">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Certificações em tecnologias, linguagens <br>
+            e metodologias que possuo: 
           </p>
           <ul class="caracteristicas">
-            <div class="caracteristicas__itens">
-              <li class="caracteristicas__item finished" data-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip-finished" title="Concluído">
+            <div class="caracteristicas__itens" style="display: flex; flex-direction: column; gap: 0.5rem">
+              <!-- <li class="caracteristicas__item finished" data-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip-finished" title="Concluído">
                 <i class="caracteristicas__item__icone bi bi-bookmark-fill"></i>
                 <p class="caracteristicas__item__descricao">Aperfeiçoar meus conhecimentos</p>
+              </li> -->
+              <li class="caracteristicas-formacao__item finished" data-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip-finished" title="">
+                <p class="caracteristicas-formacao__item__titulo">User Experience<i class="bi bi-bookmark-fill"></i></p>
+                <p class="caracteristicas-formacao__item__descricao">
+                  FIAP<br>
+                  2022
+                </p>
               </li>
-              <li class="caracteristicas__item finished" data-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip-finished" title="Concluído">
-                <i class="caracteristicas__item__icone bi bi bi-bookmark-fill"></i>
-                <p class="caracteristicas__item__descricao">Aprender a trabalhar com frameworks para JS</p>
+              <li class="caracteristicas-formacao__item finished" data-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip-finished" title="">
+                <p class="caracteristicas-formacao__item__titulo">Design Gráfico<i class="bi bi-bookmark-fill"></i></p>
+                <p class="caracteristicas-formacao__item__descricao">
+                  FIAP<br>
+                  2022
+                </p>
+              </li>
+              <li class="caracteristicas-formacao__item finished" data-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip-finished" title="">
+                <p class="caracteristicas-formacao__item__titulo">Design Thinking<i class="bi bi-bookmark-fill"></i></p>
+                <p class="caracteristicas-formacao__item__descricao">
+                  FIAP<br>
+                  2022
+                </p>
               </li>
             </div>
           </ul>
