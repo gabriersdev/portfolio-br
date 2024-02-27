@@ -804,7 +804,7 @@ const conteudo = `
         </div>
       </div>
       
-      <div class="card-contato-mensagem" id="mensagem">
+      <div class="card-contato-mensagem none" hidden id="mensagem">
         <h3 class="card-contato-mensagem__titulo">Mensagem</h3>
         <p class="card-contato-mensagem__descricao">Me envie uma mensagem que logo mais eu te respondo por e-mail</p>
         <div>

@@ -12,7 +12,8 @@
 .contatos{
   display: grid;
 
-  grid-template-columns: calc(25% - 1rem) calc(25% - 1rem) calc(25% - 1rem) calc(25% - 1rem);
+  grid-template-columns: repeat(auto-fill, calc(33.3% - 0.75rem));
+  /* grid-template-columns: repeat(auto-fill, calc(50% - 1rem)); */
   grid-gap: 1rem;
 }
 

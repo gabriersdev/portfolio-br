@@ -110,7 +110,8 @@
   margin-left: 0.75rem;
 }
 
-@media screen and (max-width: 1185px){
+@media screen and (max-width: 1185px), 
+screen and (width >= 900px) and (height <= 825px){
   .card-linguagem{
     width: auto;
   }

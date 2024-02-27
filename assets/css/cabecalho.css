@@ -221,6 +221,7 @@ header{
 @media screen and (min-width: 767px) and (max-width: 1441px) and (max-height: 800px) {
   .cabecalho__principal{
     /* top: calc(25% - 1vh); */
+    margin-top: 1rem;
   }
 
   .cabecalho__cards{
