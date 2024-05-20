@@ -9,7 +9,7 @@ const conteudo = `
   </a>
   <ul class="menu__lista">
     <li class="menu__item-lista"><a href="https://www.behance.net/devgabrielribeiro" target="_blank"><i class="bi bi-behance"></i><span>Behance</span></a></li>
-    <li class="menu__item-lista"><a href="https://github.com/gabrieszin/" target="_blank"><i class="bi bi-github"></i><span>GitHub</span></a></li>
+    <li class="menu__item-lista"><a href="https://github.com/gabriersdev/" target="_blank"><i class="bi bi-github"></i><span>GitHub</span></a></li>
     <li class="menu__item-lista"><a href="#contato"><i class="bi bi-person-lines-fill"></i><span>Contato</span></a></li>
   </ul>
 </nav>
@@ -26,7 +26,7 @@ const conteudo = `
     </a>
     <ul class="menu__lista">
       <li class="menu__item-lista"><a href="https://www.behance.net/devgabrielribeiro" target="_blank"><i class="bi bi-behance"></i><span>Behance</span></a></li>
-      <li class="menu__item-lista"><a href="https://github.com/gabrieszin/" target="_blank"><i class="bi bi-github"></i><span>GitHub</span></a></li>
+      <li class="menu__item-lista"><a href="https://github.com/gabriersdev/" target="_blank"><i class="bi bi-github"></i><span>GitHub</span></a></li>
       <li class="menu__item-lista"><a href="#contato"><i class="bi bi-person-lines-fill"></i><span>Contato</span></a></li>
     </ul>
     </nav>
@@ -757,7 +757,7 @@ const conteudo = `
       <i class="bi bi-github chamado__icone"></i>
       <h2 class="chamado__titulo">Conheça <br> meu GitHub</h2>
     </div>
-    <a href="https://github.com/gabrieszin/" class="chamado__link">GitHub do Gabriel</a>
+    <a href="https://github.com/gabriersdev/" class="chamado__link">GitHub do Gabriel</a>
   </div>
   
   <section class="contato container-principal" id="contato">

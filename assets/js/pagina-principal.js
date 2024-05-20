@@ -89,7 +89,7 @@ import { controleFechamentoModal } from "./utilitarios/modal.js";
         for (destaque of dados.destaque.filter((projeto) => projeto.visible === true)){
           let linkIMG = destaque.link
           if(destaque.desployInGitHub){
-            linkIMG = 'https://opengraph.githubassets.com/ef53dcba7698452627f8f6de5c034e97d2ccfa86964ede2c7c48527de0f8fcbb/gabrieszin/' + destaque.link.split('/')[isEmpty(destaque.link.split('/').length - 2) ? destaque.link.split('/').length - 1 : destaque.link.split('/').length - 2]
+            linkIMG = 'https://opengraph.githubassets.com/ef53dcba7698452627f8f6de5c034e97d2ccfa86964ede2c7c48527de0f8fcbb/gabriersdev/' + destaque.link.split('/')[isEmpty(destaque.link.split('/').length - 2) ? destaque.link.split('/').length - 1 : destaque.link.split('/').length - 2]
           }
           
           $('#projetos-destaque').append(`<div class="projeto-destaque"><div class="projeto-destaque--imagem" style="--img: url(${linkIMG})"></div><div class="projeto-destaque--conteudo"><h4 class="titulo">${destaque.title}</h4><p class="descricao">${destaque.resume}</p><a class="btn" href="${destaque.link}" target="_blank" rel="noreferrer noopener"><span>Ver projeto</span></a></div></div>`)

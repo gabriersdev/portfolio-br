@@ -9,7 +9,7 @@ Neste projeto eu imprimi um pouco de mim: além de falar sobre a minha história
 </p>
 
 <p>
-Você pode ver o meu portfólio no <a href="https://gabrieszin.github.io/portfolio/">GitHub Pages</a> ou o <a href="https://www.behance.net/gallery/162991373/Portfolio">protótipo do Figma</a>
+Você pode ver o meu portfólio no <a href="https://gabriersdev.github.io/portfolio/">GitHub Pages</a> ou o <a href="https://www.behance.net/gallery/162991373/Portfolio">protótipo do Figma</a>
 </p>
 
 ## Funcionalidades

@@ -35,7 +35,7 @@
       "tituloSaibaMais": "",
       "saibaMais": "", 
       "conclusao": null, 
-      "link": "https://github.com/gabrieszin/Alura-Hotel", 
+      "link": "https://github.com/gabriersdev/Alura-Hotel", 
       "linguagens": ["Java", "MySQL", "Git"],
       "dificuldade": 3
     },
@@ -48,7 +48,7 @@
       "tituloSaibaMais": "",
       "saibaMais": "", 
       "conclusao": null, 
-      "link": "https://gabrieszin.github.io/home-page-Conversor/", 
+      "link": "https://gabriersdev.github.io/home-page-Conversor/", 
       "linguagens": ["Java", "Git", "Figma"],
       "dificuldade": 3
     },
@@ -74,7 +74,7 @@
       "tituloSaibaMais": "",
       "saibaMais": "", 
       "conclusao": "2023-4-27", 
-      "link": "https://gabrieszin.github.io/my-courses-alura/", 
+      "link": "https://gabriersdev.github.io/my-courses-alura/", 
       "linguagens": ["JS", "CSS", "HTML", "Figma"],
       "dificuldade": 2
     },
@@ -87,7 +87,7 @@
       "tituloSaibaMais": "", 
       "saibaMais": "", 
       "conclusao": "2022-12-19", 
-      "link": "https://gabrieszin.github.io/projeto-humanos-altamira/", 
+      "link": "https://gabriersdev.github.io/projeto-humanos-altamira/", 
       "linguagens": ["JS", "CSS", "HTML", "Git", "Figma"],
       "dificuldade": 2
     },
@@ -113,7 +113,7 @@
       "tituloSaibaMais": "",
       "saibaMais": "", 
       "conclusao": "2023-4-27", 
-      "link": "https://gabrieszin.github.io/birthday-message", 
+      "link": "https://gabriersdev.github.io/birthday-message", 
       "linguagens": ["JS", "CSS", "HTML", "Figma"],
       "dificuldade": 1
     },
@@ -126,7 +126,7 @@
       "tituloSaibaMais": "",
       "saibaMais": "", 
       "conclusao": "2023-6-1", 
-      "link": "https://gabrieszin.github.io/calculadora-tempo-de-servico/", 
+      "link": "https://gabriersdev.github.io/calculadora-tempo-de-servico/", 
       "linguagens": ["JS", "CSS", "HTML", "Figma"],
       "dificuldade": 1
     },
@@ -139,7 +139,7 @@
       "tituloSaibaMais": "",
       "saibaMais": "", 
       "conclusao": "2023-6-1", 
-      "link": "https://gabrieszin.github.io/random-password/", 
+      "link": "https://gabriersdev.github.io/random-password/", 
       "linguagens": ["JS", "CSS", "HTML"],
       "dificuldade": 1
     },  
@@ -178,7 +178,7 @@
       "tituloSaibaMais": "", 
       "saibaMais": "", 
       "conclusao": "2022-12-19", 
-      "link": "https://gabrieszin.github.io/Encriptador/", 
+      "link": "https://gabriersdev.github.io/Encriptador/", 
       "linguagens": ["JS", "CSS", "HTML", "Git"], 
       "dificuldade": 1
     },
@@ -191,7 +191,7 @@
       "tituloSaibaMais": "",
       "saibaMais": "", 
       "conclusao": "2022-12-31", 
-      "link": "https://gabrieszin.github.io/Jogo-da-Forca/", 
+      "link": "https://gabriersdev.github.io/Jogo-da-Forca/", 
       "linguagens": ["JS", "CSS", "HTML", "Git"],
       "dificuldade": 1
     }
@@ -200,21 +200,21 @@
     {
       "visible": true,
       "title": "Confirmação CCA", 
-      "link": "https://gabrieszin.github.io/confirmacao-cca/", 
+      "link": "https://gabriersdev.github.io/confirmacao-cca/", 
       "resume": "Projeto para a verificação e validação prévia de dados básicos de clientes de Correspondentes Caixa Aqui", 
       "desployInGitHub": true
     },
     {
       "visible": true,
       "title": "Calculadora Tempo de Serviço", 
-      "link": "https://gabrieszin.github.io/calculadora-tempo-de-servico/", 
+      "link": "https://gabriersdev.github.io/calculadora-tempo-de-servico/", 
       "resume": "Calculadora de tempo de serviço trabalhado, desenvolvida utilizando recursos básicos de Programação WEB", 
       "desployInGitHub": true
     },
     {
       "visible": true,
       "title": "Random Password", 
-      "link": "https://gabrieszin.github.io/random-password/", 
+      "link": "https://gabriersdev.github.io/random-password/", 
       "resume": "Gerador de senhas aleatórias", 
       "desployInGitHub": true
     }

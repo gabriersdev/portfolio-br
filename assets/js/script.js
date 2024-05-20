@@ -5,7 +5,7 @@ import { conteudo } from './conteudo/conteudo-pg-principal.js';
 
 (() => {  
 
-  fetch('https://gist.githubusercontent.com/gabrieszin/c2136e42374bf2b78eac871b840543ad/raw/bd02b2c44a47a861024fbbcb12fabfa5a303df9d/projetos.json')
+  fetch('https://gist.githubusercontent.com/gabriersdev/c2136e42374bf2b78eac871b840543ad/raw/bd02b2c44a47a861024fbbcb12fabfa5a303df9d/projetos.json')
   .then((result) => {
     result.json().then((dados) => { 
       // console.log(dados) 
@@ -20,7 +20,7 @@ import { conteudo } from './conteudo/conteudo-pg-principal.js';
   }
 
   // Verificando página e redirecionando para a página inicial
-  if(new URL(window.location).origin.toLowerCase().trim() === 'https://gabrieszin.github.io'){
+  if(new URL(window.location).origin.toLowerCase().trim() === 'https://gabriersdev.github.io'){
     if(document.title.trim() === 'Projetos Antigos - Gabriel Ribeiro - Portfólio' || document.title.trim() === 'Projetos dos Cursos da Alura - Gabriel Ribeiro - Portfólio'){
       window.location.href = '../../index.html'
     }
