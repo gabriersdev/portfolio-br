@@ -7,7 +7,7 @@ const dadosProjetosAlura = [
     tituloSaibaMais: '',
     saibaMais: '', 
     conclusao: 2022-12-31, 
-    link: "https://gabrieszin.github.io/portfolio/", 
+    link: "https://gabriersdev.github.io/portfolio/", 
     linguagens: ["JS", "CSS", "HTML"],
     linkPreview: ''
   },
@@ -19,7 +19,7 @@ const dadosProjetosAlura = [
     tituloSaibaMais: '',
     saibaMais: '', 
     conclusao: 2022-12-31, 
-    link: "https://gabrieszin.github.io/Agenda-Tarefas/", 
+    link: "https://gabriersdev.github.io/Agenda-Tarefas/", 
     linguagens: ["JS", "CSS", "HTML"],
     linkPreview: ''
   },
@@ -31,7 +31,7 @@ const dadosProjetosAlura = [
     tituloSaibaMais: '',
     saibaMais: '', 
     conclusao: 2022-12-31, 
-    link: "https://gabrieszin.github.io/Agenda/", 
+    link: "https://gabriersdev.github.io/Agenda/", 
     linguagens: ["JS", "CSS", "HTML"],
     linkPreview: ''
   },
@@ -43,7 +43,7 @@ const dadosProjetosAlura = [
     tituloSaibaMais: '',
     saibaMais: '', 
     conclusao: 2022-12-31, 
-    link: "https://gabrieszin.github.io/Alurinha/", 
+    link: "https://gabriersdev.github.io/Alurinha/", 
     linguagens: ["CSS", "HTML"],
     linkPreview: ''
   },
@@ -55,7 +55,7 @@ const dadosProjetosAlura = [
     tituloSaibaMais: '',
     saibaMais: '', 
     conclusao: 2022-12-31, 
-    link: "https://gabrieszin.github.io/Alura-Store/", 
+    link: "https://gabriersdev.github.io/Alura-Store/", 
     linguagens: ["CSS", "HTML"],
     linkPreview: ''
   },
@@ -67,7 +67,7 @@ const dadosProjetosAlura = [
     tituloSaibaMais: '',
     saibaMais: '', 
     conclusao: 2022-12-31, 
-    link: "https://gabrieszin.github.io/Apeperia/", 
+    link: "https://gabriersdev.github.io/Apeperia/", 
     linguagens: ["CSS", "HTML"],
     linkPreview: ''
   },
@@ -79,7 +79,7 @@ const dadosProjetosAlura = [
     tituloSaibaMais: '',
     saibaMais: '', 
     conclusao: 2022-12-31, 
-    link: "https://gabrieszin.github.io/Fruta-e-Fruto/", 
+    link: "https://gabriersdev.github.io/Fruta-e-Fruto/", 
     linguagens: ["CSS", "HTML"],
     linkPreview: ''
   },
@@ -94,9 +94,9 @@ const dadosProjetosAntigos = [
     tituloSaibaMais: '', 
     saibaMais: "", 
     conclusao: 2022-12-19, 
-    link: "https://gabrieszin.github.io/conscientize-se/", 
+    link: "https://gabriersdev.github.io/conscientize-se/", 
     linguagens: ["JS", "CSS", "HTML"], 
-    linkPreview: 'https://gabrieszin.github.io/conscientize-se/'
+    linkPreview: 'https://gabriersdev.github.io/conscientize-se/'
   },
   {
     titulo: "Quiz de História", 
@@ -118,9 +118,9 @@ const dadosProjetosAntigos = [
     tituloSaibaMais: '', 
     saibaMais: "", 
     conclusao: 2022-12-19, 
-    link: "https://gabrieszin.github.io/calculator/", 
+    link: "https://gabriersdev.github.io/calculator/", 
     linguagens: ["JS", "CSS", "HTML"], 
-    linkPreview: 'https://gabrieszin.github.io/calculator/'
+    linkPreview: 'https://gabriersdev.github.io/calculator/'
   },
   {
     titulo: "Tempo para live", 
@@ -154,9 +154,9 @@ const dadosProjetosAntigos = [
     tituloSaibaMais: '', 
     saibaMais: "", 
     conclusao: 2022-12-19, 
-    link: "https://gabrieszin.github.io/random-password/", 
+    link: "https://gabriersdev.github.io/random-password/", 
     linguagens: ["JS", "CSS", "HTML"], 
-    linkPreview: 'https://gabrieszin.github.io/random-password/'
+    linkPreview: 'https://gabriersdev.github.io/random-password/'
   },
   {
     titulo: "Urna Eletrônica", 
@@ -166,9 +166,9 @@ const dadosProjetosAntigos = [
     tituloSaibaMais: '', 
     saibaMais: "", 
     conclusao: 2022-12-19, 
-    link: "https://gabrieszin.github.io/urna-eletronica/", 
+    link: "https://gabriersdev.github.io/urna-eletronica/", 
     linguagens: ["JS", "CSS", "HTML"], 
-    linkPreview: 'https://gabrieszin.github.io/urna-eletronica/'
+    linkPreview: 'https://gabriersdev.github.io/urna-eletronica/'
   },
 ]
 
