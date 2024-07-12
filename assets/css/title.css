@@ -1,0 +1,114 @@
+/*Sessão Title*/
+section.title{
+  margin: 2rem 5rem;
+  display: flex;
+}
+
+.title__div{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title__profile{
+  order: 1;
+
+  display: block;
+  background-image: url(../img/profile.png);
+  background-position: top;
+  background-size: cover;
+
+  border-radius: 10px;
+
+  width: 25rem;
+  height: 100%;
+}
+
+.title__container{
+  color: var(--cor-de-texto);
+  margin-right: 1rem;
+}
+
+.title__bio{
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+.title__subsection{
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.title__network{
+  display: flex;
+  font-size: 1.5rem;
+  margin-left: 0;
+  padding: 0;
+
+  flex-wrap: wrap;
+}
+
+.title__bio,
+.title__subsection,
+.title__network{
+  max-width: 760px;
+}
+
+.title__network__item a{
+  display: block;
+  padding: 0.5rem 0;
+  margin-right: 1.5rem;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: none;
+}
+
+.title__network__item__icone{
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.25rem;
+  margin-left: 0.15rem;
+  background: url(../img/svgs/setas-link-externo.svg) center / contain no-repeat;
+}
+
+.title__network__item a:hover,
+.title__network__item a:focus{
+  background-color: var(--cor-background-hover-links);
+  padding: 0.5rem 0.75rem;
+}
+
+@media screen and (max-width: 767px) {
+  section.title{
+    margin: auto 2rem;
+  }
+
+  .title__div{
+    flex-direction: column;
+  }
+
+  .title__profile{
+    order: initial;
+    max-width: 10rem;
+    margin-bottom: 2rem;
+  }
+
+  .title__network__item a{
+    margin-right: 1rem;
+    background-color: var(--cor-background-hover-links);
+    padding: 0.5rem 0.75rem;
+
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1000px){
+  section.title{
+    margin: 2rem 3rem;
+  }
+}

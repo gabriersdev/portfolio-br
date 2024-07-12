@@ -1,0 +1,36 @@
+/*Sessão About*/
+section.about{
+  margin: 3rem 5rem;
+}
+
+.about__title{
+  font-size: 2rem;
+
+  color: var(--cor-de-texto);
+}
+
+.about__paragraph{
+  margin-top: 1rem;
+
+  font-size: 1.5rem;
+
+  line-height: 1.25;
+
+  max-width: 760px;
+}
+
+.about img{
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  section.about{
+    margin: 3rem 2rem;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1000px){
+  section.about{
+    margin: 3rem;
+  }
+}

@@ -1,0 +1,123 @@
+/* Experiência*/
+section.experience{
+  padding: 3rem 5rem;
+}
+
+.experience__section__title{
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+
+  color: var(--cor-de-texto);
+}
+
+.experiencie__box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 2.5rem 0;
+}
+
+.experience__midia{
+  display: block;
+  width: 45%;
+  height: 100%;
+}
+
+.experiencie__box:nth-child(odd) .experience__midia{
+  order: 1;
+}
+
+.experiencie__box:nth-child(odd) .experience__info{
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+.experience__info{
+  width: 50%;
+
+  margin-left: 1rem;
+}
+
+.experience__title{
+  margin: 0.75rem 0;
+}
+
+.experience__text{
+  font-weight: 400;
+  font-size: var(--tamanho-fonte-texto-normal);
+
+  margin-bottom: 0.75rem;
+}
+
+.experience__description{
+  margin: auto;
+}
+
+.experiencia__botao--repo,
+.experiencia__botao--demo{
+  cursor: pointer;
+  padding: 1rem 0.75rem;
+  transition: 0.3s;
+  font-size: var(--tamanho-fonte-texto-normal);
+}
+
+.experiencia__botao--repo{
+  border: 1px solid var(--cor-de-borda-botao-1);
+  background-color: transparent;
+  color: var(--cor-de-texto-botao-1);
+
+  margin-right: 0.25rem;
+}
+
+.experiencia__botao--demo{
+  border: 1px solid;
+  background-color: var(--cor-de-fundo-botao-2);
+  color: var(--cor-de-texto-botao-2);
+
+  margin-left: 0.25rem;
+}
+
+.experiencia__botao--repo:hover{
+  opacity: 0.7;
+}
+
+.experiencia__botao--demo:hover{
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 767px) {
+  section.experience{
+    padding: 3rem 2rem;
+  }
+
+  .experiencie__box{
+    flex-direction: column;
+  }
+
+  .experience__midia{
+    width: 100%;
+  }
+
+  .experiencie__box:nth-child(odd) .experience__midia{
+    order: initial;
+  }
+
+  .experience__info{
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .experiencia__botao--demo{
+    margin-top: 0.25rem;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1000px){
+  section.experience{
+    padding: 3rem;
+  }
+}

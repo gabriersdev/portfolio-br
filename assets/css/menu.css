@@ -1,179 +1,91 @@
-.menu.flutuante{
-  position: sticky;
-  z-index: 2;
-  display: none;
-  /* margin: 0 1rem; */
-  /* width: calc(100% - 2rem); */
-  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0;
-}
-
-.menu.flutuante .menu__item-lista:hover{
-  border-color: #FFF !important;
-}
-
-.menu.flutuante .menu__item-lista:hover a{
-  color: #FFF;
-}
-
-.menu{
+/*Sessão Menu*/
+section.menu{
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  width: 100%;
-  padding: 0.25rem 2rem;
-
-  backdrop-filter: blur(20px);
-  /* position: absolute; */
-  border-radius: 5px;
-  transition: unset;
-
-  top: 0;
-  left: 0;
-
-  &:not(.flutuante){
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
+  margin: auto 5rem;
+  padding: 1rem 0;
 }
 
-.menu__identificacao{
-  display: flex;
-}
-
-.menu__imagem{
-  background: url(../imagens/profile.png) center / cover no-repeat;
-  border-radius: 100%;
-  width: 50px;
-  height: 50px;
-
-  margin-right: 0.9rem;
-}
-
-.menu__identificacao__titulos{
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-
-  flex-direction: column;
-}
-
-.menu__identificacao__titulos-titulo{
-  color: var(--cinza);
-  font-weight: 100;
-}
-
-.menu__identificacao__titulos-titulo, .menu__identificacao__titulos-titulo-secundario{
-  font-size: 1rem;
-}
-
-.menu__identificacao__titulos-titulo-secundario{
-  color: var(--cinza-fraco);
-  font-weight: normal;
-}
-
-.menu__lista{
+.menu header{
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  list-style-type: none;
-
-  margin-top: 1rem;
 }
 
-.menu__item-lista{
-  margin-right: 0.5rem;
-  padding: 0.45rem 1rem;
+.menu__image{
+  width: 25px;
+}
 
-  border-width: 1.5px;
-  border-style: solid;
-  border-color: var(--cinza-medio);
-  border-radius: 6px;
+.menu__title{
+  margin-left: 1rem;
+  font-weight: 700;
+}
 
-  color: var(--cinza);
+.menu__list{
+  display: flex;
+}
 
+.menu__list__item a, 
+.menu__list__item__contato a{
+  display: block;
+  color: #464646;
+  padding: 0.5rem 0.75rem;
+  transition: 0.3s;
   cursor: pointer;
-  transition: border ease-in-out 0.3s;
+  border-radius: 5px;
+  outline: none;
 }
 
-.menu__item-lista a{
-  color: inherit;
+.menu__list__item a:hover, 
+.menu__list__item a:focus, 
+.menu__list__item__contato a:hover,
+.menu__list__item__contato a:focus{
+  background-color: lightgray;
 }
 
-.menu__item-lista a i{
-  margin-right: 0.5rem;
+.menu__list__item{
+  margin: 0 1rem;
 }
 
-.menu__item-lista:hover{
-  background-color: rgba(170, 170, 170, 0.1);
-  border-color: var(--cinza-mediano-forte);
+.menu__list__item__contato{
+  font-weight: 700;
 }
 
-.menu__item-lista:last-child{
-  margin-right: 0;
-}
-
-.menu__item-lista.ativo{
-  border-width: 1px;
-  border-color: var(--cinza-mediano-fraco);
-}
-
-@media screen and (min-width: 0) and (max-width: 767px){
-  .menu{
-    padding: 1rem 2rem;
-  }
-
-  .menu__item-lista a i{
-    margin-right: 0;
-  }
-
-  .menu__item-lista a span{
+@media screen and (max-width: 390px) {
+  .menu__list__item__contato{
     display: none;
   }
 }
 
-@media screen and (max-width: 320px){
-  .menu{
-    padding: 1rem;
-    display: flex;
+@media screen and (max-width: 767px) {
+  section.menu{
+    margin: auto 2rem;
   }
 
-  div.menu__imagem{
+  .menu__list__item__contato a{
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu__list__item{
     display: none;
+    text-align: right;
   }
 }
 
-@media screen and (max-width: 360px){
-  .menu__item-lista:nth-child(2){
-    margin-right: 0;
+@media screen and (min-width: 767px) and (max-width: 1000px){
+  section.menu{
+    margin: auto 3rem;
   }
 
-  .menu__item-lista:nth-child(1){
+  .menu__list__item__contato a{
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu__list__item{
     display: none;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .menu{
-    padding: 1rem 2rem;
-    
-    &:not(.flutuante){
-      display: none;
-    }
-
-    &.flutuante{
-      top: 0;
-      display: flex !important;
-    }
-  }
-
-  .menu__item-lista:nth-child(2){
-    margin-right: 0;
-  }
-
-  .menu__item-lista:nth-child(3){
-    display: none;
+    text-align: right;
   }
 }

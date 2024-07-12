@@ -1,57 +1,29 @@
 :root{
-  --preto: #000;
-  --preto-medio: #1E1E1E;
-  --cinza-ultra-forte:  #494645;
-  --cinza-medio-forte: #3F3F3F;
-  --cinza-forte: #424242;
-  --cinza-mediano-forte: #535353;
-  --cinza-mediano-fraco: #727272;
-  --cinza-mediano-medio: #999999;
-  --cinza-medio: #AAAAAA;
-  --cinza: #C7C7C7;
-  --cinza-fraco-forte: #D9D9D9;
-  --cinza-fraco-medio: #D8D8D8;
-  --cinza-fraco-sec: #EBEDF0;
-  --cinza-fraco: #ECECEC;
+  --cor-de-fundo-secundaria: #FFF;
+  --cor-de-fundo: #F5F5F5;
+  --cor-de-fundo-formacao: #EAF2FD;
+  --cor-de-fundo-contato: #EAF2FD;
 
-  --branco: #FFF;
-  
-  --azul: #264DE4;
-  
-  --pessego: #FF9162;
-  --bege: #F69D9D;
-  --amarelo-claro: #F6F39D;
-  --amarelo: #FFFC62;
-  
-  --azul-claro-forte: #9DC1F6;
-  --azul-claro-medio: #B1D0FF;
-  --azul-mais-claro: #D9E8FF;
-  --azul-mais-claro-35: rgba(157, 193, 246, 0.1);
-  
-  --roxo: #6D3BBF;
-  --roxo-medio: #B49DF6;
-  --rosa: #F69DED;
-  --rosa-claro: #BCB6FF;
-  --rosa-mais-claro: #D0DAFD;
-  --rosa-25: rgba(180, 157, 246, 0.1);
-  
-  --oliva: #99ACA1;
-  --verde-forte: #167171;
-  --verde: #63DA92;
-  --oliva-medio: #ABC0B3;
-  --verde-agua: #77CBCB;
-  --verde-agua-claro: #B7E9FF;
-  --oliva-fraco: #CEECDA;
-  --verde-forte-35: rgba(22, 113, 113, 0.1);
-  
-  --titulo-h1: 5rem;
-  --titulo-h2: 2.25rem;
-  --titulo-h3: 1.7rem;
-  --titulo-h4: 1.5rem;
+  --cor-de-link: #000;
 
-  --padding-buttons: 0.45rem 0.75rem;
+  --cor-de-texto: #464646;
+  --cor-de-icone: #464646;
 
-  --weight-titulo-h2: 700;
+  --cor-de-borda-inputs: #808080;
+  --cor-de-fundo-inputs: #FFF;
 
-  --icone-grande: 1.5rem;
+  --cor-de-fundo-botao-2: #0000FF;
+  --cor-de-borda-botao-2: #0000FF;
+  --cor-de-texto-botao-2: #FFF;
+
+  --cor-de-fundo-botao-1: transparent;
+  --cor-de-borda-botao-1: #0000FF;
+  --cor-de-texto-botao-1: #0000FF;
+
+  --cor-background-loader: #F5F5F5;
+  --cor-loader: #0000FF;
+
+  --cor-background-hover-links: #D3D3D3;
+
+  --tamanho-fonte-texto-normal: 1.2rem;
 }
