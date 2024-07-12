@@ -1,75 +1,360 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-page="principal">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="Portfólio, Gabriel, Ribeiro, Programação, Projetos">
+
+  <meta http-equiv="refresh" content="0; url=aviso.html">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"`>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; script-src 'self'; frame-src https://gabriel-ribeiro.000webhostapp.com/formcontato-portfolio-pessoal/">
+      
+  <meta name="keywords" content="Portfólio, Projetos, Skills, Pessoal">
   <meta name="author" content="Gabriel Ribeiro">
-  <meta name="description" content="Aqui você vê os meus principais projetos, as linguagens de programação que eu trabalho, meus objetivos e como entrar em contato comigo. Veja meu portfólio agora mesmo :)">
-  <meta property="og:title" content="Portfólio - Gabriel Ribeiro">
-  <meta property="og:url" content="https://gabriersdev.github.io/portfolio/assets/imagens/external.png">
-  <meta property="og:description" content="Aqui você vê os meus principais projetos, as linguagens de programação que eu trabalho, meus objetivos e como entrar em contato comigo. Veja meu portfólio agora mesmo :)">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:image" content="https://gabriersdev.github.io/portfolio/assets/imagens/external.png">
-  <meta property="og:image:secure_url" content="https://gabriersdev.github.io/portfolio/assets/imagens/external.png"> 
-  <meta property="og:image:type" content="image/png"> 
-  <meta property="og:image:width" content="800"> 
-  <meta property="og:image:height" content="600">
+  <meta property="og:title" content="Portfólio Pessoal">
+  <meta property="og:description" content="Meu nome é Gabriel Ribeiro e construo páginas web. Sou técnico em Informática para a Internet e estudo Java e Programação WEB pelo Programa Oracle ONE na Alura. E este é o meu portfólio.">
+  <meta property="og:url" content="#">
 
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://gist.githubusercontent.com/; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net/; img-src *; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net/ https://code.jquery.com/ https://cdnjs.cloudflare.com/ https://gist.githubusercontent.com/gabriersdev/; frame-src *">  
-  
-  <title>Gabriel Ribeiro - Portfólio</title>
-  <link rel="shortcut icon" href="./assets/imagens/icon-profile.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" >
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="shortcut icon" href="./assets/img/svgs/icone.svg" type="image/x-icon">
 
-  <link rel="stylesheet" href="./assets/css/variaveis.css">
-  <link rel="stylesheet" href="./assets/css/menu.css">
-  <link rel="stylesheet" href="./assets/css/marcador.css">
-  <link rel="stylesheet" href="./assets/css/cabecalho.css">
-  <link rel="stylesheet" href="./assets/css/card.css">
-  <link rel="stylesheet" href="./assets/css/conteudo.css">
-  <link rel="stylesheet" href="./assets/css/apresentacao.css">
-  <link rel="stylesheet" href="./assets/css/projetos.css">
-  <link rel="stylesheet" href="./assets/css/formulario-pesquisa-projeto.css">
-  <link rel="stylesheet" href="./assets/css/selecao.css">
-  <link rel="stylesheet" href="./assets/css/linguagens.css">
-  <link rel="stylesheet" href="./assets/css/chamado.css">
-  <link rel="stylesheet" href="./assets/css/sobre.css">
-  <link rel="stylesheet" href="./assets/css/caracteristicas.css">
-  <link rel="stylesheet" href="./assets/css/contato.css">
-  <link rel="stylesheet" href="./assets/css/formulario.css">
-  <link rel="stylesheet" href="./assets/css/rodape.css">
-  <link rel="stylesheet" href="./assets/css/modal.css">
-  <link rel="stylesheet" href="./assets/css/paginas-auxiliares/modal-pg-auxiliar.css">
+  <!-- Folha de estilo de CSS Linkado -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <!-- Importação da Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <title>Portfólio Pessoal</title>
 </head>
 <body>
-  <!-- <div class="loader"><div class="spinner"></div></div> -->
+  <!-- Sessão de Menu  -->
+  <div class="all">
+    <section class="menu">
+      <header>
+        <img class="menu__image" src="assets/img/svgs/estrelas.svg">
+        <h3 class="menu__title">Gabriel Ribeiro</h3>
+      </header>
+      <nav>
+        <ul class="menu__list">
+          <li class="menu__list__item"><a href="#about">Sobre mim</a></li>
+          <li class="menu__list__item"><a href="#skills">Skills</a></li>
+          <li class="menu__list__item"><a href="#hobbies">Hobbies</a></li>
+          <li class="menu__list__item"><a href="#academic">Formações e Cursos</a></li>
+          <li class="menu__list__item"><a href="#experience">Experiência</a></li>
+          <li class="menu__list__item__contato"><a href="mailto:devgabrielribeiro@gmail.com">devgabrielribeiro@gmail.com</a></li>
+        </ul>
+      </nav>
+    </section>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <script type="module" src="./assets/js/script.js"></script>
-    <script type="module" src="./assets/js/pagina-principal.js"></script>
-
-    <noscript>
-      <div class="box-no-script">         
-        <div class="texto-pagina-centralizado-alt">
-          <h2 class="titulo-texto-pagina-centralizado">Este site não funciona com o 
-            <span class="destaque-pagina-centralizado">Javascript desabilitado</span></h2><br>
-            
-          <p class="label-texto-pagina-centralizado">Muitos dos recursos usados funcionam através do Javascript e sem ele a navegabilidade e o próprio funcionamento do site são comprometidos</p>
-            
-          <p class="label-texto-pagina-centralizado">Portanto, habilite o Javascript e navegue pelo site</p><br>
-          <button data-recarrega-pagina class="btn-principal-no-script" id="btn-redirecionar-inicio" name="btn-redirecionar-inicio">Recarregar</button>
+    <!-- Sessão de Header/Title/Hero -->
+    <section class="title">
+      <div class="title__div">
+        <div class="title__profile"></div>
+        <div class="title__container" id="#sobremim">
+          <h2 class="title__bio">Olá, meu nome é Gabriel Ribeiro e construo páginas web</h2>
+          <h3 class="title__subsection">Eu sou técnico em Informática para a Internet e estudo Java e Programação WEB pelo Programa Oracle ONE na Alura</h3>
+          <ul class="title__network">
+            <li class="title__network__item"><a href="https://github.com/gabrieszin/" target="_blank">Github<span class="title__network__item__icone"></span></a></li>
+            <li class="title__network__item"><a href="https://www.linkedin.com/in/gabrielribeirodev" target="_blank">Linkedin<span class="title__network__item__icone"></span></a></li>
+            <li class="title__network__item"><a href="https://t.me/devgabrielribeiro" target="_blank">Telegram<span class="title__network__item__icone"></span></a></li>
+            <li class="title__network__item"><a href="./redirecionamento.html?redirecionar=curriculo" target="_blank">Currículo<span class="title__network__item__icone"></span></a></li>
+          </ul>
         </div>
       </div>
-    </noscript>
+    </section>
+    
+    <!-- Sessão sobre mim -->
+    <section class="about">
+      <div class="about__container">
+        <h3 class="about__title">Sobre mim</h3>
+        <p class="about__paragraph">
+          Eu sou o Gabriel Ribeiro, tenho <span data-idade-atual></span> anos e programo há <span data-periodo-programando></span>. Desde que tive meu primeiro contato com um computador sempre quis aprender e aprender mais sobre seu funcionamento. Enquanto eu ainda era pequeno, passava horas e horas fuçando o que já vinha baixado no computador - foi basicamente assim que eu aprendi a mexer nos programas do Office e a configurar o PC do jeitinho que eu queria. 
+        </p>
+        <p class="about__paragraph">
+          Quando eu entrei no Ensino Médio, eu queria muito fazer um curso técnico na área, porém por problemas individuais acabou me impossibilitando de realizar um em 2021. Nesse momento que eu conheci um novo mundo: a programação. O ano virou e eu entrei de cabeça nisso: a criação de protótipos e layouts, de scripts mesmo que mais simples, a conexão de um formulário com um banco de dados, dentre muitos outros conhecimentos passaram a fazer parte do meu cotidiano. Confesso que no início foi bem difícil, por quê eu cometia muitos erros e os conceitos pareciam muito complicados de entender. Mas com os cursos e muita (ênfase no muita) prática eu estou me aperfeiçoando a cada dia mais.
+        </p>
+      </div>
+    </section>
+    
+    <!-- Sessão de Skills/Habilidades -->
+    <section class="skills">
+      <h3 class="skills__title" id="skills">Skills</h3>
+      <div class="skills__line">
+        <div class="skills__box">
+          <ul>
+            <li class="skills__img"><img src="assets/img/svgs/skills/html.svg"></li>
+            <li class="skills__name">HTML 5</li>
+          </ul>
+        </div>
+        
+        <div class="skills__box">
+          <ul>
+            <li class="skills__img"> <img src="assets/img/svgs/skills/js.svg" alt="Logo do JavaScript"></li>
+            <li class="skills__name">Javascript</li>
+          </ul>
+        </div>
+        
+        <div class="skills__box">
+          <ul>
+            <li class="skills__img"> <img src="assets/img/svgs/skills/php.svg" alt="Logo do PHP"></li>
+            <li class="skills__name">PHP</li>
+          </ul>
+        </div>
 
-  </body>
-  </html>
+        <div class="skills__box">
+          <ul>
+            <li class="skills__img"> <img src="assets/img/svgs/skills/java.svg" alt="Logo do PHP"></li>
+            <li class="skills__name">Java</li>
+          </ul>
+        </div>
+        
+        <div class="skills__box oculto">
+          <ul>
+            <li class="skills__img"><img src="assets/img/svgs/skills/node.svg" alt="Logo do Node JS"></li>
+            <li class="skills__name">Node JS</li>
+          </ul>
+        </div>
+        
+        <div class="skills__box oculto">
+          <ul>
+            <li class="skills__img"> <img src="assets/img/svgs/skills/react.svg" alt="Logo do React"> </li>
+            <li class="skills__name">React</li>
+          </ul>
+        </div>
+        
+        <div class="skills__box">
+          <ul>
+            <li class="skills__img"> <img src="assets/img/svgs/skills/css.svg" alt="Logo do CSS"> </li>
+            <li class="skills__name">CSS</li>
+          </ul>
+        </div>
+
+        <div class="skills__box">
+          <ul>
+            <li class="skills__img"> <img src="assets/img/svgs/skills/figma.svg" alt="Logo do Figma"> </li>
+            <li class="skills__name">Figma</li>
+          </ul>
+        </div>
+
+        <div class="skills__box">
+          <ul>
+            <li class="skills__img"> <img src="assets/img/svgs/skills/git.svg" alt="Logo do Git"> </li>
+            <li class="skills__name">Git</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sessão de Hobbies -->
+    <section class="hobbies" id="hobbies">
+      <h3 class="hobbies__title">Hobbies</h3>
+      <div class="hobbies__line">
+        <div class="hobbies__box oculto">
+          <ul>
+            <li class="hobbies__img"><img src="assets/img/svgs/hobbies/skate.svg" alt="Ícone de um skate"></li>
+            <li class="hobbies__name"> Andar de skate</li>
+          </ul>
+        </div>
+        
+        <div class="hobbies__box oculto">
+          <ul>
+            <li class="hobbies__img"> <img src="assets/img/svgs/hobbies/baixo.svg" alt="Ícone de um baixo"></li>
+            <li class="hobbies__name">Tocar baixo</li>
+          </ul>
+        </div>
+        
+        <div class="hobbies__box">
+          <ul>
+            <li class="hobbies__img"> <img src="assets/img/svgs/hobbies/musica.svg" alt="Ícone de música"></li>
+            <li class="hobbies__name">Ouvir música</li>
+          </ul>
+        </div>
+        
+        <div class="hobbies__box">
+          <ul>
+            <li class="hobbies__img"><img src="assets/img/svgs/hobbies/series.svg" alt="Ícone ilustrativo de uma série"></li>
+            <li class="hobbies__name">Assistir séries</li>
+          </ul>
+        </div>
+        
+        <div class="hobbies__box oculto">
+          <ul>
+            <li class="hobbies__img"> <img src="assets/img/svgs/hobbies/cozinhar.svg" alt="Ícone ilustrativo de uma cozinha"> </li>
+            <li class="hobbies__name">Cozinhar</li>
+          </ul>
+        </div>
+        
+        <div class="hobbies__box oculto">
+          <ul>
+            <li class="hobbies__img"> <img src="assets/img/svgs/hobbies/fotos.svg" alt="Ícone de uma foto"> </li>
+            <li class="hobbies__name">Tirar fotos</li>
+          </ul>
+        </div>
+
+        <div class="hobbies__box">
+          <ul>
+            <li class="hobbies__img"> <img src="assets/img/svgs/hobbies/bicicleta.svg" alt="Ícone de uma bicicleta"> </li>
+            <li class="hobbies__name">Andar de bike</li>
+          </ul>
+        </div>
+
+        <div class="hobbies__box">
+          <ul>
+            <li class="hobbies__img"> <img src="assets/img/svgs/hobbies/programar.svg" alt="Sinais de menor que e maior que"> </li>
+            <li class="hobbies__name">Programar</li>
+          </ul>
+        </div>
+        
+        <div class="hobbies__box">
+          <ul>
+            <li class="hobbies__img"> <img src="assets/img/svgs/hobbies/cinema.svg" alt="Ícone de uma tela"> </li>
+            <li class="hobbies__name">Assistir filmes</li>
+          </ul>
+        </div>
+
+        <div class="hobbies__box">
+          <ul>
+            <li class="hobbies__img"> <img src="assets/img/svgs/hobbies/botao-play.svg" alt="Ícone de um botão de play"> </li>
+            <li class="hobbies__name">Assistir lives</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sessão de Histórico Acadêmico -->
+    <section class="academic">
+      <h2 class="academic__title" id="academic">Formação Profissional e Acadêmica</h2>
+      <div class="academic__courses">
+        <div class="academic__courses__box">
+          <ul class="academic__courses__list">
+            <li class="academic__courses__item__img"><img src="./assets/img/codigo.jpg"></li>
+            <li class="academic__courses__item__title"><h4>Técnico em Informática para Internet</h4></li>
+            <li class="academic__courses__item__subtitle"><p>2021 - 2022</p></li>
+          </ul>
+        </div>
+
+        <div class="academic__courses__box oculto">
+          <ul class="academic__courses__list">
+            <li class="academic__courses__item__img"><img src=""></li>
+            <li class="academic__courses__item__title"><h4>Formação ux Design</h4></li>
+            <li class="academic__courses__item__subtitle"><p>2019 - Alura</p></li>
+          </ul>
+        </div>
+
+        <div class="academic__courses__box oculto">
+          <ul class="academic__courses__list">
+            <li class="academic__courses__item__img"><img src=""></li>
+            <li class="academic__courses__item__title"><h4>Pós-graduação design</h4></li>
+            <li class="academic__courses__item__subtitle"><p>Em andamento - UFRJ</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sessão de Experiência Profissional/Projetos-->
+    <section class="experience" id="experience">
+      <h2 class="experience__section__title" id="xp">Experiência Profissional</h2>
+      
+      <div class="experiencie__box">
+        <img class="experience__midia" src="./assets/previews/gifs/encriptador.gif">
+        <div class="experience__info">
+          <h2 class="experience__title">Encriptador de Vogais</h2>
+          <h3 class="experience__text">Challenge Oracle ONE</h3>
+          <div class="experience__description">
+            <span class="experience__repo"><a href="https://github.com/gabrieszin/Encriptador"><button class="experiencia__botao--repo">Repositório</button></a></span>
+            <span class="experience__demo"><a href="https://gabrieszin.github.io/Encriptador/"><button class="experiencia__botao--demo">Ver demo</button></a></span>
+          </div>
+        </div>
+      </div>  
+    
+      <div class="experiencie__box">
+        <img class="experience__midia" src="./assets/previews/gifs/jogo-da-forca.gif">
+        <div class="experience__info">
+          <h2 class="experience__title">Jogo da Forca</h2>
+          <h3 class="experience__text">Challenge Oracle ONE</h3>
+          <div class="experience__description">
+            <span class="experience__repo"><a href="https://github.com/gabrieszin/Jogo-da-Forca"><button class="experiencia__botao--repo">Repositório</button></a></span>
+            <span class="experience__demo"><a href="https://gabrieszin.github.io/Jogo-da-Forca/"><button class="experiencia__botao--demo">Ver demo</button></a></span>
+          </div>
+        </div>
+      </div>  
+  
+      <div class="experiencie__box">
+        <img class="experience__midia" src="./assets/previews/gifs/agenda-tarefa.gif">
+        <div class="experience__info">
+          <h2 class="experience__title">Agenda de Tarefas</h2>
+          <h3 class="experience__text">Cursos da Alura</h3>
+          <div class="experience__description">
+            <span class="experience__repo"><a href="https://github.com/gabrieszin/Agenda-Tarefas"><button class="experiencia__botao--repo">Repositório</button></a></span>
+            <span class="experience__demo"><a href="https://gabrieszin.github.io/Agenda-Tarefas/"><button class="experiencia__botao--demo">Ver demo</button></a></span>
+          </div>
+        </div>
+      </div>  
+
+      <div class="experiencie__box">
+        <img class="experience__midia" src="./assets/previews/alura-store.png">
+        <div class="experience__info">
+          <h2 class="experience__title">Alura Store</h2>
+          <h3 class="experience__text">Cursos da Alura</h3>
+          <div class="experience__description">
+            <span class="experience__repo"><a href="https://github.com/gabrieszin/Alura-Store"><button class="experiencia__botao--repo">Repositório</button></a></span>
+            <span class="experience__demo"><a href="https://gabrieszin.github.io/Alura-Store/"><button class="experiencia__botao--demo">Ver demo</button></a></span>
+          </div>
+        </div>
+      </div>  
+    </section>
+    
+    <section>
+      <div class="contato">
+        <h2 class="contato__title">Contato</h2>
+        <p class="contato__text">Se você gostou do meu trabalho e quer me contratar, ou se você quer apenas conversar, me mande um e-mail!</p>
+        <a href="#">Enviar e-mail</a>
+    </section>
+
+    <!-- Sessão de Footer/Rodapé-->
+    <footer class="footer">
+      <div class="footer__rodape">
+        <p class="destaque">Desenvolvido por Gabriel Ribeiro</p>
+        <p>Baseado em um protótipo elaborado pelo ONE. <a class="link-visivel" data-direito-autorais>Direitos Autorais</a></p>
+        <p><img src="./assets/img/svgs/copyright.svg" alt="Copyright">&nbsp;<span data-ano-atual>2022</span></p>
+      </div>
+    </footer>
+</div>
+
+  <dialog class="modal" data-modal>
+    <h3>Atribuição de Direitos Autorais</h3>
+    
+    <br><p>Para o desenvolvimento deste site foram usados recursos das seguintes bibliotecas e/ou serviços:</p>
+
+    <ul>
+      <li>Unsplash</li>
+      <li>SVG Repo</li>
+      <li>Bootstrap</li>
+      <li>Bootstrap Icons</li>
+    </ul>
+
+    <button data-modal-fecha>Fechar</button>
+  </dialog>
+
+  <div class="overlay-2">
+    <div class="lds-ring-2"><div></div><div></div><div></div><div></div></div>
+  </div>
+
+  <noscript>
+    <div class="box-no-script">         
+      <div class="texto-pagina-centralizado-alt">
+        <h2 class="titulo-texto-pagina-centralizado">Este site não funciona com o 
+          <span class="destaque-pagina-centralizado">Javascript desabilitado</span></h2><br>
+          
+        <p class="label-texto-pagina-centralizado">Muitos dos recursos usados funcionam através do Javascript e sem ele a navegabilidade e o próprio funcionamento do site são comprometidos</p>
+          
+        <p class="label-texto-pagina-centralizado">Portanto, habilite o Javascript e navegue pelo Expresso Mobilidade</p><br>
+        <button data-recarrega-pagina class="btn btn-lg btn-principal btn-principal-ativado btn-sombra btn-principal-no-script" id="btn-redirecionar-inicio" name="btn-redirecionar-inicio">Recarregar</button>
+      </div>
+    </div>
+  </noscript>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
