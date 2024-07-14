@@ -14,7 +14,7 @@ section.academic{
 
 .academic__courses{
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
   grid-gap: 1rem;
 }
 

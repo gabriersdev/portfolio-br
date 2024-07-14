@@ -13,11 +13,16 @@ section.skills{
 .skills__line{
   display: grid;
 
-  grid-template-columns: calc(20% - 1rem) calc(20% - 1rem) calc(20% - 1rem) calc(20% - 1rem) calc(20% - 1rem);
+  grid-template-columns: repeat(4, calc(25% - 1rem));
   grid-gap: 1rem;
 }
 
 .skills__box{
+  border-radius: 5px;
+  border: 1px solid #DDD;
+  transition-property: scale box-shadow;
+  transition-duration: 0.3s;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -30,6 +35,11 @@ section.skills{
   min-height: 10rem;
 
   box-sizing: border-box;
+
+  &:hover{
+    scale: 1.025;
+    box-shadow: 0 0 20px #DDD;
+  }
 }
 
 .skills__box ul{

@@ -14,11 +14,15 @@ section.hobbies{
 .hobbies__line{
   display: grid;
 
-  grid-template-columns: calc(20% - 1rem) calc(20% - 1rem) calc(20% - 1rem) calc(20% - 1rem) calc(20% - 1rem);
+  grid-template-columns: repeat(3, calc(33.3% - 1rem));
   grid-gap: 1rem;
 }
 
 .hobbies__box{
+  border-radius: 5px;
+  border: 1px solid #DDD;
+  transition: scale 0.3s;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;

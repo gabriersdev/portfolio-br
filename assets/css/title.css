@@ -2,13 +2,17 @@
 section.title{
   margin: 2rem 5rem;
   display: flex;
+  font-size: var(--tamanho-fonte-texto-destaque);
 }
 
 .title__div{
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
   width: 100%;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .title__profile{
@@ -19,9 +23,11 @@ section.title{
   background-position: top;
   background-size: cover;
 
-  border-radius: 10px;
-
   width: 25rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+
+  
   height: 100%;
 }
 
@@ -37,14 +43,14 @@ section.title{
 
 .title__subsection{
   margin-top: 2rem;
-  font-size: 1.5rem;
+  font-size: inherit;
   font-weight: 400;
   line-height: 1.25;
 }
 
 .title__network{
   display: flex;
-  font-size: 1.5rem;
+  font-size: inherit;
   margin-left: 0;
   padding: 0;
 
@@ -61,7 +67,7 @@ section.title{
   display: block;
   padding: 0.5rem 0;
   margin-right: 1.5rem;
-  border-radius: 5px;
+  border-radius: 25px;
   transition: 0.3s;
   cursor: pointer;
   outline: none;
@@ -79,6 +85,7 @@ section.title{
 .title__network__item a:focus{
   background-color: var(--cor-background-hover-links);
   padding: 0.5rem 0.75rem;
+  padding-left: 1rem;
 }
 
 @media screen and (max-width: 767px) {
