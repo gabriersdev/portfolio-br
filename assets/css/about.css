@@ -16,8 +16,6 @@ section.about{
   font-size: var(--tamanho-fonte-texto-destaque);
 
   line-height: 1.25;
-
-  max-width: 760px;
 }
 
 .about img{

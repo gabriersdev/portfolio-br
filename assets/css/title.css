@@ -9,8 +9,7 @@ section.title{
 .title__div{
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  flex-direction: row-reverse;
+  justify-content: space-between;
   width: 100%;
   gap: 3rem;
   flex-wrap: wrap;
@@ -87,6 +86,12 @@ section.title{
   background-color: var(--cor-background-hover-links);
   padding: 0.5rem 0.75rem;
   padding-left: 1rem;
+}
+
+@media screen and (max-width: 1385px) {
+  .title__profile{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {

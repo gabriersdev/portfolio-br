@@ -1,4 +1,7 @@
 :root{
+  --azul: #3083FF;
+  --azul-marinho: #273B84;
+
   --cor-de-fundo-secundaria: #FFF;
   --cor-de-fundo: #F5F5F5;
   --cor-de-fundo-formacao: #EAF2FD;
@@ -13,16 +16,16 @@
   --cor-de-borda-inputs: #808080;
   --cor-de-fundo-inputs: #FFF;
 
-  --cor-de-fundo-botao-2: #0000FF;
-  --cor-de-borda-botao-2: #0000FF;
-  --cor-de-texto-botao-2: #FFF;
+  --cor-de-fundo-botao-2: transparent;
+  --cor-de-borda-botao-2: transparent;
+  --cor-de-texto-botao-2: var(--azul);
 
   --cor-de-fundo-botao-1: transparent;
-  --cor-de-borda-botao-1: #0000FF;
-  --cor-de-texto-botao-1: #0000FF;
+  --cor-de-borda-botao-1: transparent;
+  --cor-de-texto-botao-1: #273B84;
 
   --cor-background-loader: #F5F5F5;
-  --cor-loader: #0000FF;
+  --cor-loader: #273B84;
 
   --cor-background-hover-links: #D3D3D3;
 
