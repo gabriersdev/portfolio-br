@@ -1,5 +1,41 @@
 (() => {
   
+  const conteudos = {
+    "skills": [
+      {
+        "name": "",
+        "link" : "#",
+        "img": ""
+      },
+    ],
+    "hobbies": [
+      {
+        "name": "",
+        "img": ""
+      },
+    ],
+    "academic": [
+      {
+        "name": "",
+        "school": "",
+        "start": "",
+        "finished": false,
+        "finish": "",
+        "img": ""
+      },
+    ],
+    "projects": [
+      {
+        "name": "",
+        "subtitle": "",
+        "img": "",
+        "link": "",
+        "demo": "",
+        "description": "",
+      },
+    ]
+  }
+
   const ajustarAnoAtual = () => {
     const areas = document.querySelectorAll("[data-ano-atual]");
     const dataAtual = new Date();

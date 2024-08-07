@@ -41,3 +41,17 @@ body{
   text-decoration: underline;
   cursor: pointer;
 }
+
+section{
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.hover-scale{
+  transition-property: scale box-shadow;
+  transition-duration: 0.3s;
+
+  &:hover{
+    scale: 1.025;
+    box-shadow: 0 0 20px #DDD;
+  }
+}

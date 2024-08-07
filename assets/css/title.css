@@ -1,6 +1,7 @@
 /*Sessão Title*/
 section.title{
   margin: 2rem 5rem;
+  border: unset;
   display: flex;
   font-size: var(--tamanho-fonte-texto-destaque);
 }
@@ -98,9 +99,11 @@ section.title{
   }
 
   .title__profile{
-    order: initial;
-    max-width: 10rem;
-    margin-bottom: 2rem;
+    display: none;
+  }
+
+  .title__container{
+    margin-top: 2rem;
   }
 
   .title__network__item a{

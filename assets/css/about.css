@@ -1,6 +1,7 @@
 /*Sessão About*/
 section.about{
   margin: 3rem 5rem;
+  border: unset;
 }
 
 .about__title{
