@@ -49,11 +49,14 @@ section.experience{
   font-weight: 400;
   font-size: var(--tamanho-fonte-texto-normal);
   margin-bottom: 0.75rem;
+  line-height: 1.25;
 }
 
 .experience__title,
 .experience__text{
   margin-left: 0.75rem;
+  text-wrap: balance;
+  width: min(100%, 700px);
 }
 
 .experience__description{
@@ -83,14 +86,17 @@ section.experience{
   margin-left: 0.25rem;
 }
 
-.experiencia__botao--repo:hover{
+.experiencia__botao--repo:hover,
+.experiencia__botao--repo:focus,
+.experiencia__botao--repo:active{
   background-color: var(--azul-marinho);
 }
 
-.experiencia__botao--demo:hover{
+.experiencia__botao--demo:hover,
+.experiencia__botao--demo:focus,
+.experiencia__botao--demo:active{
   background-color: var(--azul); 
 }
-
 
 .experiencia__botao--repo,
 .experiencia__botao--demo{
@@ -98,7 +104,11 @@ section.experience{
 }
 
 .experiencia__botao--repo:hover,
-.experiencia__botao--demo:hover{
+.experiencia__botao--repo:focus,
+.experiencia__botao--repo:active,
+.experiencia__botao--demo:hover,
+.experiencia__botao--demo:focus,
+.experiencia__botao--demo:active{
   color: #FFF;
 }
 
@@ -120,6 +130,7 @@ section.experience{
   }
 
   .experience__info{
+    margin-top: 1rem;
     width: 100%;
     margin-right: 0;
     margin-left: 0;

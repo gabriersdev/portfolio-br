@@ -15,6 +15,7 @@ section.menu{
 
 .menu__image{
   width: 25px;
+  border-radius: 50%;
 }
 
 .menu__title{

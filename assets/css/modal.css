@@ -22,4 +22,8 @@
 .modal button{
   cursor: pointer;
   outline: none;
+  padding: 0.5rem 0.75rem;
+  transition: background-color 0.3s ease-in-out;
+  border: 1px solid #CCC;
+  border-radius: 5px;
 }
