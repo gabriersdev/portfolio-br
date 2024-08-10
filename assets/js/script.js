@@ -37,7 +37,7 @@
   }
 
   const ajustarAnoAtual = () => {
-    const areas = document.querySelectorAll("[data-ano-atual]");
+    const areas = document.querySelectorAll("[data-update='year']");
     const dataAtual = new Date();
     areas.forEach(area => {
       area.textContent = `${dataAtual.getFullYear()}`;
@@ -73,11 +73,11 @@
   }
   
   const ajustarIdade = () => {
-    const diferencaAnos = calcularPeriodoTempo('2004-01-27 00:00:00', 'anos');
+    const diferencaAnos = calcularPeriodoTempo('2004-01-27 00:00:00', 'anos') || '20 (em 2024)'; /* Scape: 20 (em 2024) */
     
-    const idadeAtual = document.querySelectorAll('[data-idade-atual]');
-    idadeAtual.forEach(idade => {
-      idade.textContent = diferencaAnos;
+    const areas = document.querySelectorAll("[data-update='age']");
+    areas.forEach(area => {
+      area.textContent = diferencaAnos;
     })
   }
   

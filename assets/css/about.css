@@ -12,10 +12,10 @@ section.about{
 
 .about__paragraph{
   margin-top: 1rem;
-
   font-size: var(--tamanho-fonte-texto-destaque);
-
   line-height: 1.25;
+  width: min(100%, 1000px);
+  text-wrap: balance;
 }
 
 .about img{
