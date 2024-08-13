@@ -15,7 +15,7 @@ section.hobbies{
 .hobbies__line{
   display: grid;
 
-  grid-template-columns: repeat(3, calc(33.3% - 1rem));
+  grid-template-columns: repeat(auto-fill, calc(33.3% - 1rem));
   grid-gap: 1rem;
 }
 
