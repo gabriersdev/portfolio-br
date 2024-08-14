@@ -185,6 +185,72 @@
   })
     
   window.addEventListener("load", function () {
+    // Render
+    conteudos.skills.forEach(skill => {
+      const skillContainer = document.querySelector(".skills");
+      skillContainer.innerHTML += `
+        <a href="${skill.link}" class="skill">
+          <img src="${skill.img}" alt="${skill.alt}">
+          <p>${skill.name}</p>
+        </a>
+      `;
+    });
+    
+    conteudos.hobbies.forEach(hobbie => {
+      const hobbieContainer = document.querySelector(".hobbies");
+      hobbieContainer.innerHTML += `
+        <div class="hobbie">
+          <img src="${hobbie.img}" alt="${hobbie.alt}">
+          <p>${hobbie.name}</p>
+        </div>
+      `;
+    });
+
+    conteudos.academic.forEach(academic => {
+      const academicContainer = document.querySelector(".academic");
+      academicContainer.innerHTML += `
+        <div class="academic-item">
+          <h3>${academic.name}</h3>
+          <p>${academic.school}</p>
+          <p>Início: ${academic.start}</p>
+          <p>Conclusão: ${academic.finished ? academic.finish : 'Em andamento'}</p>
+        </div>
+      `;
+    });
+
+    // Projects
+    fetch('https://gist.github.com/gabriersdev/c2136e42374bf2b78eac871b840543ad').then((response) => {
+      return response.json();
+    }).then((ret) => {
+      // console.log(ret);
+
+      if (!Array.isArray(ret)) {
+        console.log('Nada encontrado');
+        return;
+      }
+      else if (ret.length == 0) {
+        // console.log('Nenhum projeto encontrado');
+        return;
+      }
+
+      ret.forEach(project => {
+        const projectContainer = document.querySelector(".projects");
+        projectContainer.innerHTML += `
+          <div class="project">
+            <h3>${project.name}</h3>
+            <p>${project.subtitle}</p>
+            <img src="${project.img}" alt="${project.name}">
+            <a href="${project.link}" target="_blank">Repositório</a>
+            <a href="${project.demo}" target="_blank">Demonstração</a>
+            <p>${project.description}</p>
+          </div>
+        `;
+      });
+
+    }).catch((error) => {
+      console.error(error);
+    });
+
     const overlay2 = document.querySelector(".overlay-2");
     overlay2.style.display = "none";
 
