@@ -116,7 +116,7 @@
       },
     ]
   }
-
+  
   const ajustarAnoAtual = () => {
     const areas = document.querySelectorAll("[data-update='year']");
     const dataAtual = new Date();
@@ -124,7 +124,7 @@
       area.textContent = `${dataAtual.getFullYear()}`;
     })
   }
-
+  
   const calcularPeriodoTempo = (inicio, forma) => {
     let dataInicio = new Date(inicio);
     let dataAtual = new Date();
@@ -183,47 +183,52 @@
       window.location.reload();
     })
   })
-    
+  
   window.addEventListener("load", function () {
     // Render
     conteudos.skills.forEach(skill => {
       const skillContainer = document.querySelector(".skills");
       skillContainer.innerHTML += `
-        <a href="${skill.link}" class="skill">
-          <img src="${skill.img}" alt="${skill.alt}">
-          <p>${skill.name}</p>
-        </a>
+        <div class="skills__box hover-scale">
+          <ul>
+            <li class="skills__img"><img src="${skill.img}" alt="${skill.alt}"></li>
+            <li class="skills__name">${skill.name}</li>
+          </ul>
+        </div>
       `;
     });
     
     conteudos.hobbies.forEach(hobbie => {
       const hobbieContainer = document.querySelector(".hobbies");
       hobbieContainer.innerHTML += `
-        <div class="hobbie">
-          <img src="${hobbie.img}" alt="${hobbie.alt}">
-          <p>${hobbie.name}</p>
+        <div class="hobbies__box">
+          <ul>
+            <li class="hobbies__img"><img src="${hobbie.img}" alt="${hobbie.alt}"></li>
+            <li class="hobbies__name">${hobbie.name}</li>
+          </ul>
         </div>
       `;
     });
-
+    
     conteudos.academic.forEach(academic => {
       const academicContainer = document.querySelector(".academic");
       academicContainer.innerHTML += `
-        <div class="academic-item">
-          <h3>${academic.name}</h3>
-          <p>${academic.school}</p>
-          <p>Início: ${academic.start}</p>
-          <p>Conclusão: ${academic.finished ? academic.finish : 'Em andamento'}</p>
+        <div class="academic__courses__box">
+          <ul class="academic__courses__list">
+            <li class="academic__courses__item__img"><img src="./assets/img/codigo.jpg"></li>
+            <li class="academic__courses__item__title"><h4>${academic.name}</h4></li>
+            <li class="academic__courses__item__subtitle"><p>${academic.start} - ${academic.finished ? academic.finish : 'Em andamento' }</p></li>
+          </ul>
         </div>
       `;
     });
-
+    
     // Projects
     fetch('https://gist.github.com/gabriersdev/c2136e42374bf2b78eac871b840543ad').then((response) => {
       return response.json();
     }).then((ret) => {
       // console.log(ret);
-
+      
       if (!Array.isArray(ret)) {
         console.log('Nada encontrado');
         return;
@@ -232,32 +237,36 @@
         // console.log('Nenhum projeto encontrado');
         return;
       }
-
+      
       ret.forEach(project => {
         const projectContainer = document.querySelector(".projects");
         projectContainer.innerHTML += `
-          <div class="project">
-            <h3>${project.name}</h3>
-            <p>${project.subtitle}</p>
-            <img src="${project.img}" alt="${project.name}">
-            <a href="${project.link}" target="_blank">Repositório</a>
-            <a href="${project.demo}" target="_blank">Demonstração</a>
-            <p>${project.description}</p>
+          <div class="experiencie__box">
+            <img class="experience__midia hover-scale" src="${project.img}" alt="${project.name}">
+            <div class="experience__info">
+              <h2 class="experience__title">${project.name}</h2>
+              <span>${project.subtitle}</span>
+              <h3 class="experience__text">${project.description}</h3>
+              <div class="experience__description">
+                <span class="experience__repo"><a href="${project.link}"><button class="experiencia__botao--repo">Repositório</button></a></span>
+                <span class="experience__demo"><a href="${project.demo}"><button class="experiencia__botao--demo">Ver demo</button></a></span>
+              </div>
+            </div>
           </div>
         `;
       });
-
+      
     }).catch((error) => {
       console.error(error);
     });
-
+    
     const overlay2 = document.querySelector(".overlay-2");
     overlay2.style.display = "none";
-
+    
     ajustarAnoAtual();
     ajustarPeriodoProgramando();
     ajustarIdade();
     controlarModal();
   })
-
+  
 })();
