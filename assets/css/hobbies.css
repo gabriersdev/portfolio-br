@@ -33,6 +33,7 @@ section.hobbies{
 
   min-width: 10rem;
   min-height: 10rem;
+  padding: 1rem;
 
   box-sizing: border-box;
 }

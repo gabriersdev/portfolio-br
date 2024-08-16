@@ -47,7 +47,7 @@ section{
 }
 
 .hover-scale{
-  transition-property: scale box-shadow;
+  transition-property: scale, box-shadow;
   transition-duration: 0.3s;
 
   &:hover{
