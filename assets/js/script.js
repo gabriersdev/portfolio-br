@@ -215,7 +215,7 @@
     getUniqueElements(conteudos.hobbies, 'name').forEach(hobbie => {
       const hobbieContainer = document.querySelector('.hobbies [data-target="load-content"]');
       hobbieContainer.innerHTML += `
-        <div class="hobbies__box">
+        <div class="hobbies__box hover-scale">
           <ul>
             <li class="hobbies__img"><img src="${hobbie.img}" alt="${hobbie.alt}"></li>
             <li class="hobbies__name">${hobbie.name}</li>
@@ -229,7 +229,7 @@
       academicContainer.innerHTML += `
         <div class="academic__courses__box">
           <ul class="academic__courses__list">
-            <li class="academic__courses__item__img"><img src="./assets/img/codigo.jpg"></li>
+            <li class="academic__courses__item__img "><img src="./assets/img/codigo.jpg"></li>
             <li class="academic__courses__item__title"><h4>${academic.name}</h4></li>
             <li class="academic__courses__item__subtitle"><p>${new Date(academic.start).getFullYear()} - ${academic.finished ? new Date(academic.finish).getFullYear() : 'Em andamento' }</p></li>
           </ul>
@@ -238,17 +238,18 @@
     });
     
     // Projects
-    fetch('https://gist.githubusercontent.com/gabriersdev/c2136e42374bf2b78eac871b840543ad/raw/5dc064085c3e5747440b688b3ba917af933c068d/projects.json').then((response) => {
+    fetch('https://gist.githubusercontent.com/gabriersdev/c2136e42374bf2b78eac871b840543ad/raw/').then((response) => {
       return response.json();
-    }).then((ret) => {
-      console.log(ret);
-      
+    }).then((ret) => {      
       if (!Array.isArray(ret.projects)) {
+        // TODO - Add. visualização em tela
         console.log('Nada encontrado');
         return;
       }
       else if (ret.projects == 0) {
-        // console.log('Nenhum projeto encontrado');
+        // TODO - Add. visualização em tela
+        alert('Nenhum projeto encontrado');
+        console.log('Nenhum projeto encontrado');
         return;
       }
       
@@ -256,14 +257,14 @@
         const projectContainer = document.querySelector('.experience [data-target="load-content"]');
         projectContainer.innerHTML += `
           <div class="experiencie__box">
-            <img class="experience__midia hover-scale" src="${project.img}" alt="Captura de tela do projeto '${project.name}'">
+            <img class="experience__midia hover-scale" src="${project.img || 'https://via.placeholder.com/600x400.png?text=Imagem...'}" alt="Captura de tela do projeto '${project.name.trim()}'">
             <div class="experience__info">
-              <h2 class="experience__title">${project.name}</h2>
-              <span>${project.subtitle}</span>
-              <h3 class="experience__text">${project.description}</h3>
+              <h2 class="experience__title">${project.name.trim()}</h2>
+              <h3 class="experience__text">${project.subtitle.trim() }</h3>
+              <h3 class="experience__text">${project.description.trim() }</h3>
               <div class="experience__description">
-                <span class="experience__repo"><a href="${project.link}"><button class="experiencia__botao--repo">Repositório</button></a></span>
-                <span class="experience__demo"><a href="${project.demo}"><button class="experiencia__botao--demo">Ver demo</button></a></span>
+                <span class="experience__repo"><a href="${project.link.trim()}"><button class="experiencia__botao--repo">Repositório</button></a></span>
+                ${project.demo && project.demo.length > 0 && project.demo !== '#' ? '<span class="experience__demo"><a href="' + project.demo.trim() + '"><button class="experiencia__botao--demo">Ver demo</button></a></span>' : ''}
               </div>
             </div>
           </div>
@@ -271,6 +272,8 @@
       });
       
     }).catch((error) => {
+      // TODO - Add. visualização em tela
+      alert(`Um erro ocorreu ${error.message}`);
       console.error(error);
     });
     
