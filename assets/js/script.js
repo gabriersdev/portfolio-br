@@ -186,8 +186,22 @@
   
   window.addEventListener("load", function () {
     // Render
-    conteudos.skills.forEach(skill => {
-      const skillContainer = document.querySelector(".skills");
+    const getUniqueElements = (array, prop, obs) => {
+      let result = array.map(e =>  e[prop]).filter((value, index, self) => self.indexOf(value) === index);
+      const newArray = [];
+
+      for (let p of result) {
+        const correspondence = array.filter(e => e[prop] === p)
+        if (!correspondence) continue;
+        else newArray.push(correspondence[0]);
+      }
+
+      if (obs === 'no-sorted') return newArray;
+      else return newArray.toSorted((a, b) => a[prop].localeCompare(b[prop]));
+    }
+
+    getUniqueElements(conteudos.skills, 'name').forEach(skill => {
+      const skillContainer = document.querySelector('.skills [data-target="load-content"]');
       skillContainer.innerHTML += `
         <div class="skills__box hover-scale">
           <ul>
@@ -198,8 +212,8 @@
       `;
     });
     
-    conteudos.hobbies.forEach(hobbie => {
-      const hobbieContainer = document.querySelector(".hobbies");
+    getUniqueElements(conteudos.hobbies, 'name').forEach(hobbie => {
+      const hobbieContainer = document.querySelector('.hobbies [data-target="load-content"]');
       hobbieContainer.innerHTML += `
         <div class="hobbies__box">
           <ul>
@@ -210,39 +224,39 @@
       `;
     });
     
-    conteudos.academic.forEach(academic => {
-      const academicContainer = document.querySelector(".academic");
+    getUniqueElements(conteudos.academic.toSorted((a, b) => new Date(a.start) < new Date(b.start)), 'name', 'no-sorted').forEach(academic => {
+      const academicContainer = document.querySelector('.academic [data-target="load-content"]');
       academicContainer.innerHTML += `
         <div class="academic__courses__box">
           <ul class="academic__courses__list">
             <li class="academic__courses__item__img"><img src="./assets/img/codigo.jpg"></li>
             <li class="academic__courses__item__title"><h4>${academic.name}</h4></li>
-            <li class="academic__courses__item__subtitle"><p>${academic.start} - ${academic.finished ? academic.finish : 'Em andamento' }</p></li>
+            <li class="academic__courses__item__subtitle"><p>${new Date(academic.start).getFullYear()} - ${academic.finished ? new Date(academic.finish).getFullYear() : 'Em andamento' }</p></li>
           </ul>
         </div>
       `;
     });
     
     // Projects
-    fetch('https://gist.github.com/gabriersdev/c2136e42374bf2b78eac871b840543ad').then((response) => {
+    fetch('https://gist.githubusercontent.com/gabriersdev/c2136e42374bf2b78eac871b840543ad/raw/5dc064085c3e5747440b688b3ba917af933c068d/projects.json').then((response) => {
       return response.json();
     }).then((ret) => {
-      // console.log(ret);
+      console.log(ret);
       
-      if (!Array.isArray(ret)) {
+      if (!Array.isArray(ret.projects)) {
         console.log('Nada encontrado');
         return;
       }
-      else if (ret.length == 0) {
+      else if (ret.projects == 0) {
         // console.log('Nenhum projeto encontrado');
         return;
       }
       
-      ret.forEach(project => {
-        const projectContainer = document.querySelector(".projects");
+      getUniqueElements(ret.projects.filter(e => e.visible && e.active), 'name').forEach(project => {
+        const projectContainer = document.querySelector('.experience [data-target="load-content"]');
         projectContainer.innerHTML += `
           <div class="experiencie__box">
-            <img class="experience__midia hover-scale" src="${project.img}" alt="${project.name}">
+            <img class="experience__midia hover-scale" src="${project.img}" alt="Captura de tela do projeto '${project.name}'">
             <div class="experience__info">
               <h2 class="experience__title">${project.name}</h2>
               <span>${project.subtitle}</span>

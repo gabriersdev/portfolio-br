@@ -51,8 +51,8 @@
     <!-- Sessão de Header/Title/Hero -->
     <section class="title">
       <div class="title__div">
-        <div class="title__profile"></div>
-        <div class="title__container" id="#sobremim">
+        <div class="title__profile" id="about"></div>
+        <div class="title__container">
           <h2 class="title__bio">Olá, meu nome é Gabriel Ribeiro e construo projetos para a web</h2>
           <h3 class="title__subsection">Sou técnico em Informática para a Internet, estou cursando Faculdade de ADS e estudando React e frameworks para JavaScript.</h3>
           <ul class="title__network">
@@ -78,110 +78,29 @@
     <!-- Sessão de Skills/Habilidades -->
     <section class="skills" id="skills">
       <h3 class="skills__title" >Skills</h3>
-      <div class="skills__line">
-        <div class="skills__box hover-scale">
-          <ul>
-            <li class="skills__img"><img src=""></li>
-            <li class="skills__name">HTML 5</li>
-          </ul>
-        </div>
+      <div class="skills__line" data-target="load-content">
       </div>
     </section>
     
     <!-- Sessão de Hobbies -->
     <section class="hobbies" id="hobbies">
       <h3 class="hobbies__title">Hobbies</h3>
-      <div class="hobbies__line">        
-        <div class="hobbies__box">
-          <ul>
-            <li class="hobbies__img"> <img src="" alt="Ícone de música"></li>
-            <li class="hobbies__name">Ouvir música</li>
-          </ul>
-        </div>
+      <div class="hobbies__line" data-target="load-content">
       </div>
     </section>
     
     <!-- Sessão de Histórico Acadêmico -->
     <section class="academic" id="academic">
       <h2 class="academic__title">Formação Profissional e Acadêmica</h2>
-      <div class="academic__courses">
-        <div class="academic__courses__box">
-          <ul class="academic__courses__list">
-            <li class="academic__courses__item__img"><img src="./assets/img/codigo.jpg"></li>
-            <li class="academic__courses__item__title"><h4>Técnico em Informática para Internet</h4></li>
-            <li class="academic__courses__item__subtitle"><p>2021 - 2022</p></li>
-          </ul>
-        </div>
-
-        <div class="academic__courses__box">
-          <ul class="academic__courses__list">
-            <li class="academic__courses__item__img"><img src="./assets/img/codigo.jpg"></li>
-            <li class="academic__courses__item__title"><h4>Formação ux Design</h4></li>
-            <li class="academic__courses__item__subtitle"><p>2019 - Alura</p></li>
-          </ul>
-        </div>
-
-        <div class="academic__courses__box">
-          <ul class="academic__courses__list">
-            <li class="academic__courses__item__img"><img src="./assets/img/codigo.jpg"></li>
-            <li class="academic__courses__item__title"><h4>Pós-graduação design</h4></li>
-            <li class="academic__courses__item__subtitle"><p>Em andamento - UFRJ</p></li>
-          </ul>
-        </div>
+      <div class="academic__courses" data-target="load-content">
       </div>
     </section>
     
     <!-- Sessão de Experiência Profissional/Projetos-->
     <section class="experience" id="experience">
       <h2 class="experience__section__title" id="xp">Experiência Profissional</h2>
-      
-      <div class="experiencie__box">
-        <img class="experience__midia hover-scale" src="//via.placeholder.com/1200x628.png">
-        <div class="experience__info">
-          <h2 class="experience__title">Encriptador de Vogais</h2>
-          <h3 class="experience__text">Challenge Oracle ONE. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h3>
-          <div class="experience__description">
-            <span class="experience__repo"><a href="https://github.com/gabrieszin/Encriptador"><button class="experiencia__botao--repo">Repositório</button></a></span>
-            <span class="experience__demo"><a href="https://gabrieszin.github.io/Encriptador/"><button class="experiencia__botao--demo">Ver demo</button></a></span>
-          </div>
-        </div>
-      </div>  
-    
-      <div class="experiencie__box">
-        <img class="experience__midia" src="//via.placeholder.com/1200x628.png">
-        <div class="experience__info">
-          <h2 class="experience__title">Jogo da Forca</h2>
-          <h3 class="experience__text">Challenge Oracle ONE</h3>
-          <div class="experience__description">
-            <span class="experience__repo"><a href="https://github.com/gabrieszin/Jogo-da-Forca"><button class="experiencia__botao--repo">Repositório</button></a></span>
-            <span class="experience__demo"><a href="https://gabrieszin.github.io/Jogo-da-Forca/"><button class="experiencia__botao--demo">Ver demo</button></a></span>
-          </div>
-        </div>
-      </div>  
-  
-      <div class="experiencie__box">
-        <img class="experience__midia" src="//via.placeholder.com/1200x628.png">
-        <div class="experience__info">
-          <h2 class="experience__title">Agenda de Tarefas</h2>
-          <h3 class="experience__text">Cursos da Alura</h3>
-          <div class="experience__description">
-            <span class="experience__repo"><a href="https://github.com/gabrieszin/Agenda-Tarefas"><button class="experiencia__botao--repo">Repositório</button></a></span>
-            <span class="experience__demo"><a href="https://gabrieszin.github.io/Agenda-Tarefas/"><button class="experiencia__botao--demo">Ver demo</button></a></span>
-          </div>
-        </div>
-      </div>  
-
-      <div class="experiencie__box">
-        <img class="experience__midia" src="//via.placeholder.com/1200x628.png">
-        <div class="experience__info">
-          <h2 class="experience__title">Alura Store</h2>
-          <h3 class="experience__text">Cursos da Alura</h3>
-          <div class="experience__description">
-            <span class="experience__repo"><a href="https://github.com/gabrieszin/Alura-Store"><button class="experiencia__botao--repo">Repositório</button></a></span>
-            <span class="experience__demo"><a href="https://gabrieszin.github.io/Alura-Store/"><button class="experiencia__botao--demo">Ver demo</button></a></span>
-          </div>
-        </div>
-      </div>  
+      <div data-target="load-content">
+      </div>
     </section>
 
     <!-- Sessão de Footer/Rodapé-->
