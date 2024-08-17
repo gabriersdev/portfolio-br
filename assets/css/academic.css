@@ -1,6 +1,6 @@
 /* Experiência Acadêmica*/
 section.academic{
-  padding: 3rem 5rem;
+  padding: 3rem var(--margin-x-sections);
   background: var(--cor-de-fundo-formacao);
 }
 
@@ -14,7 +14,7 @@ section.academic{
 
 .academic__courses{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
   grid-gap: 1rem;
 }
 
@@ -30,7 +30,8 @@ section.academic{
   margin-bottom: 1rem;
 
   width: 100%;
-  max-height: auto;
+  max-height: 400px;
+  object-fit: cover;
 
   border-radius: 5px;
 }

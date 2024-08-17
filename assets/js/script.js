@@ -87,12 +87,12 @@
     "academic": [
       {
         "name": "Técnico em Informática para Internet",
-        "school": "Escola Estadual Técnico Industrial Professor Fontes",
+        "school": "Escola Estadual Professor Fontes",
         "start": "2021-07-01",
         "finished": true,
         "finish": "2022-12-31",
-        "alt": "Imagem ilustrativa de uma tela de computador",
-        "img": "#"
+        "alt": "Imagem de um hardware",
+        "img": "./assets/img/hardware.jpg"
       },
       {
         "name": "Análise e Desenvolvimento de Sistemas",
@@ -100,8 +100,8 @@
         "start": "2023-07-01",
         "finished": false,
         "finish": "2026-01-01",
-        "alt": "",
-        "img": "#"
+        "alt": "Imagem ilustrativa de uma tela de computador",
+        "img": "./assets/img/codigo.jpg"
       },
     ],
     // Import from gist
@@ -229,8 +229,9 @@
       academicContainer.innerHTML += `
         <div class="academic__courses__box">
           <ul class="academic__courses__list">
-            <li class="academic__courses__item__img "><img src="./assets/img/codigo.jpg"></li>
+            <li class="academic__courses__item__img"><img src="${academic.img}" alt="${academic.alt}"></li>
             <li class="academic__courses__item__title"><h4>${academic.name}</h4></li>
+            <li class="academic__courses__item__subtitle"><p>${academic.school}</p></li>
             <li class="academic__courses__item__subtitle"><p>${new Date(academic.start).getFullYear()} - ${academic.finished ? new Date(academic.finish).getFullYear() : 'Em andamento' }</p></li>
           </ul>
         </div>

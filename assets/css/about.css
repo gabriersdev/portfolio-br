@@ -1,6 +1,6 @@
 /*Sessão About*/
 section.about{
-  margin: 3rem 5rem;
+  margin: 3rem var(--margin-x-sections);
   border: unset;
 }
 

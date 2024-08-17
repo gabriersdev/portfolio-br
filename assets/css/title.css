@@ -1,6 +1,6 @@
 /*Sessão Title*/
 section.title{
-  margin: 2rem 5rem;
+  margin: 3rem var(--margin-x-sections);
   border: unset;
   display: flex;
   font-size: var(--tamanho-fonte-texto-destaque);

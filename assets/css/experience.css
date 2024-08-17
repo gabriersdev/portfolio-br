@@ -1,6 +1,6 @@
 /* Experiência*/
 section.experience{
-  padding: 3rem 5rem;
+  padding: 3rem var(--margin-x-sections);
 }
 
 .experience__section__title{
@@ -14,7 +14,7 @@ section.experience{
 .experiencie__box{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   padding: 3rem 0;
 }
@@ -123,6 +123,10 @@ section.experience{
     flex-direction: column;
   }
 
+  .experiencie__box:nth-child(odd) .experience__info {
+    margin-right: 0rem;
+  }
+
   .experience__midia{
     width: 100%;
   }
@@ -136,6 +140,27 @@ section.experience{
     width: 100%;
     margin-right: 0;
     margin-left: 0;
+  }
+
+  .experience__title,
+  .experience__text,
+  .experience__description{
+    margin-left: 0;
+  } 
+
+  .experience__description button{
+    padding-left: 0;
+    padding-right: 0;
+    transition: ease-in-out 0.3s padding;
+
+    &.experiencia__botao--demo{
+      margin-left: 0.35rem;
+    }
+
+    &:hover, &:focus, &:active{
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
   }
 
   .experiencia__botao--demo{
