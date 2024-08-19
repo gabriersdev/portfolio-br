@@ -223,7 +223,7 @@
         </div>
       `;
     });
-    
+
     getUniqueElements(conteudos.academic.toSorted((a, b) => new Date(a.start) < new Date(b.start)), 'name', 'no-sorted').forEach(academic => {
       const academicContainer = document.querySelector('.academic [data-target="load-content"]');
       academicContainer.innerHTML += `
