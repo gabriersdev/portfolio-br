@@ -203,7 +203,7 @@
     getUniqueElements(conteudos.skills, 'name').forEach(skill => {
       const skillContainer = document.querySelector('.skills [data-target="load-content"]');
       skillContainer.innerHTML += `
-        <div class="skills__box hover-scale">
+        <div class="skills__box hover-scale" data-aos="fade-right">
           <ul>
             <li class="skills__img"><img src="${skill.img}" alt="${skill.alt}"></li>
             <li class="skills__name">${skill.name}</li>
@@ -215,7 +215,7 @@
     getUniqueElements(conteudos.hobbies, 'name').forEach(hobbie => {
       const hobbieContainer = document.querySelector('.hobbies [data-target="load-content"]');
       hobbieContainer.innerHTML += `
-        <div class="hobbies__box hover-scale">
+        <div class="hobbies__box hover-scale" data-aos="fade-right">
           <ul>
             <li class="hobbies__img"><img src="${hobbie.img}" alt="${hobbie.alt}"></li>
             <li class="hobbies__name">${hobbie.name}</li>
@@ -227,7 +227,7 @@
     getUniqueElements(conteudos.academic.toSorted((a, b) => new Date(a.start) < new Date(b.start)), 'name', 'no-sorted').forEach(academic => {
       const academicContainer = document.querySelector('.academic [data-target="load-content"]');
       academicContainer.innerHTML += `
-        <div class="academic__courses__box">
+        <div class="academic__courses__box" data-aos="fade-up">
           <ul class="academic__courses__list">
             <li class="academic__courses__item__img"><img src="${academic.img}" alt="${academic.alt}"></li>
             <li class="academic__courses__item__title"><h4>${academic.name}</h4></li>
@@ -257,7 +257,7 @@
       getUniqueElements(ret.projects.filter(e => e.visible && e.active), 'name').forEach(project => {
         const projectContainer = document.querySelector('.experience [data-target="load-content"]');
         projectContainer.innerHTML += `
-          <div class="experiencie__box">
+          <div class="experiencie__box" data-aos="fade-up">
             <img class="experience__midia hover-scale" src="${project.img || 'https://via.placeholder.com/600x400.png?text=Imagem...'}" alt="Captura de tela do projeto '${project.name.trim()}'">
             <div class="experience__info">
               <h2 class="experience__title">${project.name.trim()}</h2>
@@ -271,8 +271,13 @@
           </div>
         `;
       });
-      
+
+      // Init Lib de Scroll Animation
+      AOS.init();
     }).catch((error) => {
+      // Init Lib de Scroll Animation
+      AOS.init();
+
       // TODO - Add. visualização em tela
       alert(`Um erro ocorreu ${error.message}`);
       console.error(error);
