@@ -116,7 +116,19 @@
       },
     ]
   }
+  // Block alter props of object and add props
+  Object.freeze(conteudos);
   
+  const getAlert = (type, text) => {
+    const [div, strong] = [document.createElement('div'), document.createElement('strong')];
+    div.classList.value = `alert alert-${type}`;
+    div.setAttribute('role', 'alert')
+    strong.classList.value = 'text';
+    strong.textContent = text
+    div.appendChild(strong)
+    return div;
+  }
+
   const ajustarAnoAtual = () => {
     const areas = document.querySelectorAll("[data-update='year']");
     const dataAtual = new Date();
@@ -239,23 +251,20 @@
     });
     
     // Projects
+    const projectContainer = document.querySelector('.experience [data-target="load-content"]');
     fetch('https://gist.githubusercontent.com/gabriersdev/c2136e42374bf2b78eac871b840543ad/raw/').then((response) => {
       return response.json();
     }).then((ret) => {      
       if (!Array.isArray(ret.projects)) {
         // TODO - Add. visualização em tela
-        console.log('Nada encontrado');
-        return;
+        throw new Error('A resposta da API não é válida')
       }
       else if (ret.projects == 0) {
         // TODO - Add. visualização em tela
-        alert('Nenhum projeto encontrado');
-        console.log('Nenhum projeto encontrado');
-        return;
+        throw new Error('Nenhum projeto encontrado');
       }
       
       getUniqueElements(ret.projects.filter(e => e.visible && e.active), 'name').forEach(project => {
-        const projectContainer = document.querySelector('.experience [data-target="load-content"]');
         projectContainer.innerHTML += `
           <div class="experiencie__box" data-aos="fade-up">
             <img class="experience__midia hover-scale" src="${project.img || 'https://via.placeholder.com/600x400.png?text=Imagem...'}" alt="Captura de tela do projeto '${project.name.trim()}'">
@@ -275,12 +284,23 @@
       // Init Lib de Scroll Animation
       AOS.init();
     }).catch((error) => {
+      console.log(error);
       // Init Lib de Scroll Animation
       AOS.init();
 
-      // TODO - Add. visualização em tela
-      alert(`Um erro ocorreu ${error.message}`);
-      console.error(error);
+      switch (error.message) {
+        case 'A resposta da API não é válida':
+        case 'Nenhum projeto encontrado':
+          projectContainer.parentElement.appendChild(getAlert('danger', `${error.message}!`))
+          projectContainer.remove()
+        break;
+
+        default:
+          // TODO - Add. visualização em tela
+          alert(`Um erro ocorreu! ${error.message}`);
+          console.error(error);
+        break;
+      }
     });
     
     const overlay2 = document.querySelector(".overlay-2");
