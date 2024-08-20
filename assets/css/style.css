@@ -50,16 +50,16 @@ section{
 
 [data-aos]{
   &.hover-scale {
-      /* Force transition of scale and box-shadow properties */
-      /* By default, AOS overrides the property and only applies opacity and transition transformation  */
-      transition-property: opacity, transform, scale, box-shadow !important;
-    }
+    /* Force transition of scale and box-shadow properties */
+    /* By default, AOS overrides the property and only applies opacity and transition transformation  */
+    transition-property: opacity, transform, scale, box-shadow !important;
+  }
 }
 
 .hover-scale{
   transition-property: scale, box-shadow;
   transition-duration: 0.3s;
-
+  
   &:hover{
     scale: 1.025;
     box-shadow: 0 0 20px #DDD;
