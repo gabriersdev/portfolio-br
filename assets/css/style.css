@@ -12,6 +12,7 @@
 @import url(contato-iframe.css);
 @import url(footer.css);
 
+@import url(alert.css);
 @import url(loader.css);
 @import url(modal.css);
 @import url(no-script.css);
@@ -44,6 +45,14 @@ body{
 
 section{
   border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+[data-aos]{
+  &.hover-scale {
+      /* Force transition of scale and box-shadow properties */
+      /* By default, AOS overrides the property and only applies opacity and transition transformation  */
+      transition-property: opacity, transform, scale, box-shadow !important;
+    }
 }
 
 .hover-scale{
