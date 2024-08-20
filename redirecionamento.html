@@ -26,10 +26,14 @@
 
     switch(comandoRedirecionamento){
       case 'curriculo':
-        window.location.href = 'https://drive.google.com/file/d/1SmXf86XATbXfUpG6VHv-PlRea0HCrgoC/view?usp=share_link';
+        window.open(
+          './assets/docs/GABRIEL-RIBEIRO-curriculo.pdf',
+          '_blank',
+          'noopener noreferrer'
+        )
         break;
       default:
-        window.alert('Nenhum comando para redirecionamento foi recebido. Redirecionando para a página inicial do portfolio');
+        alert('Nenhum comando para redirecionamento foi recebido. Redirecionando para a página inicial do portfolio');
         window.location.href = './index.html';
     }
 
