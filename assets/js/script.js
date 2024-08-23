@@ -1,3 +1,5 @@
+"use strict";
+
 (() => {
   
   const conteudos = {
@@ -119,7 +121,7 @@
   // Block alter props of object and add props
   Object.freeze(conteudos);
   
-  const getAlert = (type, text) => {
+  const createAlert = (type, text) => {
     const [div, strong] = [document.createElement('div'), document.createElement('strong')];
     div.classList.value = `alert alert-${type}`;
     div.setAttribute('role', 'alert')
@@ -256,11 +258,9 @@
       return response.json();
     }).then((ret) => {      
       if (!Array.isArray(ret.projects)) {
-        // TODO - Add. visualização em tela
         throw new Error('A resposta da API não é válida')
       }
       else if (ret.projects == 0) {
-        // TODO - Add. visualização em tela
         throw new Error('Nenhum projeto encontrado');
       }
       
@@ -291,13 +291,14 @@
       switch (error.message) {
         case 'A resposta da API não é válida':
         case 'Nenhum projeto encontrado':
-          projectContainer.parentElement.appendChild(getAlert('danger', `${error.message}!`))
+          projectContainer.parentElement.appendChild(createAlert('danger', `${error.message}!`))
           projectContainer.remove()
         break;
 
         default:
-          // TODO - Add. visualização em tela
-          alert(`Um erro ocorreu! ${error.message}`);
+          projectContainer.parentElement.appendChild(createAlert('danger', `Um erro ocorreu! Erro: ${error.message}!`))
+          projectContainer.remove()
+          // alert(`Um erro ocorreu! ${error.message}`);
           console.error(error);
         break;
       }
