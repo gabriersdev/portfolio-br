@@ -1,57 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"`>
-  <meta http-equiv="Content-Security-Policy" content="style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; script-src 'unsafe-inline';">
-  
-  <link rel="shortcut icon" href="./assets/img/svgs/icone.svg" type="image/x-icon">
 
-  <!-- Folha de estilo de CSS Linkado -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  
-  <!-- Importação da Fonte -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" `>
+    <meta http-equiv="Content-Security-Policy"
+      content="style-src 'self' https://fonts.googleapis.com; img-src 'self'; font-src 'self' https://fonts.gstatic.com; script-src 'unsafe-inline';">
 
-  <title>Redirecionamento - Portifólio Pessoal</title>
-</head>
-<body>
-  
-  <script>
-    const urlPagina = new URLSearchParams(window.location.search);
-    const comandoRedirecionamento = urlPagina.get('redirecionar');
+    <link rel="shortcut icon" href="./assets/img/svgs/icone.svg" type="image/x-icon">
 
-    switch(comandoRedirecionamento){
-      case 'curriculo':
-        window.open(
-          './assets/docs/GABRIEL-RIBEIRO-curriculo.pdf',
-          '_blank',
-          'noopener noreferrer'
-        )
-        break;
-      default:
-        alert('Nenhum comando para redirecionamento foi recebido. Redirecionando para a página inicial do portfolio');
-        window.location.href = './index.html';
-    }
+    <!-- Folha de estilo de CSS Linkado -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-  </script>
+    <!-- Importação da Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet">
 
-  <noscript>
-    <div class="box-no-script">         
-      <div class="texto-pagina-centralizado-alt">
-        <h2 class="titulo-texto-pagina-centralizado">Este site não funciona com o 
-          <span class="destaque-pagina-centralizado">Javascript desabilitado</span></h2><br>
-          
-        <p class="label-texto-pagina-centralizado">Muitos dos recursos usados funcionam através do Javascript e sem ele a navegabilidade e o próprio funcionamento do site são comprometidos</p>
-          
-        <p class="label-texto-pagina-centralizado">Portanto, habilite o Javascript e navegue pelo Expresso Mobilidade</p><br>
-        <button data-recarrega-pagina class="btn btn-lg btn-principal btn-principal-ativado btn-sombra btn-principal-no-script" id="btn-redirecionar-inicio" name="btn-redirecionar-inicio">Recarregar</button>
+    <title>Redirecionamento - Portifólio Pessoal</title>
+  </head>
+
+  <body>
+
+    <script>
+      const urlPagina = new URLSearchParams(window.location.search);
+      const comandoRedirecionamento = urlPagina.get('redirecionar');
+
+      switch (comandoRedirecionamento) {
+        case 'curriculo':
+          window.location.href = './assets/docs/GABRIEL-RIBEIRO-curriculo.pdf';
+          break;
+        default:
+          alert('Nenhum comando para redirecionamento foi recebido. Redirecionando para a página inicial do portfolio');
+          window.location.href = './index.html';
+      }
+
+    </script>
+
+    <noscript>
+      <div class="box-no-script">
+        <div class="texto-pagina-centralizado-alt">
+          <h2 class="titulo-texto-pagina-centralizado">Este site não funciona com o
+            <span class="destaque-pagina-centralizado">Javascript desabilitado</span>
+          </h2><br>
+
+          <p class="label-texto-pagina-centralizado">Muitos dos recursos usados funcionam através do Javascript e sem
+            ele a navegabilidade e o próprio funcionamento do site são comprometidos</p>
+
+          <p class="label-texto-pagina-centralizado">Portanto, habilite o Javascript e navegue pelo Expresso Mobilidade
+          </p><br>
+          <button data-recarrega-pagina
+            class="btn btn-lg btn-principal btn-principal-ativado btn-sombra btn-principal-no-script"
+            id="btn-redirecionar-inicio" name="btn-redirecionar-inicio">Recarregar</button>
+        </div>
       </div>
-    </div>
-  </noscript>
+    </noscript>
 
-</body>
+  </body>
+
 </html>

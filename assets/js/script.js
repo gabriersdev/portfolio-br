@@ -1,60 +1,60 @@
 "use strict";
 
 (() => {
-  
+
   const conteudos = {
     "skills": [
       {
         "name": "HTML 5",
-        "link" : "#",
+        "link": "#",
         "img": "assets/img/svgs/skills/html.svg",
         "alt": "Logo do HTML 5"
       },
       {
         "name": "Javascript",
-        "link" : "#",
+        "link": "#",
         "img": "assets/img/svgs/skills/js.svg",
         "alt": "Logo do Javascript"
       },
       {
         "name": "PHP",
-        "link" : "#",
+        "link": "#",
         "img": "assets/img/svgs/skills/php.svg",
         "alt": "Logo do PHP"
       },
       {
         "name": "Java",
-        "link" : "#",
+        "link": "#",
         "img": "assets/img/svgs/skills/java.svg",
         "alt": "Logo do Java"
       },
       {
         "name": "Node",
-        "link" : "#",
+        "link": "#",
         "img": "assets/img/svgs/skills/node.svg",
         "alt": "Logo do Node"
       },
       {
         "name": "React",
-        "link" : "#",
+        "link": "#",
         "img": "assets/img/svgs/skills/react.svg",
         "alt": "Logo do React"
       },
       {
         "name": "CSS",
-        "link" : "#",
+        "link": "#",
         "img": "assets/img/svgs/skills/css.svg",
         "alt": "Logo do CSS"
       },
       {
         "name": "Figma",
-        "link" : "#",
+        "link": "#",
         "img": "assets/img/svgs/skills/figma.svg",
         "alt": "Logo do Figma"
       },
       {
         "name": "CSS",
-        "link" : "#",
+        "link": "#",
         "img": "assets/img/svgs/skills/git.svg",
         "alt": "Logo do Git"
       },
@@ -120,7 +120,7 @@
   }
   // Block alter props of object and add props
   Object.freeze(conteudos);
-  
+
   const createAlert = (type, text) => {
     const [div, strong] = [document.createElement('div'), document.createElement('strong')];
     div.classList.value = `alert alert-${type}`;
@@ -138,51 +138,51 @@
       area.textContent = `${dataAtual.getFullYear()}`;
     })
   }
-  
+
   const calcularPeriodoTempo = (inicio, forma) => {
     let dataInicio = new Date(inicio);
     let dataAtual = new Date();
-    
+
     forma = forma.toLowerCase();
-    
+
     let diferencaSegundos = Math.floor(dataAtual.getTime() - dataInicio.getTime());
     let diferencaAnos = null;
-    
-    if(forma == 'meses'){
+
+    if (forma == 'meses') {
       diferencaAnos = Math.floor(diferencaSegundos / (1000 * 3600 * 24 * 30));
-    }else if(forma == 'anos'){
+    } else if (forma == 'anos') {
       diferencaAnos = Math.floor(diferencaSegundos / (1000 * 3600 * 24 * 365.3));
     }
-    
+
     return diferencaAnos;
   }
-  
+
   const ajustarPeriodoProgramando = () => {
     const forma = 'meses';
     const diferencaAnos = calcularPeriodoTempo('2022-01-01 00:00:00', forma);
-    
+
     const periodoProgramando = document.querySelectorAll('[data-periodo-programando');
     periodoProgramando.forEach(periodo => {
       periodo.textContent = `${diferencaAnos} ${forma}`;
     })
   }
-  
+
   const ajustarIdade = () => {
     const diferencaAnos = calcularPeriodoTempo('2004-01-27 00:00:00', 'anos') || '20 (em 2024)'; /* Scape: 20 (em 2024) */
-    
+
     const areas = document.querySelectorAll("[data-update='age']");
     areas.forEach(area => {
       area.textContent = diferencaAnos;
     })
   }
-  
+
   const controlarModal = () => {
     const botaoModal = document.querySelectorAll('[data-direito-autorais]');
     botaoModal.forEach(botao => {
       botao.addEventListener('click', (evento) => {
         const modal = document.querySelector('[data-modal]');
         modal.showModal();
-        
+
         const btnFecha = modal.querySelector('[data-modal-fecha]');
         btnFecha.addEventListener('click', () => {
           modal.close();
@@ -190,18 +190,18 @@
       })
     });
   }
-  
+
   const botaoRecarregar = document.querySelectorAll('[data-recarrega-pagina]');
   botaoRecarregar.forEach(botao => {
     botao.addEventListener('click', () => {
       window.location.reload();
     })
   })
-  
+
   window.addEventListener("load", function () {
     // Render
     const getUniqueElements = (array, prop, obs) => {
-      let result = array.map(e =>  e[prop]).filter((value, index, self) => self.indexOf(value) === index);
+      let result = array.map(e => e[prop]).filter((value, index, self) => self.indexOf(value) === index);
       const newArray = [];
 
       for (let p of result) {
@@ -225,7 +225,7 @@
         </div>
       `;
     });
-    
+
     getUniqueElements(conteudos.hobbies, 'name').forEach(hobbie => {
       const hobbieContainer = document.querySelector('.hobbies [data-target="load-content"]');
       hobbieContainer.innerHTML += `
@@ -246,32 +246,32 @@
             <li class="academic__courses__item__img"><img src="${academic.img}" alt="${academic.alt}"></li>
             <li class="academic__courses__item__title"><h4>${academic.name}</h4></li>
             <li class="academic__courses__item__subtitle"><p>${academic.school}</p></li>
-            <li class="academic__courses__item__subtitle"><p>${new Date(academic.start).getFullYear()} - ${academic.finished ? new Date(academic.finish).getFullYear() : 'Em andamento' }</p></li>
+            <li class="academic__courses__item__subtitle"><p>${new Date(academic.start).getFullYear()} - ${academic.finished ? new Date(academic.finish).getFullYear() : 'Em andamento'}</p></li>
           </ul>
         </div>
       `;
     });
-    
+
     // Projects
     const projectContainer = document.querySelector('.experience [data-target="load-content"]');
     fetch('https://gist.githubusercontent.com/gabriersdev/c2136e42374bf2b78eac871b840543ad/raw/').then((response) => {
       return response.json();
-    }).then((ret) => {      
+    }).then((ret) => {
       if (!Array.isArray(ret.projects)) {
         throw new Error('A resposta da API não é válida')
       }
       else if (ret.projects == 0) {
         throw new Error('Nenhum projeto encontrado');
       }
-      
+
       getUniqueElements(ret.projects.filter(e => e.visible && e.active), 'name').forEach(project => {
         projectContainer.innerHTML += `
           <div class="experiencie__box" data-aos="fade-up">
             <img class="experience__midia hover-scale" src="${project.img || 'https://via.placeholder.com/600x400.png?text=Imagem...'}" alt="Captura de tela do projeto '${project.name.trim()}'">
             <div class="experience__info">
               <h2 class="experience__title">${project.name.trim()}</h2>
-              <h3 class="experience__text">${project.subtitle.trim() }</h3>
-              <h3 class="experience__text">${project.description.trim() }</h3>
+              <h3 class="experience__text">${project.subtitle.trim()}</h3>
+              <h3 class="experience__text">${project.description.trim()}</h3>
               <div class="experience__description">
                 <span class="experience__repo"><a href="${project.link.trim()}"><button class="experiencia__botao--repo">Repositório</button></a></span>
                 ${project.demo && project.demo.length > 0 && project.demo !== '#' ? '<span class="experience__demo"><a href="' + project.demo.trim() + '"><button class="experiencia__botao--demo">Ver demo</button></a></span>' : ''}
@@ -293,24 +293,26 @@
         case 'Nenhum projeto encontrado':
           projectContainer.parentElement.appendChild(createAlert('danger', `${error.message}!`))
           projectContainer.remove()
-        break;
+          break;
 
         default:
           projectContainer.parentElement.appendChild(createAlert('danger', `Um erro ocorreu! Erro: ${error.message}!`))
           projectContainer.remove()
           // alert(`Um erro ocorreu! ${error.message}`);
           console.error(error);
-        break;
+          break;
       }
     });
-    
+
     const overlay2 = document.querySelector(".overlay-2");
     overlay2.style.display = "none";
-    
+
     ajustarAnoAtual();
     ajustarPeriodoProgramando();
     ajustarIdade();
     controlarModal();
+
+    document.querySelectorAll('a').forEach(link => link.setAttribute('rel', 'noopener noreferrer'))
   })
-  
+
 })();

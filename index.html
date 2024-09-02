@@ -1,188 +1,197 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" `>
-  
-  <meta 
-  http-equiv="Content-Security-Policy" 
-  content="default-src 'unsafe-inline'; 
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" `>
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline'; 
   style-src 'self' https://fonts.googleapis.com https://unpkg.com; 
   img-src 'self' https://raw.githubusercontent.com https://gabriersdev.github.io; 
   font-src 'self' https://fonts.gstatic.com; 
   connect-src 'self' https://gist.githubusercontent.com/; 
   script-src 'self' 'unsafe-eval' https://unpkg.com; 
   frame-src 'self'">
-  
-  <meta name="keywords" content="Portfólio, Projetos, Skills, Pessoal">
-  <meta name="author" content="Gabriel Ribeiro">
-  <meta property="og:title" content="Gabriel - Portfólio">
-  <meta property="og:description"
-  content="Meu nome é Gabriel Ribeiro e sou técnico em Informática para a Internet, estou cursando Faculdade de ADS e estudando React e frameworks para JavaScript.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/gabriersdev/portfolio/master/assets/img/banner.png">
-  <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/gabriersdev/portfolio/master/assets/img/banner.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1600">
-  <meta property="og:image:height" content="1200">
-  
-  <link rel="shortcut icon" href="./assets/img/svgs/icone.svg" type="image/x-icon">
-  
-  <!-- Folha de estilo de CSS Linkado -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  
-  <!-- Importação da Fonte -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  
-  <title>Gabriel - Portfólio</title>
-</head>
-<body>
-  <!-- Sessão de Menu  -->
-  <div class="all">
-    <section class="menu" id="topo">
-      <header>
-        <img class="menu__image" src="assets/img/profile.png">
-        <h3 class="menu__title">Gabriel Ribeiro</h3>
-      </header>
-      <nav>
-        <ul class="menu__list">
-          <li class="menu__list__item"><a href="#about">Sobre mim</a></li>
-          <li class="menu__list__item"><a href="#skills">Skills</a></li>
-          <li class="menu__list__item"><a href="#hobbies">Hobbies</a></li>
-          <li class="menu__list__item"><a href="#academic">Formações e Cursos</a></li>
-          <li class="menu__list__item"><a href="#experience">Experiência</a></li>
-          <li class="menu__list__item__contato"><a href="mailto:devgabrielribeiro@gmail.com">Enviar e-mail</a></li>
-        </ul>
-      </nav>
-    </section>
-    
-    <!-- Sessão de Header/Title/Hero -->
-    <section class="title">
-      <div class="title__div">
-        <div class="title__profile" id="about"></div>
-        <div class="title__container">
-          <h2 class="title__bio">Olá, meu nome é Gabriel Ribeiro e construo projetos para a web</h2>
-          <h3 class="title__subsection">Sou técnico em Informática para a Internet, estou cursando Faculdade de ADS e
-            estudando React e frameworks para JavaScript.</h3>
+
+    <meta name="keywords" content="Portfólio, Projetos, Skills, Pessoal">
+    <meta name="author" content="Gabriel Ribeiro">
+    <meta property="og:title" content="Gabriel - Portfólio">
+    <meta property="og:description"
+      content="Meu nome é Gabriel Ribeiro e sou técnico em Informática para a Internet, estou cursando Faculdade de ADS e estudando React e frameworks para JavaScript.">
+    <meta property="og:image"
+      content="https://raw.githubusercontent.com/gabriersdev/portfolio/master/assets/img/banner.png">
+    <meta property="og:image:secure_url"
+      content="https://raw.githubusercontent.com/gabriersdev/portfolio/master/assets/img/banner.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1600">
+    <meta property="og:image:height" content="1200">
+
+    <link rel="shortcut icon" href="./assets/img/svgs/icone.svg" type="image/x-icon">
+
+    <!-- Folha de estilo de CSS Linkado -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Importação da Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <title>Gabriel - Portfólio</title>
+  </head>
+
+  <body>
+    <!-- Sessão de Menu  -->
+    <div class="all">
+      <section class="menu" id="topo">
+        <header>
+          <img class="menu__image" src="assets/img/profile.png">
+          <h3 class="menu__title">Gabriel Ribeiro</h3>
+        </header>
+        <nav>
+          <ul class="menu__list">
+            <li class="menu__list__item"><a href="#about">Sobre mim</a></li>
+            <li class="menu__list__item"><a href="#skills">Skills</a></li>
+            <li class="menu__list__item"><a href="#hobbies">Hobbies</a></li>
+            <li class="menu__list__item"><a href="#academic">Formações e Cursos</a></li>
+            <li class="menu__list__item"><a href="#experience">Experiência</a></li>
+            <li class="menu__list__item__contato"><a href="mailto:devgabrielribeiro@gmail.com">Enviar e-mail</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Sessão de Header/Title/Hero -->
+      <section class="title">
+        <div class="title__div">
+          <div class="title__profile" id="about"></div>
+          <div class="title__container">
+            <h2 class="title__bio">Olá, meu nome é Gabriel Ribeiro e construo projetos para a web</h2>
+            <h3 class="title__subsection">Sou técnico em Informática para a Internet, estou cursando Faculdade de ADS e
+              estudando React e frameworks para JavaScript.</h3>
             <ul class="title__network">
               <li class="title__network__item"><a href="https://github.com/gabriersdev/" target="_blank">Github<span
-                class="title__network__item__icone"></span></a></li>
-                <li class="title__network__item"><a href="https://www.linkedin.com/in/gabrielribeirodev"
-                  target="_blank">Linkedin<span class="title__network__item__icone"></span></a></li>
-                  <li class="title__network__item"><a href="https://t.me/devgabrielribeiro" target="_blank">Telegram<span
                     class="title__network__item__icone"></span></a></li>
-                    <li class="title__network__item"><a href="./redirecionamento.html?redirecionar=curriculo"
-                      target="_blank">Currículo<span class="title__network__item__icone"></span></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-              
-              <!-- Sessão sobre mim -->
-              <section class="about">
-                <div class="about__container">
-                  <h3 class="about__title">Sobre mim</h3>
-                  <p class="about__paragraph">
-                    Tenho <span data-update="age">20</span> anos e sou apaixonado por descobrir coisas novas. Desde pequeno me
-                    aventurava em descobrir as configurações do PC. Cresci e a curiosidade só aumentou. Meu primeiro contato com o
-                    desenvolvimento foi em 2021, quando iniciei o curso técnico em Informática para a Internet. A partir daí me
-                    descobri no mundo do desenvolvimento e da criação de ferramentas e aplicações para a WEB.
-                  </p>
-                </div>
-              </section>
-              
-              <!-- Sessão de Skills/Habilidades -->
-              <section class="skills" id="skills">
-                <h3 class="skills__title">Skills</h3>
-                <div class="skills__line" data-target="load-content">
-                </div>
-              </section>
-              
-              <!-- Sessão de Hobbies -->
-              <section class="hobbies" id="hobbies">
-                <h3 class="hobbies__title">Hobbies</h3>
-                <div class="hobbies__line" data-target="load-content">
-                </div>
-              </section>
-              
-              <!-- Sessão de Histórico Acadêmico -->
-              <section class="academic" id="academic">
-                <h2 class="academic__title">Formação Profissional e Acadêmica</h2>
-                <div class="academic__courses" data-target="load-content">
-                </div>
-              </section>
-              
-              <!-- TODO - Add. second img - fist banner, on hover, project img -->
-              <!-- Sessão de Experiência Profissional/Projetos-->
-              <section class="experience" id="experience">
-                <h2 class="experience__section__title" id="xp">Experiência Profissional</h2>
-                <div data-target="load-content">
-                </div>
-              </section>
-              
-              <!-- Sessão de Footer/Rodapé-->
-              <footer class="footer">
-                <div class="footer__rodape">
-                  <p class="destaque">Desenvolvido por Gabriel Ribeiro</p>
-                  <p><img src="./assets/img/svgs/copyright.svg" alt="Copyright">&nbsp;2022 - <span data-update="year">2022</span>
-                    <p><a class="link-visivel" data-direito-autorais>Direitos Autorais</a> | <a class="link-visivel" href="#topo">Ir para o topo</a></p>
-                  </p>
-                </div>
-              </footer>
-            </div>
-            
-            <dialog class="modal" data-modal>
-              <h3>Atribuição de Direitos Autorais</h3>
-              
-              <br>
-              <p>Para o desenvolvimento deste site foram usados recursos das seguintes bibliotecas e/ou serviços:</p>
-              
-              <ul>
-                <li>Unsplash</li>
-                <li>SVG Repo</li>
-                <li>Bootstrap</li>
-                <li>Bootstrap Icons</li>
-                <li>AOS - Animate On Scroll Library</li>
-              </ul>
-              
-              <p>Estilização do site baseada em um protótipo elaborado pela equipe da Oracle ONE e incrementada pelo desenvolvedor.</p><br>
-              
-              <button data-modal-fecha>Fechar</button>
-            </dialog>
-            
-            <div class="overlay-2">
-              <div class="lds-ring-2">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            
-            <noscript>
-              <div class="box-no-script">
-                <div class="texto-pagina-centralizado-alt">
-                  <h2 class="titulo-texto-pagina-centralizado">Este site não funciona com o
-                    <span class="destaque-pagina-centralizado">Javascript desabilitado</span>
-                  </h2><br>
-                  
-                  <p class="label-texto-pagina-centralizado">Muitos dos recursos usados funcionam através do Javascript e sem ele
-                    a navegabilidade e o próprio funcionamento do site são comprometidos</p>
-                    
-                    <p class="label-texto-pagina-centralizado">Portanto, habilite o Javascript e navegue pelo Expresso Mobilidade
-                    </p><br>
-                    <button data-recarrega-pagina
-                    class="btn btn-lg btn-principal btn-principal-ativado btn-sombra btn-principal-no-script"
-                    id="btn-redirecionar-inicio" name="btn-redirecionar-inicio">Recarregar</button>
-                  </div>
-                </div>
-              </noscript>
-              
-              <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-              <script src="./assets/js/script.js"></script>
-            </body>
-            
-            </html>
+              <li class="title__network__item"><a href="https://www.linkedin.com/in/gabrielmpribeiro"
+                  target="_blank">Linkedin<span class="title__network__item__icone"></span></a></li>
+              <li class="title__network__item"><a href="https://www.behance.net/gabrielmpribeiro"
+                  target="_blank">Behance<span class="title__network__item__icone"></span></a></li>
+              <li class="title__network__item"><a href="./redirecionamento.html?redirecionar=curriculo"
+                  target="_blank">Currículo<span class="title__network__item__icone"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sessão sobre mim -->
+      <section class="about">
+        <div class="about__container">
+          <h3 class="about__title">Sobre mim</h3>
+          <p class="about__paragraph">
+            Tenho <span data-update="age">20</span> anos e sou apaixonado por descobrir coisas novas. Desde pequeno me
+            aventurava em descobrir as configurações do PC. Cresci e a curiosidade só aumentou. Meu primeiro contato com
+            o
+            desenvolvimento foi em 2021, quando iniciei o curso técnico em Informática para a Internet. A partir daí me
+            descobri no mundo do desenvolvimento e da criação de ferramentas e aplicações para a WEB.
+          </p>
+        </div>
+      </section>
+
+      <!-- Sessão de Skills/Habilidades -->
+      <section class="skills" id="skills">
+        <h3 class="skills__title">Skills</h3>
+        <div class="skills__line" data-target="load-content">
+        </div>
+      </section>
+
+      <!-- Sessão de Hobbies -->
+      <section class="hobbies" id="hobbies">
+        <h3 class="hobbies__title">Hobbies</h3>
+        <div class="hobbies__line" data-target="load-content">
+        </div>
+      </section>
+
+      <!-- Sessão de Histórico Acadêmico -->
+      <section class="academic" id="academic">
+        <h2 class="academic__title">Formação Profissional e Acadêmica</h2>
+        <div class="academic__courses" data-target="load-content">
+        </div>
+      </section>
+
+      <!-- TODO - Add. second img - fist banner, on hover, project img -->
+      <!-- Sessão de Experiência Profissional/Projetos-->
+      <section class="experience" id="experience">
+        <h2 class="experience__section__title" id="xp">Experiência Profissional</h2>
+        <div data-target="load-content">
+        </div>
+      </section>
+
+      <!-- Sessão de Footer/Rodapé-->
+      <footer class="footer">
+        <div class="footer__rodape">
+          <p class="destaque">Desenvolvido por Gabriel Ribeiro</p>
+          <p><img src="./assets/img/svgs/copyright.svg" alt="Copyright">&nbsp;2022 - <span
+              data-update="year">2022</span>
+          <p><a class="link-visivel" data-direito-autorais>Direitos Autorais</a> | <a class="link-visivel"
+              href="#topo">Ir para o topo</a></p>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <dialog class="modal" data-modal>
+      <h3>Atribuição de Direitos Autorais</h3>
+
+      <br>
+      <p>Para o desenvolvimento deste site foram usados recursos das seguintes bibliotecas e/ou serviços:</p>
+
+      <ul>
+        <li>Unsplash</li>
+        <li>SVG Repo</li>
+        <li>Bootstrap</li>
+        <li>Bootstrap Icons</li>
+        <li>AOS - Animate On Scroll Library</li>
+      </ul>
+
+      <p>Estilização do site baseada em um protótipo elaborado pela equipe da Oracle ONE e incrementada pelo
+        desenvolvedor.</p><br>
+
+      <button data-modal-fecha>Fechar</button>
+    </dialog>
+
+    <div class="overlay-2">
+      <div class="lds-ring-2">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <noscript>
+      <div class="box-no-script">
+        <div class="texto-pagina-centralizado-alt">
+          <h2 class="titulo-texto-pagina-centralizado">Este site não funciona com o
+            <span class="destaque-pagina-centralizado">Javascript desabilitado</span>
+          </h2><br>
+
+          <p class="label-texto-pagina-centralizado">Muitos dos recursos usados funcionam através do Javascript e sem
+            ele
+            a navegabilidade e o próprio funcionamento do site são comprometidos</p>
+
+          <p class="label-texto-pagina-centralizado">Portanto, habilite o Javascript e navegue pelo Expresso Mobilidade
+          </p><br>
+          <button data-recarrega-pagina
+            class="btn btn-lg btn-principal btn-principal-ativado btn-sombra btn-principal-no-script"
+            id="btn-redirecionar-inicio" name="btn-redirecionar-inicio">Recarregar</button>
+        </div>
+      </div>
+    </noscript>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+
+</html>
