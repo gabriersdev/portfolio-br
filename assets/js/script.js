@@ -273,8 +273,8 @@
               <h3 class="experience__text">${project.subtitle.trim()}</h3>
               <h3 class="experience__text">${project.description.trim()}</h3>
               <div class="experience__description">
-                <span class="experience__repo"><a href="${project.link.trim()}"><button class="experiencia__botao--repo">Repositório</button></a></span>
-                ${project.demo && project.demo.length > 0 && project.demo !== '#' ? '<span class="experience__demo"><a href="' + project.demo.trim() + '"><button class="experiencia__botao--demo">Ver demo</button></a></span>' : ''}
+                <span class="experience__repo"><a href="${project.link.trim()}" target="_blank"><button class="experiencia__botao--repo">Repositório</button></a></span>
+                ${project.demo && project.demo.length > 0 && project.demo !== '#' ? '<span class="experience__demo"><a href="' + project.demo.trim() + '" target="_blank"><button class="experiencia__botao--demo">Ver demo</button></a></span>' : ''}
               </div>
             </div>
           </div>
@@ -302,6 +302,8 @@
           console.error(error);
           break;
       }
+    }).finally(() => {
+      document.querySelectorAll('a').forEach(link => link.setAttribute('rel', 'noopener noreferrer'));
     });
 
     const overlay2 = document.querySelector(".overlay-2");
@@ -311,8 +313,6 @@
     ajustarPeriodoProgramando();
     ajustarIdade();
     controlarModal();
-
-    document.querySelectorAll('a').forEach(link => link.setAttribute('rel', 'noopener noreferrer'))
   })
 
 })();
