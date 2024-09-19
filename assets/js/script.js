@@ -284,24 +284,34 @@
       // Init Lib de Scroll Animation
       AOS.init();
     }).catch((error) => {
-      console.log(error);
-      // Init Lib de Scroll Animation
-      AOS.init();
+      try {
+        // Init Lib de Scroll Animation
+        AOS.init();
+      } catch (error) {
+        console.error(error);
+      } finally {
+        switch (error.message) {
+          case 'A resposta da API não é válida':
+          case 'Nenhum projeto encontrado':
+            projectContainer.parentElement.appendChild(createAlert('danger', `${error.message}!`))
+            projectContainer.remove()
+            break;
 
-      switch (error.message) {
-        case 'A resposta da API não é válida':
-        case 'Nenhum projeto encontrado':
-          projectContainer.parentElement.appendChild(createAlert('danger', `${error.message}!`))
-          projectContainer.remove()
-          break;
+          case 'NetworkError when attempting to fetch resource.':
+            projectContainer.parentElement.appendChild(createAlert('danger', `Sem conexão com a internet! Busque uma rede, conecte-se e recarregue a página`))
+            projectContainer.remove()
+            break;
 
-        default:
-          projectContainer.parentElement.appendChild(createAlert('danger', `Um erro ocorreu! Erro: ${error.message}!`))
-          projectContainer.remove()
-          // alert(`Um erro ocorreu! ${error.message}`);
-          console.error(error);
-          break;
+          default:
+            projectContainer.parentElement.appendChild(createAlert('danger', `Um erro ocorreu! Erro: ${error.message}!`))
+            projectContainer.remove()
+            // alert(`Um erro ocorreu! ${error.message}`);
+            console.error(error);
+            break;
+        }
       }
+
+      console.log(error);
     }).finally(() => {
       document.querySelectorAll('a').forEach(link => link.setAttribute('rel', 'noopener noreferrer'));
     });
