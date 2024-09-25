@@ -53,4 +53,4 @@ Sinta-se à vontade para modificar o conteúdo, estilos e adicionar seus própri
 
 ## Autor
 
-- **Gabriel** - [LinkedIn](https://linkedin.com/in/gabrielribeirodev) | [GitHub](https://github.com/gabriersdev)
+- **Gabriel** - [LinkedIn](https://linkedin.com/in/gabrielmpribeiro) | [GitHub](https://github.com/gabriersdev)
