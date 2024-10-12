@@ -17,13 +17,13 @@
 @import url(modal.css);
 @import url(no-script.css);
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   box-sizing: border-box;
-  background-color: var(--cor-de-fundo) ;
+  background-color: var(--cor-de-fundo);
   font-family: 'Inter Tight', sans-serif;
   margin: 0;
   padding: 0;
@@ -31,24 +31,24 @@ body{
   position: relative;
 }
 
-.destaque{
+.destaque {
   font-weight: 700;
 }
 
-.oculto{
+.oculto {
   display: none;
 }
 
-.link-visivel{
+.link-visivel {
   text-decoration: underline;
   cursor: pointer;
 }
 
-section{
+section {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-[data-aos]{
+[data-aos] {
   &.hover-scale {
     /* Force transition of scale and box-shadow properties */
     /* By default, AOS overrides the property and only applies opacity and transition transformation  */
@@ -56,11 +56,11 @@ section{
   }
 }
 
-.hover-scale{
+.hover-scale {
   transition-property: scale, box-shadow;
   transition-duration: 0.3s;
-  
-  &:hover{
+
+  &:hover {
     scale: 1.025;
     box-shadow: 0 0 20px #DDD;
   }
