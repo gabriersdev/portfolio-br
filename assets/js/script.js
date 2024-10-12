@@ -153,7 +153,7 @@ import { data as conteudos } from './data.js';
       getUniqueElements(ret.projects.filter(e => e.visible && e.active), 'name').forEach(project => {
         projectContainer.innerHTML += `
           <div class="experiencie__box" data-aos="fade-up">
-            <img class="experience__midia hover-scale" src="${project.img || 'https://via.placeholder.com/600x400.png?text=Imagem...'}" alt="Captura de tela do projeto '${project.name.trim()}'">
+            <img class="experience__midia hover-scale" loading="lazy" src="${project.img || 'https://via.placeholder.com/600x400.png?text=Imagem...'}" alt="Captura de tela do projeto '${project.name.trim()}'">
             <div class="experience__info">
               <h2 class="experience__title">${project.name.trim()}</h2>
               <h3 class="experience__text">${project.subtitle.trim()}</h3>
