@@ -1,5 +1,5 @@
 /*Sessão Menu*/
-section.menu{
+section.menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,27 +9,27 @@ section.menu{
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.menu header{
+.menu header {
   display: flex;
   align-items: center;
 }
 
-.menu__image{
+.menu__image {
   width: 25px;
   border-radius: 50%;
 }
 
-.menu__title{
+.menu__title {
   margin-left: 1rem;
   font-weight: 700;
 }
 
-.menu__list{
+.menu__list {
   display: flex;
 }
 
-.menu__list__item a, 
-.menu__list__item__contato a{
+.menu__list__item a,
+.menu__list__item__contato a {
   display: block;
   color: #464646;
   padding: 0.5rem 0.75rem;
@@ -39,54 +39,64 @@ section.menu{
   outline: none;
 }
 
-.menu__list__item a:hover, 
-.menu__list__item a:focus, 
+.menu__list__item__contato a {
+  background-color: #464646;
+  color: #fff;
+}
+
+.menu__list__item a:hover,
+.menu__list__item a:focus,
 .menu__list__item__contato a:hover,
-.menu__list__item__contato a:focus{
+.menu__list__item__contato a:focus {
   background-color: lightgray;
 }
 
-.menu__list__item{
+.menu__list__item__contato a:hover,
+.menu__list__item__contato a:focus {
+  color: #464646;
+}
+
+.menu__list__item {
   margin: 0 1rem;
 }
 
-.menu__list__item__contato{
+.menu__list__item__contato {
   font-weight: 700;
 }
 
 @media screen and (max-width: 390px) {
-  .menu__list__item__contato{
+  .menu__list__item__contato {
     display: none;
   }
 }
 
 @media screen and (max-width: 767px) {
-  section.menu{
+  section.menu {
     margin: auto 2rem;
   }
 
-  .menu__list__item__contato a{
+  .menu__list__item__contato a {
     padding: 0;
     margin: 0;
   }
 
-  .menu__list__item{
+  .menu__list__item {
     display: none;
     text-align: right;
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1000px){
-  section.menu{
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+  section.menu {
     margin: auto 3rem;
   }
 
-  .menu__list__item__contato a{
+  .menu__list__item__contato a {
     padding: 0;
     margin: 0;
   }
 
-  .menu__list__item{
+  .menu__list__item {
     display: none;
     text-align: right;
   }
