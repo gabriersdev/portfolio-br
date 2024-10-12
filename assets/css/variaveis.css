@@ -1,4 +1,4 @@
-:root{
+:root {
   --azul: #3083FF;
   --azul-marinho: #273B84;
 
@@ -42,7 +42,7 @@
 }
 
 @media screen and (max-width: 1500px) {
-  :root{
+  :root {
     --margin-x-sections: 5rem;
   }
 }

@@ -1,9 +1,10 @@
 /* Experiência*/
-section.experience{
-  padding: 3rem var(--margin-x-sections);
+section.experience {
+  padding: 0 var(--margin-x-sections);
+  padding-block-start: 6rem;
 }
 
-.experience__section__title{
+.experience__section__title {
   margin-bottom: 1.5rem;
   text-align: center;
   font-size: 2rem;
@@ -11,7 +12,7 @@ section.experience{
   color: var(--cor-de-texto);
 }
 
-.experiencie__box{
+.experiencie__box {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,35 +20,35 @@ section.experience{
   padding: 3rem 0;
 }
 
-.experience__midia{
+.experience__midia {
   display: block;
   width: min(100%, 600px);
   height: min(100%, 400px);
   object-fit: cover;
-  
+
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.25) !important;
 }
 
-.experiencie__box:nth-child(odd) .experience__midia{
+.experiencie__box:nth-child(odd) .experience__midia {
   order: 1;
 }
 
-.experiencie__box:nth-child(odd) .experience__info{
+.experiencie__box:nth-child(odd) .experience__info {
   margin-left: 0;
   margin-right: 1rem;
 }
 
-.experience__info{
+.experience__info {
   width: 50%;
   margin-left: 1rem;
 }
 
-.experience__title{
+.experience__title {
   margin: 0.75rem 0;
 }
 
-.experience__text{
+.experience__text {
   font-weight: 400;
   font-size: var(--tamanho-fonte-texto-normal);
   margin-bottom: 0.75rem;
@@ -55,32 +56,32 @@ section.experience{
 }
 
 .experience__title,
-.experience__text{
+.experience__text {
   margin-left: 0.75rem;
   text-wrap: balance;
   width: min(100%, 700px);
 }
 
-.experience__description{
+.experience__description {
   margin-top: 1rem;
 }
 
 .experiencia__botao--repo,
-.experiencia__botao--demo{
+.experiencia__botao--demo {
   cursor: pointer;
   transition: 0.3s;
   font-size: var(--tamanho-fonte-texto-normal);
   border-radius: 5px
 }
 
-.experiencia__botao--repo{
+.experiencia__botao--repo {
   border: 1px solid transparent;
   background-color: transparent;
   color: var(--cor-de-texto-botao-1);
   margin-right: 0.25rem;
 }
 
-.experiencia__botao--demo{
+.experiencia__botao--demo {
   border: 1px solid transparent;
   background-color: inherit;
   color: var(--cor-de-texto-botao-2);
@@ -90,18 +91,18 @@ section.experience{
 
 .experiencia__botao--repo:hover,
 .experiencia__botao--repo:focus,
-.experiencia__botao--repo:active{
+.experiencia__botao--repo:active {
   background-color: var(--azul-marinho);
 }
 
 .experiencia__botao--demo:hover,
 .experiencia__botao--demo:focus,
-.experiencia__botao--demo:active{
-  background-color: var(--azul); 
+.experiencia__botao--demo:active {
+  background-color: var(--azul);
 }
 
 .experiencia__botao--repo,
-.experiencia__botao--demo{
+.experiencia__botao--demo {
   padding: 0.5rem 0.75rem;
 }
 
@@ -110,16 +111,16 @@ section.experience{
 .experiencia__botao--repo:active,
 .experiencia__botao--demo:hover,
 .experiencia__botao--demo:focus,
-.experiencia__botao--demo:active{
+.experiencia__botao--demo:active {
   color: #FFF;
 }
 
 @media screen and (max-width: 767px) {
-  section.experience{
+  section.experience {
     padding: 3rem 2rem;
   }
 
-  .experiencie__box{
+  .experiencie__box {
     flex-direction: column;
   }
 
@@ -127,15 +128,15 @@ section.experience{
     margin-right: 0rem;
   }
 
-  .experience__midia{
+  .experience__midia {
     width: 100%;
   }
 
-  .experiencie__box:nth-child(odd) .experience__midia{
+  .experiencie__box:nth-child(odd) .experience__midia {
     order: initial;
   }
 
-  .experience__info{
+  .experience__info {
     margin-top: 1rem;
     width: 100%;
     margin-right: 0;
@@ -144,33 +145,35 @@ section.experience{
 
   .experience__title,
   .experience__text,
-  .experience__description{
+  .experience__description {
     margin-left: 0;
-  } 
+  }
 
-  .experience__description button{
+  .experience__description button {
     padding-left: 0;
     padding-right: 0;
     transition: ease-in-out 0.3s padding;
 
-    &.experiencia__botao--demo{
+    &.experiencia__botao--demo {
       margin-left: 0.35rem;
     }
 
-    &:hover, &:focus, &:active{
+    &:hover,
+    &:focus,
+    &:active {
       padding-left: 0.75rem;
       padding-right: 0.75rem;
     }
   }
 
-  .experiencia__botao--demo{
+  .experiencia__botao--demo {
     margin-top: 0.25rem;
     margin-left: 0;
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1000px){
-  section.experience{
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+  section.experience {
     padding: 3rem;
   }
 }

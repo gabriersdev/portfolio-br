@@ -45,25 +45,26 @@
 
   <body>
     <!-- Sessão de Menu  -->
-    <div class="all">
-      <section class="menu" id="topo">
-        <header>
-          <img class="menu__image" src="assets/img/profile.png">
-          <h3 class="menu__title">Gabriel Ribeiro</h3>
-        </header>
-        <nav>
-          <ul class="menu__list">
-            <li class="menu__list__item"><a href="#about">Sobre mim</a></li>
-            <li class="menu__list__item"><a href="#experience">Experiência</a></li>
-            <li class="menu__list__item__contato"><a href="mailto:devgabrielribeiro@gmail.com">Fale comigo</a></li>
-          </ul>
-        </nav>
-      </section>
+    <header class="menu" id="topo">
+      <a class="identification-page" data-ref="#topo">
+        <img class="menu__image" src="assets/img/profile.png">
+        <h3 class="menu__title">Gabriel Ribeiro</h3>
+      </a>
+      <nav>
+        <ul class="menu__list">
+          <li class="menu__list__item"><a href="#about">Sobre mim</a></li>
+          <li class="menu__list__item"><a href="#experience">Experiência</a></li>
+          <li class="menu__list__item__contato"><a href="mailto:devgabrielribeiro@gmail.com">Fale comigo</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="all">
 
       <!-- Sessão de Header/Title/Hero -->
       <section class="title">
         <div class="title__div">
-          <div class="title__profile" id="about"></div>
+          <div class="title__profile"></div>
           <div class="title__container">
             <h2 class="title__bio">Olá, meu nome é Gabriel Ribeiro e construo projetos para a web</h2>
             <h3 class="title__subsection">Sou técnico em Informática para a Internet, estou cursando ADS na Uninter e
@@ -83,7 +84,7 @@
       </section>
 
       <!-- Sessão sobre mim -->
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__container">
           <h3 class="about__title">Sobre mim</h3>
           <p class="about__paragraph">
@@ -135,7 +136,7 @@
           </p>
         </div>
       </footer>
-    </div>
+    </main>
 
     <dialog class="modal" data-modal>
       <h3>Atribuição de Direitos Autorais</h3>

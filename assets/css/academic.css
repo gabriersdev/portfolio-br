@@ -1,10 +1,10 @@
 /* Experiência Acadêmica*/
-section.academic{
+section.academic {
   padding: 3rem var(--margin-x-sections);
   background: var(--cor-de-fundo-formacao);
 }
 
-.academic__title{
+.academic__title {
   margin-bottom: 1.5rem;
   text-align: center;
   font-size: 2rem;
@@ -12,21 +12,21 @@ section.academic{
   color: var(--cor-de-texto);
 }
 
-.academic__courses{
+.academic__courses {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
   grid-gap: 1rem;
 }
 
-.academic__courses__box{
+.academic__courses__box {
   margin: 1rem 0;
 }
 
-.academic__courses__list{
+.academic__courses__list {
   margin: 0;
 }
 
-.academic__courses__item__img img{  
+.academic__courses__item__img img {
   margin-bottom: 1rem;
 
   width: 100%;
@@ -36,31 +36,31 @@ section.academic{
   border-radius: 5px;
 }
 
-.academic__courses__item__title{
-  font-size: 1.5rem; 
+.academic__courses__item__title {
+  font-size: 1.5rem;
 
   color: var(--cor-de-texto);
 
   margin: 0.5rem 0;
 }
 
-.academic__courses__item__subtitle{
+.academic__courses__item__subtitle {
   font-size: var(--tamanho-fonte-texto-normal);
   margin: 0.5rem 0;
 }
 
 @media screen and (max-width: 767px) {
-  section.academic{
+  section.academic {
     padding: 3rem 2rem;
   }
 
-  .academic__courses{
+  .academic__courses {
     grid-template-columns: calc(100%);
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1000px){
-  section.academic{
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+  section.academic {
     padding: 2rem 3rem;
   }
 }

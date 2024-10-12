@@ -209,6 +209,17 @@ import { data as conteudos } from './data.js';
     ajustarPeriodoProgramando();
     ajustarIdade();
     controlarModal();
-  })
+
+    // Scroll to Top
+    document.querySelectorAll('[data-ref="#topo"]').forEach(e => {
+      e.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
 
 })();

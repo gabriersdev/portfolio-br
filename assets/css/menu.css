@@ -1,15 +1,17 @@
 /*Sessão Menu*/
-section.menu {
+header.menu {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  margin: auto 5rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: var(--cor-de-fundo);
+  padding: 0.25rem 5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.menu header {
+.menu .identification-page {
   display: flex;
   align-items: center;
 }
@@ -72,7 +74,7 @@ section.menu {
 
 @media screen and (max-width: 767px) {
   section.menu {
-    margin: auto 2rem;
+    padding: auto 2rem;
   }
 
   .menu__list__item__contato a {
@@ -88,7 +90,7 @@ section.menu {
 
 @media screen and (min-width: 767px) and (max-width: 1000px) {
   section.menu {
-    margin: auto 3rem;
+    padding: auto 3rem;
   }
 
   .menu__list__item__contato a {
