@@ -31,6 +31,6 @@ section.about {
 
 @media screen and (min-width: 767px) and (max-width: 1000px) {
   section.about {
-    margin: 3rem;
+    padding: auto 3rem;
   }
 }

@@ -80,6 +80,8 @@ header.menu {
   .menu__list__item__contato a {
     padding: 0;
     margin: 0;
+    background-color: var(--cor-de-fundo);
+    color: #464646;
   }
 
   .menu__list__item {
@@ -91,15 +93,5 @@ header.menu {
 @media screen and (min-width: 767px) and (max-width: 1000px) {
   section.menu {
     padding: auto 3rem;
-  }
-
-  .menu__list__item__contato a {
-    padding: 0;
-    margin: 0;
-  }
-
-  .menu__list__item {
-    display: none;
-    text-align: right;
   }
 }
