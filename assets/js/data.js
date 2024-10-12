@@ -72,6 +72,12 @@ const data = {
       "img": "assets/img/svgs/skills/python.svg",
       "alt": "Logo do Python"
     },
+    {
+      "name": "GitHub",
+      "link": "#",
+      "img": "assets/img/svgs/skills/github.svg",
+      "alt": "Logo do Git SCM"
+    },
   ],
   "hobbies": [
     {
