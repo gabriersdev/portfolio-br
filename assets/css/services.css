@@ -47,7 +47,7 @@ section.services {
 }
 
 .services__content__list .list-item {
-  background: linear-gradient(20deg, rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0.15));
+  background: linear-gradient(20deg, rgba(45, 96, 163, 0.025), rgba(0, 110, 255, 0.15));
   border-radius: 5px;
   min-height: 100px;
   padding: 1.25rem;
@@ -93,22 +93,18 @@ section.services {
   }
 
   .list-item__header__title {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: #464646;
-
-    @media screen and (max-width: 767px) {
-      font-size: 1.5rem;
-    }
   }
 
   .list-item__header__icon {
-    width: 1.25rem;
+    width: 1rem;
     object-fit: contain;
   }
 
   .list-item__body__description {
-    font-size: var(--tamanho-fonte-texto-normal);
+    /* font-size: var(--tamanho-fonte-texto-normal); */
     letter-spacing: 0.5px;
     color: #464646;
     line-height: 1.25;
