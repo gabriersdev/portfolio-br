@@ -124,8 +124,18 @@ section.experience .experience__box:last-child {
     padding: 3rem 2rem;
   }
 
+  section.experience [data-target="load-content"] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 1rem;
+    margin-top: 3rem;
+  }
+
   .experience__box {
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0;
   }
 
   .experience__box:nth-child(odd) .experience__info {
@@ -133,7 +143,7 @@ section.experience .experience__box:last-child {
   }
 
   .experience__midia {
-    width: 100%;
+    width: min(100%, 400px);
   }
 
   .experience__box:nth-child(odd) .experience__midia {
@@ -151,6 +161,10 @@ section.experience .experience__box:last-child {
   .experience__text,
   .experience__description {
     margin-left: 0;
+  }
+
+  .experience__description {
+    margin-top: 0;
   }
 
   .experience__description button {
@@ -179,5 +193,12 @@ section.experience .experience__box:last-child {
 @media screen and (min-width: 767px) and (max-width: 1000px) {
   section.experience {
     padding: auto 3rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  section.experience [data-target="load-content"] {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
