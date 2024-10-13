@@ -2,6 +2,7 @@
 section.experience {
   padding: 0 var(--margin-x-sections);
   padding-block-start: 6rem;
+  padding-block-end: 6rem;
 }
 
 .experience__section__title {
@@ -12,12 +13,15 @@ section.experience {
   color: var(--cor-de-texto);
 }
 
-.experiencie__box {
+.experience__box {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 3rem 0;
+}
+
+section.experience .experience__box:last-child {
+  padding-bottom: 0;
 }
 
 .experience__midia {
@@ -30,11 +34,11 @@ section.experience {
   border: 1px solid rgba(0, 0, 0, 0.25) !important;
 }
 
-.experiencie__box:nth-child(odd) .experience__midia {
+.experience__box:nth-child(odd) .experience__midia {
   order: 1;
 }
 
-.experiencie__box:nth-child(odd) .experience__info {
+.experience__box:nth-child(odd) .experience__info {
   margin-left: 0;
   margin-right: 1rem;
 }
@@ -120,19 +124,29 @@ section.experience {
     padding: 3rem 2rem;
   }
 
-  .experiencie__box {
-    flex-direction: column;
+  section.experience [data-target="load-content"] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 1rem;
+    margin-top: 3rem;
   }
 
-  .experiencie__box:nth-child(odd) .experience__info {
+  .experience__box {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .experience__box:nth-child(odd) .experience__info {
     margin-right: 0rem;
   }
 
   .experience__midia {
-    width: 100%;
+    width: min(100%, 400px);
   }
 
-  .experiencie__box:nth-child(odd) .experience__midia {
+  .experience__box:nth-child(odd) .experience__midia {
     order: initial;
   }
 
@@ -147,6 +161,10 @@ section.experience {
   .experience__text,
   .experience__description {
     margin-left: 0;
+  }
+
+  .experience__description {
+    margin-top: 0;
   }
 
   .experience__description button {
@@ -175,5 +193,12 @@ section.experience {
 @media screen and (min-width: 767px) and (max-width: 1000px) {
   section.experience {
     padding: auto 3rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  section.experience [data-target="load-content"] {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

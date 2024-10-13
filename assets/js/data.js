@@ -126,6 +126,44 @@ const data = {
       "img": "./assets/img/codigo.jpg"
     },
   ],
+  "services": [
+    {
+      "name": "Desenvolvimento de landing pages",
+      "description": "Criação de landing pages responsivas e dinâmicas.",
+      "img": "assets/img/svgs/services/landing-pages.svg",
+      "alt": "Ícone de uma landing page"
+    },
+    {
+      "name": "Manutenção de sites",
+      "description": "Correções de bugs, implementação de novas funcionalidades e atualizações.",
+      "img": "assets/img/svgs/services/manutencao.svg",
+      "alt": "Ícone de um site"
+    },
+    {
+      "name": "Consultoria em TI",
+      "description": "Consultoria em tecnologia da informação.",
+      "img": "assets/img/svgs/services/consultoria.svg",
+      "alt": "Ícone de um gráfico"
+    },
+    {
+      "name": "Desenvolvimento de APIs",
+      "description": "Criação de APIs RESTful e GraphQL.",
+      "img": "assets/img/svgs/services/api.svg",
+      "alt": "Ícone de um código"
+    },
+    {
+      "name": "Desenvolvimento de sistemas web",
+      "description": "Criação de sistemas e aplicações para a web.",
+      "img": "assets/img/svgs/services/sistemas.svg",
+      "alt": "Ícone de um sistema"
+    },
+    {
+      "name": "Desing de interfaces",
+      "description": "Criação de interfaces modernas e intuitivas.",
+      "img": "assets/img/svgs/services/interface.svg",
+      "alt": "Ícone de uma interface"
+    },
+  ]
 }
 
 export { data };

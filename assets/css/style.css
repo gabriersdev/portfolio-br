@@ -2,6 +2,7 @@
 @import url(reset.css);
 @import url(normalize.css);
 
+@import url(emphasis-sections.css);
 @import url(menu.css);
 @import url(title.css);
 @import url(about.css);
@@ -9,6 +10,7 @@
 @import url(hobbies.css);
 @import url(academic.css);
 @import url(experience.css);
+@import url(services.css);
 @import url(contato-iframe.css);
 @import url(footer.css);
 
