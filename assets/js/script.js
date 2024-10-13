@@ -159,7 +159,7 @@ import { data as conteudos } from './data.js';
               <h3 class="experience__text">${project.subtitle.trim()}</h3>
               <h3 class="experience__text">${project.description.trim()}</h3>
               <div class="experience__description">
-                ${project.site && project.site.length > 0 && project.site !== '#' ? '<span class="experience__repo"><a href="' + project.site.trim() + '" target="_blank"><button class="experiencia__botao--repo">Repositório</button></a></span>' : ''}
+                ${project.link && project.link.length > 0 && project.link !== '#' ? '<span class="experience__repo"><a href="' + project.link.trim() + '" target="_blank"><button class="experiencia__botao--repo">Repositório</button></a></span>' : ''}
                 ${project.demo && project.demo.length > 0 && project.demo !== '#' ? '<span class="experience__demo"><a href="' + project.demo.trim() + '" target="_blank"><button class="experiencia__botao--demo">Ver demo</button></a></span>' : ''}
               </div>
             </div>
