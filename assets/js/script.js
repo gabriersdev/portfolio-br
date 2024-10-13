@@ -138,6 +138,22 @@ import { data as conteudos } from './data.js';
       `;
     });
 
+    // Services
+    const serviceContainer = document.querySelector('.services [data-target="load-content"]');
+    conteudos.services.forEach((service, i) => {
+      serviceContainer.innerHTML += `
+      <li class="list-item" data-aos="fade-left" data-aos-delay="${100 * (i + 1)}">
+        <div class="list-item__header">
+          <img class="list-item__header__icon" src="${service.img}" alt="${service.alt}"></span>
+          <h3 class="list-item__header__title">${service.name}</h3>
+        </div>
+        <div class="list-item__body">
+          <p class="list-item__body__description">${service.description}</p>
+        </div>
+      </li>
+      `;
+    })
+
     // Projects
     const projectContainer = document.querySelector('.experience [data-target="load-content"]');
     fetch('https://gist.githubusercontent.com/gabriersdev/c2136e42374bf2b78eac871b840543ad/raw/').then((response) => {
