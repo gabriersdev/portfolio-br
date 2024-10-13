@@ -146,12 +146,6 @@ const data = {
       "alt": "Ícone de um gráfico"
     },
     {
-      "name": "Desenvolvimento de APIs",
-      "description": "Criação de APIs RESTful e GraphQL.",
-      "img": "assets/img/svgs/services/api.svg",
-      "alt": "Ícone de um código"
-    },
-    {
       "name": "Desenvolvimento de sistemas web",
       "description": "Criação de sistemas e aplicações para a web.",
       "img": "assets/img/svgs/services/sistemas.svg",
