@@ -1,13 +1,14 @@
-.footer{
-  margin-top: 5rem;
+.footer {
+  /* margin-top: 5rem; */
   padding: 2rem 5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
 
   background-color: var(--cor-de-fundo-footer);
 
   font-size: var(--tamanho-fonte-texto-normal);
 }
 
-.footer__rodape{
+.footer__rodape {
   color: var(--cor-de-texto);
 
   text-align: center;
@@ -15,26 +16,26 @@
 }
 
 @media screen and (max-width: 767px) {
-  .footer{
+  .footer {
     margin-top: 0;
     padding: 2rem 2rem;
   }
 
-  .footer__rodape{
+  .footer__rodape {
     line-height: 1.25;
   }
-  
-  .footer__rodape p{
+
+  .footer__rodape p {
     margin-bottom: 1rem;
   }
 
-  .footer__rodape p:last-child{
+  .footer__rodape p:last-child {
     margin-bottom: 0;
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1000px){
-  .footer{
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+  .footer {
     margin-top: 0;
     padding: 2rem 3rem;
   }

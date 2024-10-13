@@ -45,6 +45,10 @@ section.academic {
 .academic__courses__item__title h4 {
   font-size: 1.75rem;
   font-weight: 600;
+
+  @media screen and (max-width: 767px) {
+    font-size: 1.5rem;
+  }
 }
 
 .academic__courses__item__subtitle {
