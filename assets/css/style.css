@@ -84,6 +84,7 @@ section {
 .services__content__list .list-item {
   background: linear-gradient(20deg, rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0.15));
   border-radius: 5px;
+  min-height: 100px;
   padding: 1.25rem;
   border: 1px solid rgba(0, 0, 0, 0.15);
   display: flex;
@@ -122,13 +123,12 @@ section {
   }
 
   .list-item__header__title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
     color: #464646;
   }
 
   .list-item__header__icon {
-    font-size: 1rem;
     width: 1.25rem;
     object-fit: contain;
   }
@@ -136,8 +136,7 @@ section {
   /* .list-item__body {} */
 
   .list-item__body__description {
-    font-size: 1rem;
-    text-wrap: balance;
+    font-size: 1.25rem;
     letter-spacing: 0.5px;
     color: #464646;
     line-height: 1.25;

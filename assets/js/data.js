@@ -140,12 +140,6 @@ const data = {
       "alt": "Ícone de um site"
     },
     {
-      "name": "Desenvolvimento de sistemas web",
-      "description": "Criação de sistemas e aplicações para a web.",
-      "img": "assets/img/svgs/services/sistemas.svg",
-      "alt": "Ícone de um sistema"
-    },
-    {
       "name": "Consultoria em TI",
       "description": "Consultoria em tecnologia da informação.",
       "img": "assets/img/svgs/services/consultoria.svg",
@@ -156,6 +150,12 @@ const data = {
       "description": "Criação de APIs RESTful e GraphQL.",
       "img": "assets/img/svgs/services/api.svg",
       "alt": "Ícone de um código"
+    },
+    {
+      "name": "Desenvolvimento de sistemas web",
+      "description": "Criação de sistemas e aplicações para a web.",
+      "img": "assets/img/svgs/services/sistemas.svg",
+      "alt": "Ícone de um sistema"
     },
     {
       "name": "Desing de interfaces",

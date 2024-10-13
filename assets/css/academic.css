@@ -37,11 +37,14 @@ section.academic {
 }
 
 .academic__courses__item__title {
-  font-size: 1.5rem;
-
   color: var(--cor-de-texto);
 
   margin: 0.5rem 0;
+}
+
+.academic__courses__item__title h4 {
+  font-size: 1.75rem;
+  font-weight: 600;
 }
 
 .academic__courses__item__subtitle {
