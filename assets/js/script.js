@@ -142,7 +142,7 @@ import { data as conteudos } from './data.js';
     const serviceContainer = document.querySelector('.services [data-target="load-content"]');
     conteudos.services.forEach((service, i) => {
       serviceContainer.innerHTML += `
-      <li class="list-item" data-aos="fade-left" data-aos-delay="${100 * (i + 1)}">
+      <li class="list-item hover-scale" data-aos="fade-left">
         <div class="list-item__header">
           <img class="list-item__header__icon" src="${service.img}" alt="${service.alt}"></span>
           <h3 class="list-item__header__title">${service.name}</h3>
