@@ -34,7 +34,7 @@ section.services {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 700px) {
     grid-template-areas:
       "li-1"
       "li-2"
@@ -82,11 +82,11 @@ section.services {
 
   .list-item__header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
     margin-bottom: 1rem;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 700px) {
       flex-direction: column;
       align-items: flex-start;
     }
