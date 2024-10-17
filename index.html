@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" `>
 
     <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline'; 
-    style-src 'self' https://fonts.googleapis.com https://unpkg.com; 
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; 
     img-src 'self' https://raw.githubusercontent.com https://gabriersdev.github.io https://opengraph.githubassets.com/; 
     font-src 'self' https://fonts.gstatic.com; 
     connect-src 'self' https://gist.githubusercontent.com/; 
@@ -196,7 +196,9 @@
       </div>
     </noscript>
 
-    <script src="./assets/js/aos.js" defer></script>
+    <div id="root"></div>
+
+    <script src="./src/aos.js" defer></script>
     <script type="module" src="./src/main.jsx"></script>
   </body>
 
