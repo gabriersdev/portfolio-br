@@ -40,6 +40,7 @@ import { data as conteudos } from './data.js';
 
 
     // Projects
+    const projectContainer = document.querySelector('.experience [data-target="load-content"]');
 
   });
 
