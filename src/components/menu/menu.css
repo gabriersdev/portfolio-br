@@ -1,5 +1,5 @@
 /*Sessão Menu*/
-header.menu {
+menu.menu {
   position: sticky;
   top: 0;
   z-index: 1;
@@ -7,7 +7,7 @@ header.menu {
   align-items: center;
   justify-content: space-between;
   background-color: var(--cor-de-fundo);
-  padding: 0.25rem 5rem;
+  padding: 1rem 5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
