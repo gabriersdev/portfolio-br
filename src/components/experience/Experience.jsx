@@ -54,8 +54,8 @@ export default function Experience() {
                   <h3 className="experience__text">{project.subtitle.trim()}</h3>
                   <h3 className="experience__text">{project.description.trim()}</h3>
                   <div className="experience__description">
-                    <span className="experience__repo"><a href="${project.link.trim()}" target="_blank"><button className="experiencia__botao--repo">Repositório</button></a></span>
-                    {project.demo && project.demo.length > 0 && project.demo !== '#' ? <span className="experience__demo"><a href={project.demo.trim() + `target="_blank"`}><button className="experiencia__botao--demo">Ver demo</button></a></span> : ''}
+                    <span className="experience__repo"><a href={project.link.trim()} target="_blank"><button className="experiencia__botao--repo">Repositório</button></a></span>
+                    {project.demo && project.demo.length > 0 && project.demo !== '#' ? <span className="experience__demo"><a href={project.demo.trim()} target="_blank"><button className="experiencia__botao--demo">Ver demo</button></a></span> : ''}
                   </div>
                 </div>
               </div>
