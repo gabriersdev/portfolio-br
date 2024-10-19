@@ -1,7 +1,5 @@
 # Portfolio
 
-<img src="./assets/img/banner.png" width="800px" height="600px" style="object-fit: cover" alt="Banner escrito 'Portfólio do Gabriel'">
-
 Este é o repositório do meu portfólio pessoal. Ele foi desenvolvido utilizando HTML, CSS, JavaScript e a biblioteca AOS para animações durante o scroll.
 
 ## Demonstração
@@ -10,11 +8,12 @@ Você pode visualizar o portfólio online em: [link do portfólio](https://gabri
 
 ## Tecnologias Utilizadas
 
-- **HTML5**: Estruturação do conteúdo.
+- **ReactJS**: Framework de desenvolvimento.
 - **CSS3**: Estilos visuais e responsividade.
 - **JS**: Funcionalidades interativas.
 - **AOS (Animate On Scroll)**: Biblioteca para animações durante o scroll.
 - **Google Fonts**: Biblioteca de fontes.
+- **GitHub Pages**: Deploy.
 
 ## Funcionalidades
 
@@ -37,15 +36,12 @@ Você pode visualizar o portfólio online em: [link do portfólio](https://gabri
     cd portfolio
     ```
 
-    3. Abra o arquivo `index.html` em seu navegador.
+    3. Execute o comando para criar a versão de desenvolvimento:
+    ```bash
+    npm run dev
+    ```
 
-## Personalização
-
-Sinta-se à vontade para modificar o conteúdo, estilos e adicionar seus próprios projetos.
-
-- **HTML**: Edite o arquivo `index.html` para adicionar ou remover seções.
-- **CSS**: Modifique o arquivo `style.css` para personalizar o visual.
-- **JavaScript**: Adicione funcionalidades extras no arquivo `script.js`.
+    4. Clique no link que aparecerá no terminal após executar o comando do passo 3.
 
 ## Referências
 
