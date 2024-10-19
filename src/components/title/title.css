@@ -20,7 +20,7 @@ section.title {
   order: 1;
 
   display: block;
-  background-image: url(./img/profile.png);
+  background-image: url(../../assets/img/profile.png);
   background-position: top;
   background-size: cover;
 
@@ -79,7 +79,7 @@ section.title {
   width: 1.5rem;
   height: 1.25rem;
   margin-left: 0.15rem;
-  background: url(./img/svgs/setas-link-externo.svg) center / contain no-repeat;
+  background: url(../../assets/img/setas-link-externo.svg) center / contain no-repeat;
 }
 
 .title__network__item a:hover,
