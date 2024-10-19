@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" `>
 
     <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline'; 
-    style-src 'self' https://fonts.googleapis.com https://unpkg.com; 
-    img-src 'self' https://raw.githubusercontent.com https://gabriersdev.github.io https://opengraph.githubassets.com/; 
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; 
+    img-src 'self' https://raw.githubusercontent.com https://gabriersdev.github.io https://opengraph.githubassets.com/ data: blob:; 
     font-src 'self' https://fonts.gstatic.com; 
     connect-src 'self' https://gist.githubusercontent.com/; 
     script-src 'self' 'unsafe-eval' https://unpkg.com; 
@@ -27,10 +27,7 @@
     <meta property="og:image:width" content="1600">
     <meta property="og:image:height" content="1200">
 
-    <link rel="shortcut icon" href="./assets/img/svgs/icone.svg" type="image/x-icon">
-
-    <!-- Folha de estilo de CSS Linkado -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./img/svgs/icone.svg" type="image/x-icon">
 
     <!-- Importação da Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,157 +35,38 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> -->
 
     <title>Gabriel - Portfólio</title>
   </head>
 
   <body>
-    <!-- Sessão de Menu  -->
-    <header class="menu" id="topo">
-      <a class="identification-page" data-ref="#topo">
-        <img class="menu__image" src="assets/img/profile.png">
-        <h3 class="menu__title">Gabriel Ribeiro</h3>
-      </a>
-      <nav>
-        <ul class="menu__list">
-          <li class="menu__list__item"><a href="#about">Sobre mim</a></li>
-          <li class="menu__list__item"><a href="#experience">Experiência</a></li>
-          <li class="menu__list__item__contato"><a href="mailto:devgabrielribeiro@gmail.com">Fale comigo</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="all">
-
-      <!-- Sessão de Header/Title/Hero -->
-      <section class="title" data-aos="fade-up">
-        <div class="title__div">
-          <div class="title__profile"></div>
-          <div class="title__container">
-            <h2 class="title__bio">Olá, meu nome é Gabriel Ribeiro e construo projetos para a web</h2>
-            <h3 class="title__subsection">Sou técnico em Informática para a Internet, estou cursando ADS na Uninter e
-              estudando React e frameworks para JavaScript.</h3>
-            <ul class="title__network">
-              <li class="title__network__item"><a href="https://github.com/gabriersdev/" target="_blank">Github<span
-                    class="title__network__item__icone"></span></a></li>
-              <li class="title__network__item"><a href="https://www.linkedin.com/in/gabrielmpribeiro"
-                  target="_blank">Linkedin<span class="title__network__item__icone"></span></a></li>
-              <li class="title__network__item"><a href="https://www.behance.net/gabrielmpribeiro"
-                  target="_blank">Behance<span class="title__network__item__icone"></span></a></li>
-              <li class="title__network__item"><a href="./redirecionamento.html?redirecionar=curriculo"
-                  target="_blank">Currículo<span class="title__network__item__icone"></span></a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sessão sobre mim -->
-      <section class="about" id="about" data-aos="fade-up" data-aos-delay="100">
-        <div class="about__container">
-          <h3 class="about__title">Sobre mim</h3>
-          <p class="about__paragraph">
-            Tenho <span data-update="age">20</span> anos e sou apaixonado por explorar e aprender coisas novas. Desde
-            pequeno, sempre fui curioso sobre as configurações do PC e adorava descobrir como as coisas funcionavam. Em
-            2021, tive meu primeiro contato com o desenvolvimento ao iniciar o curso técnico em Informática para a
-            Internet. Foi nesse momento que percebi minha vocação para o desenvolvimento e para a criação de ferramentas
-            e aplicações para a web, e desde então, tenho me dedicado a aprimorar minhas habilidades nessa área.
-          </p>
-        </div>
-      </section>
-
-      <!-- Sessão de Skills/Habilidades -->
-      <section class="skills" id="skills">
-        <h3 class="skills__title">Skills</h3>
-        <div class="skills__line" data-target="load-content">
-        </div>
-      </section>
-
-      <!-- Sessão de Hobbies -->
-      <section class="hobbies" id="hobbies">
-        <h3 class="hobbies__title">Hobbies</h3>
-        <div class="hobbies__line" data-target="load-content">
-        </div>
-      </section>
-
-      <!-- Sessão de Histórico Acadêmico -->
-      <section class="academic" id="academic">
-        <h2 class="academic__title">Formação Profissional e Acadêmica</h2>
-        <div class="academic__courses" data-target="load-content">
-        </div>
-      </section>
-
-      <!-- Sessão de Experiência Profissional/Projetos-->
-      <section class="experience" id="experience">
-        <h2 class="experience__section__title" id="xp">Experiência Profissional</h2>
-        <div data-target="load-content">
-        </div>
-      </section>
-
-      <!-- Sessão de Footer/Rodapé-->
-      <footer class="footer">
-        <div class="footer__rodape">
-          <p class="destaque">Desenvolvido por Gabriel Ribeiro</p>
-          <p><img src="./assets/img/svgs/copyright.svg" alt="Copyright">&nbsp;2022 - <span
-              data-update="year">2022</span>
-          <p><a class="link-visivel" data-direito-autorais>Direitos Autorais</a> | <a class="link-visivel"
-              data-ref="#topo">Ir para o topo</a></p>
-          </p>
-        </div>
-      </footer>
-    </main>
-
-    <dialog class="modal" data-modal>
-      <h3>Atribuição de Direitos Autorais</h3>
-
-      <br>
-      <p>Para o desenvolvimento deste site foram usados recursos das seguintes bibliotecas e/ou serviços:</p>
-
-      <ul>
-        <li>Unsplash</li>
-        <li>SVG Repo</li>
-        <li>Bootstrap</li>
-        <li>Bootstrap Icons</li>
-        <li>AOS - Animate On Scroll Library</li>
-      </ul>
-
-      <p>Estilização do site baseada em um protótipo elaborado pela equipe da Oracle ONE e incrementada pelo
-        desenvolvedor.</p><br>
-
-      <button data-modal-fecha>Fechar</button>
-    </dialog>
-
-    <div class="overlay-2">
-      <div class="lds-ring-2">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-
     <noscript>
-      <div class="box-no-script">
-        <div class="texto-pagina-centralizado-alt">
-          <h2 class="titulo-texto-pagina-centralizado">Este site não funciona com o
-            <span class="destaque-pagina-centralizado">Javascript desabilitado</span>
+      <div className="box-no-script">
+        <div className="texto-pagina-centralizado-alt">
+          <h2 className="titulo-texto-pagina-centralizado">Este site não funciona com o
+            <span className="destaque-pagina-centralizado">Javascript desabilitado</span>
           </h2><br>
 
-          <p class="label-texto-pagina-centralizado">Muitos dos recursos usados funcionam através do Javascript e sem
+          <p className="label-texto-pagina-centralizado">Muitos dos recursos usados funcionam através do Javascript e
+            sem
             ele
             a navegabilidade e o próprio funcionamento do site são comprometidos</p>
 
-          <p class="label-texto-pagina-centralizado">Portanto, habilite o Javascript e navegue pelo Expresso Mobilidade
+          <p className="label-texto-pagina-centralizado">Portanto, habilite o Javascript e navegue pelo Expresso
+            Mobilidade
           </p><br>
           <button data-recarrega-pagina
-            class="btn btn-lg btn-principal btn-principal-ativado btn-sombra btn-principal-no-script"
+            className="btn btn-lg btn-principal btn-principal-ativado btn-sombra btn-principal-no-script"
             id="btn-redirecionar-inicio" name="btn-redirecionar-inicio">Recarregar</button>
         </div>
       </div>
     </noscript>
 
-    <script src="./assets/js/aos.js" defer></script>
-    <script type="module" src="./assets/js/script.js"></script>
+    <div id="root"></div>
+
+    <!-- <script src="./src/aos.js" defer></script> -->
+    <script type="module" src="./src/main.jsx"></script>
   </body>
 
 </html>
