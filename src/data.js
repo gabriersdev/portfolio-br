@@ -146,12 +146,15 @@ const data = {
       "alt": "Ícone de um gráfico"
     },
     {
+<<<<<<< HEAD:src/data.js
       "name": "Desenvolvimento de APIs",
       "description": "Criação de APIs RESTful e GraphQL.",
       "img": "./img/svgs/services/api.svg",
       "alt": "Ícone de um código"
     },
     {
+=======
+>>>>>>> 45ecce084726cae69b108204f8302707662f9d64:assets/js/data.js
       "name": "Desenvolvimento de sistemas web",
       "description": "Criação de sistemas e aplicações para a web.",
       "img": "./img/svgs/services/sistemas.svg",
@@ -166,4 +169,8 @@ const data = {
   ]
 }
 
+<<<<<<< HEAD:src/data.js
 export default data;
+=======
+export { data };
+>>>>>>> 45ecce084726cae69b108204f8302707662f9d64:assets/js/data.js
