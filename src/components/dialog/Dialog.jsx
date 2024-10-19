@@ -1,4 +1,17 @@
+import { useEffect } from 'react'
+import './dialog.css'
+
 export default function Dialog() {
+  useEffect(() => {
+    document.querySelector('[data-action="show-modal"]').addEventListener('click', () => {
+      document.querySelector('[data-modal]').showModal();
+    })
+
+    document.querySelector('[data-modal-fecha]').addEventListener('click', () => {
+      document.querySelector('[data-modal]').close()
+    })
+  }, [])
+
   return (
     <dialog className="modal" data-modal>
       <h3>Atribuição de Direitos Autorais</h3>

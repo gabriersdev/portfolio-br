@@ -28,7 +28,7 @@ export default function About() {
       <div className="about__container">
         <h3 className="about__title">Sobre mim</h3>
         <p className="about__paragraph">
-          Tenho <span>${ajustarIdade()}</span> anos e sou apaixonado por explorar e aprender coisas novas. Desde
+          Tenho <span>{ajustarIdade()}</span> anos e sou apaixonado por explorar e aprender coisas novas. Desde
           pequeno, sempre fui curioso sobre as configurações do PC e adorava descobrir como as coisas funcionavam. Em
           2021, tive meu primeiro contato com o desenvolvimento ao iniciar o curso técnico em Informática para a
           Internet. Foi nesse momento que percebi minha vocação para o desenvolvimento e para a criação de ferramentas

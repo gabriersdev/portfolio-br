@@ -1,6 +1,7 @@
 import './App.css'
 import Menu from './components/menu/Menu'
 import Title from './components/title/Title'
+import About from './components/about/About'
 import Main from './components/main/Main'
 import Dialog from './components/dialog/Dialog'
 import Footer from './components/footer/Footer'
@@ -23,9 +24,10 @@ function App() {
     <>
       <Menu fnc={upPage} />
       <Title />
+      <About />
       <Main />
       <Dialog />
-      <Footer fnc={upPage} theme={{}} />
+      <Footer fnc={upPage} />
     </>
   )
 }

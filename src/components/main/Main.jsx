@@ -1,4 +1,3 @@
-import About from '../about/About'
 import Skills from '../skills/Skills'
 import Hobbies from '../hobbies/Hobbies'
 import Academic from '../academic/Academic'
@@ -10,7 +9,6 @@ import data from '../../data.js';
 export default function Main() {
   return (
     <main className="all">
-      <About />
       <Skills data={data.skills} />
       <Hobbies data={data.hobbies} />
       <Academic data={data.academic} />
