@@ -7,6 +7,8 @@ import Dialog from './components/dialog/Dialog'
 import Footer from './components/footer/Footer'
 import { useEffect } from 'react'
 
+import AOS from 'aos'
+
 function App() {
   const upPage = (e) => {
     e.preventDefault
@@ -18,6 +20,7 @@ function App() {
 
   useEffect(() => {
     document.querySelectorAll('a').forEach(link => link.setAttribute('rel', 'noopener noreferrer'));
+    AOS.init()
   }, [])
 
   return (
