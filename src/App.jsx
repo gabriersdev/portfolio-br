@@ -5,12 +5,13 @@ import Redirect from './Redirect'
 
 function App() {
 
+
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path="/portfolio/" exact element={<Principal />} ></Route>
-          <Route path="/portfolio/redirect" element={<Redirect />} ></Route>
+          <Route path="/portfolio/redirect/" element={<Redirect />} ></Route>
         </Routes>
       </BrowserRouter>
     </>
