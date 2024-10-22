@@ -1,5 +1,7 @@
 import './title.css'
 
+import { Link } from 'react-router-dom'
+
 export default function Title() {
   return (
     <section className="title" data-aos="fade-up">
@@ -17,8 +19,7 @@ export default function Title() {
               target="_blank">Linkedin<span className="title__network__item__icone"></span></a></li>
             <li className="title__network__item"><a href="https://www.behance.net/gabrielmpribeiro"
               target="_blank">Behance<span className="title__network__item__icone"></span></a></li>
-            <li className="title__network__item"><a href="./redirect?to=curriculo"
-              target="_blank">Currículo<span className="title__network__item__icone"></span></a></li>
+            <li className="title__network__item"><Link to="/portfolio/redirect?to=curriculo" target="_blank">Currículo<span className="title__network__item__icone"></span></Link></li>
           </ul>
         </div>
       </div>
