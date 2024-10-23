@@ -1,29 +1,37 @@
-.modal{
+.modal {
   border: none;
   border-radius: 5px;
 
   padding: 2rem;
+  width: min(calc(100% - 4rem), 600px);
+  margin: auto;
 }
 
-.modal::backdrop{
+.modal::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal p{
+.modal p {
   line-height: 1.5;
 }
 
-.modal ul li{
+.modal ul li {
   list-style-type: square;
   margin-left: 20px;
   line-height: 2;
 }
 
-.modal button{
+.modal button {
   cursor: pointer;
   outline: none;
   padding: 0.5rem 0.75rem;
   transition: background-color 0.3s ease-in-out;
   border: 1px solid #CCC;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .modal {
+    padding: 1.5rem;
+  }
 }
