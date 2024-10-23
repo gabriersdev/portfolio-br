@@ -10,7 +10,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/portfolio/" exact element={<Principal />} ></Route>
+          <Route path="/portfolio/" element={<Principal />} ></Route>
           <Route path="/portfolio/redirect/" element={<Redirect />} ></Route>
         </Routes>
       </BrowserRouter>
