@@ -7,7 +7,7 @@ import { useEffect } from 'react'
 function App() {
   useEffect(() => {
     console.log(
-      "%cContrate-me!\nhttps://www.linkedin.com/in/gabrielribeirodev/",
+      "%cContrate-me!\nhttps://www.linkedin.com/in/gabrielribeirodev/\ndevgabrielribeiro@gmail.com",
       "font-size: 2rem; color: #FFF; background-color: #2631FF; font-family: sans-serif;",
     )
   }, [])
