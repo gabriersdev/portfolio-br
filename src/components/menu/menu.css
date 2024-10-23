@@ -68,6 +68,14 @@ menu.menu {
 }
 
 @media screen and (max-width: 390px) {
+  menu.menu {
+    display: block;
+  }
+
+  .menu .identification-page {
+    justify-content: center;
+  }
+
   .menu__list__item__contato {
     display: none;
   }
