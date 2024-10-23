@@ -11,7 +11,7 @@ export default function Services({ data }) {
           {
             Util.getUniqueElements(data, 'name', 'no-sorted').map((service, i) => {
               return (
-                <li key={i} className="list-item hover-scale" data-aos="fade-left">
+                <li key={i} className="list-item hover-scale" data-aos="fade-up">
                   <div className="list-item__header">
                     <img className="list-item__header__icon" src={service.img} alt={service.alt} />
                     <h3 className="list-item__header__title">{service.name}</h3>
