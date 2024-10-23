@@ -20,15 +20,17 @@ export default function Dialog() {
       <p>Para o desenvolvimento deste site foram usados recursos das seguintes bibliotecas e/ou serviços:</p>
 
       <ul>
+        <li>React</li>
         <li>Unsplash</li>
         <li>SVG Repo</li>
         <li>Bootstrap</li>
         <li>Bootstrap Icons</li>
         <li>AOS - Animate On Scroll Library</li>
+        <li>GitHub (repositório) e GitHub Pages (deploy)</li>
       </ul>
 
-      <p>Estilização do site baseada em um protótipo elaborado pela equipe da Oracle ONE e incrementada pelo
-        desenvolvedor.</p><br />
+      <p>Estilização do site baseada em um protótipo elaborado pela equipe do programa Oracle ONE e incrementada pelo
+        desenvolvedor <b>Gabriel Ribeiro!</b></p><br />
 
       <button data-modal-fecha>Fechar</button>
     </dialog>
