@@ -46,3 +46,16 @@
     --margin-x-sections: 5rem;
   }
 }
+
+@media screen and (max-width: 1385px) {
+  :root {
+    --margin-x-sections: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --tamanho-fonte-texto-destaque: 1.25rem;
+    --tamanho-fonte-texto-normal: 1.15rem;
+  }
+}
