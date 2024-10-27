@@ -45,7 +45,7 @@ export default function Experience() {
       <h2 className="experience__section__title">Experiência Profissional</h2>
       <div data-target="load-content">
         {
-          Util.getUniqueElements(experiences.filter(e => e.visible && e.active), 'name').map((project, i) => {
+          Util.getUniqueElements(experiences.filter(e => e.visible && e.active), 'name').reverse().map((project, i) => {
             return (
               <div key={i} className="experience__box" data-aos="fade-up">
                 <img className="experience__midia hover-scale" loading="lazy" src={project.img || 'https://via.placeholder.com/600x400.png?text=Imagem...'} alt={`Captura de tela do projeto ${project.name.trim()}`} />
