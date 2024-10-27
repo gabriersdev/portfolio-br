@@ -15,6 +15,21 @@
   line-height: 2;
 }
 
+.footer__rodape__links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer__rodape__links a {
+  opacity: 0.75;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .footer {
     margin-top: 0;
