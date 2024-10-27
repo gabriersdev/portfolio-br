@@ -6,10 +6,12 @@ export default function Title() {
       <div className="title__div">
         <div className="title__profile"></div>
         <div className="title__container">
-          <h2 className="title__bio">Olá, meu nome é Gabriel Ribeiro e construo projetos para a web</h2>
-          <h3 className="title__subsection">Sou técnico em Informática para a Internet, estou cursando ADS na Uninter
-            e
-            estudando React e frameworks para JavaScript.</h3>
+          <h2 className="title__bio">
+            <span className="emphasis">Meu nome é Gabriel Ribeiro e construo projetos para a web</span>
+          </h2>
+          <h3 className="title__subsection">
+            <span>Sou técnico em Informática para a Internet, estou cursando ADS na Unintere estudando React e frameworks para JavaScript.</span>
+          </h3>
           <ul className="title__network">
             <li className="title__network__item"><a href="https://github.com/gabriersdev/" target="_blank">Github<span
               className="title__network__item__icone"></span></a></li>

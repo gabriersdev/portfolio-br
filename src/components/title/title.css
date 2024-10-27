@@ -41,6 +41,14 @@ section.title {
   margin-bottom: 1rem;
 }
 
+.title__bio .emphasis {
+  background: linear-gradient(120deg, #40628b 30%, #1964aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .title__subsection {
   margin-top: 2rem;
   font-size: inherit;
