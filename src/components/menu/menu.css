@@ -25,6 +25,7 @@ menu.menu {
 .menu__title {
   margin-left: 1rem;
   font-weight: 700;
+  color: var(--cor-de-texto);
 }
 
 .menu__list {
@@ -43,7 +44,7 @@ menu.menu {
 }
 
 .menu__list__item__contato a {
-  background-color: #464646;
+  background-color: #1964AA;
   color: #fff;
 }
 
@@ -51,12 +52,12 @@ menu.menu {
 .menu__list__item a:focus,
 .menu__list__item__contato a:hover,
 .menu__list__item__contato a:focus {
-  background-color: lightgray;
+  background-color: #D3E3F7;
 }
 
 .menu__list__item__contato a:hover,
 .menu__list__item__contato a:focus {
-  color: #464646;
+  color: #1964AA;
 }
 
 .menu__list__item {

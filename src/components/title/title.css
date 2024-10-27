@@ -42,7 +42,7 @@ section.title {
 }
 
 .title__bio .emphasis {
-  background: linear-gradient(120deg, #40628b 30%, #1964aa);
+  background: linear-gradient(120deg, #40628B 30%, #1964AA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
