@@ -11,20 +11,24 @@ export default class Util {
   }
 
   static getUniqueElements = (array, prop, obs) => {
-    if (!array || !Array.isArray(array)) return;
-    if (!prop) prop = Object.keys(array[0])[0];
+    try {
+      if (!array || !Array.isArray(array)) return;
+      if (!prop) prop = Object.keys(array[0])[0];
 
-    let result = array.map(e => e[prop]).filter((value, index, self) => self.indexOf(value) === index);
-    const newArray = [];
+      let result = array.map(e => e[prop]).filter((value, index, self) => self.indexOf(value) === index);
+      const newArray = [];
 
-    for (let p of result) {
-      const correspondence = array.filter(e => e[prop] === p)
-      if (!correspondence) continue;
-      else newArray.push(correspondence[0]);
+      for (let p of result) {
+        const correspondence = array.filter(e => e[prop] === p)
+        if (!correspondence) continue;
+        else newArray.push(correspondence[0]);
+      }
+
+      if (obs === 'no-sorted') return newArray;
+      else return newArray.toSorted((a, b) => a[prop].localeCompare(b[prop]));
+    } catch (error) {
+      console.error(error);
     }
-
-    if (obs === 'no-sorted') return newArray;
-    else return newArray.toSorted((a, b) => a[prop].localeCompare(b[prop]));
   }
 
 }
