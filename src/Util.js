@@ -28,6 +28,7 @@ export default class Util {
       else return newArray.toSorted((a, b) => a[prop].localeCompare(b[prop]));
     } catch (error) {
       console.error(error);
+      return [];
     }
   }
 
