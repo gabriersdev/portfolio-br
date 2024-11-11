@@ -8,5 +8,9 @@
 html.no-contact {
   [data-element="ref-contact"] {
     display: none !important;
+
+    [data-element="ref-alternative"] {
+      display: block !important;
+    }
   }
 }

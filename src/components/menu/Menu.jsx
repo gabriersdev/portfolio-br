@@ -14,6 +14,7 @@ export default function Menu({ fnc }) {
           <li className="menu__list__item"><a href="#experience">Experiência</a></li>
           <li className="menu__list__item"><a href="#services">Serviços</a></li>
           <li className="menu__list__item__contato" data-element="ref-contact"><a href="mailto:devgabrielribeiro@gmail.com">Fale comigo</a></li>
+          <li className="menu__list__item__contato" data-element="ref-alternative"><a href="https://github.com/gabriersdev/">Meu Github</a></li>
         </ul>
       </nav>
     </menu>

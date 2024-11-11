@@ -16,7 +16,8 @@ body {
   font-weight: 700;
 }
 
-.oculto {
+.oculto,
+.d-none {
   display: none;
 }
 
