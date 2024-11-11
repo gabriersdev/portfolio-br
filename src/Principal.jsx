@@ -18,11 +18,17 @@ export default function Principal() {
     });
   }
 
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
+  try {
+    const location = useLocation();
+    let queryParams = null;
 
-  if (queryParams.get('or').includes('freelancer')) document.querySelector('html').classList.add('no-contact')
-  else console.log("%cContrate-me!\nhttps://www.linkedin.com/in/gabrielribeirodev/\ndevgabrielribeiro@gmail.com", "font-size: 2rem; color: #FFF; background-color: #2631FF; font-family: sans-serif;")
+    if (location.search) queryParams = new URLSearchParams(location.search);
+
+    if (queryParams.get('or').includes('freelancer')) document.querySelector('html').classList.add('no-contact')
+    else console.log("%cContrate-me!\nhttps://www.linkedin.com/in/gabrielribeirodev/\ndevgabrielribeiro@gmail.com", "font-size: 2rem; color: #FFF; background-color: #2631FF; font-family: sans-serif;")
+  } catch (error) {
+    console.log('Ocorreu um erro ao tentar verificar os parâmetros passados. %s', error);
+  }
 
 
   useEffect(() => {
