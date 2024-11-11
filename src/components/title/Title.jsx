@@ -16,10 +16,10 @@ export default function Title() {
             <li className="title__network__item"><a href="https://github.com/gabriersdev/" target="_blank">Github<span
               className="title__network__item__icone"></span></a></li>
             <li className="title__network__item"><a href="https://www.linkedin.com/in/gabrielmpribeiro"
-              target="_blank">Linkedin<span className="title__network__item__icone"></span></a></li>
+              target="_blank" data-element="ref-contact">Linkedin<span className="title__network__item__icone"></span></a></li>
             <li className="title__network__item"><a href="https://www.behance.net/gabrielmpribeiro"
               target="_blank">Behance<span className="title__network__item__icone"></span></a></li>
-            <li className="title__network__item"><a href="https://gabriersdev.github.io/resources?resource=resume"
+            <li className="title__network__item" data-element="ref-contact"><a href="https://gabriersdev.github.io/resources?resource=resume"
               target="_blank">Currículo<span className="title__network__item__icone"></span></a></li>
           </ul>
         </div>
