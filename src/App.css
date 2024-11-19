@@ -5,6 +5,12 @@
 @import url(./assets/css/reset.css);
 @import url(./assets/css/variables.css);
 
+html:not(.no-contact) {
+  [data-element="ref-alternative"] {
+    display: none;
+  }
+}
+
 html.no-contact {
   [data-element="ref-contact"] {
     display: none !important;
