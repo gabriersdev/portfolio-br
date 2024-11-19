@@ -10,7 +10,7 @@ export default function Title() {
             <span className="emphasis">Meu nome é Gabriel Ribeiro e construo projetos para a web</span>
           </h2>
           <h3 className="title__subsection">
-            <span>Sou técnico em Informática para a Internet, estou cursando ADS na Unintere estudando React e frameworks para JavaScript.</span>
+            <span>Sou técnico em Informática para a Internet, estou cursando ADS na Uninter e estudando React e frameworks para JavaScript.</span>
           </h3>
           <ul className="title__network">
             <li className="title__network__item"><a href="https://github.com/gabriersdev/" target="_blank">Github<span
