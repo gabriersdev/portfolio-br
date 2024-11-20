@@ -16,6 +16,10 @@ body {
   font-weight: 700;
 }
 
+.arial {
+  font-family: Arial, sans-serif;
+}
+
 .oculto,
 .d-none {
   display: none;
