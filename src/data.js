@@ -157,6 +157,12 @@ const data = {
       "img": "./img/svgs/services/interface.svg",
       "alt": "Ícone de uma interface"
     },
+    {
+      "name": "Artes para redes sociais",
+      "description": "Criação de posts e banners.",
+      "img": "./img/svgs/services/post.svg",
+      "alt": "Ícone de uma página de rede social"
+    },
   ]
 }
 
