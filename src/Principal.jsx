@@ -29,11 +29,19 @@ export default function Principal() {
   } catch (error) {
     console.log('Ocorreu um erro ao tentar verificar os parâmetros passados. %s', error);
   }
-
-
+  
   useEffect(() => {
     document.querySelectorAll('a').forEach(link => link.setAttribute('rel', 'noopener noreferrer'));
     AOS.init()
+    
+    // Verificar se #[id] existe e rolar a página até ele
+    if (window.location.hash) {
+      const id = window.location.hash.replace('#', '')
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }  
   }, [])
 
   return (
