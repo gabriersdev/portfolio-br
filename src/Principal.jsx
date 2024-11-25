@@ -23,7 +23,8 @@ export default function Principal() {
     let queryParams = null;
 
     if (location.search) queryParams = new URLSearchParams(location.search);
-
+    
+    // Verificar se queryParams não é null, se o parâmetro 'or' existe e se ele contém 'freelancer'
     if (queryParams) if (queryParams.get('or').includes('freelancer')) document.querySelector('html').classList.add('no-contact')
     else console.log("%cContrate-me!\nhttps://www.linkedin.com/in/gabrielribeirodev/\ndevgabrielribeiro@gmail.com", "font-size: 2rem; color: #FFF; background-color: #2631FF; font-family: sans-serif;")
   } catch (error) {
