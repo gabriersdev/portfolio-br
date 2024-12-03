@@ -22,7 +22,7 @@ jobs:
       - name: Testar links
         uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
-          base-url: 'https://gabriersdev.github.io/recibos-psi'
+          base-url: 'https://gabriersdev.github.io/portfolio'
 
   deploy:
     if: github.event.pull_request.merged == true && github.ref == 'refs/heads/main' # Só implanta após o merge na branch main
