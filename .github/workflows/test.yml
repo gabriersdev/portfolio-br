@@ -1,0 +1,46 @@
+name: CI/CD com Aprovação de Pull Request
+
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened, closed ]
+    branches:
+      - main # Branch protegida
+
+jobs:
+  test:
+    if: github.event.action != 'closed' # Executa testes em todos os eventos, exceto quando o PR é fechado
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Instalar dependências
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install
+      - name: Construir o site
+        run: npm run build
+      - name: Testar links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          base-url: 'https://gabriersdev.github.io/portfolio'
+
+  deploy:
+    if: github.event.pull_request.merged == true && github.ref == 'refs/heads/main' # Só implanta após o merge na branch main
+    needs: test # Garante que os testes passem antes da implantação
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: main # Checkout da branch principal após o merge
+      - name: Instalar dependências
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install
+      - name: Construir o site
+        run: npm run build
+      - name: Implantar no GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
