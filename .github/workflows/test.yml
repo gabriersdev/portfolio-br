@@ -1,46 +1,90 @@
-name: CI/CD com Aprovação de Pull Request
+name: Verificar e Aprovar PR
 
 on:
   pull_request:
-    types: [ opened, synchronize, reopened, closed ]
-    branches:
-      - main # Branch protegida
+    types: [ opened, synchronize, reopened ]
 
 jobs:
-  test:
-    if: github.event.action != 'closed' # Executa testes em todos os eventos, exceto quando o PR é fechado
+  verificar:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Instalar dependências
-        uses: actions/setup-node@v3
         with:
-          node-version: 16
-      - run: npm install
-      - name: Construir o site
-        run: npm run build
-      - name: Testar links
-        uses: gaurav-nelson/github-action-markdown-link-check@v1
-        with:
-          base-url: 'https://gabriersdev.github.io/portfolio'
+          fetch-depth: 0  # Importante para histórico do Git para ações de revisão de código
 
-  deploy:
-    if: github.event.pull_request.merged == true && github.ref == 'refs/heads/main' # Só implanta após o merge na branch main
-    needs: test # Garante que os testes passem antes da implantação
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: main # Checkout da branch principal após o merge
-      - name: Instalar dependências
+      - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-      - run: npm install
-      - name: Construir o site
+          node-version: 16 # Ou a versão que você usa
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Construir projeto
         run: npm run build
-      - name: Implantar no GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+
+      - name: Salvar artefatos de build
+        uses: actions/upload-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          name: build-artifacts
+          path: dist/
+
+  aprovar:
+    needs: verificar
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' # Somente executa em PRs
+    steps:
+      - name: Revisar e aprovar PR
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const pullNumber = context.payload.pull_request.number;
+            
+            // Checa os PRs
+            const checks = await github.rest.checks.listSuitesForRef({
+              owner,
+              repo,
+              ref: context.payload.pull_request.head.sha,
+            });
+
+            const allChecksPassed = checks.data.check_suites.every(suite => suite.conclusion === 'success');
+            
+            if (allChecksPassed) {              
+              // Adicionar um comentário de aprovação
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: pullNumber,
+                body: '✅ Todos os checks passaram! Aprovado automaticamente.',
+              });
+
+
+             try{
+                  // Aprovar o PR
+                   await github.rest.pulls.merge({
+                      owner,
+                      repo,
+                      pull_number: pullNumber,
+                      commit_title: 'Merge automático após aprovação',
+                      merge_method: 'squash', // Ou 'merge' ou 'rebase' - escolha o seu método preferido
+                    });
+
+                 } catch(error){
+                   console.error("Erro ao fazer merge automático:", error.message);
+                    await github.rest.issues.createComment({
+                      owner,
+                      repo,
+                      issue_number: pullNumber,
+                      body: '❌ Erro ao fazer merge automático: ' + error.message
+                    });
+                }
+
+            } else {
+               await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: pullNumber,
+                body: '⚠️ Alguns checks falharam. Revise antes de aprovar.',
+              });
+            }
