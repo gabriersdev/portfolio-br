@@ -1,0 +1,10 @@
+{
+  "name": "Portfolio - Gabriel Ribeiro",
+  "short_name": "Portfolio",
+  "start_url": "./portfolio",
+  "display": "standalone",
+  "background_color": "#",
+  "theme_color": "#",
+  "icons": [
+  ]
+}
