@@ -71,6 +71,7 @@ menu.menu {
 @media screen and (max-width: 390px) {
   menu.menu {
     display: block;
+    position: relative;
   }
 
   .menu .identification-page {
