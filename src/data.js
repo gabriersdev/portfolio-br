@@ -114,7 +114,7 @@ const data = {
       "finished": true,
       "finish": "2022-12-31",
       "alt": "Imagem de um hardware",
-      "img": "././img/hardware.jpg"
+      "img": "./img/jpg/hardware.jpg"
     },
     {
       "name": "Análise e Desenvolvimento de Sistemas",
@@ -123,7 +123,19 @@ const data = {
       "finished": false,
       "finish": "2026-01-01",
       "alt": "Imagem ilustrativa de uma tela de computador",
-      "img": "././img/codigo.jpg"
+      "img": "./img/jpg/codigo.jpg"
+    },
+    {
+      "name": "Certificado Scrum Foundation Professional Certification",
+      "school": "Certiprof",
+      "start": "2024-10-21",
+      "finished": true,
+      "finish": "2027-10-21",
+      "alt": "Badge de certificação",
+      "img": "./img/png/certification-scrum.png",
+      "style": {
+        "objectFit": "contain"
+      }
     },
   ],
   "services": [

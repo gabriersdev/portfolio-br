@@ -12,7 +12,7 @@ export default function Academic({ data }) {
             return (
               <div key={i} className="academic__courses__box" data-aos="fade-up">
                 <ul className="academic__courses__list">
-                  <li className="academic__courses__item__img"><img src={academic.img} alt={academic.alt} /></li>
+                  <li className="academic__courses__item__img"><img src={academic.img} alt={academic.alt} style={academic.style || {}} /></li>
                   <li className="academic__courses__item__title"><h4>{academic.name}</h4></li>
                   <li className="academic__courses__item__subtitle"><p>{academic.school}</p></li>
                   <li className="academic__courses__item__subtitle"><p>{new Date(academic.start).getFullYear()} - {academic.finished ? new Date(academic.finish).getFullYear() : 'Em andamento'}</p></li>
