@@ -4,6 +4,9 @@ const DYNAMIC_CACHE_NAME = 'dynamic-portfolio-app-v1';
 const staticUrlsToCache = [ // Arquivos estáticos que raramente mudam
   '/portfolio/',
   '/portfolio/manifest.json',
+  '/img/profile.png',
+  '/img/profile-192x192.png',
+  '/img/profile-512x512.png',
 ];
 
 self.addEventListener('install', (event) => {
