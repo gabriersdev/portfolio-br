@@ -97,7 +97,7 @@ section.title {
   padding-left: 1rem;
 }
 
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1264px) {
   .title__profile {
     display: none;
   }
@@ -140,6 +140,14 @@ section.title {
 
 @media screen and (min-width: 767px) and (max-width: 1000px) {
   section.title {
-    padding: auto 3rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .title__network:after {
+    margin-top: 1rem;
+    content: "Continua abaixo...";
   }
 }

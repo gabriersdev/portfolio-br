@@ -78,7 +78,7 @@ menu.menu {
     justify-content: center;
   }
 
-  .menu__list__item__contato {
+  .menu__list {
     display: none;
   }
 }
