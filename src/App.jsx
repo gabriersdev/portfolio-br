@@ -7,7 +7,7 @@ import Redirect from './Redirect'
 
 function App() {
   useEffect(() => {
-    if ("serviceWorker" in navigator ) {
+    if ("serviceWorker" in navigator && window.location.hostname !== "localhost") {
       navigator.serviceWorker
         .register("./service-worker.js")
         .then(() => console.log("Service Worker registrado com sucesso!"))
