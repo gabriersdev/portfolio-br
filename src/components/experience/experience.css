@@ -32,6 +32,8 @@ section.experience .experience__box:last-child {
   object-fit: cover;
 
   border-radius: 15px;
+  aspect-ratio: 12 / 9;
+  
   border: 1px solid rgba(0, 0, 0, 0.25) !important;
 }
 

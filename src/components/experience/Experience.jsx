@@ -36,7 +36,6 @@ export default function Experience() {
             break;
         }
       }
-
     });
   }, [])
 
@@ -48,7 +47,7 @@ export default function Experience() {
           Util.getUniqueElements(experiences.filter(e => e.visible && e.active), 'name').reverse().map((project, i) => {
             return (
               <div key={i} className="experience__box" data-aos="fade-up">
-                <img className="experience__midia hover-scale" loading="lazy" src={project.img || 'https://via.placeholder.com/600x400.png?text=Imagem...'} alt={`Captura de tela do projeto ${project.name.trim()}`} />
+                <img className="experience__midia hover-scale" loading="lazy" src={project.img || 'https://via.placeholder.com/600x400.png?text=Imagem...'} alt={`Captura de tela do projeto ${project.name.trim()}`} style={ project.img.includes('https://opengraph.githubassets.com') ? {aspectRatio: "initial" } : {} } />
                 <div className="experience__info">
                   <h2 className="experience__title">{project.name.trim()}</h2>
                   <h3 className="experience__text">{project.subtitle.trim()}</h3>

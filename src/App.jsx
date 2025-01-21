@@ -13,6 +13,17 @@ function App() {
         .then(() => console.log("Service Worker registrado com sucesso!"))
         .catch((err) => console.error("Erro ao registrar o Service Worker:", err));
     }
+
+    const defineHeigthWidth = () => {
+      document.querySelectorAll('img').forEach(img => {
+        img.setAttribute('width', `${img.clientWidth}px`)
+        img.setAttribute('height', `${img.clientHeight}px`)
+      })
+    }
+
+    // Define width e height para as imgs
+    window.addEventListener("resize", defineHeigthWidth)
+    document.addEventListener("DOMContentLoaded", defineHeigthWidth)
   }, []);
 
   return (
