@@ -132,10 +132,7 @@ const data = {
       "finished": true,
       "finish": "2027-10-21",
       "alt": "Badge de certificação",
-      "img": "./img/png/certification-scrum.png",
-      "style": {
-        "objectFit": "contain"
-      }
+      "img": "./img/png/certification-scrum-frame.png",
     },
   ],
   "services": [

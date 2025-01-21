@@ -16,6 +16,7 @@ section.academic {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
   grid-gap: 1rem;
+  justify-items: center;
 }
 
 .academic__courses__box {
@@ -24,6 +25,12 @@ section.academic {
 
 .academic__courses__list {
   margin: 0;
+}
+
+.academic__courses__item__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .academic__courses__item__img img {

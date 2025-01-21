@@ -5,7 +5,7 @@ export default function Menu({ fnc }) {
   return (
     <menu className="menu" id="topo">
       <a className="identification-page" onClick={fnc}>
-        <img className="menu__image" src="./img/profile.png" />
+        <img className="menu__image" src="./img/profile-192x192.png" alt={"Foto de perfil"} />
         <h3 className="menu__title">Gabriel Ribeiro</h3>
       </a>
       <nav>
