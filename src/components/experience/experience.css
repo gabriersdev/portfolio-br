@@ -31,7 +31,7 @@ section.experience .experience__box:last-child {
   max-height: 400px;
   object-fit: cover;
 
-  border-radius: 5px;
+  border-radius: 15px;
   border: 1px solid rgba(0, 0, 0, 0.25) !important;
 }
 
