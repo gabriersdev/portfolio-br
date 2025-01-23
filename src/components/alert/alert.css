@@ -2,8 +2,8 @@
   display: flex;
   width: max-content;
   padding: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--preto-015);
+  background-color: var(--preto-005);
   border-radius: 5px;
 
   &.alert-danger{

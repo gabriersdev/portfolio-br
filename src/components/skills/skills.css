@@ -20,7 +20,7 @@ section.skills {
 
 .skills__box {
   border-radius: 5px;
-  border: 1px solid #DDD;
+  border: 1px solid var(--cinza-claro);
 
   display: flex;
   flex-direction: column;
