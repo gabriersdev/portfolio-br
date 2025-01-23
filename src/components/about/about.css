@@ -31,6 +31,7 @@ section.about {
 
 @media screen and (min-width: 767px) and (max-width: 1000px) {
   section.about {
-    padding: auto 3rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 }

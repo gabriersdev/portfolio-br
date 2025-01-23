@@ -34,7 +34,7 @@ section.experience .experience__box:last-child {
   border-radius: 15px;
   aspect-ratio: 12 / 9;
   
-  border: 1px solid rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid var(--preto-015) !important;
 }
 
 .experience__box:nth-child(odd) .experience__midia {
@@ -119,7 +119,7 @@ section.experience .experience__box:last-child {
 .experiencia__botao--demo:hover,
 .experiencia__botao--demo:focus,
 .experiencia__botao--demo:active {
-  color: #FFF;
+  color: var(--branco);
 }
 
 @media screen and (max-width: 767px) {
@@ -142,7 +142,7 @@ section.experience .experience__box:last-child {
   }
 
   .experience__box:nth-child(odd) .experience__info {
-    margin-right: 0rem;
+    margin-right: 0;
   }
 
   .experience__midia {
@@ -195,7 +195,8 @@ section.experience .experience__box:last-child {
 
 @media screen and (min-width: 767px) and (max-width: 1000px) {
   section.experience {
-    padding: auto 3rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
   }
 }
 
