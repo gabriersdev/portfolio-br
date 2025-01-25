@@ -144,7 +144,7 @@ const data = {
     },
     {
       "name": "Manutenção de sites",
-      "description": "Correções de bugs, implementação de novas funcionalidades e atualizações.",
+      "description": "Correções de bugs, novas funcionalidades e atualizações.",
       "img": "./img/svgs/services/manutencao.svg",
       "alt": "Ícone de um site"
     },
@@ -171,6 +171,18 @@ const data = {
       "description": "Criação de posts e banners.",
       "img": "./img/svgs/services/post.svg",
       "alt": "Ícone de uma página de rede social"
+    },
+    {
+      "name": "Copywriting",
+      "description": "Escrita persuasiva.",
+      "img": "./img/svgs/services/alphabet.svg",
+      "alt": "Imagem com as letras A, B e C"
+    },    
+    {
+      "name": "SEO",
+      "description": "Seu produto ou serviço no topo. Suas vendas também.",
+      "img": "./img/svgs/services/ad.svg",
+      "alt": "Imagem com texto escrito 'ad'"
     },
   ]
 }
