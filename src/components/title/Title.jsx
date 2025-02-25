@@ -12,6 +12,9 @@ export default function Title() {
           <h3 className="title__subsection">
             <span>Sou técnico em Informática para a Internet, estou cursando ADS na Uninter e estudando React e frameworks para JavaScript.</span>
           </h3>
+          <div style={{marginTop: '1rem'}}>
+            <a href="https://wakatime.com/@92075f46-4a0e-440e-ba90-65daf570fc30" target={"_blank"}><img src="https://wakatime.com/badge/user/92075f46-4a0e-440e-ba90-65daf570fc30.svg" alt="Total de tempo em desenvolvimento desde 19 de agosto de 2023."/></a>
+          </div>
           <ul className="title__network">
             <li className="title__network__item"><a href="https://github.com/gabriersdev/" target="_blank">Github<span
               className="title__network__item__icone"></span></a></li>

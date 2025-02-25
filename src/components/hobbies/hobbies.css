@@ -21,8 +21,7 @@ section.hobbies {
 
 .hobbies__box {
   border-radius: 5px;
-  /* TODO - Organizar cores */
-  border: 1px solid #DDD;
+  border: 1px solid var(--cinza-claro);
 
   display: flex;
   flex-direction: column;

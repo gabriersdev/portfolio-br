@@ -1,6 +1,6 @@
 # Portfolio
 
-Este é o repositório do meu portfólio pessoal. Ele foi desenvolvido utilizando HTML, CSS, JavaScript e a biblioteca AOS para animações durante o scroll.
+Este é o repositório do meu portfólio pessoal. Ele foi desenvolvido utilizando React e a biblioteca AOS para animações durante o scroll. Projeto na arquitetura PWA.
 
 ## Demonstração
 

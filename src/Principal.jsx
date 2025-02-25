@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import {useEffect, useRef, useState} from 'react'
 import AOS from 'aos'
 
 import Menu from './components/menu/Menu'
@@ -8,8 +8,14 @@ import Main from './components/main/Main'
 import Dialog from './components/dialog/Dialog'
 import Footer from './components/footer/Footer'
 import {useLocation} from 'react-router-dom'
+import ExpandImage from "./components/expandImage/ExpandImage.jsx";
+import {ThemeContext} from "./ThemeContext.jsx";
 
 export default function Principal() {
+  const dialog = useRef(null);
+  const [src, setSrc] = useState(null);
+  const [alt, setAlt] = useState(null);
+
   const upPage = (e) => {
     e.preventDefault()
     window.scrollTo({
@@ -23,7 +29,7 @@ export default function Principal() {
     let queryParams = null;
 
     if (location.search) queryParams = new URLSearchParams(location.search);
-    
+
     // Verificar se queryParams não é null, se o parâmetro 'or' existe e se ele contém 'freelancer'
     if (queryParams) if (queryParams.get('or').includes('freelancer')) document.querySelector('html').classList.add('no-contact')
     // Exibição no-contact
@@ -56,12 +62,15 @@ export default function Principal() {
 
   return (
     <>
-      <Menu fnc={upPage}/>
-      <Title/>
-      <About/>
-      <Main/>
-      <Dialog/>
-      <Footer fnc={upPage}/>
+      <ThemeContext value={{dialog, expandImageInfos: {src, setSrc, alt, setAlt}}}>
+        <ExpandImage src={src} alt={alt}/>
+        <Menu fnc={upPage}/>
+        <Title/>
+        <About/>
+        <Main/>
+        <Dialog/>
+        <Footer fnc={upPage}/>
+      </ThemeContext>
     </>
   )
 }

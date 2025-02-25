@@ -47,11 +47,11 @@ section.services {
 }
 
 .services__content__list .list-item {
-  background: linear-gradient(20deg, rgba(45, 96, 163, 0.025), rgba(0, 110, 255, 0.15));
+  background: linear-gradient(20deg, var(--azul-025), var(--azul-escuro-015));
   border-radius: 5px;
   min-height: 100px;
   padding: 1.25rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--preto-015);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -95,7 +95,7 @@ section.services {
   .list-item__header__title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #464646;
+    color: var(--cinza);
   }
 
   .list-item__header__icon {
@@ -106,7 +106,7 @@ section.services {
   .list-item__body__description {
     /* font-size: var(--tamanho-fonte-texto-normal); */
     letter-spacing: 0.5px;
-    color: #464646;
+    color: var(--cinza);
     line-height: 1.25;
   }
 }
