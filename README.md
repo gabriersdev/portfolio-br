@@ -50,3 +50,5 @@ Você pode visualizar o portfólio online em: [link do portfólio](https://gabri
 ## Autor
 
 - **Gabriel** - [LinkedIn](https://linkedin.com/in/gabrielmpribeiro) | [GitHub](https://github.com/gabriersdev)
+
+(C) 2024
