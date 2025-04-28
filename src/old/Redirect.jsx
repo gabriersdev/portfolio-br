@@ -11,7 +11,7 @@ export default function Redirect() {
         break;
       default:
         alert('Nenhum comando para redirecionamento foi recebido. Redirecionando para a página inicial do portfolio');
-        window.location.href = './index.html';
+        window.location.href = '../../index.html';
     }
   }, [])
 

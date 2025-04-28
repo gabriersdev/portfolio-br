@@ -1,5 +1,5 @@
 import './hobbies.css';
-import Util from '../../Util.js';
+import Util from '../../old/Util.js';
 import PropTypes from 'prop-types';
 
 export default function Hobbies({ data }) {

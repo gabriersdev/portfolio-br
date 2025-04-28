@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './experience.css'
 import Alert from '../alert/Alert'
-import Util from '../../Util.js';
+import Util from '../../old/Util.js';
 
 export default function Experience() {
   const [experiences, setExperiences] = useState([]);

@@ -3,7 +3,7 @@ import Academic from '../academic/Academic'
 import Experience from '../experience/Experience'
 import Services from '../services/Services'
 
-import data from '../../data.js';
+import data from '../../old/data.js';
 
 export default function Main() {
   return (

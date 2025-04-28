@@ -1,12 +1,12 @@
 import {useEffect} from 'react'
 import AOS from 'aos'
 
-import Menu from './components/menu/Menu'
-import Title from './components/title/Title'
-import About from './components/about/About'
-import Main from './components/main/Main'
-import Dialog from './components/dialog/Dialog'
-import Footer from './components/footer/Footer'
+import Menu from '../components/menu/Menu'
+import Title from '../components/title/Title'
+import About from '../components/about/About'
+import Main from '../components/main/Main'
+import Dialog from '../components/dialog/Dialog'
+import Footer from '../components/footer/Footer'
 import {useLocation} from 'react-router-dom'
 
 export default function Principal() {

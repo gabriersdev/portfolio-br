@@ -1,5 +1,5 @@
 import './services.css'
-import Util from '../../Util.js'
+import Util from '../../old/Util.js'
 import PropType from 'prop-types'
 
 export default function Services({ data }) {

@@ -7,10 +7,11 @@ html {
 body {
   box-sizing: border-box;
   background-color: var(--cor-de-fundo);
-  font-family: 'Inter Tight', sans-serif;
+  font-family: 'Inter Tight', 'Inter', sans-serif;
   margin: 0;
+  border: 0;
   padding: 0;
-  line-height: 1;
+  line-height: 1 !important;
   position: relative;
 }
 

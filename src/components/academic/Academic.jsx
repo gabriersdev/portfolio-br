@@ -1,6 +1,6 @@
 import './academic.css';
 import ProtoType from 'prop-types';
-import Util from '../../Util';
+import Util from '../../old/Util';
 
 export default function Academic({ data }) {
   return (
