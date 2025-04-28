@@ -6,7 +6,7 @@ export default function Footer({ fnc }) {
   return (
     <footer className="footer">
       <div className="footer__rodape">
-        <p className="destaque">Desenvolvido por Gabriel Ribeiro</p>
+        <p className="emphasis">Desenvolvido por Gabriel Ribeiro</p>
         <div>
           <p><img src="./img/svgs/copyright.svg" alt="Copyright" />&nbsp;2022 - <span>{new Date().getFullYear()}</span></p>
           <div className="footer__rodape__links">

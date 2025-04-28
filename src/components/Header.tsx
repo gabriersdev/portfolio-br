@@ -14,34 +14,6 @@ type TimeDisplayProps = {
   locale?: string; // Optionally allow locale, defaulting to 'en-GB'
 };
 
-const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
-  const [currentTime, setCurrentTime] = useState("");
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const options: Intl.DateTimeFormatOptions = {
-        timeZone,
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false,
-      };
-      const timeString = new Intl.DateTimeFormat(locale, options).format(now);
-      setCurrentTime(timeString);
-    };
-
-    updateTime();
-    const intervalId = setInterval(updateTime, 1000);
-
-    return () => clearInterval(intervalId);
-  }, [timeZone, locale]);
-
-  return <>{currentTime}</>;
-};
-
-export default TimeDisplay;
-
 export const Header = () => {
   const pathname = usePathname() ?? "";
 
@@ -65,14 +37,14 @@ export const Header = () => {
           <Flex
             background="surface"
             border="neutral-medium"
-            radius="m-4"
+            radius="xs"
             shadow="l"
-            padding="4"
+            padding="8"
             horizontal="center"
           >
             <Flex gap="4" vertical="center" textVariant="body-default-s">
               {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} style={{borderRadius: "5px"}}/>
               )}
               <Line vert maxHeight="24" />
               {routes["/about"] && (
@@ -83,12 +55,14 @@ export const Header = () => {
                     href="/about"
                     label={about.label}
                     selected={pathname === "/about"}
+                    style={{borderRadius: "5px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="person"
                     href="/about"
                     selected={pathname === "/about"}
+                    style={{borderRadius: "5px"}}
                   />
                 </>
               )}
@@ -100,12 +74,14 @@ export const Header = () => {
                     href="/work"
                     label={work.label}
                     selected={pathname.startsWith("/work")}
+                    style={{borderRadius: "5px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="grid"
                     href="/work"
                     selected={pathname.startsWith("/work")}
+                    style={{borderRadius: "5px"}}
                   />
                 </>
               )}
@@ -117,12 +93,14 @@ export const Header = () => {
                     href="/blog"
                     label={blog.label}
                     selected={pathname.startsWith("/blog")}
+                    style={{borderRadius: "5px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="book"
                     href="/blog"
                     selected={pathname.startsWith("/blog")}
+                    style={{borderRadius: "5px"}}
                   />
                 </>
               )}
@@ -134,12 +112,14 @@ export const Header = () => {
                     href="/gallery"
                     label={gallery.label}
                     selected={pathname.startsWith("/gallery")}
+                    style={{borderRadius: "5px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="gallery"
                     href="/gallery"
                     selected={pathname.startsWith("/gallery")}
+                    style={{borderRadius: "5px"}}
                   />
                 </>
               )}
@@ -147,15 +127,6 @@ export const Header = () => {
           </Flex>
         </Flex>
         <Flex fillWidth horizontal="end" vertical="center">
-          <Flex
-            paddingRight="12"
-            horizontal="end"
-            vertical="center"
-            textVariant="body-default-s"
-            gap="20"
-          >
-            <Flex hide="s">{display.time && <TimeDisplay timeZone={person.location} />}</Flex>
-          </Flex>
         </Flex>
       </Flex>
     </>

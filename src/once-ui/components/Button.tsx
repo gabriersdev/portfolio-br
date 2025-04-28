@@ -81,6 +81,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps | AnchorProps>(
           "text-decoration-none",
           "button",
           "cursor-interactive",
+          "font-inherit",
           {
             ["fill-width"]: fillWidth,
             ["fit-width"]: !fillWidth,

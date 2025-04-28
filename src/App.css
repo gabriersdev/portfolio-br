@@ -19,3 +19,7 @@ html.no-contact {
     }
   }
 }
+
+.font-inherit {
+  font-family: inherit !important;
+}
