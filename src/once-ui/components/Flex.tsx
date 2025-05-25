@@ -12,6 +12,7 @@ import {
   SpacingProps,
   StyleProps,
 } from "../interfaces";
+
 import { ColorScheme, ColorWeight, SpacingToken, TextVariant } from "../types";
 
 interface ComponentProps
