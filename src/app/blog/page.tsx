@@ -58,7 +58,7 @@ export default function Blog() {
           }),
         }}
       />
-      <Heading marginBottom="l" variant="display-strong-s">
+      <Heading marginBottom="l" variant="display-strong-l">
         {blog.title}
       </Heading>
       <Column fillWidth flex={1}>

@@ -22,7 +22,7 @@ export async function generateMetadata() {
       description: "Portfolio website showcasing my work.",
       url: baseURL,
       siteName: `${person.firstName}'s Portfolio`,
-      locale: "en_US",
+      locale: "pt-R",
       type: "website",
     },
     robots: {
@@ -72,7 +72,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <Flex
       as="html"
-      lang="en"
+      lang="pt-BR"
       background="page"
       data-neutral={style.neutral}
       data-brand={style.brand}

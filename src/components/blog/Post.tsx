@@ -43,10 +43,10 @@ export default function Post({ post, thumbnail }: PostProps) {
           />
         )}
         <Column position="relative" fillWidth gap="8" vertical="center">
-          <Heading as="h2" variant="heading-strong-l" wrap="balance">
+          <Heading as="h2" variant="heading-strong-l" onBackground={"brand-medium"} style={{fontSize: "1.35rem"}} wrap="balance">
             {post.metadata.title}
           </Heading>
-          <Text variant="label-default-s" onBackground="neutral-weak">
+          <Text variant="body-default-m" onBackground="info-medium">
             {post.metadata.publishedAt && formatDate(post.metadata.publishedAt, false)}
           </Text>
           {tags.length > 0 && (

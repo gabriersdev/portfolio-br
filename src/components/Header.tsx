@@ -1,18 +1,12 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 
-import { Fade, Flex, Line, ToggleButton } from "@/once-ui/components";
+import { Fade, Flex, ToggleButton } from "@/once-ui/components";
 import styles from "@/components/Header.module.scss";
 
 import { routes, display } from "@/app/resources";
 import { person, home, about, blog, work, gallery } from "@/app/resources/content";
-
-type TimeDisplayProps = {
-  timeZone: string;
-  locale?: string; // Optionally allow locale, defaulting to 'en-GB'
-};
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
@@ -27,11 +21,10 @@ export const Header = () => {
         as="header"
         zIndex={9}
         fillWidth
-        padding="8"
+        padding="12"
         horizontal="center"
       >
         <Flex paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.location && <Flex hide="s">{person.location}</Flex>}
         </Flex>
         <Flex fillWidth horizontal="center">
           <Flex
@@ -41,12 +34,18 @@ export const Header = () => {
             shadow="l"
             padding="8"
             horizontal="center"
+            style={{borderRadius: "100px", padding: "0.5rem 0.5rem"}}
           >
             <Flex gap="4" vertical="center" textVariant="body-default-s">
               {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} style={{borderRadius: "5px"}}/>
+                <ToggleButton 
+                  prefixIcon="home" 
+                  label={home.label} 
+                  href="/" 
+                  size={"l"}
+                  selected={pathname === "/"}
+                  style={{borderRadius: "25px"}}/>
               )}
-              <Line vert maxHeight="24" />
               {routes["/about"] && (
                 <>
                   <ToggleButton
@@ -54,15 +53,16 @@ export const Header = () => {
                     prefixIcon="person"
                     href="/about"
                     label={about.label}
+                    size={"l"}
                     selected={pathname === "/about"}
-                    style={{borderRadius: "5px"}}
+                    style={{borderRadius: "25px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="person"
                     href="/about"
                     selected={pathname === "/about"}
-                    style={{borderRadius: "5px"}}
+                    style={{borderRadius: "25px"}}
                   />
                 </>
               )}
@@ -73,15 +73,16 @@ export const Header = () => {
                     prefixIcon="grid"
                     href="/work"
                     label={work.label}
+                    size={"l"}
                     selected={pathname.startsWith("/work")}
-                    style={{borderRadius: "5px"}}
+                    style={{borderRadius: "25px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="grid"
                     href="/work"
                     selected={pathname.startsWith("/work")}
-                    style={{borderRadius: "5px"}}
+                    style={{borderRadius: "25px"}}
                   />
                 </>
               )}
@@ -92,15 +93,16 @@ export const Header = () => {
                     prefixIcon="book"
                     href="/blog"
                     label={blog.label}
+                    size={"l"}
                     selected={pathname.startsWith("/blog")}
-                    style={{borderRadius: "5px"}}
+                    style={{borderRadius: "25px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="book"
                     href="/blog"
                     selected={pathname.startsWith("/blog")}
-                    style={{borderRadius: "5px"}}
+                    style={{borderRadius: "25px"}}
                   />
                 </>
               )}
@@ -111,15 +113,16 @@ export const Header = () => {
                     prefixIcon="gallery"
                     href="/gallery"
                     label={gallery.label}
+                    size={"l"}
                     selected={pathname.startsWith("/gallery")}
-                    style={{borderRadius: "5px"}}
+                    style={{borderRadius: "25px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="gallery"
                     href="/gallery"
                     selected={pathname.startsWith("/gallery")}
-                    style={{borderRadius: "5px"}}
+                    style={{borderRadius: "25px"}}
                   />
                 </>
               )}

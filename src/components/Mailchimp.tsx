@@ -112,7 +112,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
           opacity: mailchimp.effects.lines.opacity as any,
         }}
       />
-      <Heading style={{ position: "relative" }} marginBottom="s" variant="display-strong-xs">
+      <Heading style={{ position: "relative", textWrap: "balance", fontWeight: 600 }} marginBottom="s" variant="display-strong-s">
         {newsletter.title}
       </Heading>
       <Text

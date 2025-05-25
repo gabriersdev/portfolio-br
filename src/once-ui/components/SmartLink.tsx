@@ -41,7 +41,7 @@ const SmartLink = forwardRef<HTMLAnchorElement, SmartLinkProps>(
       <>
         {prefixIcon && <Icon name={prefixIcon} size={iconSize} />}
         {children}
-        {suffixIcon && <Icon name={suffixIcon} size={iconSize} />}
+        {suffixIcon && <Icon name={suffixIcon} size={iconSize} style={{paddingTop: "2.5px"}} />}
       </>
     );
 

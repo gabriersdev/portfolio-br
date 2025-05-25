@@ -1,4 +1,4 @@
-import { InlineCode } from "@/once-ui/components";
+import {InlineCode, Text} from "@/once-ui/components";
 
 const person = {
   firstName: "Gabriel",
@@ -6,10 +6,10 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Desenvolvedor Full Stack",
-  avatar: "/images/avatar.jpg",
-  // location: ""
-  languages: ["Português"], // optional: Leave the array empty if you don't want to display languages
+  role: "Full Stack Developer",
+  avatar: "/img/avatar.png",
+  location: "Brazil",
+  languages: ["Portuguese"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -27,19 +27,19 @@ const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
-    name: "GitHub",
+    name: "",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/gabriersdev",
   },
   {
-    name: "LinkedIn",
+    name: "",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/gabrielmpribeiro",
   },
   {
-    name: "Email",
+    name: "",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:devgabrielribeiro@gmail.com",
   },
 ];
 
@@ -47,12 +47,11 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Full Stack Developer</>,
   subline: (
-    <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
-    </>
+    <p>
+      Web Developer specialized in building interactive and scalable web applications using React, TypeScript, and modern tools. Delivered real-world solutions like a public transport app, a data validation system for banking agents, and automation bots.
+    </p>
   ),
 };
 
@@ -69,16 +68,18 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "mailto:devgabrielribeiro@gmail.com",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        <p>I’m a Web Developer with a technical background in Internet Informatics and currently pursuing a degree in Systems Analysis and Development. I specialize in building responsive interfaces and interactive applications using React, TypeScript, JavaScript, HTML, and CSS, alongside tools like Next.js and Vite.</p>
+        
+        <p>I’ve developed real-world solutions such as a mobility platform for public transport users (Mobilidade), a data validation tool for banking agents (CCA), a voting-based clip competition system (BattleTube), and Discord bots for automation and content notifications. These projects demonstrate my ability to design and deliver applications with practical impact, integrating APIs, handling dynamic data, and focusing on user experience.</p>
+        
+        <p style={{marginBottom: 0, paddingBottom: 0}}>I value clean code, reusable components, and continuous learning, always aiming to deliver scalable and maintainable solutions.</p>
       </>
     ),
   },
@@ -87,9 +88,9 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Freelance Developer",
+        timeframe: "2024 - Present",
+        role: "Technical support, maintenance and development of web apps and websites",
         achievements: [
           <>
             Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
@@ -102,27 +103,21 @@ const about = {
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/img/projects/project-01/cover-01.jpg",
+          //   alt: "Once UI Project",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "CHR Despachante Imobiliário",
+        timeframe: "2023 - 2024",
+        role: "Computer Technician",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <>I provided maintenance on the company's equipment, in addition to being responsible for updating, configuring and installing the company's computers.</>,
+          <>I was responsible for implementing a file sharing system, which transformed the company's housing finance flow and increased sales completion by 40%.</>,
         ],
         images: [],
       },
@@ -133,12 +128,22 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
+        name: (
+          <div>
+            <span>Systems Development Analyst</span><br/>
+            <Text onBackground={"brand-weak"} variant={"body-default-m"}>Uninter</Text>
+          </div>
+        ),
         description: <>Studied software engineering.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: (
+          <div>
+            <span>Computer Technician for the Internet</span><br/>
+            <Text onBackground={"brand-weak"} variant={"body-default-m"}>ETEC Professor Fontes</Text>
+          </div>
+        ),
+        description: <>Studied equipment maintenance and web development.</>,
       },
     ],
   },
@@ -152,13 +157,13 @@ const about = {
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
+            src: "/img/projects/project-01/cover-02.jpg",
             alt: "Project image",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
+            src: "/img/projects/project-01/cover-03.jpg",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -171,7 +176,7 @@ const about = {
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
+            src: "/img/projects/project-01/cover-04.jpg",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -205,72 +210,7 @@ const gallery = {
   // Images from https://pexels.com
   images: [
     {
-      src: "/images/gallery/img-01.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-02.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-03.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-04.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-05.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-06.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-07.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-08.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-09.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-10.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-11.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-12.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-13.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-14.jpg",
+      src: "/img/gallery/img-14.jpg",
       alt: "image",
       orientation: "horizontal",
     },
