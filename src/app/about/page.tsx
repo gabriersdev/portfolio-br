@@ -14,6 +14,7 @@ import {baseURL} from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import {person, about, social} from "@/app/resources/content";
+import SchedulingButton from "@/components/SchedulingButton";
 
 export async function generateMetadata() {
   const title = about.title;
@@ -140,27 +141,7 @@ export default function About() {
             vertical="center"
             marginBottom="32"
           >
-            {about.calendar.display && (
-              <a style={{textDecoration: "none"}} href={"#"}>
-                <Flex
-                  fitWidth
-                  border="brand-alpha-medium"
-                  className={styles.blockAlign}
-                  style={{
-                    backdropFilter: "blur(var(--static-space-1))",
-                  }}
-                  background="brand-alpha-weak"
-                  radius="full"
-                  padding="4"
-                  gap="8"
-                  marginBottom="m"
-                  vertical="center"
-                >
-                  <Icon paddingLeft="8" name="calendar" onBackground="brand-weak"/>
-                  <Flex paddingRight="8">Schedule a call</Flex>
-                </Flex>
-              </a>
-            )}
+            <SchedulingButton/>
 
             <Heading className={styles.textAlign} variant="display-strong-m" style={{fontWeight: 800}}>
               {person.name}
@@ -282,8 +263,11 @@ export default function About() {
               <Column fillWidth gap="l" marginBottom="40">
                 {about.studies.institutions.map((institution, index) => (
                   <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
+                    <Text variant="heading-strong-l" onBackground={"neutral-strong"}>
                       {institution.name}
+                    </Text>
+                    <Text variant="body-default-m" onBackground={"brand-weak"}>
+                      {institution.school}
                     </Text>
                     <Text variant="heading-default-xs" onBackground="neutral-weak">
                       {institution.description}

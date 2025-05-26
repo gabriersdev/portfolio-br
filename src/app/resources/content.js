@@ -1,4 +1,4 @@
-import {InlineCode, Text} from "@/once-ui/components";
+import {Text} from "@/once-ui/components";
 
 const person = {
   firstName: "Gabriel",
@@ -77,7 +77,8 @@ const about = {
       <>
         <p>I’m a Web Developer with a technical background in Internet Informatics and currently pursuing a degree in Systems Analysis and Development. I specialize in building responsive interfaces and interactive applications using React, TypeScript, JavaScript, HTML, and CSS, alongside tools like Next.js and Vite.</p>
         
-        <p>I’ve developed real-world solutions such as a mobility platform for public transport users (Mobilidade), a data validation tool for banking agents (CCA), a voting-based clip competition system (BattleTube), and Discord bots for automation and content notifications. These projects demonstrate my ability to design and deliver applications with practical impact, integrating APIs, handling dynamic data, and focusing on user experience.</p>
+        <p>I’ve developed real-world solutions such as a mobility platform for public transport users (Mobilidade), a data validation tool for banking agents (CCA), a voting-based clip competition system (BattleTube), and Discord bots for automation and content notifications. These projects demonstrate my ability to design and deliver applications with practical impact, integrating APIs, handling
+          dynamic data, and focusing on user experience.</p>
         
         <p style={{marginBottom: 0, paddingBottom: 0}}>I value clean code, reusable components, and continuous learning, always aiming to deliver scalable and maintainable solutions.</p>
       </>
@@ -128,21 +129,13 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: (
-          <div>
-            <span>Systems Development Analyst</span><br/>
-            <Text onBackground={"brand-weak"} variant={"body-default-m"}>Uninter</Text>
-          </div>
-        ),
+        name: (<div><span>Systems Development Analyst</span><br/>{/*<Text onBackground={"brand-weak"} variant={"body-default-m"}>Uninter</Text>*/}</div>),
+        school: <>Uninter</>,
         description: <>Studied software engineering.</>,
       },
       {
-        name: (
-          <div>
-            <span>Computer Technician for the Internet</span><br/>
-            <Text onBackground={"brand-weak"} variant={"body-default-m"}>ETEC Professor Fontes</Text>
-          </div>
-        ),
+        name: (<div><span>Computer Technician for the Internet</span><br/>{/*<Text onBackground={"brand-weak"} variant={"body-default-m"}>ETEC Professor Fontes</Text>*/}</div>),
+        school: <>ETEC Professor Fontes</>,
         description: <>Studied equipment maintenance and web development.</>,
       },
     ],
@@ -217,4 +210,4 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export {person, social, newsletter, home, about, blog, work, gallery};

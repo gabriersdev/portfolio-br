@@ -7,6 +7,7 @@ import {baseURL, routes} from "@/app/resources";
 import {home, about, person, newsletter} from "@/app/resources/content";
 import {Mailchimp} from "@/components";
 import {Posts} from "@/components/blog/Posts";
+import SchedulingButton from "@/components/SchedulingButton";
 
 export async function generateMetadata() {
   const title = home.title;
@@ -65,9 +66,11 @@ export default function Home() {
       <Column fillWidth paddingY="l" gap="m">
         <Column maxWidth="s">
           <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
-            <Heading wrap="balance" variant="display-default-l" style={{fontWeight: 500}}>
-              {home.headline}
-            </Heading>
+            <div style={{display: "flex", flexDirection: "column", gap: "1rem"}}>
+              <Heading wrap="balance" variant="display-default-l" style={{fontWeight: 500}}>
+                {home.headline}
+              </Heading>
+            </div>
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
             <Text wrap="balance" onBackground="info-medium" variant="heading-strong-l">
@@ -75,25 +78,28 @@ export default function Home() {
             </Text>
           </RevealFx>
           <RevealFx translateY="12" delay={0.4} horizontal="start">
-            <Button
-              id="about"
-              data-border="rounded"
-              href="/about"
-              variant="secondary"
-              size="l"
-              arrowIcon
-            >
-              <Flex gap="8" vertical="center">
-                {about.avatar.display && (
-                  <Avatar
-                    style={{marginLeft: "-0.75rem", marginRight: "0.25rem", border: "none"}}
-                    src={person.avatar}
-                    size="m"
-                  />
-                )}
-                {about.title}
-              </Flex>
-            </Button>
+            <div style={{display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem"}}>
+              <Button
+                id="about"
+                data-border="rounded"
+                href="/about"
+                variant="secondary"
+                size="l"
+                arrowIcon
+              >
+                <Flex gap="8" vertical="center">
+                  {about.avatar.display && (
+                    <Avatar
+                      style={{marginLeft: "-0.75rem", marginRight: "0.25rem", border: "none"}}
+                      src={person.avatar}
+                      size="m"
+                    />
+                  )}
+                  {about.title}
+                </Flex>
+              </Button>
+              <SchedulingButton variant={"home"}/>
+            </div>
           </RevealFx>
         </Column>
       </Column>
