@@ -1,5 +1,3 @@
-import {Text} from "@/once-ui/components";
-
 const person = {
   firstName: "Gabriel",
   lastName: "Ribeiro",
@@ -9,7 +7,7 @@ const person = {
   role: "Full Stack Developer",
   avatar: "/img/avatar.png",
   location: "Brazil",
-  languages: ["Portuguese"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["Portuguese", "Russian"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -155,26 +153,32 @@ const about = {
             width: 16,
             height: 9,
           },
-          {
-            src: "/img/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/img/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Node.js",
+        description: "I built web applications with Node.js + Next.js or React + Tailwind.",
+        images: []
+      },
+      {
+        title: "Python",
+        description: "I developed bots with Python, for ads on Discord with YouTube and Twitch API, moderation on Reddit and webscrapping.",
+        images: []
+      },
+      {
+        title: "PHP",
+        description: "I created websites with PHP and provided maintenance on websites made with Wordpress and Laravel.",
+        images: []
+      },
+      {
+        title: "SQL",
+        description: "I built applications (web or not) and APIs with MySQL, using HeidiSQL, PHPMyAdmin and Workbench.",
+        images: []
+      },
+      {
+        title: "Scrum",
+        description: "I am certified by Certiproof as a qualified and knowledgeable professional in Scrum and its methods.",
+        images: []
       },
     ],
   },
@@ -203,7 +207,7 @@ const gallery = {
   // Images from https://pexels.com
   images: [
     {
-      src: "/img/gallery/img-14.jpg",
+      src: "/img/gallery/x.jpg",
       alt: "image",
       orientation: "horizontal",
     },

@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column} from "@/once-ui/components";
+import {Heading, Flex, Text, Button, Avatar, RevealFx, Column} from "@/once-ui/components";
 import {Projects} from "@/components/work/Projects";
 
 import {baseURL, routes} from "@/app/resources";
