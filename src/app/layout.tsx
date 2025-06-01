@@ -7,7 +7,7 @@ import { Footer, Header, RouteGuard } from "@/components";
 import { baseURL, effects, style } from "@/app/resources";
 
 import { Inter } from "next/font/google";
-import { Source_Code_Pro } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 
 import { person, home } from "@/app/resources/content";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
@@ -22,7 +22,7 @@ export async function generateMetadata() {
       description: "Portfolio website showcasing my work.",
       url: baseURL,
       siteName: `${person.firstName}'s Portfolio`,
-      locale: "pt-R",
+      locale: "pt-BR",
       type: "website",
     },
     robots: {
@@ -58,7 +58,7 @@ const tertiary: FontConfig | undefined = undefined;
 /*
  */
 
-const code = Source_Code_Pro({
+const code = JetBrains_Mono({
   variable: "--font-code",
   subsets: ["latin"],
   display: "swap",
