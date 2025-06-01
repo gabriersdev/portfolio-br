@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Heading, Flex, Text, Button, Avatar, RevealFx, Column, Icon} from "@/once-ui/components";
+import {Heading, Flex, Text, Button, Avatar, RevealFx, Column} from "@/once-ui/components";
 import {Projects} from "@/components/work/Projects";
 
 import {baseURL, routes} from "@/app/resources";
@@ -80,22 +80,8 @@ export default function Home() {
           </RevealFx>
           <AnimatedComponents delay={3000}>
             <div style={{display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "flex-end", gap: "0.5rem", flexDirection: "row-reverse"}}>
-              <Button
-                id="schedule"
-                data-border="rounded"
-                href="https://calendly.com/devgabrielribeiro/30min"
-                variant="primary"
-                size="l"
-              >
-                <Flex gap="4" vertical="center">
-                  <Icon
-                    style={{marginLeft: "-0.75rem", marginRight: "0.25rem", border: "none"}}  
-                    paddingLeft="8" name="calendar" onBackground="info-weak"
-                  />
-                  {"Schedule a call"}
-                </Flex>
-              </Button>
-              
+              <SchedulingButton variant={"primary"}/>
+
               <Button
                 id="about"
                 data-border="rounded"

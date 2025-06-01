@@ -68,6 +68,10 @@ const about = {
     display: true,
     link: "mailto:devgabrielribeiro@gmail.com",
   },
+  schedule: {
+    display: true,
+    link: "https://calendly.com/devgabrielribeiro/30min",
+  },
   intro: {
     display: true,
     title: "Introduction",

@@ -1,12 +1,33 @@
 import {about} from "@/app/resources";
-import {Flex, Icon} from "@/once-ui/components";
+import {Button, Flex, Icon} from "@/once-ui/components";
 import styles from "@/components/about/about.module.scss";
 import AnimatedComponents from "@/components/animated-components/animated-componets";
+import React from "react";
 
 export default function SchedulingButton({variant}: { variant?: string }) {
-  if (about.calendar.display) {
+  if (about.schedule.display) {
+    if (variant === "primary") {
+      return (
+        <Button
+          id="schedule"
+          data-border="rounded"
+          href={about.schedule.link}
+          variant="primary"
+          size="l"
+        >
+          <Flex gap="4" vertical="center">
+            <Icon
+              style={{marginLeft: "-0.75rem", marginRight: "0.25rem", border: "none"}}
+              paddingLeft="8" name="calendar" onBackground="info-weak"
+            />
+            {"Schedule a call"}
+          </Flex>
+        </Button>
+      )
+    }
+
     return (
-      <a style={{textDecoration: "none"}} href={"https://calendly.com/devgabrielribeiro/30min"}>
+      <a style={{textDecoration: "none"}} href={about.schedule.link}>
         <AnimatedComponents>
           <Flex
             fitWidth

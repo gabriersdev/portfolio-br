@@ -72,6 +72,7 @@ export default function About() {
   
   // @ts-ignore
   // @ts-ignore
+  // @ts-ignore
   return (
     <Column maxWidth="m">
       <script
@@ -106,6 +107,7 @@ export default function About() {
           gap="32"
           hide="s"
         >
+          {/*@ts-ignore*/}
           <TableOfContents structure={structure} about={about}/>
         </Column>
       )}
@@ -331,6 +333,16 @@ export default function About() {
                 </Column>
               </>
             )}
+
+            {
+              social?.find(s => s.icon === "github") && (
+                <Flex background={"brand-weak"} border={"brand-weak"} radius={"s"} padding={"s"} marginTop={"l"} gap="8" center={true}>
+                  <Icon name={"github"} size={"s"} onBackground={"brand-weak"} />
+                  {/*@ts-ignore*/}
+                  <Text onBackground={"brand-weak"}>Follow my work on <a href={social?.find(s => s.icon === "github")["link"]}>Github</a></Text>
+                </Flex>   
+              )
+            }
           </AnimatedComponents>
         </Column>
       </Flex>

@@ -24,11 +24,12 @@ export const Footer = () => {
         vertical="center"
       >
         <Text variant="body-default-m" onBackground="neutral-strong">
-          <Text onBackground="neutral-medium">© {currentYear}</Text>
+          <Text onBackground="neutral-medium" paddingRight="2">© {currentYear}</Text>
           <Text paddingX="2" onBackground={"brand-medium"}>{person.name}.</Text>
           <Text onBackground="neutral-medium">
             {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
-            Make with {" "}
+            {" "}
+            Make with {""}
             <SmartLink
               style={{marginLeft: "-0.195rem"}}
               href="https://once-ui.com/templates/magic-portfolio"
