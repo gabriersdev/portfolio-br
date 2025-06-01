@@ -1,13 +1,29 @@
+"use client";
+
 import {about} from "@/app/resources";
 import {Flex, Icon} from "@/once-ui/components";
 import styles from "@/components/about/about.module.scss";
-import AnimatedComponents from "@/components/animated-components/animated-componets";
+import React, {useEffect, useState} from 'react';
 
-export default function SchedulingButton({variant}: { variant?: string }) {
+export default function SchedulingButton({variant, duration}: { variant?: string, duration?: number }) {
+  const [visible, setVisible] = useState(false);
+
+  if (!duration) duration = 1000;
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setVisible(true), 10); // pequeno delay para o efeito funcionar
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const style = {
+    transition: `opacity ${duration}ms ease-in-out`,
+    opacity: visible ? 1 : 0,
+  };
+
   if (about.calendar.display) {
     return (
-      <a style={{textDecoration: "none"}} href={"https://calendly.com/devgabrielribeiro/30min"}>
-        <AnimatedComponents>
+      <div style={style}>
+        <a style={{textDecoration: "none"}} href={"#"}>
           <Flex
             fitWidth
             border="brand-alpha-medium"
@@ -25,8 +41,8 @@ export default function SchedulingButton({variant}: { variant?: string }) {
             <Icon paddingLeft="8" name="calendar" onBackground="brand-weak"/>
             <Flex paddingRight="8">Schedule a call</Flex>
           </Flex>
-        </AnimatedComponents>
-      </a>
+        </a>
+      </div>
     )
   } else return null
 }

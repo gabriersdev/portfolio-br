@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Heading, Flex, Text, Button, Avatar, RevealFx, Column} from "@/once-ui/components";
+import {Heading, Flex, Text, Button, Avatar, RevealFx, Column, Icon} from "@/once-ui/components";
 import {Projects} from "@/components/work/Projects";
 
 import {baseURL, routes} from "@/app/resources";
@@ -8,6 +8,7 @@ import {home, about, person, newsletter} from "@/app/resources/content";
 import {Mailchimp} from "@/components";
 import {Posts} from "@/components/blog/Posts";
 import SchedulingButton from "@/components/SchedulingButton";
+import AnimatedComponents from "@/components/animated-components/animated-componets";
 
 export async function generateMetadata() {
   const title = home.title;
@@ -77,17 +78,32 @@ export default function Home() {
               {home.subline}
             </Text>
           </RevealFx>
-          <RevealFx translateY="12" delay={0.4} horizontal="start">
-            <div style={{display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem"}}>
+          <AnimatedComponents delay={3000}>
+            <div style={{display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "flex-end", gap: "0.5rem", flexDirection: "row-reverse"}}>
+              <Button
+                id="schedule"
+                data-border="rounded"
+                href="https://calendly.com/devgabrielribeiro/30min"
+                variant="primary"
+                size="l"
+              >
+                <Flex gap="4" vertical="center">
+                  <Icon
+                    style={{marginLeft: "-0.75rem", marginRight: "0.25rem", border: "none"}}  
+                    paddingLeft="8" name="calendar" onBackground="info-weak"
+                  />
+                  {"Schedule a call"}
+                </Flex>
+              </Button>
+              
               <Button
                 id="about"
                 data-border="rounded"
                 href="/about"
-                variant="secondary"
+                variant="primary"
                 size="l"
-                arrowIcon
               >
-                <Flex gap="8" vertical="center">
+                <Flex gap="4" vertical="center">
                   {about.avatar.display && (
                     <Avatar
                       style={{marginLeft: "-0.75rem", marginRight: "0.25rem", border: "none"}}
@@ -98,9 +114,8 @@ export default function Home() {
                   {about.title}
                 </Flex>
               </Button>
-              <SchedulingButton variant={"home"}/>
             </div>
-          </RevealFx>
+          </AnimatedComponents>
         </Column>
       </Column>
       <RevealFx translateY="16" delay={0.6}>
