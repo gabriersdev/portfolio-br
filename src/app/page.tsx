@@ -1,14 +1,14 @@
 import React from "react";
 
-import {Heading, Flex, Text, Button, Avatar, RevealFx, Column} from "@/once-ui/components";
+import {Heading, Flex, Text, Button, Avatar, RevealFx, Column, Icon} from "@/once-ui/components";
 import {Projects} from "@/components/work/Projects";
 
-import {baseURL, routes} from "@/app/resources";
-import {home, about, person, newsletter} from "@/app/resources/content";
-import {Mailchimp} from "@/components";
+import {baseURL, routes, social} from "@/app/resources";
+import {home, about, person, contact} from "@/app/resources/content";
 import {Posts} from "@/components/blog/Posts";
 import SchedulingButton from "@/components/SchedulingButton";
 import AnimatedComponents from "@/components/animated-components/animated-componets";
+import {Contact} from "@/components/Contact";
 
 export async function generateMetadata() {
   const title = home.title;
@@ -120,7 +120,12 @@ export default function Home() {
         </Flex>
       )}
       <Projects range={[2]}/>
-      {newsletter.display && <Mailchimp newsletter={newsletter}/>}
+      <Flex background={"brand-weak"} fillWidth={true} border={"brand-weak"} radius={"s"} padding={"s"} gap="8" center={true}>
+        <Icon name={"grid"} size={"s"} onBackground={"brand-weak"} />
+        {/*@ts-ignore*/}
+        <Text onBackground={"brand-weak"}>See outher works in <a href={"/work"}>Work page</a></Text>
+      </Flex>
+      {contact.display && <Contact contact={contact}/>}
     </Column>
   );
 }

@@ -13,12 +13,13 @@ const person = {
 const newsletter = {
   display: true,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: (
-    <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
-    </>
-  ),
+  description: (<>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>),
+};
+
+const contact = {
+  display: true,
+  title: <>Talk to {person.firstName}</>,
+  description: (<>For requests for quotes, consultancy, maintenance and development of websites and platforms, send a message.</>),
 };
 
 const social = [
@@ -218,4 +219,4 @@ const gallery = {
   ],
 };
 
-export {person, social, newsletter, home, about, blog, work, gallery};
+export {person, social, newsletter, contact, home, about, blog, work, gallery};

@@ -12,14 +12,15 @@ function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T
   }) as T;
 }
 
-type NewsletterProps = {
+type ContactProps = {
   display: boolean;
   title: string | JSX.Element;
   description: string | JSX.Element;
 };
 
-export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
-  const [email, setEmail] = useState<string>("");
+export const Contact = ({ contact }: { contact: ContactProps }) => {
+  const [email, setEmail] = useState<string>(""); 
+  const [message, setMessage] = useState<string>(""); 
   const [error, setError] = useState<string>("");
   const [touched, setTouched] = useState<boolean>(false);
 
@@ -113,7 +114,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
         }}
       />
       <Heading style={{ position: "relative", textWrap: "balance", fontWeight: 600 }} marginBottom="s" variant="display-strong-s">
-        {newsletter.title}
+        {contact.title}
       </Heading>
       <Text
         style={{
@@ -124,24 +125,26 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
         marginBottom="l"
         onBackground="neutral-medium"
       >
-        {newsletter.description}
+        {contact.description}
       </Text>
       <form
         style={{
-          width: "100%",
+          width: "min(600px, 100%)",
           display: "flex",
           justifyContent: "center",
+          flexDirection: "column",
+          gap: "1rem",
         }}
         action={mailchimp.action}
         method="post"
         id="mc-embedded-subscribe-form"
         name="mc-embedded-subscribe-form"
       >
-        <Flex id="mc_embed_signup_scroll" fillWidth maxWidth={24} gap="8">
+        <Flex fillWidth gap="8">
           <Input
             formNoValidate
             labelAsPlaceholder
-            id="mce-EMAIL"
+            id="con-EMAIL"
             name="EMAIL"
             type="email"
             label="Email"
@@ -179,10 +182,30 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
               value=""
             />
           </div>
+        </Flex>
+        <Flex fillWidth gap="8">
+          <Input
+            formNoValidate
+            labelAsPlaceholder
+            id="con-MESSAGE"
+            name="MESSAGE"
+            type="text"
+            label="Short message"
+            required
+            onChange={(e) => {
+              if (error) {
+                handleChange(e);
+              } else {
+                debouncedHandleChange(e);
+              }
+            }}
+            onBlur={handleBlur}
+            errorMessage={error}
+          />
           <div className="clear">
             <Flex height="48" vertical="center">
               <Button id="mc-embedded-subscribe" value="Subscribe" style={{fontFamily: "inherit"}} size="l" fillWidth>
-                Subscribe
+                Send
               </Button>
             </Flex>
           </div>
