@@ -110,7 +110,7 @@ export default function Home() {
       {routes["/blog"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
           <Flex flex={1} paddingLeft="l">
-            <Heading as="h2" variant="display-strong-s" wrap="balance">
+            <Heading as="h2" variant="display-strong-s" wrap="balance" style={{fontWeight: 600}}>
               Latest from the blog
             </Heading>
           </Flex>
