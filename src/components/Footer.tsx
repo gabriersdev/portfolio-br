@@ -29,9 +29,9 @@ export const Footer = () => {
           <Text onBackground="neutral-medium">
             {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
             {" "}
-            Make with {""}
+            Make with
             <SmartLink
-              style={{marginLeft: "-0.195rem"}}
+              style={{marginLeft: "-0.005rem"}}
               href="https://once-ui.com/templates/magic-portfolio"
             >
               Once UI
