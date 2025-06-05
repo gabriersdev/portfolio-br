@@ -68,7 +68,7 @@ const display = {
 };
 
 const mailchimp = {
-  action: "https://formsubmit.co/devgabrielribeiro@gmail.com",
+  action: "https://usebasin.com/f/b75148f15cf1",
   effects: {
     mask: {
       cursor: false,
@@ -107,7 +107,7 @@ const mailchimp = {
 };
 
 const contact = {
-  action: "https://formsubmit.co/devgabrielribeiro@gmail.com",
+  action: "https://usebasin.com/f/b75148f15cf1",
   effects: {
     mask: {
       cursor: false,

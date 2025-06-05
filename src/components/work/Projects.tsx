@@ -11,9 +11,9 @@ export function Projects({ range }: ProjectsProps) {
 
   const sortedProjects = allProjects.sort((a, b) => {
     return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
-  });
+  }).toReversed();
 
-  const displayedProjects = range
+  let displayedProjects = range
     ? sortedProjects.slice(range[0] - 1, range[1] ?? sortedProjects.length)
     : sortedProjects;
 

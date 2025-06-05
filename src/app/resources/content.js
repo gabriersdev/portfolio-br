@@ -18,7 +18,7 @@ const newsletter = {
 
 const contact = {
   display: true,
-  title: <>Talk to {person.firstName}</>,
+  title: <>Talk to me</>,
   description: (<>For requests for quotes, consultancy, maintenance and development of websites and platforms, send a message.</>),
 };
 
@@ -153,7 +153,13 @@ const about = {
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/img/projects/project-01/cover-02.jpg",
+            src: "/img/projects/template/img-1.png",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/img/projects/battle/img-3.png",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -161,14 +167,22 @@ const about = {
         ],
       },
       {
-        title: "Node.js",
-        description: "I built web applications with Node.js + Next.js or React + Tailwind.",
-        images: []
-      },
-      {
         title: "Python",
         description: "I developed bots with Python, for ads on Discord with YouTube and Twitch API, moderation on Reddit and webscrapping.",
         images: []
+      },
+      {
+        title: "Node.js",
+        description: "I built web applications with Node.js + Next.js or React + Tailwind.",
+        images: [
+          {
+            src: "/img/projects/mobilidade/mob-1.png",
+            link: "/work/mobilidade",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ]
       },
       {
         title: "PHP",
@@ -178,7 +192,15 @@ const about = {
       {
         title: "SQL",
         description: "I built applications (web or not) and APIs with MySQL, using HeidiSQL, PHPMyAdmin and Workbench.",
-        images: []
+        images: [
+          {
+            src: "/img/projects/mobilidade/mob-1.png",
+            link: "/work/mobilidade",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ]
       },
       {
         title: "Scrum",

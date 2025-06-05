@@ -115,13 +115,15 @@ export default function Home() {
             </Heading>
           </Flex>
           <Flex flex={3} paddingX="20">
-            <Posts range={[1, 2]} columns="2"/>
+            <Posts range={[2, 2]} columns="2"/>
           </Flex>
         </Flex>
       )}
-      <Projects range={[2]}/>
+      <RevealFx translateY="16" delay={0.6}>
+        <Projects range={[3, 4]}/>
+      </RevealFx>
       <Flex background={"brand-weak"} fillWidth={true} border={"brand-weak"} radius={"s"} padding={"s"} gap="8" center={true}>
-        <Icon name={"grid"} size={"s"} onBackground={"brand-weak"} />
+        <Icon name={"grid"} size={"s"} onBackground={"brand-weak"}/>
         {/*@ts-ignore*/}
         <Text onBackground={"brand-weak"}>See outher works in <a href={"/work"}>Work page</a></Text>
       </Flex>
