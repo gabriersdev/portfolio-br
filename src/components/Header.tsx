@@ -1,20 +1,20 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import {usePathname} from "next/navigation";
 
-import { Fade, Flex, ToggleButton } from "@/once-ui/components";
+import {Fade, Flex, ToggleButton} from "@/once-ui/components";
 import styles from "@/components/Header.module.scss";
 
-import { routes } from "@/app/resources";
-import { home, about, blog, work, gallery } from "@/app/resources/content";
+import {routes} from "@/app/resources";
+import {home, about, blog, work, gallery} from "@/app/resources/content";
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
 
   return (
     <>
-      <Fade hide="s" fillWidth position="fixed" height="80" zIndex={9} />
-      <Fade show="s" fillWidth position="fixed" bottom="0" to="top" height="80" zIndex={9} />
+      <Fade hide="s" fillWidth position="fixed" height="80" zIndex={9}/>
+      <Fade show="s" fillWidth position="fixed" bottom="0" to="top" height="80" zIndex={9}/>
       <Flex
         fitHeight
         className={styles.position}
@@ -38,13 +38,23 @@ export const Header = () => {
           >
             <Flex gap="4" vertical="center" textVariant="body-default-s">
               {routes["/"] && (
-                <ToggleButton 
-                  prefixIcon="home" 
-                  label={home.label} 
-                  href="/" 
-                  size={"l"}
-                  selected={pathname === "/"}
-                  style={{borderRadius: "25px"}}/>
+                <>
+                  <ToggleButton
+                    className={"s-flex-hide"}
+                    prefixIcon="home"
+                    label={home.label}
+                    href="/"
+                    size={"l"}
+                    selected={pathname === "/"}
+                    style={{borderRadius: "25px"}}/>
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="home"
+                    href="/"
+                    selected={pathname === "/"}
+                    style={{borderRadius: "25px"}}
+                  />
+                </>
               )}
               {routes["/about"] && (
                 <>

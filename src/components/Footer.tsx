@@ -24,9 +24,9 @@ export const Footer = () => {
         vertical="center"
       >
         <Text variant="body-default-m" onBackground="neutral-strong">
-          <Text onBackground="neutral-medium" paddingRight="2">© {currentYear}</Text>
-          <Text paddingX="2" onBackground={"brand-medium"}>{person.name}.</Text>
-          <Text onBackground="neutral-medium">
+          <Text onBackground="neutral-medium" paddingRight="2">©{currentYear}</Text>
+          <Text paddingX="2" onBackground={"brand-medium"}>{person.name}</Text>
+          <Text onBackground="neutral-medium" style={{display: "block"}}>
             {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
             {" "}
             Make with

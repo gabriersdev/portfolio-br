@@ -1,5 +1,3 @@
-import React from "react";
-
 import {Heading, Flex, Text, Button, Avatar, RevealFx, Column, Icon} from "@/once-ui/components";
 import {Projects} from "@/components/work/Projects";
 
@@ -9,6 +7,7 @@ import {Posts} from "@/components/blog/Posts";
 import SchedulingButton from "@/components/SchedulingButton";
 import AnimatedComponents from "@/components/animated-components/animated-componets";
 import {Contact} from "@/components/Contact";
+import HeroHome from "@/components/hero-home/HeroHome";
 
 export async function generateMetadata() {
   const title = home.title;
@@ -66,18 +65,7 @@ export default function Home() {
       />
       <Column fillWidth paddingY="l" gap="m">
         <Column maxWidth="s">
-          <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
-            <div style={{display: "flex", flexDirection: "column", gap: "1rem"}}>
-              <Heading wrap="balance" variant="display-default-l" style={{fontWeight: 500}}>
-                {home.headline}
-              </Heading>
-            </div>
-          </RevealFx>
-          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
-            <Text wrap="balance" onBackground="info-medium" variant="heading-strong-l">
-              {home.subline}
-            </Text>
-          </RevealFx>
+          <HeroHome/>
           <AnimatedComponents delay={3000}>
             <div style={{display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "flex-end", gap: "0.5rem", flexDirection: "row-reverse"}}>
               <SchedulingButton variant={"primary"}/>

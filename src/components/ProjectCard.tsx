@@ -49,7 +49,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       >
         {title && (
           <Flex flex={5}>
-            <Heading as="h2" wrap="balance" variant="heading-strong-xl" style={{fontWeight: 600, fontSize: "1.75rem"}} onBackground={"brand-weak"}>
+            <Heading as="h2" wrap="balance" variant="heading-strong-xl" style={{fontWeight: 600, fontSize: "1.75rem"}} onBackground={"brand-strong"}>
               {title}
             </Heading>
           </Flex>
@@ -62,7 +62,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 {description}
               </Text>
             )}
-            <Flex gap="24" wrap>
+            <Flex gap="m" wrap>
               {content?.trim() && (
                 <SmartLink
                   suffixIcon="arrowRight"

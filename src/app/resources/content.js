@@ -46,7 +46,8 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Full Stack Developer</>,
+  headlineMediumScreen: <>Full Stack Developer</>,
+  headlineSmallScreen: <>My name is Gabriel and I am a Full Stack Developer</>,
   subline: (
     <p>
       Web Developer specialized in building interactive and scalable web applications using React, TypeScript, and modern tools. Delivered real-world solutions like a public transport app, a data validation system for banking agents, and automation bots.
