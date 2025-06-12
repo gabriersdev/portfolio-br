@@ -25,8 +25,9 @@ export function Posts({ range, columns = "1", thumbnail = false }: PostsProps) {
     <>
       {displayedBlogs.length > 0 && (
         <Grid columns={columns} mobileColumns="1" fillWidth marginBottom="40" gap="m">
-          {displayedBlogs.map((post) => (
-            <Post key={post.slug} post={post} thumbnail={thumbnail} />
+          {displayedBlogs.map((post, index) => (
+            // <Post key={post.slug} post={post} thumbnail={thumbnail} />
+            <Post key={index} post={post} thumbnail={thumbnail} />
           ))}
         </Grid>
       )}

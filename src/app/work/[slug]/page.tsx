@@ -24,6 +24,7 @@ export function generateMetadata({ params: { slug } }: WorkParams) {
   let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slug);
 
   if (!post) {
+    // @ts-ignore
     return;
   }
 
@@ -37,6 +38,7 @@ export function generateMetadata({ params: { slug } }: WorkParams) {
   } = post.metadata;
   let ogImage = image ? `https://${baseURL}${image}` : `https://${baseURL}/og?title=${title}`;
 
+  // @ts-ignore
   return {
     title,
     description,

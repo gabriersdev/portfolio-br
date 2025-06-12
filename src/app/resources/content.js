@@ -1,4 +1,5 @@
 const person = {
+  generalTitle: "Gabriel Ribeiro",
   firstName: "Gabriel",
   lastName: "Ribeiro",
   get name() {
@@ -57,6 +58,7 @@ const home = {
 
 const about = {
   label: "About",
+  // title: "About me" + ` - ${home.title}`,
   title: "About me",
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
@@ -160,7 +162,7 @@ const about = {
             height: 9,
           },
           {
-            src: "/img/projects/battle/img-3.png",
+            src: "/img/projects/battle/img-1.svg",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -170,7 +172,20 @@ const about = {
       {
         title: "Python",
         description: "I developed bots with Python, for ads on Discord with YouTube and Twitch API, moderation on Reddit and webscrapping.",
-        images: []
+        images: [
+          {
+            src: "https://opengraph.githubassets.com/939568c657128880d286ba1bf90d9d8496ff6822b1a389f3e97f9fb6886f4d3e/gabriersdev/bot-notificacao-video-youtube-discord",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "https://opengraph.githubassets.com/939568c657128880d286ba1bf90d9d8496ff6822b1a389f3e97f9fb6886f4d3e/gabriersdev/bot-notificacao-live-twitch-discord",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ]
       },
       {
         title: "Node.js",
@@ -214,7 +229,7 @@ const about = {
 
 const blog = {
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about design and tech..." + ` ${home.title}`,
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -222,7 +237,7 @@ const blog = {
 
 const work = {
   label: "Work",
-  title: "My projects",
+  title: "My projects" + ` - ${home.title}`,
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
@@ -230,7 +245,7 @@ const work = {
 
 const gallery = {
   label: "Gallery",
-  title: "My photo gallery",
+  title: "My photo gallery" + ` - ${home.title}`,
   description: `A photo collection by ${person.name}`,
   // Images from https://pexels.com
   images: [
