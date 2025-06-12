@@ -16,6 +16,7 @@ import styles from "@/components/about/about.module.scss";
 import {person, about, social} from "@/app/resources/content";
 import SchedulingButton from "@/components/SchedulingButton";
 import AnimatedComponents from "@/components/animated-components/animated-componets";
+import {HeroAbout} from "@/components/HeroAbout";
 
 export async function generateMetadata() {
   const title = about.title;
@@ -149,20 +150,7 @@ export default function About() {
               marginBottom="32"
             >
               <SchedulingButton/>
-
-              <Heading className={styles.textAlign} variant="display-strong-m" style={{fontWeight: 800}}>
-                {person.name}
-              </Heading>
-
-              <Text
-                className={styles.textAlign}
-                variant="heading-strong-l"
-                onBackground="brand-medium"
-                marginBottom={"xs"}
-                // style={{fontWeight: 500}}
-              >
-                {person.role}
-              </Text>
+              <HeroAbout/>
 
               {social.length > 0 && (
                 <Flex className={styles.blockAlign} paddingTop="20" paddingBottom="8" gap="8" wrap horizontal="center" fitWidth>
