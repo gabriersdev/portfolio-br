@@ -1,7 +1,7 @@
 import {Heading, Flex, Text, Button, Avatar, RevealFx, Column, Icon} from "@/once-ui/components";
 import {Projects} from "@/components/work/Projects";
 
-import {baseURL, routes, social} from "@/app/resources";
+import {baseURL, routes, bannerURL, social} from "@/app/resources";
 import {home, about, person, contact} from "@/app/resources/content";
 import {Posts} from "@/components/blog/Posts";
 import SchedulingButton from "@/components/SchedulingButton";
@@ -12,7 +12,7 @@ export async function generateMetadata() {
   const title = home.title;
   const description = home.description;
   // const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
-  const ogImage = `https://${baseURL}/banner.png`
+  const ogImage = `https://${baseURL}/${bannerURL}`
 
   return {
     title,

@@ -1,4 +1,5 @@
 const baseURL = "gabriel.lts.app.br";
+const bannerURL = "banner.svg";
 
 const routes = {
   "/": true,
@@ -145,4 +146,4 @@ const contact = {
   },
 };
 
-export {routes, protectedRoutes, effects, style, display, mailchimp, contact, baseURL};
+export {routes, protectedRoutes, effects, style, display, mailchimp, contact, baseURL, bannerURL};

@@ -1,13 +1,13 @@
-import { Flex } from "@/once-ui/components";
+import {Flex} from "@/once-ui/components";
 import MasonryGrid from "@/components/gallery/MasonryGrid";
-import { baseURL } from "@/app/resources";
-import { gallery, person } from "@/app/resources/content";
+import {baseURL, bannerURL} from "@/app/resources";
+import {gallery, person} from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = gallery.title;
   const description = gallery.description;
   // const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
-  const ogImage = `https://${baseURL}/banner.png`
+  const ogImage = `https://${baseURL}/${bannerURL}`
 
   return {
     title,
@@ -62,7 +62,7 @@ export default function Gallery() {
           }),
         }}
       />
-      <MasonryGrid />
+      <MasonryGrid/>
     </Flex>
   );
 }

@@ -1,7 +1,7 @@
 import {Column, Flex, Heading} from "@/once-ui/components";
 import {Mailchimp} from "@/components";
 import {Posts} from "@/components/blog/Posts";
-import {baseURL} from "@/app/resources";
+import {baseURL, bannerURL} from "@/app/resources";
 import {blog, person, newsletter} from "@/app/resources/content";
 import AnimatedComponents from "@/components/animated-components/animated-componets";
 
@@ -9,7 +9,7 @@ export async function generateMetadata() {
   const title = blog.title;
   const description = blog.description;
   // const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
-  const ogImage = `https://${baseURL}/banner.png`
+  const ogImage = `https://${baseURL}/${bannerURL}`
   
   return {
     title,

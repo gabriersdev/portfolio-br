@@ -10,7 +10,7 @@ import {
   Tag,
   Text,
 } from "@/once-ui/components";
-import {baseURL} from "@/app/resources";
+import {baseURL, bannerURL} from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import {person, about, social} from "@/app/resources/content";
@@ -22,7 +22,7 @@ export async function generateMetadata() {
   const title = about.title;
   const description = about.description;
   // const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
-  const ogImage = `https://${baseURL}/banner.png`
+  const ogImage = `https://${baseURL}/${bannerURL}`
 
   return {
     title,
