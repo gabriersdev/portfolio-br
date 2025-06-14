@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import './expandImage.css';
 import {useContext} from "react";
-import {Theme} from "../../ThemeContext.jsx";
+import {Theme} from "../ThemeContext.jsx";
 
 const ExpandImage = () => {
   const {dialog, expandImageInfos} = useContext(Theme);
