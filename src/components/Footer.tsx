@@ -25,7 +25,11 @@ export const Footer = () => {
       >
         <Text variant="body-default-m" onBackground="neutral-strong">
           <Text onBackground="neutral-medium" paddingRight="2">©{currentYear}</Text>
-          <Text paddingX="2" onBackground={"brand-medium"}>{person.name}</Text>
+          <Text paddingX="2" onBackground={"brand-medium"}>
+            <SmartLink style={{marginLeft: "-0.15rem"}} href={social.filter(s => s.name.toLowerCase() === "github" || s.icon.toLowerCase() === "github".toLowerCase())[0]["link"] || ""}>
+              {person.name}
+            </SmartLink>
+          </Text>
           <Text onBackground="neutral-medium" style={{display: "block"}}>
             {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
             {" "}

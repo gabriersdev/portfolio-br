@@ -7,7 +7,8 @@ import { person, work } from "@/app/resources/content";
 export async function generateMetadata() {
   const title = work.title;
   const description = work.description;
-  const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+  // const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+  const ogImage = `https://${baseURL}/banner.png`
 
   return {
     title,
