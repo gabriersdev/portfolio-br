@@ -8,8 +8,9 @@ import AnimatedComponents from "@/components/animated-components/animated-compon
 export async function generateMetadata() {
   const title = blog.title;
   const description = blog.description;
-  const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
-
+  // const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+  const ogImage = `https://${baseURL}/banner.png`
+  
   return {
     title,
     description,

@@ -5,7 +5,7 @@ import {
   Flex,
   Heading,
   Icon,
-  IconButton,
+  IconButton, RevealFx,
   SmartImage,
   Tag,
   Text,
@@ -21,7 +21,8 @@ import {HeroAbout} from "@/components/HeroAbout";
 export async function generateMetadata() {
   const title = about.title;
   const description = about.description;
-  const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+  // const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+  const ogImage = `https://${baseURL}/banner.png`
 
   return {
     title,
@@ -70,7 +71,7 @@ export default function About() {
       items: about.technical.skills.map((skill) => skill.title),
     },
   ];
-  
+
   // @ts-ignore
   // @ts-ignore
   // @ts-ignore
@@ -141,7 +142,7 @@ export default function About() {
           </Column>
         )}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
-          <AnimatedComponents>
+          <RevealFx translateY={"2"} fillWidth direction={"column"} style={{textAlign: "left", justifyContent: "flex-start", alignItems: "flex-start"}}>
             <Column
               id={about.intro.title}
               fillWidth
@@ -325,13 +326,13 @@ export default function About() {
             {
               social?.find(s => s.icon === "github") && (
                 <Flex background={"brand-weak"} border={"brand-weak"} radius={"s"} padding={"s"} marginTop={"l"} gap="8" center={true}>
-                  <Icon name={"github"} size={"s"} onBackground={"brand-weak"} />
+                  <Icon name={"github"} size={"s"} onBackground={"brand-weak"}/>
                   {/*@ts-ignore*/}
                   <Text onBackground={"brand-weak"}>Follow my work on <a href={social?.find(s => s.icon === "github")["link"]}>Github</a></Text>
-                </Flex>   
+                </Flex>
               )
             }
-          </AnimatedComponents>
+          </RevealFx>
         </Column>
       </Flex>
     </Column>

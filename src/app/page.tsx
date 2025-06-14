@@ -5,14 +5,14 @@ import {baseURL, routes, social} from "@/app/resources";
 import {home, about, person, contact} from "@/app/resources/content";
 import {Posts} from "@/components/blog/Posts";
 import SchedulingButton from "@/components/SchedulingButton";
-import AnimatedComponents from "@/components/animated-components/animated-componets";
 import {Contact} from "@/components/Contact";
 import HeroHome from "@/components/hero-home/HeroHome";
 
 export async function generateMetadata() {
   const title = home.title;
   const description = home.description;
-  const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+  // const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+  const ogImage = `https://${baseURL}/banner.png`
 
   return {
     title,
@@ -66,7 +66,7 @@ export default function Home() {
       <Column fillWidth paddingY="l" gap="m">
         <Column maxWidth="s">
           <HeroHome/>
-          <AnimatedComponents delay={3000}>
+          <RevealFx translateY={"2"} fillWidth horizontal={"start"}>
             <div style={{display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "flex-end", gap: "0.5rem", flexDirection: "row-reverse"}}>
               <SchedulingButton variant={"primary"}/>
 
@@ -89,7 +89,7 @@ export default function Home() {
                 </Flex>
               </Button>
             </div>
-          </AnimatedComponents>
+          </RevealFx>
         </Column>
       </Column>
       <RevealFx translateY="16" delay={0.6}>
