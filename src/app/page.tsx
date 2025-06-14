@@ -93,6 +93,9 @@ export default function Home() {
         </Column>
       </Column>
       <RevealFx translateY="16" delay={0.6}>
+        <Projects range={[4, 4]}/>
+      </RevealFx>
+      <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]}/>
       </RevealFx>
       {routes["/blog"] && (
@@ -103,12 +106,12 @@ export default function Home() {
             </Heading>
           </Flex>
           <Flex flex={3} paddingX="20">
-            <Posts range={[2, 2]} columns="2"/>
+            <Posts range={[1, 1]} columns="2"/>
           </Flex>
         </Flex>
       )}
       <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[3, 4]}/>
+        <Projects range={[3, 3]}/>
       </RevealFx>
       <Flex background={"brand-weak"} fillWidth={true} border={"brand-weak"} radius={"s"} padding={"s"} gap="8" center={true}>
         <Icon name={"grid"} size={"s"} onBackground={"brand-weak"}/>

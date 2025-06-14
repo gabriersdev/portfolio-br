@@ -1,11 +1,14 @@
-import { notFound } from "next/navigation";
-import { CustomMDX } from "@/components/mdx";
-import { getPosts } from "@/app/utils/utils";
-import { AvatarGroup, Button, Column, Flex, Heading, SmartImage, Text } from "@/once-ui/components";
-import { baseURL } from "@/app/resources";
-import { person } from "@/app/resources/content";
-import { formatDate } from "@/app/utils/formatDate";
+import {notFound} from "next/navigation";
+import {CustomMDX} from "@/components/mdx";
+import {getPosts} from "@/app/utils/utils";
+import {AvatarGroup, Button, Column, Flex, Heading, Icon, SmartImage, Text} from "@/once-ui/components";
+import {baseURL} from "@/app/resources";
+import {person} from "@/app/resources/content";
+import {formatDate} from "@/app/utils/formatDate";
 import ScrollToHash from "@/components/ScrollToHash";
+import styles from "@/components/about/about.module.scss";
+import React from "react";
+import AnimatedComponents from "@/components/animated-components/animated-componets";
 
 interface WorkParams {
   params: {
@@ -20,7 +23,7 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   }));
 }
 
-export function generateMetadata({ params: { slug } }: WorkParams) {
+export function generateMetadata({params: {slug}}: WorkParams) {
   let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slug);
 
   if (!post) {
@@ -38,6 +41,7 @@ export function generateMetadata({ params: { slug } }: WorkParams) {
   } = post.metadata;
   let ogImage = image ? `https://${baseURL}${image}` : `https://${baseURL}/og?title=${title}`;
 
+  // @ts-ignore
   // @ts-ignore
   return {
     title,
@@ -65,7 +69,7 @@ export function generateMetadata({ params: { slug } }: WorkParams) {
   };
 }
 
-export default function Project({ params }: WorkParams) {
+export default function Project({params}: WorkParams) {
   let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === params.slug);
 
   if (!post) {
@@ -101,12 +105,16 @@ export default function Project({ params }: WorkParams) {
           }),
         }}
       />
-      <Column maxWidth="xs" gap="16">
-        <Button href="/work" variant="tertiary" weight="default" size="s" prefixIcon="chevronLeft">
-          Projects
-        </Button>
-        <Heading variant="display-strong-s">{post.metadata.title}</Heading>
-      </Column>
+      <AnimatedComponents>
+        <Flex>
+          <Column maxWidth="xs" gap="16">
+            <Button href="/work" variant="tertiary" weight="default" size="m" prefixIcon="chevronLeft">
+              <span style={{fontSize: "1rem"}}>Projects</span>
+            </Button>
+            <Heading variant="display-strong-s">{post.metadata.title}</Heading>
+          </Column>
+        </Flex>
+      </AnimatedComponents>
       {post.metadata.images.length > 0 && (
         <SmartImage
           priority
@@ -116,16 +124,29 @@ export default function Project({ params }: WorkParams) {
           src={post.metadata.images[0]}
         />
       )}
-      <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
+      <Column style={{margin: "auto"}} as="article" maxWidth="xs">
         <Flex gap="12" marginBottom="24" vertical="center">
-          {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="m" />}
+          {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="m"/>}
           <Text variant="body-default-s" onBackground="neutral-weak">
             {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
           </Text>
         </Flex>
-        <CustomMDX source={post.content} />
+        <CustomMDX source={post.content}/>
+        <Flex marginTop={"m"} gap={"s"}>
+          {post.metadata.link && (
+            <Button href={post.metadata.link} variant={"primary"} style={{borderRadius: 500}} size={"l"}>
+              <Flex style={{fontFamily: "'Inter', sans-serif"}}>View project</Flex>
+            </Button>
+          )}
+
+          {post.metadata.repo && (
+            <Button href={post.metadata.repo} variant={"secondary"} style={{borderRadius: 500}} size={"l"}>
+              <Flex style={{fontFamily: "'Inter', sans-serif"}}>View repository</Flex>
+            </Button>
+          )}
+        </Flex>
       </Column>
-      <ScrollToHash />
+      <ScrollToHash/>
     </Column>
   );
 }

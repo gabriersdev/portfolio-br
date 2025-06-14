@@ -7,8 +7,7 @@ import "./HeroHome.css";
 
 export default function HeroHome() {
   const [width, setWidth] = useState<number>(window.innerWidth);
-  const [latestRender, setLatestRender] = useState<number>();
-  const [content, setContent] = useState<ReactElement>();
+  const [_, setLatestRender] = useState<number>();
 
   useEffect(() => {
     setLatestRender(new Date().getTime());
@@ -19,37 +18,29 @@ export default function HeroHome() {
     })
   }, []);
 
-  useEffect(() => {
-    if (latestRender) {
-      setContent(
-        <>
-          {
-            width < 767 && (
-              <RevealFx translateY={"2"} fillWidth horizontal={"start"}>
-                <Flex style={{background: "#00CC9920", padding: "0.5rem 1rem", borderRadius: "500px", border: "1px solid #00CC9910", marginBottom: "2rem"}} marginTop={"xl"}>
-                  <span className={"gradient-text"}>✨ Portfolio</span>
-                </Flex>
-              </RevealFx>
-            )
-          }
-          <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom={width > 767 ? "m" : "l"} paddingTop={width > 767 ? "xl" : "xs"}>
-            <div style={{display: "flex", flexDirection: "column", gap: "1rem"}}>
-              <Heading wrap="balance" variant={width < 767 ? "display-default-xs" : "display-default-l"} style={{fontWeight: 500}}>
-                {width < 767 ? home.headlineSmallScreen : home.headlineMediumScreen}
-              </Heading>
-            </div>
-          </RevealFx>
-          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom={width > 767 ? "m" : "xl"}>
-            <Text wrap="balance" onBackground="info-medium" variant="heading-strong-l">
-              {home.subline}
-            </Text>
-          </RevealFx>
-        </>
-      )
-    }
-  }, [latestRender]);
-
   return (
-    <>{content}</>
+    <>
+      {
+        width < 767 && (
+          <RevealFx translateY={"2"} fillWidth horizontal={"start"}>
+            <Flex style={{background: "#00CC9920", padding: "0.5rem 1rem", borderRadius: "500px", border: "1px solid #00CC9910", marginBottom: "2rem"}} marginTop={"xl"}>
+              <span className={"gradient-text"}>✨ Portfolio</span>
+            </Flex>
+          </RevealFx>
+        )
+      }
+      <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom={width > 767 ? "m" : "l"} paddingTop={width > 767 ? "xl" : "xs"}>
+        <div style={{display: "flex", flexDirection: "column", gap: "1rem"}}>
+          <Heading wrap="balance" variant={width < 767 ? "display-default-xs" : "display-default-l"} style={{fontWeight: 500}}>
+            {width < 767 ? home.headlineSmallScreen : home.headlineMediumScreen}
+          </Heading>
+        </div>
+      </RevealFx>
+      <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom={width > 767 ? "m" : "xl"}>
+        <Text wrap="balance" onBackground="info-medium" variant="heading-strong-l">
+          {home.subline}
+        </Text>
+      </RevealFx>
+    </>
   )
 }
