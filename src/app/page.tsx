@@ -93,10 +93,10 @@ export default function Home() {
         </Column>
       </Column>
       <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[4, 4]}/>
+        <Projects range={[2, 2]}/>
       </RevealFx>
       <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]}/>
+        <Projects range={[5, 5]}/>
       </RevealFx>
       {routes["/blog"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
