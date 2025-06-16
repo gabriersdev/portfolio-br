@@ -115,6 +115,7 @@ export default function Project({params}: WorkParams) {
           </Column>
         </Flex>
       </AnimatedComponents>
+
       {post.metadata.images.length > 0 && (
         <SmartImage
           priority
@@ -124,29 +125,32 @@ export default function Project({params}: WorkParams) {
           src={post.metadata.images[0]}
         />
       )}
-      <Column style={{margin: "auto"}} as="article" maxWidth="xs">
-        <Flex gap="12" marginBottom="24" vertical="center">
-          {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="m"/>}
-          <Text variant="body-default-s" onBackground="neutral-weak">
-            {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
-          </Text>
-        </Flex>
-        <CustomMDX source={post.content}/>
-        <Flex marginTop={"m"} gap={"s"}>
-          {post.metadata.link && (
-            <Button href={post.metadata.link} variant={"primary"} style={{borderRadius: 500}} size={"l"}>
-              <Flex style={{fontFamily: "'Inter', sans-serif"}}>View project</Flex>
-            </Button>
-          )}
 
-          {post.metadata.repo && (
-            <Button href={post.metadata.repo} variant={"secondary"} style={{borderRadius: 500}} size={"l"}>
-              <Flex style={{fontFamily: "'Inter', sans-serif"}}>View repository</Flex>
-            </Button>
-          )}
-        </Flex>
-      </Column>
-      <ScrollToHash/>
+      <AnimatedComponents>
+        <Column style={{margin: "auto"}} as="article" maxWidth="xs">
+          <Flex gap="12" marginBottom="24" vertical="center">
+            {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="m"/>}
+            <Text variant="body-default-m" onBackground="neutral-weak">
+              {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
+            </Text>
+          </Flex>
+          <CustomMDX source={post.content}/>
+          <Flex marginTop={"m"} gap={"s"}>
+            {post.metadata.link && (
+              <Button href={post.metadata.link} variant={"primary"} style={{borderRadius: 500}} size={"l"}>
+                <Flex style={{fontFamily: "'Inter', sans-serif"}}>View project</Flex>
+              </Button>
+            )}
+
+            {post.metadata.repo && (
+              <Button href={post.metadata.repo} variant={"secondary"} style={{borderRadius: 500}} size={"l"}>
+                <Flex style={{fontFamily: "'Inter', sans-serif"}}>View repository</Flex>
+              </Button>
+            )}
+          </Flex>
+        </Column>
+        <ScrollToHash/>
+      </AnimatedComponents>
     </Column>
   );
 }

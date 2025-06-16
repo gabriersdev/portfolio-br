@@ -43,7 +43,7 @@ export default function Post({ post, thumbnail }: PostProps) {
           />
         )}
         <Column position="relative" fillWidth gap="8" vertical="center">
-          <Heading as="h2" variant="heading-strong-l" onBackground={"brand-medium"} style={{fontSize: "1.35rem"}} wrap="balance">
+          <Heading as="h2" wrap="balance" variant="heading-strong-xl" style={{fontWeight: 600, fontSize: "1.75rem"}} onBackground={"brand-medium"}>
             {post.metadata.title}
           </Heading>
           <Text variant="body-default-m" onBackground="info-medium">

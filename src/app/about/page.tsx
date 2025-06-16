@@ -141,8 +141,8 @@ export default function About() {
             )}
           </Column>
         )}
-        <Column className={styles.blockAlign} flex={9} maxWidth={40}>
-          <RevealFx translateY={"2"} fillWidth direction={"column"} style={{textAlign: "left", justifyContent: "flex-start", alignItems: "flex-start"}}>
+        <AnimatedComponents>
+          <Column className={styles.blockAlign} flex={9} maxWidth={40}>
             <Column
               id={about.intro.title}
               fillWidth
@@ -153,36 +153,34 @@ export default function About() {
               <SchedulingButton/>
               <HeroAbout/>
 
-              <AnimatedComponents delay={2000}>
-                {social.length > 0 && (
-                  <Flex className={styles.blockAlign} paddingTop="20" paddingBottom="8" gap="8" wrap horizontal="center" fitWidth>
-                    {social.map(
-                      (item) =>
-                        item.link && (
-                          <>
-                            <Button
-                              className="s-flex-hide"
-                              key={item.name}
-                              href={item.link}
-                              prefixIcon={item.icon}
-                              label={item.name}
-                              size="l"
-                              variant="secondary"
-                            />
-                            <IconButton
-                              className="s-flex-show"
-                              size="l"
-                              key={`${item.name}-icon`}
-                              href={item.link}
-                              icon={item.icon}
-                              variant="secondary"
-                            />
-                          </>
-                        ),
-                    )}
-                  </Flex>
-                )}
-              </AnimatedComponents>
+              {social.length > 0 && (
+                <Flex className={styles.blockAlign} paddingTop="20" paddingBottom="8" gap="8" wrap horizontal="center" fitWidth>
+                  {social.map(
+                    (item) =>
+                      item.link && (
+                        <>
+                          <Button
+                            className="s-flex-hide"
+                            key={item.name}
+                            href={item.link}
+                            prefixIcon={item.icon}
+                            label={item.name}
+                            size="l"
+                            variant="secondary"
+                          />
+                          <IconButton
+                            className="s-flex-show"
+                            size="l"
+                            key={`${item.name}-icon`}
+                            href={item.link}
+                            icon={item.icon}
+                            variant="secondary"
+                          />
+                        </>
+                      ),
+                  )}
+                </Flex>
+              )}
             </Column>
 
             {about.intro.display && (
@@ -334,9 +332,10 @@ export default function About() {
                 </Flex>
               )
             }
-          </RevealFx>
-        </Column>
+          </Column>
+        </AnimatedComponents>
       </Flex>
     </Column>
-  );
+)
+  ;
 }

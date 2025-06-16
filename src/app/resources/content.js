@@ -8,7 +8,7 @@ const person = {
   role: "Full Stack Developer",
   avatar: "/img/avatar.png",
   location: "Brazil",
-  languages: ["Portuguese", "Russian"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["Portuguese"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {

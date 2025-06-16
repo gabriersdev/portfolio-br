@@ -45,7 +45,7 @@ const Tag = forwardRef<HTMLDivElement, TagProps>(
       >
         {prefixIcon && <Icon name={prefixIcon} size="xs" />}
         <Flex style={{ userSelect: "none" }} paddingX={paddingSize} vertical="center">
-          <Text as="span" variant="label-default-s">
+          <Text as="span" variant="body-default-m">
             {label || children}
           </Text>
         </Flex>
