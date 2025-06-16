@@ -1,7 +1,7 @@
-import {Heading, Flex, Text, Button, Avatar, RevealFx, Column, Icon} from "@/once-ui/components";
+import {Heading, Flex, Text, Button, Avatar, RevealFx, Column, Icon, SmartLink} from "@/once-ui/components";
 import {Projects} from "@/components/work/Projects";
 
-import {baseURL, routes, bannerURL, social} from "@/app/resources";
+import {baseURL, routes, bannerURL} from "@/app/resources";
 import {home, about, person, contact} from "@/app/resources/content";
 import {Posts} from "@/components/blog/Posts";
 import SchedulingButton from "@/components/SchedulingButton";
@@ -102,11 +102,11 @@ export default function Home() {
         <Flex fillWidth gap="24" mobileDirection="column">
           <Flex flex={1} paddingLeft="l">
             <Heading as="h2" variant="display-strong-s" wrap="balance" style={{fontWeight: 600}}>
-              Latest from the blog
+              Latest from <SmartLink style={{marginLeft: "-0.15rem"}} href={"/blog"}>the blog</SmartLink>
             </Heading>
           </Flex>
-          <Flex flex={3} paddingX="20">
-            <Posts range={[1, 1]} columns="2"/>
+          <Flex flex={3} wrap={true}>
+            <Posts range={[1, 1]} columns="1"/>
           </Flex>
         </Flex>
       )}

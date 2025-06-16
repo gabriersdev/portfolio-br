@@ -134,7 +134,7 @@ export default function About() {
               <Flex wrap gap="8">
                 {person.languages.map((language, index) => (
                   <Tag key={index} size="l">
-                    <Text variant={"body-default-l"}>{language}</Text>
+                    <Text variant={"body-default-m"}>{language}</Text>
                   </Tag>
                 ))}
               </Flex>
@@ -196,8 +196,8 @@ export default function About() {
                 </Heading>
                 <Column fillWidth gap="l" marginBottom="40">
                   {about.work.experiences.map((experience, index) => (
-                    <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
-                      <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
+                    <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth >
+                      <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4" gap={"s"} wrap={true}>
                         <Text id={experience.company} variant="heading-strong-l">
                           {experience.company}
                         </Text>
@@ -292,7 +292,7 @@ export default function About() {
                         {skill.description}
                       </Text>
                       {skill.images && skill.images.length > 0 && (
-                        <Flex fillWidth paddingTop="m" gap="12" wrap>
+                        <Flex fillWidth paddingTop="s" gap="12" wrap>
                           {skill.images.map((image, index) => (
                             <Flex
                               key={index}

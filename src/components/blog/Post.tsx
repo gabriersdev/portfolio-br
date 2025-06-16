@@ -43,14 +43,14 @@ export default function Post({ post, thumbnail }: PostProps) {
           />
         )}
         <Column position="relative" fillWidth gap="8" vertical="center">
-          <Heading as="h2" wrap="balance" variant="heading-strong-xl" style={{fontWeight: 600, fontSize: "1.75rem"}} onBackground={"brand-medium"}>
+          <Heading as="h2" wrap="balance" variant="heading-strong-xl" style={{fontWeight: 600, fontSize: "1.75rem", lineHeight: "1.25"}} onBackground={"brand-medium"}>
             {post.metadata.title}
           </Heading>
           <Text variant="body-default-m" onBackground="info-medium">
             {post.metadata.publishedAt && formatDate(post.metadata.publishedAt, false)}
           </Text>
           {tags.length > 0 && (
-            <Flex gap="8">
+            <Flex gap="8" marginTop={"m"} wrap={true}>
               {tags.map((tag: string, index: number) =>
                 index < 3 ? <Tag key={index} label={tag} variant="neutral" /> : null
               )}
