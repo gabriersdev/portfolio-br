@@ -31,7 +31,6 @@ export const Footer = () => {
             </SmartLink>
           </Text>
           <Text onBackground="neutral-medium" style={{display: "block"}}>
-            {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
             {" "}
             Make with
             <SmartLink
