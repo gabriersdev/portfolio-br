@@ -1,8 +1,8 @@
 import {getPosts} from "@/app/utils/utils";
-import {Column} from "@/once-ui/components";
+import {Card, Column, Flex, Grid, Heading, RevealFx, Text} from "@/once-ui/components";
 import {Projects} from "@/components/work/Projects";
 import {baseURL, bannerURL} from "@/app/resources";
-import {person, work} from "@/app/resources/content";
+import {person, review, work} from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = work.title;
@@ -65,6 +65,32 @@ export default function Work() {
         }}
       />
       <Projects/>
+      {
+        review?.display && (
+          <RevealFx>
+            <Flex marginTop={"xl"} direction={"column"} gap={"l"}>
+              <Heading variant={"display-strong-s"}>{review.title}</Heading>
+              <Grid columns={2} gap="8">
+                {
+                  [...review.data].map((r, i) => {
+                    return (
+                      <Card key={i} border={"brand-alpha-medium"} radius={"m"} padding={"0"} cursor={"default"}>
+                        <Flex style={{background: "", width: "100%", justifyContent: "center"}} padding={"m"} direction={"column"} gap={"xs"}>
+                          <Text variant={"body-default-m"} onBackground={"info-medium"} align={"center"}>{r.content}</Text>
+                          <Flex style={{justifyContent: "center", background: "", width: "100%"}} wrap={true} align={"center"} direction={"column"} gap={"4"} paddingTop={"m"}>
+                            <Text variant={"body-default-m"} onBackground={"brand-medium"} align={"center"}>{r.author}</Text>
+                            <Text variant={"body-default-m"} onBackground={"brand-weak"} align={"center"} style={{textWrap: "balance"}}>{r.project}</Text>
+                          </Flex>
+                        </Flex>
+                      </Card>
+                    )
+                  })
+                }
+              </Grid>
+            </Flex>
+          </RevealFx>
+        )
+      }
     </Column>
   );
 }

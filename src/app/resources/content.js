@@ -257,4 +257,43 @@ const gallery = {
   ],
 };
 
-export {person, social, newsletter, contact, home, about, blog, work, gallery};
+const review = {
+  display: true,
+  label: "",
+  title: "Client Reviews",
+  description: "",
+  data: [
+    {
+      content: "\"I was apprehensive that I had lost the site, but Gabriel finished the service in less than a day and I had my site fully recovered with the backup and everything else.\n I highly recommend the service!\"",
+      author: "Willian C.",
+      project: "WordPress site recovery",
+    },
+    {
+      content: "\"Working with Gabriel was a good experience. He understood our requirements and skillfully executed what he was asked to do.\"",
+      author: "Bruno M.",
+      project: "New visual identity for a gaming website",
+    },
+    {
+      content: "\"He understood the project's needs and delivered what was requested. I recommend him and would work with him again.\"",
+      author: "Isabela H.",
+      project: "Adapting Spreadsheets for WordPress",
+    },   
+    {
+      content: "\"I want to express my gratitude to Gabriel for the incredible job he did on my shop's website. He met all of my expectations, was extremely fast, and the site turned out exactly the way I wanted - everything was perfect! I highly recommend his work to anyone looking for quality and efficiency. Thank you, Gabriel!\"",
+      author: "Caroline C.",
+      project: "Fix shopping cart issue",
+    },
+    {
+      content: "\"He knows his stuff and is creative with solutions. I will definitely work with him again!\"",
+      author: "Diogo G.",
+      project: "Create a plugin for batch search in Tiny ERP",
+    },    
+    {
+      content: "\"An excellent professional. He completed my request on schedule.\"",
+      author: "Henrique S.",
+      project: "Creating a User Manual for a Web Platform",
+    },
+  ]
+}
+
+export {person, social, newsletter, contact, home, about, blog, work, gallery, review};

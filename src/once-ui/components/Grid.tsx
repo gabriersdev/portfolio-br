@@ -1,6 +1,6 @@
 "use client";
 
-import React, { CSSProperties, forwardRef } from "react";
+import React, {CSSProperties, forwardRef, useEffect, useState} from "react";
 import classNames from "classnames";
 
 import {
@@ -12,7 +12,7 @@ import {
   DisplayProps,
   ConditionalProps,
 } from "../interfaces";
-import { SpacingToken, ColorScheme, ColorWeight } from "../types";
+import {SpacingToken, ColorScheme, ColorWeight} from "../types";
 
 interface ComponentProps
   extends GridProps,
@@ -21,7 +21,8 @@ interface ComponentProps
     StyleProps,
     CommonProps,
     DisplayProps,
-    ConditionalProps {}
+    ConditionalProps {
+}
 
 const Grid = forwardRef<HTMLDivElement, ComponentProps>(
   (
@@ -105,6 +106,9 @@ const Grid = forwardRef<HTMLDivElement, ComponentProps>(
     },
     ref,
   ) => {
+    const [windowWidth, setWindowWidth] = useState(0);
+    const [componentClasses, setComponentClasses] = useState("");
+    
     const generateDynamicClass = (type: string, value: string | "-1" | undefined) => {
       if (!value) return undefined;
       if (value === "surface" || value === "page" || value === "transparent") {
@@ -150,7 +154,7 @@ const Grid = forwardRef<HTMLDivElement, ComponentProps>(
       return undefined;
     };
 
-    const classes = classNames(
+    let classes = classNames(
       inline ? "display-inline-grid" : "display-grid",
       fit && "fit",
       fitWidth && "fit-width",
@@ -187,8 +191,8 @@ const Grid = forwardRef<HTMLDivElement, ComponentProps>(
         border || borderTop || borderRight || borderBottom || borderLeft,
       ),
       (border || borderTop || borderRight || borderBottom || borderLeft) &&
-        !borderStyle &&
-        "border-solid",
+      !borderStyle &&
+      "border-solid",
       border && !borderWidth && `border-1`,
       (borderTop || borderRight || borderBottom || borderLeft) && "border-reset",
       borderTop && "border-top-1",
@@ -230,8 +234,30 @@ const Grid = forwardRef<HTMLDivElement, ComponentProps>(
       ...style,
     };
 
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowWidth(document.body.clientWidth);
+      };
+
+      window.addEventListener('resize', handleResize);
+      handleResize();
+
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    useEffect(() => {
+      if (!windowWidth) return () => {};
+      else if (windowWidth < 500) setComponentClasses(classes.replace(/\s?columns-\d+/, " columns-1"));
+      else setComponentClasses(classes)
+    }, [windowWidth]);
+
+    useEffect(() => {
+      if (!classes) return () => {};
+      setComponentClasses(classes)
+    }, [classes]);
+    
     return (
-      <Component ref={ref} className={classes} style={combinedStyle} {...rest}>
+      <Component ref={ref} className={componentClasses} style={combinedStyle} {...rest}>
         {children}
       </Component>
     );
@@ -240,5 +266,5 @@ const Grid = forwardRef<HTMLDivElement, ComponentProps>(
 
 Grid.displayName = "Grid";
 
-export { Grid };
-export type { GridProps };
+export {Grid};
+export type {GridProps};
