@@ -1,8 +1,8 @@
 "use client";
 
-import { mailchimp } from "@/app/resources";
-import { Button, Flex, Heading, Input, Text, Background, Column } from "@/once-ui/components";
-import React, { useState } from "react";
+import {mailchimp} from "@/app/resources";
+import {Button, Flex, Heading, Input, Text, Background, Column} from "@/once-ui/components";
+import React, {useState} from "react";
 
 function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T {
   let timeout: ReturnType<typeof setTimeout>;
@@ -18,9 +18,9 @@ type ContactProps = {
   description: string | JSX.Element;
 };
 
-export const Contact = ({ contact }: { contact: ContactProps }) => {
-  const [email, setEmail] = useState<string>(""); 
-  const [message, setMessage] = useState<string>(""); 
+export const Contact = ({contact}: { contact: ContactProps }) => {
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [touched, setTouched] = useState<boolean>(false);
 
@@ -113,7 +113,7 @@ export const Contact = ({ contact }: { contact: ContactProps }) => {
           opacity: mailchimp.effects.lines.opacity as any,
         }}
       />
-      <Heading style={{ position: "relative", textWrap: "balance", fontWeight: 600 }} marginBottom="s" variant="display-strong-s">
+      <Heading style={{position: "relative", textWrap: "balance", fontWeight: 600}} marginBottom="s" variant="display-strong-s">
         {contact.title}
       </Heading>
       <Text
@@ -141,6 +141,7 @@ export const Contact = ({ contact }: { contact: ContactProps }) => {
         name="mc-embedded-subscribe-form"
       >
         <Flex fillWidth gap="8">
+          <input id={"form-context-1"} name={"form-context-1"} type="hidden" value={"Portfolio"} autoComplete="off"/>
           <Input
             formNoValidate
             labelAsPlaceholder
@@ -159,7 +160,7 @@ export const Contact = ({ contact }: { contact: ContactProps }) => {
             onBlur={handleBlur}
             errorMessage={error}
           />
-          <div style={{ display: "none" }}>
+          <div style={{display: "none"}}>
             <input
               type="checkbox"
               readOnly
@@ -170,10 +171,10 @@ export const Contact = ({ contact }: { contact: ContactProps }) => {
             />
           </div>
           <div id="mce-responses" className="clearfalse">
-            <div className="response" id="mce-error-response" style={{ display: "none" }}></div>
-            <div className="response" id="mce-success-response" style={{ display: "none" }}></div>
+            <div className="response" id="mce-error-response" style={{display: "none"}}></div>
+            <div className="response" id="mce-success-response" style={{display: "none"}}></div>
           </div>
-          <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
+          <div aria-hidden="true" style={{position: "absolute", left: "-5000px"}}>
             <input
               type="text"
               readOnly

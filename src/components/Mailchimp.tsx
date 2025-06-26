@@ -138,6 +138,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
         name="mc-embedded-subscribe-form"
       >
         <Flex id="mc_embed_signup_scroll" fillWidth maxWidth={24} gap="8">
+          <input id={"form-context-2"} name={"form-context-2"} type="hidden" value={"Portfolio"} autoComplete="off"/>
           <Input
             formNoValidate
             labelAsPlaceholder

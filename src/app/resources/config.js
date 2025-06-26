@@ -69,7 +69,8 @@ const display = {
 };
 
 const mailchimp = {
-  action: "https://usebasin.com/f/b75148f15cf1",
+  // action: "https://usebasin.com/f/b75148f15cf1",
+  action: "https://usebasin.com/f/876b4e72c7f4",
   effects: {
     mask: {
       cursor: false,
@@ -108,7 +109,8 @@ const mailchimp = {
 };
 
 const contact = {
-  action: "https://usebasin.com/f/b75148f15cf1",
+  // action: "https://usebasin.com/f/b75148f15cf1",
+  action: "https://usebasin.com/f/876b4e72c7f4",
   effects: {
     mask: {
       cursor: false,
