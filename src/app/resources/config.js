@@ -1,5 +1,5 @@
 const baseURL = "gabriel.lts.app.br";
-const bannerURL = "banner.svg";
+const bannerURL = "banner.png";
 
 const routes = {
   "/": true,
