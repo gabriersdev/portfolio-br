@@ -3,14 +3,14 @@ import "@/once-ui/tokens/index.scss";
 
 import classNames from "classnames";
 
-import { Footer, Header, RouteGuard } from "@/components";
-import { baseURL, effects, style } from "@/app/resources";
+import {Footer, Header, RouteGuard} from "@/components";
+import {baseURL, effects, style} from "@/app/resources";
 
-import { Inter } from "next/font/google";
-import { JetBrains_Mono } from "next/font/google";
+import {Inter} from "next/font/google";
+import {JetBrains_Mono} from "next/font/google";
 
-import { person, home } from "@/app/resources/content";
-import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
+import {person, home} from "@/app/resources/content";
+import {Background, Column, Flex, ToastProvider} from "@/once-ui/components";
 
 export async function generateMetadata() {
   return {
@@ -68,7 +68,7 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-export default async function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({children}: RootLayoutProps) {
   return (
     <Flex
       as="html"
@@ -91,7 +91,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       )}
     >
       <ToastProvider>
-        <Column style={{ minHeight: "100vh" }} as="body" fillWidth margin="0" padding="0">
+        <Column style={{minHeight: "100vh"}} as="body" fillWidth margin="0" padding="0">
           <Background
             mask={{
               cursor: effects.mask.cursor,
@@ -140,7 +140,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             }}
           />
           <Flex fillWidth minHeight="16"></Flex>
-          <Header />
+          <Header/>
           <Flex
             position="relative"
             zIndex={0}
@@ -154,7 +154,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
               <RouteGuard>{children}</RouteGuard>
             </Flex>
           </Flex>
-          <Footer />
+          <Footer/>
         </Column>
       </ToastProvider>
     </Flex>
