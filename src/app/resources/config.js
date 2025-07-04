@@ -148,4 +148,8 @@ const contact = {
   },
 };
 
-export {routes, protectedRoutes, effects, style, display, mailchimp, contact, baseURL, bannerURL};
+const api = {
+  host: "",
+}
+
+export {routes, protectedRoutes, effects, style, display, mailchimp, contact, baseURL, bannerURL, api};
