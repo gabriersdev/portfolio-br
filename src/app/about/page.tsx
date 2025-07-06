@@ -336,6 +336,5 @@ export default function About() {
         </AnimatedComponents>
       </Flex>
     </Column>
-  )
-    ;
+  );
 }

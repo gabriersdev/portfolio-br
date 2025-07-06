@@ -148,4 +148,9 @@ const contact = {
   },
 };
 
-export {routes, protectedRoutes, effects, style, display, mailchimp, contact, baseURL, bannerURL};
+const api = {
+  host: "https://gabriers.up.railway.app",
+  devHost: "http://localhost:8001"
+}
+
+export {routes, protectedRoutes, effects, style, display, mailchimp, contact, baseURL, bannerURL, api};
