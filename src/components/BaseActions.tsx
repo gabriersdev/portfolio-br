@@ -5,9 +5,11 @@ import {api} from "@/app/resources/config"
 
 export default function BaseActions() {
   const [publicIp, setPublicIp] = useState(0);
+  const MODE = process.env.NODE_ENV;
 
   useEffect(() => {
     if (window.location.hostname !== "localhost") {
+    // if (true) {
       fetch("https://api64.ipify.org?format=json")
         .then(response => response.json())
         .then(data => {
@@ -21,14 +23,15 @@ export default function BaseActions() {
   }, [])
 
   if (publicIp && window.location.hostname !== "localhost") {
+  // if (publicIp) {
     try {
-      axios.post(`${api.host}/api/logs/`, {
+      axios.post(`${MODE === "development" ? `${api.devHost}` : `${api.host}`}/api/portfolio/logs/`, {
         eventType: 'Access page',
         eventDetails: `Access URL: ${window.location.origin}${window.location.pathname}${window.location.search} ${new Date().getTime()}`,
         os: navigator.userAgent.includes('Windows') ? 'Windows' : navigator.userAgent.includes('MacOS') ? 'MacOS' : navigator.userAgent.slice(0, 254),
         browser: navigator.userAgent.slice(0, 254),
         ipAddress: publicIp,
-        user_agent: navigator.userAgent.slice(0, 254),
+        userAgent: navigator.userAgent.slice(0, 254),
         page: window.location.pathname,
         referrer: document?.referrer || "",
       }).then(() => {
