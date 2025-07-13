@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Column, Flex, Text } from "@/once-ui/components";
+import {Column, Flex, Text} from "@/once-ui/components";
 import styles from "./about.module.scss";
 
 interface TableOfContentsProps {
@@ -18,7 +18,7 @@ interface TableOfContentsProps {
   };
 }
 
-const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) => {
+const TableOfContents: React.FC<TableOfContentsProps> = ({structure, about}) => {
   const scrollTo = (id: string, offset: number) => {
     const element = document.getElementById(id);
     if (element) {
@@ -67,7 +67,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
                   <Flex
                     hide="l"
                     key={itemIndex}
-                    style={{ cursor: "pointer" }}
+                    style={{cursor: "pointer"}}
                     className={styles.hover}
                     gap="12"
                     paddingLeft="24"

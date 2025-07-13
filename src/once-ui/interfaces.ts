@@ -105,7 +105,8 @@ export interface StyleProps extends HTMLAttributes<HTMLDivElement> {
     | "surface"
     | "overlay"
     | "page"
-    | "transparent";
+    | "transparent"
+    | "neutral-strong";
   solid?: `${ColorScheme}-${ColorWeight}`;
   borderTop?:
     | `${ColorScheme}-${ColorWeight}`
