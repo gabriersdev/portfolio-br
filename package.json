@@ -10,18 +10,19 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
-    "@floating-ui/react-dom": "^2.1.4",
+    "@floating-ui/react-dom": "^2.1.1",
     "@mdx-js/loader": "^3.1.0",
     "@next/mdx": "^15.3.3",
     "@react-spring/web": "^10.0.1",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/vite": "^4.1.7",
+    "@vercel/speed-insights": "^1.2.0",
     "@vitejs/plugin-react": "^4.5.0",
     "axios": "^1.10.0",
     "classnames": "^2.5.1",
     "cookie": "^1.0.1",
     "gray-matter": "^4.0.3",
-    "next": "^15.4.4",
+    "next": "^14.2.16",
     "next-mdx-remote": "^5.0.0",
     "postcss-preset-env": "^10.2.3",
     "prismjs": "^1.29.0",
@@ -34,12 +35,12 @@
     "sass": "^1.77.6",
     "sharp": "^0.33.4",
     "tailwindcss-animate": "^1.0.7",
-    "vite": "^7.0.6"
+    "vite": "^6.3.5"
   },
   "devDependencies": {
     "@csstools/postcss-global-data": "^3.0.0",
     "@types/cookie": "^0.6.0",
-    "@types/node": "^24",
+    "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.21",

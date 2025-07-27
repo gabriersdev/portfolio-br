@@ -8,12 +8,12 @@ const person = {
   role: "Full Stack Developer",
   avatar: "/img/avatar.png",
   location: "Brazil",
-  languages: ["Portuguese"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["Portuguese"], // optional: Leave the array empty if you don&apos;t want to display languages
 };
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
   description: (<>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>),
 };
 
@@ -45,7 +45,7 @@ const social = [
 
 const home = {
   label: "Home",
-  title: `${person.name}'s Portfolio`,
+  title: `${person.name}&apos;s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headlineMediumScreen: <>Full Stack Developer</>,
   headlineSmallScreen: <>My name is Gabriel and I am a Full Stack Developer</>,
@@ -109,7 +109,7 @@ const about = {
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
+          // optional: leave the array empty if you don&apos;t want to display images
           // {
           //   src: "/img/projects/project-01/cover-01.jpg",
           //   alt: "Once UI Project",
@@ -123,8 +123,8 @@ const about = {
         timeframe: "2023 - 2024",
         role: "Computer Technician",
         achievements: [
-          <>I provided maintenance on the company's equipment, in addition to being responsible for updating, configuring and installing the company's computers.</>,
-          <>I was responsible for implementing a file sharing system, which transformed the company's housing finance flow and increased sales completion by 40%.</>,
+          <>I provided maintenance on the company&apos;s equipment, in addition to being responsible for updating, configuring and installing the company&apos;s computers.</>,
+          <>I was responsible for implementing a file sharing system, which transformed the company&apos;s housing finance flow and increased sales completion by 40%.</>,
         ],
         images: [],
       },
@@ -153,7 +153,7 @@ const about = {
       {
         title: "Figma",
         description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
+        // optional: leave the array empty if you don&apos;t want to display images
         images: [
           {
             src: "/img/projects/template/img-1.png",
@@ -274,12 +274,12 @@ const review = {
       project: "New visual identity for a gaming website",
     },
     {
-      content: "\"He understood the project's needs and delivered what was requested. I recommend him and would work with him again.\"",
+      content: "\"He understood the project&apos;s needs and delivered what was requested. I recommend him and would work with him again.\"",
       author: "Isabela H.",
       project: "Adapting Spreadsheets for WordPress",
     },   
     {
-      content: "\"I want to express my gratitude to Gabriel for the incredible job he did on my shop's website. He met all of my expectations, was extremely fast, and the site turned out exactly the way I wanted - everything was perfect! I highly recommend his work to anyone looking for quality and efficiency. Thank you, Gabriel!\"",
+      content: "\"I want to express my gratitude to Gabriel for the incredible job he did on my shop&apos;s website. He met all of my expectations, was extremely fast, and the site turned out exactly the way I wanted - everything was perfect! I highly recommend his work to anyone looking for quality and efficiency. Thank you, Gabriel!\"",
       author: "Caroline C.",
       project: "Fix shopping cart issue",
     },

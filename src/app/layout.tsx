@@ -1,6 +1,7 @@
 import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
 
+import {SpeedInsights} from "@vercel/speed-insights/next"
 import classNames from "classnames";
 
 import {Footer, Header, RouteGuard} from "@/components";
@@ -91,6 +92,7 @@ export default async function RootLayout({children}: RootLayoutProps) {
         code.variable,
       )}
     >
+      <SpeedInsights/>
       <BaseActions/>
       <ToastProvider>
         <Column style={{minHeight: "100vh"}} as="body" fillWidth margin="0" padding="0">
