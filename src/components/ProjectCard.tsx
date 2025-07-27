@@ -9,6 +9,7 @@ import {
   SmartLink,
   Text,
 } from "@/once-ui/components";
+import Link from "next/link";
 
 interface ProjectCardProps {
   href: string;
@@ -49,9 +50,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       >
         {title && (
           <Flex flex={5}>
-            <Heading as="h2" wrap="balance" variant="heading-strong-xl" style={{fontWeight: 600, fontSize: "1.75rem"}} onBackground={"brand-strong"}>
-              {title}
-            </Heading>
+            <Link href={href}>
+              <Heading as="h2" wrap="balance" variant="heading-strong-xl" style={{fontWeight: 600, fontSize: "1.75rem"}} onBackground={"brand-strong"}>
+                {title}
+              </Heading>
+            </Link>
           </Flex>
         )}
         {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
