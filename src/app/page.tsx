@@ -7,6 +7,7 @@ import {Posts} from "@/components/blog/Posts";
 import SchedulingButton from "@/components/SchedulingButton";
 import {Contact} from "@/components/Contact";
 import HeroHome from "@/components/hero-home/HeroHome";
+import React from "react";
 
 export async function generateMetadata() {
   const title = home.title;
@@ -70,6 +71,22 @@ export default function Home() {
             <div style={{display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "flex-end", gap: "0.5rem", flexDirection: "row-reverse"}}>
               <SchedulingButton variant={"primary"}/>
 
+              <Button
+                id="about"
+                data-border="rounded"
+                href={"mailto:devgabrielribeiro@gmail.com"}
+                variant="primary"
+                size="l"
+              >
+                <Flex gap="4" vertical="center">
+                  <Icon
+                    style={{marginLeft: "-0.75rem", marginRight: "0.25rem", border: "none"}}
+                    paddingLeft="8" name="email" size={"s"} onBackground="info-weak"
+                  />
+                  {"Send me an email"}
+                </Flex>
+              </Button>
+              
               <Button
                 id="about"
                 data-border="rounded"
