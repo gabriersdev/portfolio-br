@@ -1,12 +1,12 @@
 import {notFound} from "next/navigation";
 import {CustomMDX} from "@/components/mdx";
 import {getPosts} from "@/app/utils/utils";
-import {AvatarGroup, Button, Column, Flex, Heading, Icon, SmartImage, Text} from "@/once-ui/components";
+import {AvatarGroup, Button, Column, Flex, Heading, SmartImage, Text} from "@/once-ui/components";
 import {baseURL} from "@/app/resources";
 import {person} from "@/app/resources/content";
 import {formatDate} from "@/app/utils/formatDate";
 import ScrollToHash from "@/components/ScrollToHash";
-import styles from "@/components/about/about.module.scss";
+// import styles from "@/components/about/about.module.scss";
 import React from "react";
 import AnimatedComponents from "@/components/animated-components/animated-componets";
 
@@ -25,12 +25,12 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
 
 export function generateMetadata({params: {slug}}: WorkParams) {
   let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slug);
-
+  
   if (!post) {
     // @ts-ignore
     return;
   }
-
+  
   let {
     title,
     publishedAt: publishedTime,
@@ -40,7 +40,7 @@ export function generateMetadata({params: {slug}}: WorkParams) {
     team,
   } = post.metadata;
   let ogImage = image ? `https://${baseURL}${image}` : `https://${baseURL}/og?title=${title}`;
-
+  
   // @ts-ignore
   // @ts-ignore
   return {
@@ -71,16 +71,16 @@ export function generateMetadata({params: {slug}}: WorkParams) {
 
 export default function Project({params}: WorkParams) {
   let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === params.slug);
-
+  
   if (!post) {
     notFound();
   }
-
+  
   const avatars =
     post.metadata.team?.map((person) => ({
       src: person.avatar,
     })) || [];
-
+  
   return (
     <Column as="section" maxWidth="m" horizontal="center" gap="l">
       <script
@@ -115,7 +115,7 @@ export default function Project({params}: WorkParams) {
           </Column>
         </Flex>
       </AnimatedComponents>
-
+      
       {post.metadata.images.length > 0 && (
         <SmartImage
           priority
@@ -125,7 +125,7 @@ export default function Project({params}: WorkParams) {
           src={post.metadata.images[0]}
         />
       )}
-
+      
       <AnimatedComponents>
         <Column style={{margin: "auto"}} as="article" maxWidth="xs">
           <Flex gap="12" marginBottom="24" vertical="center">
@@ -141,7 +141,7 @@ export default function Project({params}: WorkParams) {
                 <Flex style={{fontFamily: "'Inter', sans-serif"}}>View project</Flex>
               </Button>
             )}
-
+            
             {post.metadata.repo && (
               <Button href={post.metadata.repo} variant={"secondary"} style={{borderRadius: 500}} size={"l"}>
                 <Flex style={{fontFamily: "'Inter', sans-serif"}}>View repository</Flex>
