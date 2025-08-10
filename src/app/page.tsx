@@ -128,7 +128,7 @@ export default function Home() {
         </Flex>
       )}
       <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[3, 3]}/>
+        <Projects range={[8, 8]}/>
       </RevealFx>
       <Flex background={"brand-weak"} fillWidth={true} border={"brand-weak"} radius={"s"} padding={"s"} gap="8" center={true}>
         <Icon name={"grid"} size={"s"} onBackground={"brand-weak"}/>
