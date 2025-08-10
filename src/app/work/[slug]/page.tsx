@@ -3,7 +3,7 @@ import {CustomMDX} from "@/components/mdx";
 import {getPosts} from "@/app/utils/utils";
 import {AvatarGroup, Button, Column, Flex, Heading, SmartImage, Text} from "@/once-ui/components";
 import {baseURL} from "@/app/resources";
-import {person} from "@/app/resources/content";
+import {person} from "@/app/resources/lang/default/content";
 import {formatDate} from "@/app/utils/formatDate";
 import ScrollToHash from "@/components/ScrollToHash";
 // import styles from "@/components/about/about.module.scss";

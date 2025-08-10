@@ -2,7 +2,7 @@ import {Heading, Flex, Text, Button, Avatar, RevealFx, Column, Icon, SmartLink} 
 import {Projects} from "@/components/work/Projects";
 
 import {baseURL, routes, bannerURL} from "@/app/resources";
-import {home, about, person, contact} from "@/app/resources/content";
+import {home, about, person, contact} from "@/app/resources/lang/default/content";
 import {Posts} from "@/components/blog/Posts";
 import SchedulingButton from "@/components/SchedulingButton";
 import {Contact} from "@/components/Contact";
@@ -113,7 +113,7 @@ export default function Home() {
         <Projects range={[2, 2]}/>
       </RevealFx>
       <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[5, 5]}/>
+        <Projects range={[4, 4]}/>
       </RevealFx>
       {routes["/blog"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
@@ -123,10 +123,13 @@ export default function Home() {
             </Heading>
           </Flex>
           <Flex flex={3} wrap={true}>
-            <Posts range={[1, 1]} columns="1"/>
+            <Posts range={[1, 2]} columns="1"/>
           </Flex>
         </Flex>
       )}
+      <RevealFx translateY="16" delay={0.6}>
+        <Projects range={[5, 5]}/>
+      </RevealFx>
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[8, 8]}/>
       </RevealFx>
