@@ -2,7 +2,7 @@ import {Column, Flex, Heading} from "@/once-ui/components";
 import {Mailchimp} from "@/components";
 import {Posts} from "@/components/blog/Posts";
 import {baseURL, bannerURL, home} from "@/app/resources";
-import {blog, person, newsletter} from "@/app/resources/content";
+import {blog, person, newsletter} from "@/app/resources/lang/default/content";
 import AnimatedComponents from "@/components/animated-components/animated-componets";
 
 export async function generateMetadata() {

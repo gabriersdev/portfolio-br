@@ -1,3 +1,5 @@
+// TODO - traduzir
+
 const person = {
   generalTitle: "Gabriel Ribeiro",
   firstName: "Gabriel",
@@ -39,7 +41,7 @@ const social = [
   {
     name: "",
     icon: "email",
-    link: "mailto:devgabrielribeiro@gmail.com",
+    link: "mailto:gabriel@lts.app.br",
   },
 ];
 
@@ -135,7 +137,7 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: (<div><span>Systems Development Analyst</span><br/>{/*<Text onBackground={"brand-weak"} variant={"body-default-m"}>Uninter</Text>*/}</div>),
+        name: (<div><span>Systems Development Analyst (ends in Jan 2026)</span><br/>{/*<Text onBackground={"brand-weak"} variant={"body-default-m"}>Uninter</Text>*/}</div>),
         school: <>Uninter</>,
         description: <>Studied software engineering.</>,
       },

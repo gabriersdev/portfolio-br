@@ -19,4 +19,4 @@ export {
   blog,
   work,
   gallery,
-} from "@/app/resources/content.js";
+} from "@/app/resources/lang/default/content.js";

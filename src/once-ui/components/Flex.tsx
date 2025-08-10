@@ -1,7 +1,7 @@
 "use client";
 
 import classNames from "classnames";
-import { CSSProperties, forwardRef } from "react";
+import {CSSProperties, forwardRef} from "react";
 
 import {
   CommonProps,
@@ -13,7 +13,7 @@ import {
   StyleProps,
 } from "../interfaces";
 
-import { ColorScheme, ColorWeight, SpacingToken, TextVariant } from "../types";
+import {ColorScheme, ColorWeight, SpacingToken, TextVariant} from "../types";
 
 interface ComponentProps
   extends FlexProps,
@@ -22,7 +22,8 @@ interface ComponentProps
     StyleProps,
     CommonProps,
     DisplayProps,
-    ConditionalProps {}
+    ConditionalProps {
+}
 
 const Flex = forwardRef<HTMLDivElement, ComponentProps>(
   (
@@ -118,23 +119,23 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
         "You cannot use both 'onBackground' and 'onSolid' props simultaneously. Only one will be applied.",
       );
     }
-
+    
     if (background && solid) {
       console.warn(
         "You cannot use both 'background' and 'solid' props simultaneously. Only one will be applied.",
       );
     }
-
+    
     const getVariantClasses = (variant: TextVariant) => {
       const [fontType, weight, size] = variant.split("-");
       return [`font-${fontType}`, `font-${weight}`, `font-${size}`];
     };
-
+    
     const sizeClass = textSize ? `font-${textSize}` : "";
     const weightClass = textWeight ? `font-${textWeight}` : "";
-
+    
     const variantClasses = textVariant ? getVariantClasses(textVariant) : [sizeClass, weightClass];
-
+    
     let colorClass = "";
     if (onBackground) {
       const [scheme, weight] = onBackground.split("-") as [ColorScheme, ColorWeight];
@@ -143,28 +144,28 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
       const [scheme, weight] = onSolid.split("-") as [ColorScheme, ColorWeight];
       colorClass = `${scheme}-on-solid-${weight}`;
     }
-
+    
     const generateDynamicClass = (type: string, value: string | undefined) => {
       if (!value) return undefined;
-
+      
       if (value === "transparent") {
         return `transparent-border`;
       }
-
+      
       if (["surface", "page", "overlay"].includes(value)) {
         return `${value}-${type}`;
       }
-
+      
       const parts = value.split("-");
       if (parts.includes("alpha")) {
         const [scheme, , weight] = parts;
         return `${scheme}-${type}-alpha-${weight}`;
       }
-
+      
       const [scheme, weight] = value.split("-") as [ColorScheme, ColorWeight];
       return `${scheme}-${type}-${weight}`;
     };
-
+    
     const classes = classNames(
       inline ? "display-inline-flex" : "display-flex",
       padding && `p-${padding}`,
@@ -197,8 +198,8 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
         border || borderTop || borderRight || borderBottom || borderLeft,
       ),
       (border || borderTop || borderRight || borderBottom || borderLeft) &&
-        !borderStyle &&
-        "border-solid",
+      !borderStyle &&
+      "border-solid",
       border && !borderWidth && "border-1",
       (borderTop || borderRight || borderBottom || borderLeft) && "border-reset",
       borderTop && "border-top-1",
@@ -230,13 +231,13 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
       overflowY && `overflow-y-${overflowY}`,
       flex && `flex-${flex}`,
       horizontal &&
-        (direction === "row" || direction === "row-reverse" || direction === undefined
-          ? `justify-${horizontal}`
-          : `align-${horizontal}`),
+      (direction === "row" || direction === "row-reverse" || direction === undefined
+        ? `justify-${horizontal}`
+        : `align-${horizontal}`),
       vertical &&
-        (direction === "row" || direction === "row-reverse" || direction === undefined
-          ? `align-${vertical}`
-          : `justify-${vertical}`),
+      (direction === "row" || direction === "row-reverse" || direction === undefined
+        ? `align-${vertical}`
+        : `justify-${vertical}`),
       center && "center",
       fit && "fit",
       fitWidth && "fit-width",
@@ -255,7 +256,7 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
       className,
       ...variantClasses,
     );
-
+    
     const parseDimension = (
       value: number | SpacingToken | undefined,
       type: "width" | "height",
@@ -291,7 +292,7 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
       }
       return undefined;
     };
-
+    
     const combinedStyle: CSSProperties = {
       maxWidth: parseDimension(maxWidth, "width"),
       minWidth: parseDimension(minWidth, "width"),
@@ -303,7 +304,7 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
       textAlign: align,
       ...style,
     };
-
+    
     return (
       <Component ref={ref} className={classes} style={combinedStyle} {...rest}>
         {children}
@@ -313,4 +314,4 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
 );
 
 Flex.displayName = "Flex";
-export { Flex };
+export {Flex};

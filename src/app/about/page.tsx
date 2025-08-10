@@ -13,7 +13,7 @@ import {
 import {baseURL, bannerURL} from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
-import {person, about, social, review} from "@/app/resources/content";
+import {person, about, social, review} from "@/app/resources/lang/default/content";
 import SchedulingButton from "@/components/SchedulingButton";
 import AnimatedComponents from "@/components/animated-components/animated-componets";
 import {HeroAbout} from "@/components/HeroAbout";
