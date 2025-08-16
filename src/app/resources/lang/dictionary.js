@@ -9,9 +9,14 @@ const dictionaries = {
 
 // Esta é a única função que você precisará usar.
 export const getDictionary = async (locale) => {
-  console.log("locale", locale);
+  if (!Object.keys(dictionaries).includes(locale)) {
+    const dictKeyMatch = Object.keys(dictionaries).find(k => locale.startsWith(k));
+    if (dictKeyMatch) locale = dictKeyMatch
+  }
+  
+  let existingDictionary = dictionaries[locale];
   
   // Se o locale solicitado não existir no nosso mapa, usamos 'default'.
-  const chosenLocale = dictionaries[locale] ? locale : 'default';
+  const chosenLocale = existingDictionary ? locale : 'default';
   return dictionaries[chosenLocale]();
 };

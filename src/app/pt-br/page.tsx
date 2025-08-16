@@ -1,4 +1,4 @@
-import {Heading, Flex, Text, Button, Avatar, RevealFx, Column, Icon, SmartLink} from "@/once-ui/components";
+import {Heading, Flex, Button, Avatar, RevealFx, Column, Icon, SmartLink} from "@/once-ui/components";
 import {Projects} from "@/components/work/Projects";
 
 import {baseURL, routes, bannerURL} from "@/app/resources";

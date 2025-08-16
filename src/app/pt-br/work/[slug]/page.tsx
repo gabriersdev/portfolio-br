@@ -16,14 +16,14 @@ interface WorkParams {
 }
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const posts = getPosts(["src", "app", "work", "projects"]);
+  const posts = getPosts(["src", "app", "pt-br", "work", "projects"]);
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
 export function generateMetadata({params: {slug}}: WorkParams) {
-  let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slug);
+  let post = getPosts(["src", "app", "pt-br", "work", "projects"]).find((post) => post.slug === slug);
   
   if (!post) {
     // @ts-ignore
@@ -40,8 +40,6 @@ export function generateMetadata({params: {slug}}: WorkParams) {
   } = post.metadata;
   let ogImage = image ? `https://${baseURL}${image}` : `https://${baseURL}/og?title=${title}`;
   
-  // @ts-ignore
-  // @ts-ignore
   return {
     title,
     description,
@@ -69,7 +67,7 @@ export function generateMetadata({params: {slug}}: WorkParams) {
 }
 
 export default function Project({params}: WorkParams) {
-  let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === params.slug);
+  let post = getPosts(["src", "app", "pt-br", "work", "projects"]).find((post) => post.slug === params.slug);
   
   if (!post) {
     notFound();

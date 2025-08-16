@@ -277,7 +277,7 @@ const review = {
       content: "\"He understood the project&apos;s needs and delivered what was requested. I recommend him and would work with him again.\"",
       author: "Isabela H.",
       project: "Adapting Spreadsheets for WordPress",
-    },   
+    },
     {
       content: "\"I want to express my gratitude to Gabriel for the incredible job he did on my shop&apos;s website. He met all of my expectations, was extremely fast, and the site turned out exactly the way I wanted - everything was perfect! I highly recommend his work to anyone looking for quality and efficiency. Thank you, Gabriel!\"",
       author: "Caroline C.",
@@ -287,7 +287,7 @@ const review = {
       content: "\"He knows his stuff and is creative with solutions. I will definitely work with him again!\"",
       author: "Diogo G.",
       project: "Create a plugin for batch search in Tiny ERP",
-    },    
+    },
     {
       content: "\"An excellent professional. He completed my request on schedule.\"",
       author: "Henrique S.",
@@ -303,6 +303,20 @@ const CTG = {
     label: "Work page",
   },
 }
+
+// TODO - implementar
+const links = [
+  {
+    type: "email",
+    name: "Send me an email",
+    link: "mailto:gabriel@lts.app.br",
+  },
+  {
+    type: "schedule-call",
+    name: "Schedule a call",
+    link: "#",
+  },
+]
 
 const content = {person, social, newsletter, contact, home, about, blog, work, gallery, review, CTG}
 export {person, social, newsletter, contact, home, about, blog, work, gallery, review, CTG, content};

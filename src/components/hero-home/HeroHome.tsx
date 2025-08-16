@@ -1,6 +1,6 @@
 "use client";
 
-import React, {ReactElement, useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Flex, Heading, RevealFx, Text} from "@/once-ui/components";
 import {home} from "@/app/resources";
 import "./HeroHome.css";
