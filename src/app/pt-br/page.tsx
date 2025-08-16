@@ -2,7 +2,7 @@ import {Heading, Flex, Text, Button, Avatar, RevealFx, Column, Icon, SmartLink} 
 import {Projects} from "@/components/work/Projects";
 
 import {baseURL, routes, bannerURL} from "@/app/resources";
-import {home, about, person, contact} from "@/app/resources/lang/default/content";
+import {home, about, person, contact} from "@/app/resources/lang/pt-br/content";
 import {Posts} from "@/components/blog/Posts";
 import SchedulingButton from "@/components/SchedulingButton";
 import {Contact} from "@/components/Contact";
@@ -15,7 +15,7 @@ export async function generateMetadata() {
   const description = home.description;
   // const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
   const ogImage = `https://${baseURL}/${bannerURL}`
-
+  
   return {
     title,
     description,
@@ -71,7 +71,7 @@ export default function Home() {
           <RevealFx translateY={"2"} fillWidth horizontal={"start"}>
             <div style={{display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "flex-end", gap: "0.5rem", flexDirection: "row-reverse"}}>
               <SchedulingButton variant={"primary"}/>
-
+              
               <Button
                 id="about"
                 data-border="rounded"

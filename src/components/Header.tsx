@@ -7,10 +7,12 @@ import styles from "@/components/Header.module.scss";
 
 import {routes} from "@/app/resources";
 import {home, about, blog, work, gallery} from "@/app/resources/lang/default/content";
+import {langs} from "@/app/resources/config";
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
-
+  const basePath = langs.includes(pathname) ? pathname : (pathname.match(/\//g)?.length === 2 ? "/" + pathname.split("/")[1] : "/" + pathname.split("/")[1]);
+  
   return (
     <>
       <Fade hide="s" fillWidth position="fixed" height="80" zIndex={9}/>
@@ -37,31 +39,31 @@ export const Header = () => {
             style={{borderRadius: "100px", padding: "0.5rem 0.5rem"}}
           >
             <Flex gap="4" vertical="center" textVariant="body-default-s">
-              {routes["/"] && (
+              {routes[`/`] && (
                 <>
                   <ToggleButton
                     className={"s-flex-hide"}
                     prefixIcon="home"
                     label={home.label}
-                    href="/"
+                    href={`/about`}
                     size={"l"}
                     selected={pathname === "/"}
                     style={{borderRadius: "25px"}}/>
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="home"
-                    href="/"
+                    href={`/about`}
                     selected={pathname === "/"}
                     style={{borderRadius: "25px"}}
                   />
                 </>
               )}
-              {routes["/about"] && (
+              {routes[`/about`] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="person"
-                    href="/about"
+                    href={`/about`}
                     label={about.label}
                     size={"l"}
                     selected={pathname === "/about"}
@@ -70,68 +72,68 @@ export const Header = () => {
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="person"
-                    href="/about"
+                    href={`/about`}
                     selected={pathname === "/about"}
                     style={{borderRadius: "25px"}}
                   />
                 </>
               )}
-              {routes["/work"] && (
+              {routes[`/work`] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="grid"
-                    href="/work"
+                    href={`/work`}
                     label={work.label}
                     size={"l"}
-                    selected={pathname.startsWith("/work")}
+                    selected={pathname.includes("/work")}
                     style={{borderRadius: "25px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="grid"
-                    href="/work"
-                    selected={pathname.startsWith("/work")}
+                    href={`/work`}
+                    selected={pathname.includes("/work")}
                     style={{borderRadius: "25px"}}
                   />
                 </>
               )}
-              {routes["/blog"] && (
+              {routes[`/blog`] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="book"
-                    href="/blog"
+                    href={`/blog`}
                     label={blog.label}
                     size={"l"}
-                    selected={pathname.startsWith("/blog")}
+                    selected={pathname.includes("/blog")}
                     style={{borderRadius: "25px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="book"
-                    href="/blog"
-                    selected={pathname.startsWith("/blog")}
+                    href={`/blog`}
+                    selected={pathname.includes("/blog")}
                     style={{borderRadius: "25px"}}
                   />
                 </>
               )}
-              {routes["/gallery"] && (
+              {routes[`/gallery`] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="gallery"
-                    href="/gallery"
+                    href={`/gallery`}
                     label={gallery.label}
                     size={"l"}
-                    selected={pathname.startsWith("/gallery")}
+                    selected={pathname.includes("/gallery")}
                     style={{borderRadius: "25px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="gallery"
-                    href="/gallery"
-                    selected={pathname.startsWith("/gallery")}
+                    href={`/gallery`}
+                    selected={pathname.includes("/gallery")}
                     style={{borderRadius: "25px"}}
                   />
                 </>

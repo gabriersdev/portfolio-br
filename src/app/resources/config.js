@@ -7,6 +7,12 @@ const routes = {
   "/work": true,
   "/blog": true,
   "/gallery": false,
+  
+  "/pt-br": true,
+  "/pt-br/about": true,
+  "/pt-br/work": true,
+  "/pt-br/blog": true,
+  "/pt-br/gallery": false,
 };
 
 // Enable password protection on selected routes
@@ -153,4 +159,8 @@ const api = {
   devHost: "http://localhost:8001"
 }
 
-export {routes, protectedRoutes, effects, style, display, mailchimp, contact, baseURL, bannerURL, api};
+const langs = [
+  "/pt-br", "/"
+]
+
+export {routes, protectedRoutes, effects, style, display, mailchimp, contact, baseURL, bannerURL, api, langs};

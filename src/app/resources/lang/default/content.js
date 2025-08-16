@@ -296,4 +296,13 @@ const review = {
   ]
 }
 
-export {person, social, newsletter, contact, home, about, blog, work, gallery, review};
+const CTG = {
+  content: "See outher works in",
+  link: {
+    href: "/work",
+    label: "Work page",
+  },
+}
+
+const content = {person, social, newsletter, contact, home, about, blog, work, gallery, review, CTG}
+export {person, social, newsletter, contact, home, about, blog, work, gallery, review, CTG, content};
