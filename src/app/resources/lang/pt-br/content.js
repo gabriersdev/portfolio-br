@@ -296,7 +296,7 @@ const review = {
 const CTG = {
   content: "Veja outros projetos meus",
   link: {
-    href: "/pt-br/work",
+    href: "/work",
     label: "clicando aqui",
   },
 }

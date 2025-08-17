@@ -1,21 +1,21 @@
 "use client";
 
+import {useCallback, useEffect, useState} from "react";
 import {usePathname} from "next/navigation";
-
-import {Button, Fade, Flex, Text, ToggleButton} from "@/once-ui/components";
-import styles from "@/components/Header.module.scss";
-
-import {routes} from "@/app/resources";
-import {langs} from "@/app/resources/config";
-import {useEffect, useState} from "react";
-import {getDictionary} from "@/app/resources/lang/dictionary";
 import Image from "next/image";
 import Link from "next/link";
+
+import {Fade, Flex, Text, ToggleButton} from "@/once-ui/components";
+import styles from "@/components/Header.module.scss";
+import {routes} from "@/app/resources";
+import {langs} from "@/app/resources/config";
+import {getDictionary} from "@/app/resources/lang/dictionary";
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
   // Se pathname comecar com um termo que esteja em langs e seu conteúdo não for apenas /, assume que o base path é o lang correspondente
-  const basePath = pathname !== "/" && langs.includes(pathname) ? pathname : pathname.split("/").length > 1 ? `/${pathname.split("/")[1]}` : "/";
+  let basePath = pathname !== "/" && langs.includes(pathname) ? pathname : pathname.split("/").length > 1 ? `/${pathname.split("/")[1]}` : "";
+  basePath = pathname !== "/" ? basePath : "";
   
   const [home, setHome] = useState<any | null>(null);
   const [about, setAbout] = useState<any | null>(null);
@@ -23,7 +23,7 @@ export const Header = () => {
   const [work, setWork] = useState<any | null>(null);
   const [gallery, setGallery] = useState<any | null>(null);
   
-  useEffect(() => {
+  const updateData = useCallback(() => {
     getDictionary(pathname).then(data => {
       if (data.home && data.about, data.blog, data.work, data.gallery) {
         setHome(data.home);
@@ -33,7 +33,15 @@ export const Header = () => {
         setGallery(data.gallery);
       }
     });
+  }, [pathname]);
+  
+  useEffect(() => {
+    updateData();
   }, []);
+  
+  useEffect(() => {
+    updateData();
+  }, [pathname]);
   
   if (!(home || about || blog || work || gallery)) return null;
   
@@ -172,8 +180,11 @@ export const Header = () => {
                     <Flex vertical={"center"} gap={"xs"} paddingRight={"1"} style={{lineHeight: 0}}>
                       <Text style={{fontWeight: "light", fontSize: "13px"}} onBackground={"info-medium"} className={"s-flex-hide"}>Idiomas</Text>
                       <Flex vertical={"center"} gap={"xs"}>
-                        <Link href={"/pt-br"}><Image src={"/img/languages/pt-br.svg"} alt={""} width={20} height={16} style={{objectFit: "cover", borderRadius: "1.5px"}}/></Link>
-                        <Link href={"/"}><Image src={"/img/languages/default.svg"} alt={""} width={20} height={16} style={{objectFit: "cover", borderRadius: "1.5px"}}/></Link>
+                        {
+                          langs.map((lang, index) => (
+                            <Link key={index} href={"/" + lang.replace("/", "")}><Image src={"/img/languages/" + (lang === "/" ? "default" : lang) + ".svg"} alt={""} width={20} height={16} style={{objectFit: "cover", borderRadius: "1.5px"}}/></Link>
+                          ))
+                        }
                       </Flex>
                     </Flex>
                   </Flex>

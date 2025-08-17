@@ -8,17 +8,17 @@ const routes = {
   "/blog": true,
   "/gallery": false,
   
-  "/pt-br": true,
-  "/pt-br/about": true,
-  "/pt-br/work": true,
-  "/pt-br/blog": true,
-  "/pt-br/gallery": false,
+  // "/pt-br": true,
+  // "/pt-br/about": true,
+  // "/pt-br/work": true,
+  // "/pt-br/blog": true,
+  // "/pt-br/gallery": false,
 };
 
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env
 const protectedRoutes = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+  "/work/post-path": true,
 };
 
 const style = {
@@ -160,7 +160,8 @@ const api = {
 }
 
 const langs = [
-  "/pt-br", "/"
+  // "/pt-br",
+  "/"
 ]
 
 export {routes, protectedRoutes, effects, style, display, mailchimp, contact, baseURL, bannerURL, api, langs};
