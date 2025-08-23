@@ -1,49 +1,15 @@
 "use client";
 
-import {useCallback, useEffect, useState} from "react";
 import {usePathname} from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
 
-import {Fade, Flex, Text, ToggleButton} from "@/once-ui/components";
+import {Fade, Flex, ToggleButton} from "@/once-ui/components";
 import styles from "@/components/Header.module.scss";
+
 import {routes} from "@/app/resources";
-import {langs} from "@/app/resources/config";
-import {getDictionary} from "@/app/resources/lang/dictionary";
+import {home, about, blog, work, gallery} from "@/app/resources/lang/default/content";
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
-  // Se pathname comecar com um termo que esteja em langs e seu conteúdo não for apenas /, assume que o base path é o lang correspondente
-  let basePath = pathname !== "/" && langs.includes(pathname) ? pathname : pathname.split("/").length > 1 ? `/${pathname.split("/")[1]}` : "";
-  basePath = pathname !== "/" ? basePath : "";
-  
-  const [home, setHome] = useState<any | null>(null);
-  const [about, setAbout] = useState<any | null>(null);
-  const [blog, setBlog] = useState<any | null>(null);
-  const [work, setWork] = useState<any | null>(null);
-  const [gallery, setGallery] = useState<any | null>(null);
-  
-  const updateData = useCallback(() => {
-    getDictionary(pathname).then(data => {
-      if (data.home && data.about, data.blog, data.work, data.gallery) {
-        setHome(data.home);
-        setAbout(data.about);
-        setBlog(data.blog);
-        setWork(data.work);
-        setGallery(data.gallery);
-      }
-    });
-  }, [pathname]);
-  
-  useEffect(() => {
-    updateData();
-  }, []);
-  
-  useEffect(() => {
-    updateData();
-  }, [pathname]);
-  
-  if (!(home || about || blog || work || gallery)) return null;
   
   return (
     <>
@@ -58,7 +24,7 @@ export const Header = () => {
         padding="12"
         horizontal="center"
       >
-        <Flex paddingLeft="12" fillWidth vertical="center" textVariant="body-default-m">
+        <Flex paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
         </Flex>
         <Flex fillWidth horizontal="center">
           <Flex
@@ -70,124 +36,104 @@ export const Header = () => {
             horizontal="center"
             style={{borderRadius: "100px", padding: "0.5rem 0.5rem"}}
           >
-            <Flex gap="4" vertical="center" textVariant="body-default-m">
-              {routes[`${basePath ? basePath : "/"}`] && (
+            <Flex gap="4" vertical="center" textVariant="body-default-s">
+              {routes["/"] && (
                 <>
                   <ToggleButton
                     className={"s-flex-hide"}
                     prefixIcon="home"
                     label={home.label}
-                    href={`${basePath ? basePath : "/"}`}
+                    href="/"
                     size={"l"}
-                    selected={pathname === `/${basePath}`}
+                    selected={pathname === "/"}
                     style={{borderRadius: "25px"}}/>
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="home"
-                    href={`${basePath ? basePath : "/"}`}
-                    selected={pathname === `/${basePath}`}
+                    href="/"
+                    selected={pathname === "/"}
                     style={{borderRadius: "25px"}}
                   />
                 </>
               )}
-              {routes[`${basePath}/about`] && (
+              {routes["/about"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="person"
-                    href={`${basePath}/about`}
+                    href="/about"
                     label={about.label}
                     size={"l"}
-                    selected={pathname === `${basePath}/about`}
+                    selected={pathname === "/about"}
                     style={{borderRadius: "25px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="person"
-                    href={`${basePath}/about`}
-                    selected={pathname === `${basePath}/about`}
+                    href="/about"
+                    selected={pathname === "/about"}
                     style={{borderRadius: "25px"}}
                   />
                 </>
               )}
-              {routes[`${basePath}/work`] && (
+              {routes["/work"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="grid"
-                    href={`${basePath}/work`}
+                    href="/work"
                     label={work.label}
                     size={"l"}
-                    selected={pathname.includes(`${basePath}/work`)}
+                    selected={pathname.startsWith("/work")}
                     style={{borderRadius: "25px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="grid"
-                    href={`${basePath}/work`}
-                    selected={pathname.includes(`${basePath}/work`)}
+                    href="/work"
+                    selected={pathname.startsWith("/work")}
                     style={{borderRadius: "25px"}}
                   />
                 </>
               )}
-              {routes[`${basePath}/blog`] && (
+              {routes["/blog"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="book"
-                    href={`${basePath}/blog`}
+                    href="/blog"
                     label={blog.label}
                     size={"l"}
-                    selected={pathname.includes(`${basePath}/blog`)}
+                    selected={pathname.startsWith("/blog")}
                     style={{borderRadius: "25px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="book"
-                    href={`${basePath}/blog`}
-                    selected={pathname.includes(`${basePath}/blog`)}
+                    href="/blog"
+                    selected={pathname.startsWith("/blog")}
                     style={{borderRadius: "25px"}}
                   />
                 </>
               )}
-              {routes[`${basePath}/gallery`] && (
+              {routes["/gallery"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="gallery"
-                    href={`${basePath}/gallery`}
+                    href="/gallery"
                     label={gallery.label}
                     size={"l"}
-                    selected={pathname.includes(`${basePath}/gallery`)}
+                    selected={pathname.startsWith("/gallery")}
                     style={{borderRadius: "25px"}}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="gallery"
-                    href={`${basePath}/gallery`}
-                    selected={pathname.includes(`${basePath}/gallery`)}
+                    href="/gallery"
+                    selected={pathname.startsWith("/gallery")}
                     style={{borderRadius: "25px"}}
                   />
-                </>
-              )}
-              {langs && langs.length > 1 && (
-                <>
-                  <Flex
-                    padding={"xs"}
-                    paddingRight={"2"}
-                    style={{marginRight: "0.75rem", border: 0, outline: "none"}}
-                  >
-                    <Flex vertical={"center"} gap={"xs"} paddingRight={"1"} style={{lineHeight: 0}}>
-                      <Text style={{fontWeight: "light", fontSize: "13px"}} onBackground={"info-medium"} className={"s-flex-hide"}>Idiomas</Text>
-                      <Flex vertical={"center"} gap={"xs"}>
-                        {
-                          langs.map((lang, index) => (
-                            <Link key={index} href={"/" + lang.replace("/", "")}><Image src={"/img/languages/" + (lang === "/" ? "default" : lang) + ".svg"} alt={""} width={20} height={16} style={{objectFit: "cover", borderRadius: "1.5px"}}/></Link>
-                          ))
-                        }
-                      </Flex>
-                    </Flex>
-                  </Flex>
                 </>
               )}
             </Flex>
