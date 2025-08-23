@@ -23,7 +23,7 @@ export async function generateMetadata() {
   const description = about.description;
   // const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
   const ogImage = `https://${baseURL}/${bannerURL}`
-
+  
   return {
     title,
     description,
@@ -71,7 +71,7 @@ export default function About() {
       items: about.technical.skills.map((skill) => skill.title),
     },
   ];
-
+  
   // @ts-ignore
   // @ts-ignore
   // @ts-ignore
@@ -99,7 +99,7 @@ export default function About() {
           }),
         }}
       />
-
+      
       {about.tableOfContent.display && (
         <Column
           left="0"
@@ -113,7 +113,7 @@ export default function About() {
           <TableOfContents structure={structure} about={about}/>
         </Column>
       )}
-
+      
       <Flex fillWidth mobileDirection="column" horizontal="center">
         {about.avatar.display && (
           <Column
@@ -152,7 +152,7 @@ export default function About() {
             >
               <SchedulingButton/>
               <HeroAbout/>
-
+              
               {social.length > 0 && (
                 <Flex className={styles.blockAlign} paddingTop="20" paddingBottom="8" gap="8" wrap horizontal="center" fitWidth>
                   {social.map(
@@ -182,13 +182,13 @@ export default function About() {
                 </Flex>
               )}
             </Column>
-
+            
             {about.intro.display && (
               <Column textVariant="body-default-m" fillWidth gap="m" marginBottom="xl">
                 {about.intro.description}
               </Column>
             )}
-
+            
             {about.work.display && (
               <>
                 <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
@@ -250,7 +250,7 @@ export default function About() {
                 </Column>
               </>
             )}
-
+            
             {about.studies.display && (
               <>
                 <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
@@ -273,7 +273,7 @@ export default function About() {
                 </Column>
               </>
             )}
-
+            
             {about.technical.display && (
               <>
                 <Heading
@@ -322,7 +322,7 @@ export default function About() {
                 </Column>
               </>
             )}
-
+            
             {
               social?.find(s => s.icon === "github") && (
                 <Flex background={"brand-weak"} border={"brand-weak"} radius={"s"} padding={"s"} marginTop={"l"} gap="8" center={true}>

@@ -8,6 +8,7 @@ import SchedulingButton from "@/components/SchedulingButton";
 import {Contact} from "@/components/Contact";
 import HeroHome from "@/components/hero-home/HeroHome";
 import React from "react";
+import CallToAction from "@/components/CallToAction";
 
 export async function generateMetadata() {
   const title = home.title;
@@ -133,11 +134,7 @@ export default function Home() {
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[8, 8]}/>
       </RevealFx>
-      <Flex background={"brand-weak"} fillWidth={true} border={"brand-weak"} radius={"s"} padding={"s"} gap="8" center={true}>
-        <Icon name={"grid"} size={"s"} onBackground={"brand-weak"}/>
-        {/*@ts-ignore*/}
-        <Text onBackground={"brand-weak"}>See outher works in <a href={"/work"}>Work page</a></Text>
-      </Flex>
+      <CallToAction/>
       {contact.display && <Contact contact={contact}/>}
     </Column>
   );

@@ -1,5 +1,3 @@
-// TODO - traduzir
-
 const person = {
   generalTitle: "Gabriel Ribeiro",
   firstName: "Gabriel",
@@ -7,27 +5,27 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Full Stack Developer",
+  role: "Desenvolvedor Full Stack",
   avatar: "/img/avatar.png",
-  location: "Brazil",
-  languages: ["Portuguese"], // optional: Leave the array empty if you don&apos;t want to display languages
+  location: "Brasil",
+  languages: ["Português"], // opcional: Deixe o array vazio se não quiser exibir os idiomas
 };
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
-  description: (<>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>),
+  title: <>Inscreva-se na Newsletter de {person.firstName}</>,
+  description: (<>Ocasionalmente, escrevo sobre design, tecnologia e compartilho reflexões sobre a interseção entre criatividade e engenharia.</>),
 };
 
 const contact = {
   display: true,
-  title: <>Talk to me</>,
-  description: (<>For requests for quotes, consultancy, maintenance and development of websites and platforms, send a message.</>),
+  title: <>Fale comigo</>,
+  description: (<>Para solicitações de orçamentos, consultoria, manutenção e desenvolvimento de sites e plataformas, envie uma mensagem.</>),
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
+  // Os links são exibidos automaticamente.
+  // Importe novos ícones em /once-ui/icons.ts
   {
     name: "",
     icon: "github",
@@ -46,23 +44,23 @@ const social = [
 ];
 
 const home = {
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headlineMediumScreen: <>Full Stack Developer</>,
-  headlineSmallScreen: <>My name is Gabriel and I am a Full Stack Developer</>,
+  label: "Início",
+  title: `Portfólio de ${person.name}`,
+  description: `Site de portfólio que apresenta meu trabalho como ${person.role}`,
+  headlineMediumScreen: <>Desenvolvedor Full Stack</>,
+  headlineSmallScreen: <>Meu nome é Gabriel e eu sou um Desenvolvedor Full Stack</>,
   subline: (
     <p>
-      Web Developer specialized in building interactive and scalable web applications using React, TypeScript, and modern tools. Delivered real-world solutions like a public transport app, a data validation system for banking agents, and automation bots.
+      Desenvolvedor Web especializado na construção de aplicações web interativas e escaláveis usando React, TypeScript e ferramentas modernas. Entreguei soluções do mundo real como um aplicativo de transporte público, um sistema de validação de dados para correspondentes bancários e bots de automação.
     </p>
   ),
 };
 
 const about = {
-  label: "About",
-  // title: "About me" + ` - ${home.title}`,
-  title: "About me",
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "Sobre",
+  // title: "Sobre mim" + ` - ${home.title}`,
+  title: "Sobre mim",
+  description: `Conheça ${person.name}, ${person.role} do ${person.location}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -80,38 +78,35 @@ const about = {
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Introdução",
     description: (
       <>
-        <p>I’m a Web Developer with a technical background in Internet Informatics and currently pursuing a degree in Systems Analysis and Development. I specialize in building responsive interfaces and interactive applications using React, TypeScript, JavaScript, HTML, and CSS, alongside tools like Next.js and Vite.</p>
+        <p>Sou Desenvolvedor Web com formação técnica em Informática para Internet e atualmente cursando Análise e Desenvolvimento de Sistemas. Especializo-me na construção de interfaces responsivas e aplicações interativas usando React, TypeScript, JavaScript, HTML e CSS, além de ferramentas como Next.js e Vite.</p>
         
-        <p>I’ve developed real-world solutions such as a mobility platform for public transport users (Mobilidade), a data validation tool for banking agents (CCA), a voting-based clip competition system (BattleTube), and Discord bots for automation and content notifications. These projects demonstrate my ability to design and deliver applications with practical impact, integrating APIs, handling
-          dynamic data, and focusing on user experience.</p>
+        <p>Desenvolvi soluções do mundo real, como uma plataforma de mobilidade para usuários de transporte público (Mobilidade), uma ferramenta de validação de dados para correspondentes bancários (CCA), um sistema de competição de clipes baseado em votação (BattleTube) e bots para Discord de automação e notificações de conteúdo. Esses projetos demonstram minha capacidade de projetar e entregar aplicações com impacto prático, integrando APIs, manipulando dados dinâmicos e focando na experiência do usuário.</p>
         
-        <p style={{marginBottom: 0, paddingBottom: 0}}>I value clean code, reusable components, and continuous learning, always aiming to deliver scalable and maintainable solutions.</p>
+        <p style={{marginBottom: 0, paddingBottom: 0}}>Valorizo código limpo, componentes reutilizáveis e aprendizado contínuo, sempre visando entregar soluções escaláveis e de fácil manutenção.</p>
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true, // defina como false para ocultar esta seção
+    title: "Experiência Profissional",
     experiences: [
       {
-        company: "Freelance Developer",
-        timeframe: "2024 - Present",
-        role: "Technical support, maintenance and development of web apps and websites",
+        company: "Desenvolvedor Freelancer",
+        timeframe: "2024 - Atualmente",
+        role: "Suporte técnico, manutenção e desenvolvimento de aplicativos e sites",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Redesenhei a UI/UX da plataforma FLY, resultando em um aumento de 20% no engajamento do usuário e tempos de carregamento 30% mais rápidos.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Liderei a integração de ferramentas de IA nos fluxos de trabalho de design, permitindo que os designers iterassem 50% mais rápido.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don&apos;t want to display images
+          // opcional: deixe o array vazio se não quiser exibir imagens
           // {
           //   src: "/img/projects/project-01/cover-01.jpg",
           //   alt: "Once UI Project",
@@ -123,49 +118,49 @@ const about = {
       {
         company: "CHR Despachante Imobiliário",
         timeframe: "2023 - 2024",
-        role: "Computer Technician",
+        role: "Técnico em Informática",
         achievements: [
-          <>I provided maintenance on the company&apos;s equipment, in addition to being responsible for updating, configuring and installing the company&apos;s computers.</>,
-          <>I was responsible for implementing a file sharing system, which transformed the company&apos;s housing finance flow and increased sales completion by 40%.</>,
+          <>Realizei a manutenção dos equipamentos da empresa, além de ser responsável pela atualização, configuração e instalação dos computadores da empresa.</>,
+          <>Fui responsável por implementar um sistema de compartilhamento de arquivos, que transformou o fluxo de financiamento habitacional da empresa e aumentou a conclusão das vendas em 40%.</>,
         ],
         images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true, // defina como false para ocultar esta seção
+    title: "Estudos",
     institutions: [
       {
-        name: (<div><span>Systems Development Analyst (ends in Jan 2026)</span><br/>{/*<Text onBackground={"brand-weak"} variant={"body-default-m"}>Uninter</Text>*/}</div>),
+        name: (<div><span>Análise e Desenvolvimento de Sistemas (conclusão em Jan 2026)</span><br/>{/*<Text onBackground={"brand-weak"} variant={"body-default-m"}>Uninter</Text>*/}</div>),
         school: <>Uninter</>,
-        description: <>Studied software engineering.</>,
+        description: <>Estudei engenharia de software.</>,
       },
       {
-        name: (<div><span>Computer Technician for the Internet</span><br/>{/*<Text onBackground={"brand-weak"} variant={"body-default-m"}>ETEC Professor Fontes</Text>*/}</div>),
+        name: (<div><span>Técnico em Informática para Internet</span><br/>{/*<Text onBackground={"brand-weak"} variant={"body-default-m"}>ETEC Professor Fontes</Text>*/}</div>),
         school: <>ETEC Professor Fontes</>,
-        description: <>Studied equipment maintenance and web development.</>,
+        description: <>Estudei manutenção de equipamentos e desenvolvimento web.</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true, // defina como false para ocultar esta seção
+    title: "Habilidades técnicas",
     skills: [
       {
         title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don&apos;t want to display images
+        description: <>Capaz de prototipar no Figma com Once UI em uma velocidade impressionante.</>,
+        // opcional: deixe o array vazio se não quiser exibir imagens
         images: [
           {
             src: "/img/projects/template/img-1.png",
-            alt: "Project image",
+            alt: "Imagem do projeto",
             width: 16,
             height: 9,
           },
           {
             src: "/img/projects/battle/img-1.svg",
-            alt: "Project image",
+            alt: "Imagem do projeto",
             width: 16,
             height: 9,
           },
@@ -173,17 +168,17 @@ const about = {
       },
       {
         title: "Python",
-        description: "I developed bots with Python, for ads on Discord with YouTube and Twitch API, moderation on Reddit and webscrapping.",
+        description: "Desenvolvi bots com Python, para anúncios no Discord com as APIs do YouTube e Twitch, moderação no Reddit e web scraping.",
         images: [
           {
             src: "https://opengraph.githubassets.com/939568c657128880d286ba1bf90d9d8496ff6822b1a389f3e97f9fb6886f4d3e/gabriersdev/bot-notificacao-video-youtube-discord",
-            alt: "Project image",
+            alt: "Imagem do projeto",
             width: 16,
             height: 9,
           },
           {
             src: "https://opengraph.githubassets.com/939568c657128880d286ba1bf90d9d8496ff6822b1a389f3e97f9fb6886f4d3e/gabriersdev/bot-notificacao-live-twitch-discord",
-            alt: "Project image",
+            alt: "Imagem do projeto",
             width: 16,
             height: 9,
           },
@@ -191,12 +186,12 @@ const about = {
       },
       {
         title: "Node.js",
-        description: "I built web applications with Node.js + Next.js or React + Tailwind.",
+        description: "Construí aplicações web com Node.js + Next.js ou React + Tailwind.",
         images: [
           {
             src: "/img/projects/mobilidade/mob-1.png",
             link: "/work/mobilidade",
-            alt: "Project image",
+            alt: "Imagem do projeto",
             width: 16,
             height: 9,
           },
@@ -204,17 +199,17 @@ const about = {
       },
       {
         title: "PHP",
-        description: "I created websites with PHP and provided maintenance on websites made with Wordpress and Laravel.",
+        description: "Criei sites com PHP e prestei manutenção em sites feitos com Wordpress e Laravel.",
         images: []
       },
       {
         title: "SQL",
-        description: "I built applications (web or not) and APIs with MySQL, using HeidiSQL, PHPMyAdmin and Workbench.",
+        description: "Construí aplicações (web ou não) e APIs com MySQL, utilizando HeidiSQL, PHPMyAdmin e Workbench.",
         images: [
           {
             src: "/img/projects/mobilidade/mob-1.png",
             link: "/work/mobilidade",
-            alt: "Project image",
+            alt: "Imagem do projeto",
             width: 16,
             height: 9,
           },
@@ -222,7 +217,7 @@ const about = {
       },
       {
         title: "Scrum",
-        description: "I am certified by Certiproof as a qualified and knowledgeable professional in Scrum and its methods.",
+        description: "Sou certificado pela Certiproof como um profissional qualificado e conhecedor do Scrum e seus métodos.",
         images: []
       },
     ],
@@ -231,29 +226,29 @@ const about = {
 
 const blog = {
   label: "Blog",
-  title: "Writing about design and tech..." + ` ${home.title}`,
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  title: "Escrevendo sobre design e tecnologia..." + ` ${home.title}`,
+  description: `Leia o que ${person.name} tem feito recentemente`,
+  // Crie novas postagens de blog adicionando um novo arquivo .mdx a app/blog/posts
+  // Todas as postagens serão listadas na rota /blog
 };
 
 const work = {
-  label: "Work",
-  title: "My projects" + ` - ${home.title}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  label: "Projetos",
+  title: "Meus projetos" + ` - ${home.title}`,
+  description: `Projetos de design e desenvolvimento por ${person.name}`,
+  // Crie novas páginas de projeto adicionando um novo arquivo .mdx a app/blog/posts
+  // Todos os projetos serão listados nas rotas /home e /work
 };
 
 const gallery = {
-  label: "Gallery",
-  title: "My photo gallery" + ` - ${home.title}`,
-  description: `A photo collection by ${person.name}`,
-  // Images from https://pexels.com
+  label: "Galeria",
+  title: "Minha galeria de fotos" + ` - ${home.title}`,
+  description: `Uma coleção de fotos por ${person.name}`,
+  // Imagens de https://pexels.com
   images: [
     {
       src: "/img/gallery/x.jpg",
-      alt: "image",
+      alt: "imagem",
       orientation: "horizontal",
     },
   ],
@@ -262,40 +257,49 @@ const gallery = {
 const review = {
   display: true,
   label: "",
-  title: "Client Reviews",
+  title: "Avaliações de Clientes",
   description: "",
   data: [
     {
-      content: "\"I was apprehensive that I had lost the site, but Gabriel finished the service in less than a day and I had my site fully recovered with the backup and everything else.\n I highly recommend the service!\"",
+      content: "\"Eu estava apreensivo por ter perdido o site, mas o Gabriel concluiu o serviço em menos de um dia e eu tive meu site totalmente recuperado com o backup e tudo mais.\n Recomendo fortemente o serviço!\"",
       author: "Willian C.",
-      project: "WordPress site recovery",
+      project: "Recuperação de site WordPress",
     },
     {
-      content: "\"Working with Gabriel was a good experience. He understood our requirements and skillfully executed what he was asked to do.\"",
+      content: "\"Trabalhar com o Gabriel foi uma boa experiência. Ele entendeu nossos requisitos e executou com habilidade o que foi solicitado.\"",
       author: "Bruno M.",
-      project: "New visual identity for a gaming website",
+      project: "Nova identidade visual para um site de jogos",
     },
     {
-      content: "\"He understood the project&apos;s needs and delivered what was requested. I recommend him and would work with him again.\"",
+      content: "\"Ele entendeu as necessidades do projeto e entregou o que foi solicitado. Eu o recomendo e trabalharia com ele novamente.\"",
       author: "Isabela H.",
-      project: "Adapting Spreadsheets for WordPress",
-    },   
-    {
-      content: "\"I want to express my gratitude to Gabriel for the incredible job he did on my shop&apos;s website. He met all of my expectations, was extremely fast, and the site turned out exactly the way I wanted - everything was perfect! I highly recommend his work to anyone looking for quality and efficiency. Thank you, Gabriel!\"",
-      author: "Caroline C.",
-      project: "Fix shopping cart issue",
+      project: "Adaptação de Planilhas para WordPress",
     },
     {
-      content: "\"He knows his stuff and is creative with solutions. I will definitely work with him again!\"",
-      author: "Diogo G.",
-      project: "Create a plugin for batch search in Tiny ERP",
-    },    
+      content: "\"Quero expressar minha gratidão ao Gabriel pelo incrível trabalho que ele fez no site da minha loja. Ele atendeu a todas as minhas expectativas, foi extremamente rápido, e o site ficou exatamente do jeito que eu queria - tudo perfeito! Recomendo muito o trabalho dele para quem procura qualidade e eficiência. Obrigado, Gabriel!\"",
+      author: "Caroline C.",
+      project: "Correção de problema no carrinho de compras",
+    },
     {
-      content: "\"An excellent professional. He completed my request on schedule.\"",
+      content: "\"Ele sabe o que faz e é criativo com as soluções. Com certeza trabalharei com ele novamente!\"",
+      author: "Diogo G.",
+      project: "Criar um plugin para busca em lote no Tiny ERP",
+    },
+    {
+      content: "\"Um excelente profissional. Ele concluiu minha solicitação dentro do prazo.\"",
       author: "Henrique S.",
-      project: "Creating a User Manual for a Web Platform",
+      project: "Criação de um Manual do Usuário para uma Plataforma Web",
     },
   ]
 }
 
-export {person, social, newsletter, contact, home, about, blog, work, gallery, review};
+const CTG = {
+  content: "Veja outros projetos meus",
+  link: {
+    href: "/work",
+    label: "clicando aqui",
+  },
+}
+
+const content = {person, social, newsletter, contact, home, about, blog, work, gallery, review, CTG}
+export {person, social, newsletter, contact, home, about, blog, work, gallery, review, CTG, content};

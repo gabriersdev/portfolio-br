@@ -10,7 +10,7 @@ import {home, about, blog, work, gallery} from "@/app/resources/lang/default/con
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
-
+  
   return (
     <>
       <Fade hide="s" fillWidth position="fixed" height="80" zIndex={9}/>
