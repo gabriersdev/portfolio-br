@@ -12,7 +12,7 @@ export default function AppropriateParam({If, Else}: {If?: ReactNode, Else?: Rea
   useEffect(() => {
     if (params) {
       console.log(params.get("o"))
-      if (params.get("o")?.includes("99")) setContent(Else);
+      if (params.get("o")?.includes("99") || document.referrer?.includes("99freelas.com.br")) setContent(Else);
       else setContent(If);
     } else setContent(If);
   }, [params]);
