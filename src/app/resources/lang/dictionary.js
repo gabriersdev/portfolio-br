@@ -4,7 +4,7 @@
 // Isso facilita adicionar novos idiomas no futuro.
 const dictionaries = {
   '/pt-br': () => import('./pt-br/content.js').then(module => module.content),
-  'default': () => import('./default/content.js').then(module => module.content),
+  'default': () => import('./pt-br/content.js').then(module => module.content),
 };
 
 // Esta é a única função que você precisará usar.

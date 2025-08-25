@@ -2,7 +2,7 @@ import {getPosts} from "@/app/utils/utils";
 import {Card, Column, Flex, Grid, Heading, RevealFx, Text} from "@/once-ui/components";
 import {Projects} from "@/components/work/Projects";
 import {baseURL, bannerURL} from "@/app/resources";
-import {person, review, work} from "@/app/resources/lang/default/content";
+import {person, review, work} from "@/app/resources/lang/pt-br/content";
 
 export async function generateMetadata() {
   const title = work.title;

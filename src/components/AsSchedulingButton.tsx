@@ -39,7 +39,7 @@ export default function SchedulingButton({variant, duration}: { variant?: string
             vertical="center"
           >
             <Icon paddingLeft="8" name="calendar" onBackground="brand-weak"/>
-            <Flex paddingRight="8">Schedule a call</Flex>
+            <Flex paddingRight="8">Agendar uma chamada</Flex>
           </Flex>
         </a>
       </div>

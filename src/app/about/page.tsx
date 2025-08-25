@@ -13,10 +13,12 @@ import {
 import {baseURL, bannerURL} from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
-import {person, about, social, review} from "@/app/resources/lang/default/content";
+import {person, about, social} from "@/app/resources/lang/pt-br/content";
 import SchedulingButton from "@/components/SchedulingButton";
 import AnimatedComponents from "@/components/animated-components/animated-componets";
 import {HeroAbout} from "@/components/HeroAbout";
+import CallToAction from "@/components/CallToAction";
+import React from "react";
 
 export async function generateMetadata() {
   const title = about.title;
@@ -325,10 +327,8 @@ export default function About() {
             
             {
               social?.find(s => s.icon === "github") && (
-                <Flex background={"brand-weak"} border={"brand-weak"} radius={"s"} padding={"s"} marginTop={"l"} gap="8" center={true}>
-                  <Icon name={"github"} size={"s"} onBackground={"brand-weak"}/>
-                  {/*@ts-ignore*/}
-                  <Text onBackground={"brand-weak"}>Follow my work on <a href={social?.find(s => s.icon === "github")["link"]}>Github</a></Text>
+                <Flex direction={"column"} marginTop={"l"} gap="8" center={true}>
+                  <CallToAction/>
                 </Flex>
               )
             }

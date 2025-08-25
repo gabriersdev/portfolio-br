@@ -1,11 +1,11 @@
 "use client";
 
-import React, { forwardRef, useState, useEffect, ReactNode } from "react";
+import React, {forwardRef, useState, useEffect, ReactNode} from "react";
 import classNames from "classnames";
-import { IconType } from "react-icons";
-import { iconLibrary } from "../icons";
-import { ColorScheme, ColorWeight } from "../types";
-import { Flex, Tooltip } from ".";
+import {IconType} from "react-icons";
+import {iconLibrary} from "../icons";
+import {ColorScheme, ColorWeight} from "../types";
+import {Flex, Tooltip} from ".";
 import styles from "./Icon.module.scss";
 import iconStyles from "./IconButton.module.scss";
 
@@ -34,20 +34,20 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
     ref,
   ) => {
     const IconComponent: IconType | undefined = iconLibrary[name];
-
+    
     if (!IconComponent) {
       console.warn(`Icon "${name}" does not exist in the library.`);
       return null;
     }
-
+    
     if (onBackground && onSolid) {
       console.warn(
         "You cannot use both 'onBackground' and 'onSolid' props simultaneously. Only one will be applied.",
       );
     }
-
+    
     let colorClass = "color-inherit";
-
+    
     if (onBackground) {
       const [scheme, weight] = onBackground.split("-") as [ColorScheme, ColorWeight];
       colorClass = `${scheme}-on-background-${weight}`;
@@ -55,10 +55,10 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
       const [scheme, weight] = onSolid.split("-") as [ColorScheme, ColorWeight];
       colorClass = `${scheme}-on-solid-${weight}`;
     }
-
+    
     const [isTooltipVisible, setTooltipVisible] = useState(false);
     const [isHover, setIsHover] = useState(false);
-
+    
     useEffect(() => {
       let timer: NodeJS.Timeout;
       if (isHover) {
@@ -68,10 +68,10 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
       } else {
         setTooltipVisible(false);
       }
-
+      
       return () => clearTimeout(timer);
     }, [isHover]);
-
+    
     return (
       <Flex
         inline
@@ -87,10 +87,10 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
         onMouseLeave={() => setIsHover(false)}
         {...rest}
       >
-        <IconComponent />
+        <IconComponent/>
         {tooltip && isTooltipVisible && (
           <Flex position="absolute" zIndex={1} className={iconStyles[tooltipPosition]}>
-            <Tooltip label={tooltip} />
+            <Tooltip label={tooltip}/>
           </Flex>
         )}
       </Flex>
@@ -100,4 +100,4 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
 
 Icon.displayName = "Icon";
 
-export { Icon };
+export {Icon};

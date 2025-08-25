@@ -51,7 +51,7 @@ const home = {
   headlineSmallScreen: <>Meu nome é Gabriel e eu sou um Desenvolvedor Full Stack</>,
   subline: (
     <p>
-      Desenvolvedor Web especializado na construção de aplicações web interativas e escaláveis usando React, TypeScript e ferramentas modernas. Entreguei soluções do mundo real como um aplicativo de transporte público, um sistema de validação de dados para correspondentes bancários e bots de automação.
+      Desenvolvedor especializado na construção de aplicações web interativas e escaláveis usando React, TypeScript e ferramentas modernas. Entreguei soluções do mundo real como um aplicativo de transporte público, um sistema de validação de dados para correspondentes bancários e bots de automação.
     </p>
   ),
 };
@@ -134,7 +134,7 @@ const about = {
       {
         name: (<div><span>Análise e Desenvolvimento de Sistemas (conclusão em Jan 2026)</span><br/>{/*<Text onBackground={"brand-weak"} variant={"body-default-m"}>Uninter</Text>*/}</div>),
         school: <>Uninter</>,
-        description: <>Estudei engenharia de software.</>,
+        description: <>Estudei desenvolvimento de sistemas, paradigmas de programação, arquitetura de projetos e análise de dados.</>,
       },
       {
         name: (<div><span>Técnico em Informática para Internet</span><br/>{/*<Text onBackground={"brand-weak"} variant={"body-default-m"}>ETEC Professor Fontes</Text>*/}</div>),

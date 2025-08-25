@@ -1,5 +1,5 @@
 import {Flex, IconButton, SmartLink, Text} from "@/once-ui/components";
-import {person, social} from "@/app/resources/lang/default/content";
+import {person, social} from "@/app/resources/lang/pt-br/content";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
@@ -32,7 +32,7 @@ export const Footer = () => {
           </Text>
           <Text onBackground="neutral-medium" style={{display: "block"}}>
             {" "}
-            Make with
+            Feito com
             <SmartLink
               style={{marginLeft: "-0.005rem"}}
               href="https://once-ui.com/templates/magic-portfolio"

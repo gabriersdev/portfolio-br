@@ -10,7 +10,7 @@ import {baseURL, effects, style} from "@/app/resources";
 import {Inter} from "next/font/google";
 import {JetBrains_Mono} from "next/font/google";
 
-import {person, home} from "@/app/resources/lang/default/content";
+import {person, home} from "@/app/resources/lang/pt-br/content";
 import {Background, Column, Flex, ToastProvider} from "@/once-ui/components";
 import BaseActions from "@/components/BaseActions";
 

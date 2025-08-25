@@ -6,7 +6,7 @@ import {Fade, Flex, ToggleButton} from "@/once-ui/components";
 import styles from "@/components/Header.module.scss";
 
 import {routes} from "@/app/resources";
-import {home, about, blog, work, gallery} from "@/app/resources/lang/default/content";
+import {home, about, blog, work, gallery} from "@/app/resources/lang/pt-br/content";
 
 export const Header = () => {
   const pathname = usePathname() ?? "";

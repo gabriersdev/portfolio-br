@@ -191,7 +191,7 @@ export const Contact = ({contact}: { contact: ContactProps }) => {
             id="con-MESSAGE"
             name="MESSAGE"
             type="text"
-            label="Short message"
+            label="Mensagem"
             required
             onChange={(e) => {
               if (error) {
@@ -206,7 +206,7 @@ export const Contact = ({contact}: { contact: ContactProps }) => {
           <div className="clear">
             <Flex height="48" vertical="center">
               <Button id="mc-embedded-subscribe" value="Subscribe" style={{fontFamily: "inherit"}} size="l" fillWidth>
-                Send
+                Enviar
               </Button>
             </Flex>
           </div>

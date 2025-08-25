@@ -1,42 +1,45 @@
-# Welcome to portfolio 👋
+# Bem-vindo ao portfólio 👋
+
 ![GitHub Release](https://img.shields.io/github/v/release/gabriersdev/portfolio)
 
-> My portfolio with my main projects, the programming languages I work with, my goals and how to contact me.
+> Meu portfólio com meus principais projetos, as linguagens de programação com as quais trabalho, meus objetivos e como entrar em contato comigo.
 
-### 🏠 [Homepage](/)
+> Clone do projeto <https://github.com/gabriersdev/portfolio>
+
+### 🏠 [Página Inicial](/)
 
 ### ✨ [Demo](https://gabriel.lts.app.br)
 
-## Install
+## Instalação
 
 ```sh
 npm install
-```
+````
 
-## Usage
+## Uso
 
 ```sh
 npm run start
 ```
 
-## Author
+## Autor
 
 👤 **Gabriel Ribeiro**
 
-* Website: https://gabriel.lts.app.br
+* Website: https://dev.lts.app.br
 * Github: [@gabriersdev](https://github.com/gabriersdev)
 * LinkedIn: [@gabrielmpribeiro](https://linkedin.com/in/gabrielmpribeiro)
 
-## 🤝 Contributing
+## 🤝 Contribuição
 
-Contributions, issues and feature requests are welcome!
+Contribuições, issues e solicitações de recursos são bem-vindos\!
 
-Feel free to check [issues page](https://github.com/gabriersdev/portfolio/issues). You can also take a look at the [contributing guide](https://github.com/gabriersdev/portfolio/pulls).
+Sinta-se à vontade para conferir a [página de issues](https://github.com/gabriersdev/portfolio/issues). Você também pode dar uma olhada no [guia de contribuição](https://github.com/gabriersdev/portfolio/pulls).
 
-## Show your support
+## Mostre seu apoio
 
-Give a ⭐️ if this project helped you!
+Dê uma ⭐️ se este projeto te ajudou\!
 
+-----
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+*Este README foi gerado com ❤️ por [readme-md-generator](https://github.com/kefranabg/readme-md-generator)*

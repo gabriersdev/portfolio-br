@@ -34,7 +34,7 @@ export default function SchedulingButton({variant}: { variant?: string }) {
               style={{marginLeft: "-0.75rem", marginRight: "0.25rem", border: "none"}}
               paddingLeft="8" name="calendar" onBackground="info-weak"
             />
-            {"Schedule a call"}
+            {"Agendar uma chamada"}
           </Flex>
         </Button>
       )
@@ -65,7 +65,7 @@ export default function SchedulingButton({variant}: { variant?: string }) {
             vertical="center"
           >
             <Icon paddingLeft="8" name="calendar" onBackground="brand-weak"/>
-            <Flex paddingRight="8">Schedule a call</Flex>
+            <Flex paddingRight="8">Agendar uma chamada</Flex>
           </Flex>
         </div>
       </a>

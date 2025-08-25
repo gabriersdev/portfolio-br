@@ -67,21 +67,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             )}
             <Flex gap="m" wrap>
               {content?.trim() && (
-                <SmartLink
-                  suffixIcon="arrowRight"
-                  style={{margin: "0", width: "fit-content", textDecoration: "none"}}
-                  href={href}
-                >
-                  <Text variant="body-default-m">Read case study</Text>
+                <SmartLink suffixIcon="arrowRight" style={{margin: "0", width: "fit-content", textDecoration: "none"}} href={href}>
+                  <Text variant="body-default-m">Veja caso de estudo</Text>
                 </SmartLink>
               )}
               {link && (
-                <SmartLink
-                  suffixIcon="arrowUpRightFromSquare"
-                  style={{margin: "0", width: "fit-content", textDecoration: "none"}}
-                  href={link}
-                >
-                  <Text variant="body-default-m">View project</Text>
+                <SmartLink suffixIcon="arrowUpRightFromSquare" style={{margin: "0", width: "fit-content", textDecoration: "none"}} href={link}>
+                  <Text variant="body-default-m">Ver projeto</Text>
                 </SmartLink>
               )}
             </Flex>

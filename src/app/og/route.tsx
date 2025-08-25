@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 import { baseURL } from "@/app/resources";
-import { person } from "@/app/resources/lang/default/content";
+import { person } from "@/app/resources/lang/pt-br/content";
 
 export const runtime = "edge";
 
