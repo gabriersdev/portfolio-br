@@ -182,8 +182,8 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
           </div>
           <div className="clear">
             <Flex height="48" vertical="center">
-              <Button id="mc-embedded-subscribe" value="Subscribe" style={{fontFamily: "inherit"}} size="l" fillWidth>
-                Subscribe
+              <Button id="mc-embedded-subscribe" style={{fontFamily: "inherit"}} size="l" fillWidth>
+                Inscrever
               </Button>
             </Flex>
           </div>

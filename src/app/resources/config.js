@@ -1,5 +1,6 @@
 const baseURL = "gabriel.lts.app.br";
 const bannerURL = "banner.png";
+const githubURL = "https://github.com/gabriersdev";
 
 const routes = {
   "/": true,
@@ -164,4 +165,4 @@ const langs = [
   "/"
 ]
 
-export {routes, protectedRoutes, effects, style, display, mailchimp, contact, baseURL, bannerURL, api, langs};
+export {githubURL, routes, protectedRoutes, effects, style, display, mailchimp, contact, baseURL, bannerURL, api, langs};

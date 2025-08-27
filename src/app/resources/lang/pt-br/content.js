@@ -13,7 +13,7 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Inscreva-se na Newsletter de {person.firstName}</>,
+  title: <>Inscreva-se na minha Newsletter</>,
   description: (<>Ocasionalmente, escrevo sobre design, tecnologia e compartilho reflexões sobre a interseção entre criatividade e engenharia.</>),
 };
 
@@ -99,11 +99,11 @@ const about = {
         role: "Suporte técnico, manutenção e desenvolvimento de aplicativos e sites",
         achievements: [
           <>
-            Redesenhei a UI/UX da plataforma FLY, resultando em um aumento de 20% no engajamento do usuário e tempos de carregamento 30% mais rápidos.
+            Como desenvolvedor freelancer, atuo na manutenção e implementação de melhorias de sites desenvolvidos com Wordpress e também na criação de sistemas e sites com React. Também integro o time de desenvolvimento da Lotus Media.
           </>,
           <>
-            Liderei a integração de ferramentas de IA nos fluxos de trabalho de design, permitindo que os designers iterassem 50% mais rápido.
-          </>,
+            Também presto serviços como suporte técnico, incluindo substituição de componentes e equipamentos e formatação e configuração de dispositivos e impressoras.
+          </>
         ],
         images: [
           // opcional: deixe o array vazio se não quiser exibir imagens

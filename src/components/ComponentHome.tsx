@@ -39,7 +39,7 @@ export default function ComponentHome() {
         <Column maxWidth="s">
           <HeroHome/>
           <RevealFx translateY={"2"} fillWidth horizontal={"start"}>
-            <div style={{display: "flex", flexWrap: "nowrap", alignItems: "flex-start", justifyContent: "flex-start", gap: "0.5rem", width: "auto"}}>
+            <div style={{display: "flex", flexWrap: "wrap", alignItems: "flex-start", justifyContent: "flex-start", columnGap: "0.5rem", rowGap: "0.75rem", width: "auto"}}>
               <Button
                 id="about"
                 data-border="rounded"
@@ -60,26 +60,7 @@ export default function ComponentHome() {
               </Button>
               
               <AppropriateParam
-                If={
-                  <div style={{display: "flex", alignItems: "flex-start", justifyContent: "flex-start", gap: "0.5rem", width: "auto", flexWrap: "wrap"}}>
-                    <SchedulingButton variant={"primary"}/>
-                    <Button
-                      id="mailtox"
-                      data-border="rounded"
-                      href={"mailto:devgabrielribeiro@gmail.com"}
-                      variant="primary"
-                      size="l"
-                    >
-                      <Flex gap="4" vertical="center">
-                        <Icon
-                          style={{marginLeft: "-0.75rem", marginRight: "0.25rem", border: "none"}}
-                          paddingLeft="8" name="email" size={"s"} onBackground="info-weak"
-                        />
-                        {"Me envie um e-mail"}
-                      </Flex>
-                    </Button>
-                  </div>
-                }
+                If={<SchedulingButton variant={"primary"}/>}
                 
                 Else={
                   <>
@@ -100,8 +81,25 @@ export default function ComponentHome() {
                     </Button>
                   </>
                 }
-              >
-              </AppropriateParam>
+              />
+              
+              <AppropriateParam If={
+                <Button
+                  id="mailtox"
+                  data-border="rounded"
+                  href={"mailto:devgabrielribeiro@gmail.com"}
+                  variant="primary"
+                  size="l"
+                >
+                  <Flex gap="4" vertical="center">
+                    <Icon
+                      style={{marginLeft: "-0.75rem", marginRight: "0.25rem", border: "none"}}
+                      paddingLeft="8" name="email" size={"s"} onBackground="info-weak"
+                    />
+                    {"Me envie um e-mail"}
+                  </Flex>
+                </Button>
+              }/>
             </div>
           </RevealFx>
         </Column>

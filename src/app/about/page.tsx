@@ -328,7 +328,7 @@ export default function About() {
             {
               social?.find(s => s.icon === "github") && (
                 <Flex direction={"column"} marginTop={"l"} gap="8" center={true}>
-                  <CallToAction/>
+                  <CallToAction variant={"github"}/>
                 </Flex>
               )
             }
