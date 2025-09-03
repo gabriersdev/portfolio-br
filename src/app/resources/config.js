@@ -1,4 +1,4 @@
-const baseURL = "gabriel.lts.app.br";
+const baseURL = "dev.lts.app.br";
 const bannerURL = "banner.png";
 const githubURL = "https://github.com/gabriersdev";
 
@@ -161,7 +161,7 @@ const api = {
 }
 
 const langs = [
-  // "/pt-br",
+  "/pt-br",
   "/"
 ]
 
