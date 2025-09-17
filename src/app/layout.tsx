@@ -9,7 +9,6 @@ import {baseURL, effects, style} from "@/app/resources";
 
 import {Inter} from "next/font/google";
 import {JetBrains_Mono} from "next/font/google";
-import {Inter_Tight} from "next/font/google";
 
 import {person, home} from "@/app/resources/lang/pt-br/content";
 import {Background, Column, Flex, ToastProvider} from "@/once-ui/components";
@@ -45,12 +44,6 @@ export async function generateMetadata() {
 
 const primary = Inter({
   variable: "--font-primary",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const secondary = Inter_Tight({
-  variable: "--font-secondary",
   subsets: ["latin"],
   display: "swap",
 });
