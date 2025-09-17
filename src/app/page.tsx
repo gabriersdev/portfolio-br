@@ -1,5 +1,5 @@
-import {baseURL, routes, bannerURL} from "@/app/resources";
-import {home, about, person, contact} from "@/app/resources/lang/pt-br/content";
+import {baseURL, bannerURL} from "@/app/resources";
+import {home} from "@/app/resources/lang/pt-br/content";
 import ComponentHome from "@/components/ComponentHome";
 import React from "react";
 
