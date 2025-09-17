@@ -108,6 +108,9 @@ export default function ComponentHome() {
         <Projects range={[4, 4]}/>
       </RevealFx>
       <RevealFx translateY="16" delay={0.7}>
+        <Projects range={[10, 10]}/>
+      </RevealFx>
+      <RevealFx translateY="16" delay={0.8}>
         <Projects range={[6,6]}/>
       </RevealFx>
       {routes["/blog"] && (
@@ -122,10 +125,10 @@ export default function ComponentHome() {
           </Flex>
         </Flex>
       )}
-      <RevealFx translateY="16" delay={0.8}>
+      <RevealFx translateY="16" delay={0.9}>
         <Projects range={[1, 1]}/>
       </RevealFx>
-      <RevealFx translateY="16" delay={0.9}>
+      <RevealFx translateY="16" delay={1}>
         <Projects range={[2, 2]}/>
       </RevealFx>
       <CallToAction/>

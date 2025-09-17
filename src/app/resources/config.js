@@ -161,8 +161,8 @@ const api = {
 }
 
 const langs = [
+  "/",
   "/pt-br",
-  "/"
 ]
 
 export {githubURL, routes, protectedRoutes, effects, style, display, mailchimp, contact, baseURL, bannerURL, api, langs};

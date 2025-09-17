@@ -13,6 +13,7 @@ import {JetBrains_Mono} from "next/font/google";
 import {person, home} from "@/app/resources/lang/pt-br/content";
 import {Background, Column, Flex, ToastProvider} from "@/once-ui/components";
 import BaseActions from "@/components/BaseActions";
+import React from "react";
 
 export async function generateMetadata() {
   return {
@@ -91,6 +92,7 @@ export default async function RootLayout({children}: RootLayoutProps) {
         tertiary ? tertiary.variable : "",
         code.variable,
       )}
+      style={{fontFamily: "'Inter', Inter, sans-serif"}}
     >
       <SpeedInsights/>
       <BaseActions/>
