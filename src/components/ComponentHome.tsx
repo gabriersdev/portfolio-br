@@ -53,7 +53,7 @@ export default function ComponentHome() {
                     style={{marginLeft: "-0.75rem", marginRight: "0.25rem", border: "none"}}
                     paddingLeft="8" name="email" size={"s"} onBackground="info-weak"
                   />
-                  {"Send me an email"}
+                  {"Me envie um e-mail"}
                 </Flex>
               </Button>
               
