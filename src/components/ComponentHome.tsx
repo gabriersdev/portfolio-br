@@ -92,7 +92,7 @@ export default function ComponentHome() {
         <Flex fillWidth gap="24" mobileDirection="column">
           <Flex flex={1} paddingLeft="l">
             <Heading as="h2" variant="display-strong-s" wrap="balance" style={{fontWeight: 600}}>
-              Latest from <SmartLink style={{marginLeft: "-0.15rem"}} href={"/blog"}>the blog</SmartLink>
+              Últimas do <SmartLink style={{marginLeft: "-0.15rem"}} href={"/blog"}>blog</SmartLink>
             </Heading>
           </Flex>
           <Flex flex={3} wrap={true}>
