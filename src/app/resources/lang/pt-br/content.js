@@ -48,7 +48,7 @@ const home = {
   title: `Portfólio de ${person.name}`,
   description: `Site de portfólio que apresenta meu trabalho como ${person.role}`,
   headlineMediumScreen: <>Desenvolvedor Full Stack</>,
-  headlineSmallScreen: <>Meu nome é Gabriel e eu sou um Desenvolvedor Full Stack</>,
+  headlineSmallScreen: <>Meu nome é Gabriel e eu sou Desenvolvedor Full Stack</>,
   subline: (
     <p>
       Desenvolvedor especializado na construção de aplicações web interativas e escaláveis usando React, TypeScript e ferramentas modernas. Entreguei soluções do mundo real como um aplicativo de transporte público, um sistema de validação de dados para correspondentes bancários e bots de automação.

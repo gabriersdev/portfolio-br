@@ -92,7 +92,6 @@ export default async function RootLayout({children}: RootLayoutProps) {
         tertiary ? tertiary.variable : "",
         code.variable,
       )}
-      style={{fontFamily: "'Inter', Inter, sans-serif"}}
     >
       <SpeedInsights/>
       <BaseActions/>
