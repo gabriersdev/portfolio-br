@@ -53,7 +53,7 @@ export default function ComponentHome() {
                     style={{marginLeft: "-0.75rem", marginRight: "0.25rem", border: "none"}}
                     paddingLeft="8" name="email" size={"s"} onBackground="info-weak"
                   />
-                  {"Send me an email"}
+                  {"Me envie um e-mail"}
                 </Flex>
               </Button>
               
@@ -92,7 +92,7 @@ export default function ComponentHome() {
         <Flex fillWidth gap="24" mobileDirection="column">
           <Flex flex={1} paddingLeft="l">
             <Heading as="h2" variant="display-strong-s" wrap="balance" style={{fontWeight: 600}}>
-              Latest from <SmartLink style={{marginLeft: "-0.15rem"}} href={"/blog"}>the blog</SmartLink>
+              Últimas do <SmartLink style={{marginLeft: "-0.15rem"}} href={"/blog"}>blog</SmartLink>
             </Heading>
           </Flex>
           <Flex flex={3} wrap={true}>
