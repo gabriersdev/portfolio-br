@@ -7,11 +7,11 @@ export const runtime = "edge";
 export async function GET(request: Request) {
   let url = new URL(request.url);
   let title = url.searchParams.get("title") || "Portfolio";
-  const font = fetch(new URL("../../../public/fonts/Inter.ttf", import.meta.url)).then((res) =>
+  const font = fetch("https://rsms.me/inter/font-files/Inter-Regular.woff").then((res) =>
     res.arrayBuffer(),
   );
   const fontData = await font;
-
+  
   return new ImageResponse(
     <div
       style={{
