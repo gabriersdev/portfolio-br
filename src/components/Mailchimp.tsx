@@ -1,8 +1,8 @@
 "use client";
 
-import { mailchimp } from "@/app/resources";
-import { Button, Flex, Heading, Input, Text, Background, Column } from "@/once-ui/components";
-import React, { useState } from "react";
+import {mailchimp} from "@/app/resources";
+import {Background, Button, Column, Flex, Heading, Input, Text} from "@/once-ui/components";
+import React, {JSX, useState} from "react";
 
 function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T {
   let timeout: ReturnType<typeof setTimeout>;
@@ -18,40 +18,40 @@ type NewsletterProps = {
   description: string | JSX.Element;
 };
 
-export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
+export const Mailchimp = ({newsletter}: { newsletter: NewsletterProps }) => {
   const [email, setEmail] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [touched, setTouched] = useState<boolean>(false);
-
+  
   const validateEmail = (email: string): boolean => {
     if (email === "") {
       return true;
     }
-
+    
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
   };
-
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setEmail(value);
-
+    
     if (!validateEmail(value)) {
       setError("Please enter a valid email address.");
     } else {
       setError("");
     }
   };
-
+  
   const debouncedHandleChange = debounce(handleChange, 2000);
-
+  
   const handleBlur = () => {
     setTouched(true);
     if (!validateEmail(email)) {
       setError("Please enter a valid email address.");
     }
   };
-
+  
   return (
     <Column
       overflow="hidden"
@@ -112,7 +112,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
           opacity: mailchimp.effects.lines.opacity as any,
         }}
       />
-      <Heading style={{ position: "relative", textWrap: "balance", fontWeight: 600 }} marginBottom="s" variant="display-strong-s">
+      <Heading style={{position: "relative", textWrap: "balance", fontWeight: 600}} marginBottom="s" variant="display-strong-s">
         {newsletter.title}
       </Heading>
       <Text
@@ -157,7 +157,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
             onBlur={handleBlur}
             errorMessage={error}
           />
-          <div style={{ display: "none" }}>
+          <div style={{display: "none"}}>
             <input
               type="checkbox"
               readOnly
@@ -168,10 +168,10 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
             />
           </div>
           <div id="mce-responses" className="clearfalse">
-            <div className="response" id="mce-error-response" style={{ display: "none" }}></div>
-            <div className="response" id="mce-success-response" style={{ display: "none" }}></div>
+            <div className="response" id="mce-error-response" style={{display: "none"}}></div>
+            <div className="response" id="mce-success-response" style={{display: "none"}}></div>
           </div>
-          <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
+          <div aria-hidden="true" style={{position: "absolute", left: "-5000px"}}>
             <input
               type="text"
               readOnly
