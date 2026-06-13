@@ -18,7 +18,7 @@ import SchedulingButton from "@/components/SchedulingButton";
 import AnimatedComponents from "@/components/animated-components/animated-componets";
 import {HeroAbout} from "@/components/HeroAbout";
 import CallToAction from "@/components/CallToAction";
-import React from "react";
+import React, {JSX} from "react";
 
 export async function generateMetadata() {
   const title = about.title;
